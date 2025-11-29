@@ -1,184 +1,188 @@
-## Updates
+# Easy Rust (Korean)
+
+Easy Rust는 *Simple English*로 작성되어 이해하기 매우 쉽고 간단하지만... 아쉽게도 대한민국의 공용어는 영어가 아닙니다. 그리하여 OpenAI Codex Agent의 Test operation 겸, [Easy Rust](https://github.com/Dhghomon/easy_rust)를 `GPT-5.1-Codex-Max`을 통해 한국어로 번역하고선, 다듬은 버전입니다. 
+
+## 업데이트
 ![example workflow name](https://github.com/Dhghomon/easy_rust/workflows/github%20pages/badge.svg)
 
-19 January 2023: [Learn Rust in a Month of Lunches](https://www.manning.com/books/learn-rust-in-a-month-of-lunches) is now available for purchase on Manning. Rust in a Month of Lunches is based on the content in the original Easy Rust but updated, improved with reader feedback and expanded (about twice the size).
+2023년 1월 19일: [Learn Rust in a Month of Lunches](https://www.manning.com/books/learn-rust-in-a-month-of-lunches)가 이제 Manning에서 구매 가능합니다. Rust in a Month of Lunches는 원래 Easy Rust 내용을 바탕으로 했지만 독자 피드백을 반영해 다듬었고 분량도 두 배 정도 늘렸습니다.
 
 ![](Learn_Rust_in_a_Month_of_Lunches.png)
 
-31 October 2022: [Now available in Spanish](https://www.jmgaguilera.com/rust_facil/)
+2022년 10월 31일: [스페인어판 공개](https://www.jmgaguilera.com/rust_facil/)
 
-23 May 2021: [Now available in Indonesian](https://github.com/ariandy/easy-rust-indonesia) thanks to [Ariandy](https://github.com/ariandy)/[1kb](https://1kilobyte.github.io/).
+2021년 5월 23일: [인도네시아어판 공개](https://github.com/ariandy/easy-rust-indonesia) - [Ariandy](https://github.com/ariandy)/[1kb](https://1kilobyte.github.io/) 덕분입니다.
 
-2 April 2021: [Added BuyMeACoffee link](https://www.buymeacoffee.com/mithridates) for those who would like to buy me a coffee.
+2021년 4월 2일: [BuyMeACoffee 링크 추가](https://www.buymeacoffee.com/mithridates) - 커피 한 잔 사 주고 싶은 분들을 위해 준비했습니다.
 
-1 February 2021: [Now available on YouTube!](https://www.youtube.com/playlist?list=PLfllocyHVgsRwLkTAhG0E-2QxCf-ozBkk) Two months later: all done as of 1 April 2021 for 186 videos in total (slightly over 23 hours).
+2021년 2월 1일: [유튜브에도 공개!](https://www.youtube.com/playlist?list=PLfllocyHVgsRwLkTAhG0E-2QxCf-ozBkk) 두 달 뒤인 4월 1일, 총 186개의 영상을 모두 올렸습니다(23시간 조금 넘는 분량).
 
-22 December 2020: mdBook can be found [here](https://dhghomon.github.io/easy_rust).
+2020년 12월 22일: mdBook은 [여기](https://dhghomon.github.io/easy_rust)에서 볼 수 있습니다.
 
-28 November 2020: [Now also available in simplified Chinese](https://github.com/kumakichi/easy_rust_chs) thanks to [kumakichi](https://github.com/kumakichi)!
+2020년 11월 28일: [중국어 간체판 공개](https://github.com/kumakichi/easy_rust_chs) - [kumakichi](https://github.com/kumakichi) 덕분입니다!
 
-27 November 2021: [Videos for Easy Rust are now being recorded in Korean!](https://www.youtube.com/watch?v=W9DO6m8JSSs&list=PLfllocyHVgsSJf1zO6k6o3SX2mbZjAqYE) 한국어판 비디오도 녹화 시작!
+2021년 11월 27일: [Easy Rust 한국어 비디오 녹화 시작!](https://www.youtube.com/watch?v=W9DO6m8JSSs&list=PLfllocyHVgsSJf1zO6k6o3SX2mbZjAqYE) 한국어판 비디오도 녹화 시작!
 
 ![](Easy_Rust_sample_image.png)
 
-## Introduction
+## 소개
 
-Rust is a new language that already has good textbooks. But sometimes its textbooks are difficult because they are for native English speakers. Many companies and people now learn Rust, and they could learn faster with a book that has easy English. This textbook is for these companies and people to learn Rust with simple English.
+Rust는 새 언어지만 이미 좋은 교재가 있습니다. 다만 원어민을 위해 쓰인 책들이라 읽기 어려울 때가 있습니다. 요즘 많은 회사와 사람이 Rust를 배우고 있는데, 쉬운 영어로 쓰인 책이 있다면 더 빨리 배울 수 있을 겁니다. 이 책은 그런 회사와 사람들이 간단한 영어로 Rust를 익히도록 돕기 위해 만들었습니다.
 
-Rust is a language that is quite new, but already very popular. It's popular because it gives you the speed and control of C or C++ but also the memory safety of other newer languages like Python. It does this with some new ideas that are sometimes different from other languages. That means that there are some new things to learn, and you can't just "figure it out as you go along". Rust is a language that you have to think about for a while to understand. But it still looks pretty familiar if you know another language and it is made to help you write good code.
+Rust는 비교적 새로운 언어지만 이미 아주 인기 있습니다. C나 C++처럼 빠르고 세밀하게 다룰 수 있으면서도 Python 같은 새 언어들이 가진 메모리 안전성도 제공합니다. 다른 언어와는 조금 다른 새 아이디어를 써서 그걸 해냅니다. 그래서 새로 배워야 할 게 있고, 그냥 "하다 보면 알겠지"로 끝나지 않습니다. Rust는 한동안 생각하며 이해해야 하는 언어입니다. 그래도 다른 언어를 알고 있다면 꽤 익숙하게 느껴지고, 좋은 코드를 쓰도록 돕는 방향으로 설계되어 있습니다.
 
-## Who am I?
+## 저는 누구인가요?
 
-I am a Canadian who lives in Korea, and I wrote Easy Rust while thinking of how to make it easy for companies here to start using it. I hope that other countries that don't use English as a first language can use it too.
+저는 한국에 사는 캐나다인이고, 한국 회사들이 쉽게 Rust를 쓰기 시작할 방법을 생각하며 Easy Rust를 썼습니다. 영어가 모국어가 아닌 다른 나라에서도 도움이 되길 바랍니다.
 
-## Writing Rust in Easy English
+## 쉬운 영어로 쓰는 Rust
 
-*Rust in Easy English* was written from July to August 2020, and is over 400 pages long. You can contact me here or [on LinkedIn](https://www.linkedin.com/in/davemacleod) or [on Twitter](https://twitter.com/mithridates) if you have any questions. If you see anything wrong or have a pull request to make, go ahead. Over 20 people have already helped out by fixing typos and problems in the code, so you can too. I'm not the world's best Rust expert so I always like to hear new ideas or see where I can make the book better.
+*Rust in Easy English*는 2020년 7월부터 8월까지 썼고, 400쪽이 넘습니다. 궁금한 점이 있으면 여기나 [LinkedIn](https://www.linkedin.com/in/davemacleod), [Twitter](https://twitter.com/mithridates)로 연락 주세요. 잘못된 부분을 봤거나 풀 리퀘스트를 보내고 싶다면 언제든지 환영입니다. 이미 20명이 넘는 분들이 오타와 코드 문제를 고쳐 줬으니, 여러분도 함께할 수 있습니다. 저는 세계 최고 Rust 전문가가 아니라서, 새 아이디어를 듣거나 책을 더 좋게 만들 부분을 찾는 걸 언제나 좋아합니다.
 
 
 
-- [Part 1 - Rust in your browser](#part-1---rust-in-your-browser)
+- [1부 - 브라우저에서 Rust](#1부---브라우저에서-rust)
   - [Rust Playground](#rust-playground)
-  - [🚧 and ⚠️](#-and-️)
-  - [Comments](#comments)
-  - [Types](#types)
-    - [Primitive types](#primitive-types)
-  - [Type inference](#type-inference)
-    - [Floats](#floats)
-  - [Printing 'hello, world!'](#printing-hello-world)
-    - [Declaring variables and code blocks](#declaring-variables-and-code-blocks)
-  - [Display and debug](#display-and-debug)
-    - [Smallest and largest numbers](#smallest-and-largest-numbers)
-  - [Mutability (changing)](#mutability-changing)
-    - [Shadowing](#shadowing)
-  - [The stack, the heap, and pointers](#the-stack-the-heap-and-pointers)
-  - [More about printing](#more-about-printing)
-  - [Strings](#strings)
-  - [const and static](#const-and-static)
-  - [More on references](#more-on-references)
-  - [Mutable references](#mutable-references)
-    - [Shadowing again](#shadowing-again)
-  - [Giving references to functions](#giving-references-to-functions)
-  - [Copy types](#copy-types)
-    - [Variables without values](#variables-without-values)
-  - [Collection types](#collection-types)
-    - [Arrays](#arrays)
-  - [Vectors](#vectors)
-  - [Tuples](#tuples)
-  - [Control flow](#control-flow)
-  - [Structs](#structs)
-  - [Enums](#enums)
-    - [Enums to use multiple types](#enums-to-use-multiple-types)
-  - [Loops](#loops)
-  - [Implementing structs and enums](#implementing-structs-and-enums)
-  - [Destructuring](#destructuring)
-  - [References and the dot operator](#references-and-the-dot-operator)
-  - [Generics](#generics)
-  - [Option and Result](#option-and-result)
+  - [🚧와 ⚠️](#🚧와-⚠️)
+  - [주석](#주석)
+  - [타입](#타입)
+    - [기본 타입](#기본-타입)
+  - [타입 추론](#타입-추론)
+    - [부동소수점](#부동소수점)
+  - ['hello, world!' 출력하기](#hello-world-출력하기)
+    - [변수 선언과 코드 블록](#변수-선언과-코드-블록)
+  - [Display와 debug](#display와-debug)
+    - [가장 작은 수와 가장 큰 수](#가장-작은-수와-가장-큰-수)
+  - [가변성(값 바꾸기)](#가변성값-바꾸기)
+    - [섀도잉](#섀도잉)
+  - [스택, 힙, 포인터](#스택-힙-포인터)
+  - [출력 더 알아보기](#출력-더-알아보기)
+  - [문자열](#문자열)
+  - [const와 static](#const와-static)
+  - [레퍼런스 더 알아보기](#레퍼런스-더-알아보기)
+  - [가변 레퍼런스](#가변-레퍼런스)
+    - [다시 섀도잉](#다시-섀도잉)
+  - [함수에 레퍼런스 넘기기](#함수에-레퍼런스-넘기기)
+  - [Copy 타입](#copy-타입)
+    - [값이 없는 변수](#값이-없는-변수)
+  - [컬렉션 타입](#컬렉션-타입)
+    - [배열](#배열)
+  - [벡터](#벡터)
+  - [튜플](#튜플)
+  - [제어 흐름](#제어-흐름)
+  - [구조체](#구조체)
+  - [열거형](#열거형)
+    - [여러 타입을 쓰는 열거형](#여러-타입을-쓰는-열거형)
+  - [반복문](#반복문)
+  - [구조체와 열거형 구현하기](#구조체와-열거형-구현하기)
+  - [디스트럭처링](#디스트럭처링)
+  - [레퍼런스와 점 연산자](#레퍼런스와-점-연산자)
+  - [제네릭](#제네릭)
+  - [Option과 Result](#option과-result)
     - [Option](#option)
     - [Result](#result)
-  - [Other collections](#other-collections)
-    - [HashMap (and BTreeMap)](#hashmap-and-btreemap)
-    - [HashSet and BTreeSet](#hashset-and-btreeset)
+  - [다른 컬렉션](#다른-컬렉션)
+    - [HashMap과 BTreeMap](#hashmap과-btreemap)
+    - [HashSet과 BTreeSet](#hashset과-btreeset)
     - [BinaryHeap](#binaryheap)
     - [VecDeque](#vecdeque)
-  - [The ? operator](#the--operator)
-    - [When panic and unwrap are good](#when-panic-and-unwrap-are-good)
-  - [Traits](#traits)
-    - [The From trait](#the-from-trait)
-    - [Taking a String and a &str in a function](#taking-a-string-and-a-str-in-a-function)
-  - [Chaining methods](#chaining-methods)
-  - [Iterators](#iterators)
-    - [How an iterator works](#how-an-iterator-works)
-  - [Closures](#closures)
-    - [|_| in a closure](#_-in-a-closure)
-    - [Helpful methods for closures and iterators](#helpful-methods-for-closures-and-iterators)
-  - [The dbg! macro and .inspect](#the-dbg-macro-and-inspect)
-  - [Types of &str](#types-of-str)
-  - [Lifetimes](#lifetimes)
-  - [Interior mutability](#interior-mutability)
+  - [? 연산자](#-연산자)
+    - [panic과 unwrap이 좋은 때](#panic과-unwrap이-좋은-때)
+  - [트레이트](#트레이트)
+    - [From 트레이트](#from-트레이트)
+    - [함수에서 String과 &str 받기](#함수에서-string과-str-받기)
+  - [메서드 체이닝](#메서드-체이닝)
+  - [이터레이터](#이터레이터)
+    - [이터레이터가 동작하는 방식](#이터레이터가-동작하는-방식)
+  - [클로저](#클로저)
+    - [클로저에서 |_|](#클로저에서-_)
+    - [클로저와 이터레이터에 도움이 되는 메서드](#클로저와-이터레이터에-도움이-되는-메서드)
+  - [dbg! 매크로와 .inspect](#dbg-매크로와-inspect)
+  - [&str 타입 종류](#str-타입-종류)
+  - [수명](#수명)
+  - [내부 가변성](#내부-가변성)
     - [Cell](#cell)
     - [RefCell](#refcell)
     - [Mutex](#mutex)
     - [RwLock](#rwlock)
   - [Cow](#cow)
-  - [Type aliases](#type-aliases)
-    - [Importing and renaming inside a function](#importing-and-renaming-inside-a-function)
-  - [The todo! macro](#the-todo-macro)
+  - [타입 별칭](#타입-별칭)
+    - [함수 안에서 임포트와 이름 바꾸기](#함수-안에서-임포트와-이름-바꾸기)
+  - [todo! 매크로](#todo-매크로)
   - [Rc](#rc)
-  - [Multiple threads](#multiple-threads)
-  - [Closures in functions](#closures-in-functions)
+  - [여러 스레드](#여러-스레드)
+  - [함수 안의 클로저](#함수-안의-클로저)
   - [impl Trait](#impl-trait)
   - [Arc](#arc)
-  - [Channels](#channels)
-  - [Reading Rust documentation](#reading-rust-documentation)
+  - [채널](#채널)
+  - [Rust 문서 읽기](#rust-문서-읽기)
     - [assert_eq!](#assert_eq)
-    - [Searching](#searching)
-    - [[src] button](#src-button)
-    - [Information on traits](#information-on-traits)
-  - [Attributes](#attributes)
+    - [검색하기](#검색하기)
+    - [[src] 버튼](#src-버튼)
+    - [트레이트 정보](#트레이트-정보)
+  - [애트리뷰트](#애트리뷰트)
   - [Box](#box)
-  - [Box around traits](#box-around-traits)
-  - [Default and the builder pattern](#default-and-the-builder-pattern)
-  - [Deref and DerefMut](#deref-and-derefmut)
-  - [Crates and modules](#crates-and-modules)
-  - [Testing](#testing)
-    - [Test-driven development](#test-driven-development)
-  - [External crates](#external-crates)
+  - [트레이트를 Box로 감싸기](#트레이트를-box로-감싸기)
+  - [Default와 빌더 패턴](#default와-빌더-패턴)
+  - [Deref와 DerefMut](#deref와-derefmut)
+  - [크레이트와 모듈](#크레이트와-모듈)
+  - [테스트](#테스트)
+    - [테스트 주도 개발](#테스트-주도-개발)
+  - [외부 크레이트](#외부-크레이트)
     - [rand](#rand)
     - [rayon](#rayon)
     - [serde](#serde)
     - [regex](#regex)
     - [chrono](#chrono)
-  - [A tour of the standard library](#a-tour-of-the-standard-library)
-    - [Arrays](#arrays-1)
+  - [표준 라이브러리 한 바퀴](#표준-라이브러리-한-바퀴)
+    - [배열](#배열-1)
     - [char](#char)
-    - [Integers](#integers)
-    - [Floats](#floats)
+    - [정수](#정수)
+    - [부동소수점](#부동소수점-1)
     - [Bool](#bool)
     - [Vec](#vec)
     - [String](#string)
-    - [OsString and CString](#osstring-and-cstring)
+    - [OsString과 CString](#osstring과-cstring)
     - [Mem](#mem)
     - [Prelude](#prelude)
     - [Time](#time)
-    - [Other-macros](#other-macros)
-  - [Writing macros](#writing-macros)
-- [Part 2 - Rust on your computer](#part-2---rust-on-your-computer)
+    - [기타 매크로](#기타-매크로)
+  - [매크로 작성](#매크로-작성)
+- [2부 - 내 컴퓨터에서 Rust](#2부---내-컴퓨터에서-rust)
   - [Cargo](#cargo)
-  - [Taking_user_input](#taking-user-input)
-  - [Using files](#using-files)
+  - [입력 받기](#입력-받기)
+  - [파일 사용하기](#파일-사용하기)
   - [Cargo doc](#cargo-doc)
-  - [The end?](#the-end)
+  - [끝인가?](#끝인가)
 
-# Part 1 - Rust in your browser
+# 1부 - 브라우저에서 Rust
 
-This book has two parts. In Part 1, you will learn as much Rust as you can just in your browser. You can actually learn almost everything you need to know without installing Rust, so Part 1 is very long. Then at the end is Part 2. It is much shorter, and is about Rust on your computer. That's where you will learn everything else you need to know that you can only do outside of a browser. Some examples are: working with files, taking user input, graphics, and personal settings. Hopefully, by the end of Part 1 you will like Rust enough that you will install it. And if you don't, no problem - Part 1 teaches you so much that you won't mind.
+이 책은 두 부분으로 되어 있습니다. 1부에서는 브라우저만으로 최대한 많은 Rust를 배웁니다. Rust를 설치하지 않아도 알아야 할 거의 모든 것을 배울 수 있어서 1부가 아주 깁니다. 마지막에 2부가 있는데 훨씬 짧고 내 컴퓨터에서 Rust를 다룹니다. 파일 작업, 사용자 입력 받기, 그래픽, 개인 설정처럼 브라우저 밖에서만 할 수 있는 나머지 내용을 거기서 배웁니다. 1부가 끝날 때쯤에는 Rust가 마음에 들어서 설치하고 싶을 겁니다. 그래도 설치하지 않더라도 상관없습니다. 1부만으로도 많은 것을 배우게 됩니다.
 
 ## Rust Playground
-**[See this chapter on YouTube](https://youtu.be/-lYeJeQ11OI)**
+**[이 챕터를 유튜브에서 보기](https://youtu.be/-lYeJeQ11OI)**
 
-Maybe you don't want to install Rust yet, and that's okay. You can go to [https://play.rust-lang.org/](https://play.rust-lang.org/) and start writing Rust without leaving your browser. You can write your code there and click Run to see the results. You can run most of the samples in this book inside the Playground in your browser. Only near the end you will see samples that go beyond what you can do in the Playground (like opening files).
+아직 Rust를 설치하고 싶지 않아도 괜찮습니다. [https://play.rust-lang.org/](https://play.rust-lang.org/)에 들어가면 브라우저를 떠나지 않고 Rust 코드를 바로 쓸 수 있습니다. 거기서 코드를 작성하고 Run을 눌러 결과를 볼 수 있습니다. 이 책에 나온 대부분의 예제 코드를 브라우저의 Playground에서 실행할 수 있습니다. 거의 끝부분에서야 Playground가 할 수 있는 범위를 넘어서는 예제(파일 열기 같은 것)를 보게 됩니다.
 
-Here are some tips when using the Rust Playground:
+Rust Playground를 사용할 때 도움이 되는 팁은 다음과 같습니다.
 
-- Run your code with Run
-- Change Debug to Release if you want your code to be faster. Debug: compiles faster, runs slower, contains debug information. Release: compiles slower, runs much faster, removes debug information.
-- Click on Share to get a url link. You can use that to share your code if you want help. After you click share, you can click on `Open a new thread in the Rust user forum` to ask people there for help right away.
-- Tools: Rustfmt will format your code nicely.
-- Tools: Clippy will give you extra information about how to make your code better.
-- Config: here you can change your theme to dark mode so you can work at night, and many other configurations.
+- Run으로 코드를 실행합니다.
+- 코드가 더 빠르길 원하면 Debug를 Release로 바꾸세요. Debug: 더 빨리 컴파일되지만 더 느리게 실행되고 디버그 정보를 포함합니다. Release: 더 느리게 컴파일되지만 훨씬 빠르게 실행되고 디버그 정보를 뺍니다.
+- Share를 눌러 URL 링크를 받습니다. 도움이 필요할 때 코드를 공유할 수 있습니다. Share를 누른 뒤 `Open a new thread in the Rust user forum`을 눌러 바로 도움을 요청할 수도 있습니다.
+- Tools: Rustfmt가 코드를 깔끔하게 정리해 줍니다.
+- Tools: Clippy가 코드를 더 좋게 만드는 팁을 줍니다.
+- Config: 여기서 밤에 작업할 수 있도록 다크 모드로 바꾸는 등 여러 설정을 바꿀 수 있습니다.
 
-If you want to install Rust, go here [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install) and follow the instructions. Usually you will use `rustup` to install and update Rust.
+Rust를 설치하고 싶다면 [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install)로 가서 안내를 따르세요. 보통 `rustup`으로 Rust를 설치하고 업데이트합니다.
 
-## 🚧 and ⚠️
+## 🚧와 ⚠️
 
-Sometimes the code examples in the book don't work. If an example doesn't work, it will have a 🚧 or a ⚠️ in it. 🚧 is like "under construction": it means that the code is not complete. Rust needs a `fn main()` (a main function) to run, but sometimes we just want to look at small pieces of code so it won't have a `fn main()`. Those examples are correct, but need a `fn main()` for you to run them. And some code examples show you a problem that we will fix. Those ones might have a `fn main()` but generate an error, and so they will have a ⚠️.
+책의 코드 예제가 가끔은 그대로 동작하지 않을 수 있습니다. 그런 예제에는 🚧나 ⚠️가 있습니다. 🚧는 "공사 중" 같은 뜻으로, 코드가 완성되지 않았음을 뜻합니다. Rust는 실행하려면 `fn main()`(메인 함수)이 필요하지만, 작은 코드 조각만 보고 싶을 때는 `fn main()`을 넣지 않을 때가 있습니다. 예제 자체는 맞지만 실행하려면 `fn main()`을 붙여야 합니다. 또 어떤 예제는 우리가 고칠 문제를 보여 주기 위해 일부러 오류를 내기도 합니다. 그런 예제는 `fn main()`이 있어도 에러를 만들기 때문에 ⚠️가 붙습니다.
 
-## Comments
-**[See this chapter on YouTube](https://youtu.be/fJ7jBZG_Rpo)**
+## 주석
+**[이 챕터를 유튜브에서 보기](https://youtu.be/fJ7jBZG_Rpo)**
 
-Comments are made for programmers to read, not the computer. It's good to write comments to help other people understand your code.  It's also good to help you understand your code later.  (Many people write good code but then forget why they wrote it.) To write comments in Rust you usually use `//`:
+주석은 컴퓨터가 아니라 프로그래머가 읽는 글입니다. 다른 사람이 코드를 이해하도록 돕기 위해 주석을 쓰면 좋습니다. 나중에 스스로 코드를 이해하는 데도 도움이 됩니다. (많은 사람이 좋은 코드를 쓰지만 왜 그렇게 썼는지 잊어버리곤 합니다.) Rust에서 주석을 쓰려면 보통 `//`를 사용합니다:
 
 ```rust
 fn main() {
@@ -188,9 +192,9 @@ fn main() {
 }
 ```
 
-When you do this, the compiler won't look at anything to the right of the `//`.
+이렇게 하면 `//` 오른쪽은 전부 컴파일러가 보지 않습니다.
 
-There is another kind of comment that you write with `/*` to start and `*/` to end. This one is useful to write in the middle of your code.
+다른 형태의 주석도 있습니다. `/*`로 시작해 `*/`로 끝나는 주석입니다. 코드 중간에 적기에 좋습니다.
 
 ```rust
 fn main() {
@@ -198,75 +202,74 @@ fn main() {
 }
 ```
 
-To the compiler, `let some_number/*: i16*/ = 100;` looks like `let some_number = 100;`.
+컴파일러 입장에서는 `let some_number/*: i16*/ = 100;`가 `let some_number = 100;`과 같습니다.
 
-The `/* */` form is also useful for very long comments over more than one line. In this example you can see that you need to write `//` for every line. But if you type `/*`, it won't stop until you finish it with `*/`.
+`/* */` 주석은 여러 줄에 걸친 긴 주석에도 유용합니다. 아래 예제처럼 `//`는 매 줄마다 써야 합니다. 하지만 `/*`를 쓰면 `*/`로 마칠 때까지 계속 이어집니다.
 
 ```rust
 fn main() {
-    let some_number = 100; /* Let me tell you
-    a little about this number.
-    It's 100, which is my favourite number.
-    It's called some_number but actually I think that... */
+    let some_number = 100; /* 이 숫자에 대해
+    조금 얘기해 볼게요.
+    100인데, 제가 제일 좋아하는 숫자예요.
+    some_number라고 부르지만 사실 저는... */
 
-    let some_number = 100; // Let me tell you
-    // a little about this number.
-    // It's 100, which is my favourite number.
-    // It's called some_number but actually I think that...
+    let some_number = 100; // 이 숫자에 대해
+    // 조금 얘기해 볼게요.
+    // 100인데, 제가 제일 좋아하는 숫자예요.
+    // some_number라고 부르지만 사실 저는...
 }
 ```
 
-## Types
+## 타입
 
-Rust has many types that let you work with numbers, characters, and so on. Some are simple, others are more complicated, and you can even create your own.
+Rust에는 숫자, 문자 등을 다룰 수 있는 여러 타입이 있습니다. 어떤 것은 단순하고, 어떤 것은 좀 더 복잡하며, 직접 만들 수도 있습니다.
 
-### Primitive types
-**[See this chapter on YouTube](https://youtu.be/OxTPU5UGMhs)**
+### 기본 타입
+**[이 챕터를 유튜브에서 보기](https://youtu.be/OxTPU5UGMhs)**
 
-Rust has simple types that are called **primitive types** (primitive = very basic). We will start with integers and `char` (characters). Integers are whole numbers with no decimal point. There are two types of integers:
+Rust에는 **기본 타입**이라 부르는 단순한 타입들이 있습니다(기본 = 아주 기초적이라는 뜻). 정수와 `char`(문자)부터 시작해 보겠습니다. 정수는 소수점이 없는 온전한 숫자입니다. 정수에는 두 종류가 있습니다.
 
-- Signed integers,
-- Unsigned integers.
+- 부호 있는 정수
+- 부호 없는 정수
 
-Signed means `+` (plus sign) and `-` (minus sign), so signed integers can be positive (e.g. +8), negative (e.g. -8), or zero. But unsigned integers can only be positive or zero, because they do not have a sign.
+부호가 있다는 건 `+`와 `-`가 있다는 뜻입니다. 그래서 부호 있는 정수는 양수(+8), 음수(-8), 0을 모두 표현할 수 있습니다. 하지만 부호 없는 정수는 부호가 없으므로 양수와 0만 표현할 수 있습니다.
 
-The signed integers are: `i8`, `i16`, `i32`, `i64`, `i128`, and `isize`.
-The unsigned integers are: `u8`, `u16`, `u32`, `u64`, `u128`, and `usize`.
+부호 있는 정수 타입: `i8`, `i16`, `i32`, `i64`, `i128`, `isize`
+부호 없는 정수 타입: `u8`, `u16`, `u32`, `u64`, `u128`, `usize`
 
-The number after the i or the u means the number of bits for the number, so numbers with more bits can be larger. 8 bits = one byte, so `i8` is one byte, `i64` is 8 bytes, and so on. Number types with larger sizes can hold larger numbers. For example, a `u8` can hold up to 255, but a `u16` can hold up to 65535. And a `u128` can hold up to 340282366920938463463374607431768211455.
+i나 u 뒤의 숫자는 비트 수를 뜻합니다. 비트가 많을수록 더 큰 수를 담을 수 있습니다. 8비트 = 1바이트이므로 `i8`은 1바이트, `i64`는 8바이트입니다. 크기가 큰 숫자 타입일수록 더 큰 수를 넣을 수 있습니다. 예를 들어 `u8`은 최대 255까지 넣을 수 있고, `u16`은 최대 65535까지, `u128`은 최대 340282366920938463463374607431768211455까지 담을 수 있습니다.
 
-So what is `isize` and `usize`? This means the number of bits on your type of computer. (The number of bits on your computer is called the **architecture** of your computer.) So `isize` and `usize` on a 32-bit computer is like `i32` and `u32`, and `isize` and `usize` on a 64-bit computer is like `i64` and `u64`.
+그렇다면 `isize`와 `usize`는 무엇일까요? 이것은 사용하는 컴퓨터의 비트 수를 따릅니다. (컴퓨터의 비트 수를 **아키텍처**라고 합니다.) 32비트 컴퓨터의 `isize`와 `usize`는 `i32`, `u32`와 같고, 64비트 컴퓨터의 `isize`와 `usize`는 `i64`, `u64`와 같습니다.
 
-There are many reasons for the different types of integers. One reason is computer performance: a smaller number of bytes is faster to process. For example, the number -10 as an `i8` is `11110110`, but as an `i128` it is `11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110110`. But here are some other uses:
+정수 타입이 이렇게 다양한 이유는 많습니다. 하나는 성능입니다. 바이트 수가 작을수록 처리 속도가 빠릅니다. 예를 들어 -10을 `i8`로 표현하면 `11110110`이지만, `i128`로 표현하면 `11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111110110`이 됩니다. 또 다른 이유도 있습니다.
 
-Characters in Rust are called `char`. Every `char` has a number: the letter `A` is number 65, while the character `友` ("friend" in Chinese) is number 21451. The list of numbers is called "Unicode". Unicode uses smaller numbers for characters that are used more, like A through Z, or digits 0 through 9, or space.
+Rust에서 문자는 `char`입니다. 모든 `char`에는 번호가 있습니다. 예를 들어 문자 `A`는 65이고, 문자 `友`(중국어로 "친구")는 21451입니다. 이 번호 목록을 "유니코드"라고 합니다. 유니코드는 많이 쓰이는 문자(A부터 Z, 숫자 0부터 9, 공백 등)에는 작은 번호를 배정합니다.
 
 ```rust
 fn main() {
     let first_letter = 'A';
-    let space = ' '; // A space inside ' ' is also a char
-    let other_language_char = 'Ꮔ'; // Thanks to Unicode, other languages like Cherokee display just fine too
-    let cat_face = '😺'; // Emojis are chars too
+    let space = ' '; // ' ' 안의 공백도 char입니다
+    let other_language_char = 'Ꮔ'; // 유니코드 덕분에 체로키 같은 다른 문자도 잘 표시됩니다
+    let cat_face = '😺'; // 이모지도 char입니다
 }
 ```
 
-The characters that are used most have numbers less than 256, and they can fit into a `u8`. Remember, a `u8` is 0 plus all the numbers up to 255, for 256 in total. This means that Rust can safely **cast** a `u8` into a `char`, using `as`. ("Cast `u8` as `char`" means "pretend `u8` is a `char`")
+가장 자주 쓰이는 문자는 256보다 작은 번호를 가지며 `u8`에 들어갈 수 있습니다. `u8`은 0부터 255까지 총 256개의 값을 담을 수 있다는 점을 기억하세요. 그래서 Rust에서는 `as`를 써서 `u8`을 안전하게 `char`로 **캐스팅**할 수 있습니다. ("`u8`을 `char`로 캐스팅한다"는 말은 "`u8`을 `char`처럼 취급한다"는 뜻입니다.)
 
-Casting with `as` is useful because Rust is very strict. It always needs to know the type, and won't let you use two different types together even if they are both integers. For example, this will not work:
+`as`를 써서 캐스팅하는 것은 Rust가 엄격하기 때문에 유용합니다. Rust는 언제나 타입을 알아야 하고, 둘 다 정수라도 타입이 다르면 함께 쓸 수 없습니다. 예를 들어 아래 코드는 동작하지 않습니다.
 
 ```rust
-fn main() { // main() is where Rust programs start to run. Code goes inside {} (curly brackets)
+fn main() { // main()은 Rust 프로그램이 시작되는 곳입니다. 코드는 {}(중괄호) 안에 넣습니다
 
-    let my_number = 100; // We didn't write a type of integer,
-                         // so Rust chooses i32. Rust always
-                         // chooses i32 for integers if you don't
-                         // tell it to use a different type
+    let my_number = 100; // 정수 타입을 적지 않았으므로
+                         // Rust가 i32를 선택합니다. 정수 타입을
+                         // 따로 적지 않으면 Rust는 항상 i32를 고릅니다
 
     println!("{}", my_number as char); // ⚠️
 }
 ```
 
-Here is the reason:
+이유는 다음과 같습니다.
 
 ```text
 error[E0604]: only `u8` can be cast as `char`, not `i32`
@@ -276,7 +279,7 @@ error[E0604]: only `u8` can be cast as `char`, not `i32`
   |                    ^^^^^^^^^^^^^^^^^
 ```
 
-Fortunately we can easily fix this with `as`. We can't cast `i32` as a `char`, but we can cast an `i32` as a `u8`. And then we can do the same from `u8` to `char`. So in one line we use `as` to make my_number a `u8`, and again to make it a `char`. Now it will compile:
+다행히 `as`로 쉽게 고칠 수 있습니다. `i32`를 바로 `char`로 캐스팅할 수는 없지만, `i32`를 `u8`으로 바꾼 뒤 `u8`을 `char`로 바꿀 수는 있습니다. 그래서 한 줄에서 `as`로 my_number를 `u8`으로, 다시 `char`로 바꾸면 컴파일됩니다.
 
 ```rust
 fn main() {
@@ -285,49 +288,49 @@ fn main() {
 }
 ```
 
-It prints `d` because that is the `char` in place 100.
+100번째 위치의 `char`가 `d`이기 때문에 `d`를 출력합니다.
 
-The easier way, however, is just to tell Rust that `my_number` is a `u8`. Here's how you do it:
+더 쉬운 방법은 아예 `my_number`가 `u8`이라고 Rust에 알려 주는 것입니다. 이렇게 하면 됩니다.
 
 ```rust
 fn main() {
-    let my_number: u8 = 100; //  change my_number to my_number: u8
+    let my_number: u8 = 100; //  my_number를 my_number: u8로 바꿉니다
     println!("{}", my_number as char);
 }
 ```
 
-So those are two reasons for all the different number types in Rust. Here is another reason: `usize` is the size that Rust uses for *indexing*. (Indexing means "which item is first", "which item is second", etc.) `usize` is the best size for indexing because:
+이것이 Rust에 다양한 숫자 타입이 있는 두 가지 이유입니다. 또 다른 이유로, `usize`는 *인덱싱*할 때 쓰는 크기입니다. (인덱싱은 "첫 번째 항목은 무엇인가", "두 번째 항목은 무엇인가"를 가리키는 것입니다.) `usize`가 인덱싱에 가장 좋은 이유는 다음과 같습니다.
 
-- An index can't be negative, so it needs to be a number with a u
-- It should be big, because sometimes you need to index many things, but
-- It can't be a u64 because 32-bit computers can't use u64.
+- 인덱스는 음수가 될 수 없으니 u가 붙은 타입이어야 합니다.
+- 많은 항목을 인덱싱할 때도 있으니 커야 합니다.
+- 하지만 32비트 컴퓨터는 u64를 쓸 수 없으니 u64는 아닙니다.
 
-So Rust uses `usize` so that your computer can get the biggest number for indexing that it can read.
+그래서 Rust는 각 컴퓨터가 읽을 수 있는 최대 크기로 인덱싱할 수 있도록 `usize`를 씁니다.
 
 
 
-Let's learn some more about `char`. You saw that a `char` is always one character, and uses `''` instead of `""`.
+`char`에 대해 조금 더 알아봅시다. `char`는 항상 한 글자이고 `""`가 아니라 `''`를 사용합니다.
 
-All `chars` use 4 bytes of memory, since 4 bytes are enough to hold any kind of character:
-- Basic letters and symbols usually need 1 out of 4 bytes: `a b 1 2 + - = $ @`
-- Other letters like German Umlauts or accents need 2 out of 4 bytes: `ä ö ü ß è é à ñ`
-- Korean, Japanese or Chinese characters need 3 or 4 bytes: `国 안 녕`
+모든 `char`는 4바이트 메모리를 사용합니다. 4바이트면 어떤 문자든 담을 수 있기 때문입니다.
+- 기본 문자와 기호는 보통 4바이트 중 1바이트만 필요합니다: `a b 1 2 + - = $ @`
+- 독일어 움라우트나 악센트 같은 문자는 4바이트 중 2바이트를 씁니다: `ä ö ü ß è é à ñ`
+- 한국어, 일본어, 중국어 문자는 3바이트나 4바이트가 필요합니다: `国 안 녕`
 
-When using characters as part of a string, the string is encoded to use the least amount of memory needed for each character.
+문자가 문자열에 들어가면, 각 문자가 필요로 하는 최소 메모리만 쓰도록 문자열이 인코딩됩니다.
 
-We can use `.len()` to see this for ourselves:
+직접 확인하려면 `.len()`을 사용해 볼 수 있습니다.
 
 ```rust
 fn main() {
     println!("Size of a char: {}", std::mem::size_of::<char>()); // 4 bytes
-    println!("Size of string containing 'a': {}", "a".len()); // .len() gives the size of the string in bytes
+    println!("Size of string containing 'a': {}", "a".len()); // .len()은 문자열의 바이트 크기를 줍니다
     println!("Size of string containing 'ß': {}", "ß".len());
     println!("Size of string containing '国': {}", "国".len());
     println!("Size of string containing '𓅱': {}", "𓅱".len());
 }
 ```
 
-This prints:
+출력 결과는 다음과 같습니다.
 
 ```text
 Size of a char: 4
@@ -337,27 +340,27 @@ Size of string containing '国': 3
 Size of string containing '𓅱': 4
 ```
 
-You can see that `a` is one byte, the German `ß` is two, the Japanese `国` is three, and the ancient Egyptian `𓅱` is 4 bytes.
+`a`는 1바이트, 독일어 `ß`는 2바이트, 일본어 `国`은 3바이트, 고대 이집트 문자 `𓅱`는 4바이트인 걸 볼 수 있습니다.
 
 ```rust
 fn main() {
     let slice = "Hello!";
     println!("Slice is {} bytes.", slice.len());
-    let slice2 = "안녕!"; // Korean for "hi"
+    let slice2 = "안녕!"; // 한국어로 "hi"
     println!("Slice2 is {} bytes.", slice2.len());
 }
 ```
 
-This prints:
+출력 결과는 다음과 같습니다.
 
 ```text
 Slice is 6 bytes.
 Slice2 is 7 bytes.
 ```
 
-`slice` is 6 characters in length and 6 bytes, but `slice2` is 3 characters in length and 7 bytes.
+`slice`는 길이가 6글자이고 6바이트입니다. 하지만 `slice2`는 길이가 3글자지만 7바이트입니다.
 
-If `.len()` gives the size in bytes, what about the size in characters? We will learn about these methods later, but you can just remember that `.chars().count()` will do it. `.chars().count()` turns what you wrote into characters and then counts how many there are.
+`.len()`이 바이트 크기를 준다면 문자 개수는 어떻게 구할까요? 이 메서드는 뒤에서 더 배울 테니, 지금은 `.chars().count()`가 해 준다고만 기억하면 됩니다. `.chars().count()`는 문자열을 문자로 바꾼 뒤 몇 개 있는지 셉니다.
 
 
 ```rust
@@ -369,24 +372,24 @@ fn main() {
 }
 ```
 
-This prints:
+출력 결과는 다음과 같습니다.
 
 ```text
 Slice is 6 bytes and also 6 characters.
 Slice2 is 7 bytes but only 3 characters.
 ```
 
-## Type inference
-**[See this chapter on YouTube](https://youtu.be/q1D2vpy3kEI)**
+## 타입 추론
+**[이 챕터를 유튜브에서 보기](https://youtu.be/q1D2vpy3kEI)**
 
-Type inference means that if you don't tell the compiler the type, but it can decide by itself, it will decide. The compiler always needs to know the type of the variables, but you don’t always need to tell it. Actually, usually you don't need to tell it. For example, for `let my_number = 8`, `my_number` will be an `i32`. That is because the compiler chooses i32 for integers if you don't tell it. But if you say `let my_number: u8 = 8`, it will make `my_number` a `u8`, because you told it `u8`.
+타입 추론은 우리가 컴파일러에 타입을 알려 주지 않았지만 컴파일러가 스스로 결정할 수 있을 때 알아서 선택하는 것을 말합니다. 컴파일러는 변수 타입을 항상 알아야 하지만 우리가 매번 알려 줄 필요는 없습니다. 사실 대부분 알려 줄 필요가 없습니다. 예를 들어 `let my_number = 8`이라면 `my_number`는 `i32`가 됩니다. 우리가 따로 지정하지 않으면 컴파일러가 정수 타입으로 i32를 고르기 때문입니다. 하지만 `let my_number: u8 = 8`이라고 쓰면 `u8`이라고 알려 줬기 때문에 `my_number`를 `u8`로 만듭니다.
 
-So usually the compiler can guess. But sometimes you need to tell it, for two reasons:
+대부분의 경우 컴파일러가 추측할 수 있습니다. 하지만 두 가지 이유로 직접 알려 줘야 할 때가 있습니다.
 
-1) You are doing something very complex and the compiler doesn't know the type you want.
-2) You want a different type (for example, you want an `i128`, not an `i32`).
+1) 아주 복잡한 일을 하고 있어서 컴파일러가 원하는 타입을 알지 못할 때
+2) 다른 타입을 쓰고 싶을 때(예: `i32` 대신 `i128`을 쓰고 싶을 때)
 
-To specify a type, add a colon after the variable name.
+타입을 지정하려면 변수 이름 뒤에 콜론을 붙이면 됩니다.
 
 ```rust
 fn main() {
@@ -398,20 +401,20 @@ For numbers, you can say the type after the number. You don't need a space - jus
 
 ```rust
 fn main() {
-    let small_number = 10u8; // 10u8 = 10 of type u8
+    let small_number = 10u8; // 10u8 = u8 타입의 10
 }
 ```
 
-You can also add `_` if you want to make the number easy to read.
+숫자를 더 읽기 쉽게 하고 싶다면 `_`를 넣을 수도 있습니다.
 
 ```rust
 fn main() {
-    let small_number = 10_u8; // This is easier to read
-    let big_number = 100_000_000_i32; // 100 million is easy to read with _
+    let small_number = 10_u8; // 이쪽이 읽기 쉽습니다
+    let big_number = 100_000_000_i32; // 1억을 _로 끊으면 읽기 쉽습니다
 }
 ```
 
-The `_` does not change the number. It is only to make it easy for you to read. And it doesn't matter how many `_` you use:
+`_`는 숫자를 바꾸지 않습니다. 읽기 쉽게 하려고 넣는 것일 뿐입니다. `_`를 몇 개 쓰든 상관없습니다.
 
 ```rust
 fn main() {
@@ -421,32 +424,32 @@ fn main() {
 }
 ```
 
-This prints `0, 1624`.
+`0, 1624`를 출력합니다.
 
-### Floats
+### 부동소수점
 
-Floats are numbers with decimal points. 5.5 is a float, and 6 is an integer. 5.0 is also a float, and even 5. is a float.
+부동소수점 수는 소수점이 있는 숫자입니다. 5.5는 부동소수점이고 6은 정수입니다. 5.0도 부동소수점이고 5.도 부동소수점입니다.
 
 ```rust
 fn main() {
-    let my_float = 5.; // Rust sees . and knows that it is a float
+    let my_float = 5.; // Rust는 .을 보고 부동소수점임을 압니다
 }
 ```
 
-But the types are not called `float`, they are called `f32` and `f64`. It is the same as integers: the number after `f` shows the number of bits. If you don't write the type, Rust will choose `f64`.
+하지만 타입 이름은 `float`가 아니라 `f32`, `f64`입니다. 정수와 마찬가지로 `f` 뒤 숫자가 비트 수를 나타냅니다. 타입을 적지 않으면 Rust는 `f64`를 선택합니다.
 
-Of course, only floats of the same type can be used together. So you can't add an `f32` to an `f64`.
+물론 같은 타입의 부동소수점끼리만 함께 쓸 수 있습니다. 그래서 `f32`와 `f64`를 더할 수는 없습니다.
 
 ```rust
 fn main() {
-    let my_float: f64 = 5.0; // This is an f64
-    let my_other_float: f32 = 8.5; // This is an f32
+    let my_float: f64 = 5.0; // 이것은 f64입니다
+    let my_other_float: f32 = 8.5; // 이것은 f32입니다
 
     let third_float = my_float + my_other_float; // ⚠️
 }
 ```
 
-When you try to run this, Rust will say:
+이 코드를 실행하려 하면 Rust는 이렇게 말합니다.
 
 ```text
 error[E0308]: mismatched types
@@ -456,56 +459,56 @@ error[E0308]: mismatched types
   |                                  ^^^^^^^^^^^^^^ expected `f64`, found `f32`
 ```
 
-The compiler writes "expected (type), found (type)" when you use the wrong type. It reads your code like this:
+잘못된 타입을 썼을 때 컴파일러는 "expected (type), found (type)"이라고 말합니다. 컴파일러는 코드를 이런 식으로 읽습니다.
 
 ```rust
 fn main() {
-    let my_float: f64 = 5.0; // The compiler sees an f64
-    let my_other_float: f32 = 8.5; // The compiler sees an f32. It is a different type.
-    let third_float = my_float + // You want to add my_float to something, so it must be an f64 plus another f64. Now it expects an f64...
-    let third_float = my_float + my_other_float;  // ⚠️ but it found an f32. It can't add them.
+    let my_float: f64 = 5.0; // 컴파일러는 f64를 봅니다
+    let my_other_float: f32 = 8.5; // 컴파일러는 f32를 봅니다. 다른 타입입니다.
+    let third_float = my_float + // my_float에 뭔가를 더하려고 하니 f64에 f64를 더해야 합니다. 이제 f64를 기대합니다...
+    let third_float = my_float + my_other_float;  // ⚠️ 그런데 f32를 봤습니다. 더할 수 없습니다.
 }
 ```
 
-So when you see "expected (type), found (type)", you must find why the compiler expected a different type.
+"expected (type), found (type)"이 보이면 컴파일러가 왜 다른 타입을 기대했는지 찾아야 합니다.
 
-Of course, with simple numbers it is easy to fix. You can cast the `f32` to an `f64` with `as`:
+단순한 숫자라면 고치기 쉽습니다. `as`로 `f32`를 `f64`로 캐스팅할 수 있습니다.
 
 ```rust
 fn main() {
     let my_float: f64 = 5.0;
     let my_other_float: f32 = 8.5;
 
-    let third_float = my_float + my_other_float as f64; // my_other_float as f64 = use my_other_float like an f64
+    let third_float = my_float + my_other_float as f64; // my_other_float as f64 = my_other_float을 f64처럼 사용
 }
 ```
 
-Or even more simply, remove the type declarations. ("to declare a type" = "to tell Rust to use the type") Rust will choose types that can add together.
+또는 더 간단하게, 타입 선언을 없애면 됩니다. (타입을 선언한다 = Rust에게 이 타입을 사용하라고 알려 준다) Rust가 더할 수 있는 타입을 골라 줍니다.
 
 ```rust
 fn main() {
-    let my_float = 5.0; // Rust will choose f64
-    let my_other_float = 8.5; // Here again it will choose f64
+    let my_float = 5.0; // Rust는 f64를 고릅니다
+    let my_other_float = 8.5; // 여기서도 f64를 고릅니다
 
     let third_float = my_float + my_other_float;
 }
 ```
 
-The Rust compiler is smart and will not choose f64 if you need f32:
+Rust 컴파일러는 똑똑해서 f32가 필요하면 f64를 고르지 않습니다.
 
 ```rust
 fn main() {
     let my_float: f32 = 5.0;
-    let my_other_float = 8.5; // Usually Rust would choose f64,
+    let my_other_float = 8.5; // 보통이라면 Rust는 f64를 고릅니다,
 
-    let third_float = my_float + my_other_float; // but now it knows that you need to add it to an f32. So it chooses f32 for my_other_float too
+    let third_float = my_float + my_other_float; // 하지만 지금은 f32에 더해야 한다는 걸 압니다. 그래서 my_other_float도 f32로 고릅니다
 }
 ```
 
-## Printing 'hello, world!'
-**See this chapter on YouTube: [Video 1](https://youtu.be/yYlPHRl2geQ), [Video 2](https://youtu.be/DTCSfBJJZb8)**
+## 'hello, world!' 출력하기
+**이 챕터를 유튜브에서 보기: [영상 1](https://youtu.be/yYlPHRl2geQ), [영상 2](https://youtu.be/DTCSfBJJZb8)**
 
-When you start a new Rust program, it always has this code:
+새 Rust 프로그램을 시작하면 항상 이런 코드가 있습니다.
 
 ```rust
 fn main() {
@@ -513,15 +516,15 @@ fn main() {
 }
 ```
 
-- `fn` means function,
-- `main` is the function that starts the program,
-- `()` means that we didn't give the function any variables to start.
+- `fn`은 함수를 뜻합니다.
+- `main`은 프로그램이 시작되는 함수입니다.
+- `()`는 함수에 시작할 때 넘기는 변수가 없음을 뜻합니다.
 
-`{}` is called a **code block**. This is the space where code lives.
+`{}`는 **코드 블록**이라고 합니다. 코드가 들어가는 공간입니다.
 
-`println!` is a **macro** that prints to the console. A **macro** is like a function that writes code for you. Macros have a `!` after them. We will learn about making macros later. For now, remember that `!` means that it is a macro.
+`println!`은 콘솔에 출력하는 **매크로**입니다. **매크로**는 코드를 대신 써 주는 함수 비슷한 것입니다. 매크로 이름 뒤에는 `!`가 붙습니다. 매크로를 만드는 법은 나중에 배울 테니, 지금은 `!`가 매크로라는 뜻이라고만 기억하세요.
 
-To learn about the `;`, we will create another function. First, in `main` we will print a number 8:
+`;`에 대해 알아보려면 함수를 하나 더 만들겠습니다. 먼저 `main`에서 숫자 8을 출력합니다.
 
 ```rust
 fn main() {
@@ -529,10 +532,10 @@ fn main() {
 }
 ```
 
-The `{}` in `println!` means "put the variable inside here". This prints `Hello, world number 8!`.
+`println!` 안의 `{}`는 "여기에 변수를 넣으라"는 뜻입니다. 이 코드는 `Hello, world number 8!`을 출력합니다.
 
 
-We can put more in, just like we did before:
+이처럼 더 많은 값을 넣을 수도 있습니다.
 
 ```rust
 fn main() {
@@ -540,9 +543,9 @@ fn main() {
 }
 ```
 
-This prints `Hello, worlds number 8 and 9!`.
+이 코드는 `Hello, worlds number 8 and 9!`를 출력합니다.
 
-Now let's create the function.
+이제 함수를 만들어 봅시다.
 
 ```rust
 fn number() -> i32 {
@@ -554,12 +557,12 @@ fn main() {
 }
 ```
 
-This also prints `Hello, world number 8!`. When Rust looks at `number()` it sees a function. This function:
+이 코드도 `Hello, world number 8!`을 출력합니다. Rust가 `number()`를 보면 함수를 봅니다. 이 함수는 다음과 같습니다.
 
-- Does not take anything (because it has `()`)
-- Returns an `i32`. The `->` (called a "skinny arrow") shows what the function returns.
+- 아무것도 받지 않습니다(`()`이기 때문).
+- `i32`를 반환합니다. `->`(얇은 화살표라고도 함)가 함수가 반환하는 타입을 보여 줍니다.
 
-Inside the function is just `8`. Because there is no `;`, this is the value it returns. If it had a `;`, it would not return anything (it would return a `()`). Rust will not compile this if it has a `;`, because the return is `i32` and `;` returns `()`, not `i32`:
+함수 안에는 `8`만 있습니다. `;`가 없기 때문에 이것이 반환 값입니다. 만약 `;`가 있었다면 아무 것도 반환하지 않습니다(`()`를 반환함). 반환 타입이 `i32`인데 `;`는 `()`를 반환하므로 Rust는 이를 컴파일하지 않습니다.
 
 ```rust
 fn main() {
@@ -580,43 +583,43 @@ fn number() -> i32 {
   |      - help: consider removing this semicolon
 ```
 
-This means "you told me that `number()` returns an `i32`, but you added a `;` so it doesn't return anything". So the compiler suggests removing the semicolon.
+이는 "`number()`가 `i32`를 반환한다고 했는데 `;`를 붙여서 아무 것도 반환하지 않는다"는 뜻입니다. 그래서 컴파일러가 세미콜론을 지우라고 제안합니다.
 
-You can also write `return 8;` but in Rust it is normal to just remove the `;` to `return`.
+`return 8;`이라고 적어도 되지만, Rust에서는 `;`를 빼는 방식으로 `return`하는 것이 일반적입니다.
 
-When you want to give variables to a function, put them inside the `()`. You have to give them a name and write the type.
+함수에 변수를 넘기고 싶다면 `()` 안에 넣습니다. 이름을 붙이고 타입을 적어야 합니다.
 
 ```rust
-fn multiply(number_one: i32, number_two: i32) { // Two i32s will enter the function. We will call them number_one and number_two.
+fn multiply(number_one: i32, number_two: i32) { // i32 두 개가 함수로 들어옵니다. 이름을 number_one과 number_two로 붙였습니다.
     let result = number_one * number_two;
     println!("{} times {} is {}", number_one, number_two, result);
 }
 
 fn main() {
-    multiply(8, 9); // We can give the numbers directly
-    let some_number = 10; // Or we can declare two variables
+    multiply(8, 9); // 숫자를 직접 줄 수도 있습니다
+    let some_number = 10; // 아니면 변수를 둘 선언해서
     let some_other_number = 2;
-    multiply(some_number, some_other_number); // and put them in the function
+    multiply(some_number, some_other_number); // 함수에 넣을 수도 있습니다
 }
 ```
 
-We can also return an `i32`. Just take out the semicolon at the end:
+`i32`를 반환하도록 만들 수도 있습니다. 마지막 세미콜론을 빼면 됩니다.
 
 ```rust
 fn multiply(number_one: i32, number_two: i32) -> i32 {
     let result = number_one * number_two;
     println!("{} times {} is {}", number_one, number_two, result);
-    result // this is the i32 that we return
+    result // 우리가 반환할 i32입니다
 }
 
 fn main() {
-    let multiply_result = multiply(8, 9); // We used multiply() to print and to give the result to multiply_result
+    let multiply_result = multiply(8, 9); // multiply()를 이용해 출력도 하고 결과를 multiply_result에 받았습니다
 }
 ```
 
-### Declaring variables and code blocks
+### 변수 선언과 코드 블록
 
-Use `let` to declare a variable (declare a variable = tell Rust to make a variable).
+변수를 선언할 때는 `let`을 사용합니다(변수를 선언한다 = Rust에게 변수를 만들어 달라고 말한다).
 
 ```rust
 fn main() {
@@ -625,57 +628,57 @@ fn main() {
 }
 ```
 
-Variables start and end inside a code block `{}`. In this example, `my_number` ends before we call `println!`, because it is inside its own code block.
+변수는 코드 블록 `{}` 안에서 시작하고 끝납니다. 아래 예제에서는 `my_number`가 자기만의 코드 블록 안에 있어서 `println!`을 호출하기 전에 끝납니다.
 
 ```rust
 fn main() {
     {
-        let my_number = 8; // my_number starts here
-                           // my_number ends here!
+        let my_number = 8; // my_number는 여기서 시작하고
+                           // 여기서 끝납니다!
     }
 
-    println!("Hello, number {}", my_number); // ⚠️ there is no my_number and
-                                             // println!() can't find it
+    println!("Hello, number {}", my_number); // ⚠️ my_number가 없어서
+                                             // println!()이 찾을 수 없습니다
 }
 ```
 
-You can use a code block to return a value:
+코드 블록으로 값을 반환할 수도 있습니다.
 
 ```rust
 fn main() {
     let my_number = {
         let second_number = 8;
-        second_number + 9 // No semicolon, so the code block returns 8 + 9.
-                          // It works just like a function
+        second_number + 9 // 세미콜론이 없으므로 코드 블록이 8 + 9를 반환합니다.
+                          // 함수와 똑같이 동작합니다
     };
 
     println!("My number is: {}", my_number);
 }
 ```
 
-If you add a semicolon inside the block, it will return `()` (nothing):
+블록 안에 세미콜론을 붙이면 `()`(아무 것도 없음)을 반환합니다.
 
 ```rust
 fn main() {
     let my_number = {
-        let second_number = 8; // declare second_number,
-        second_number + 9; // add 9 to second_number
-                           // but we didn't return it!
-                           // second_number dies now
+        let second_number = 8; // second_number를 선언하고,
+        second_number + 9; // second_number에 9를 더했지만
+                           // 반환하지 않았습니다!
+                           // 이제 second_number는 소멸합니다
     };
 
-    println!("My number is: {:?}", my_number); // my_number is ()
+    println!("My number is: {:?}", my_number); // my_number는 ()
 }
 ```
 
-So why did we write `{:?}` and not `{}`? We will talk about that now.
+그렇다면 왜 `{}` 대신 `{:?}`를 썼을까요? 지금 그 이야기를 하겠습니다.
 
-## Display and debug
-**[See this chapter on YouTube](https://youtu.be/jd3pC248c0o)**
+## Display와 debug
+**[이 챕터를 유튜브에서 보기](https://youtu.be/jd3pC248c0o)**
 
-Simple variables in Rust can be printed with `{}` inside `println!`. But some variables can't, and you need to **debug print**. Debug print is printing for the programmer, because it usually shows more information. Debug sometimes doesn't look pretty, because it has extra information to help you.
+Rust의 단순한 변수는 `println!` 안에서 `{}`로 출력할 수 있습니다. 하지만 어떤 변수는 그렇게 할 수 없고 **디버그 출력**을 해야 합니다. 디버그 출력은 프로그래머를 위한 출력으로, 보통 더 많은 정보를 보여 줍니다. 도움을 주기 위해 추가 정보가 붙기 때문에 디버그 출력은 가끔 예쁘지 않을 수 있습니다.
 
-How do you know if you need `{:?}` and not `{}`? The compiler will tell you. For example:
+`{}`가 아니라 `{:?}`가 필요한지 어떻게 알까요? 컴파일러가 알려 줍니다. 예를 들어:
 
 ```rust
 fn main() {
@@ -684,7 +687,7 @@ fn main() {
 }
 ```
 
-When we run this, the compiler says:
+이 코드를 실행하면 컴파일러가 이렇게 말합니다.
 
 ```text
 error[E0277]: `()` doesn't implement `std::fmt::Display`
@@ -699,11 +702,11 @@ error[E0277]: `()` doesn't implement `std::fmt::Display`
   = note: this error originates in a macro (in Nightly builds, run with -Z macro-backtrace for more info)
 ```
 
-This is a lot of information. But the important part is: `you may be able to use {:?} (or {:#?} for pretty-print) instead`. This means that you can try `{:?}`, and also `{:#?}` `{:#?}` is called "pretty printing". It is like `{:?}` but prints with different formatting over more lines.
+정보가 꽤 많습니다. 하지만 중요한 부분은 `you may be able to use {:?} (or {:#?} for pretty-print) instead`입니다. `{:?}`를 써 볼 수 있고, `{:#?}`도 쓸 수 있다는 뜻입니다. `{:#?}`는 "예쁘게 출력"이라고 부르며 `{:?}`와 비슷하지만 여러 줄로 더 보기 좋은 형식을 사용합니다.
 
-So Display means printing with `{}`, and Debug means printing with `{:?}`.
+정리하면 Display는 `{}`로 출력하는 것이고, Debug는 `{:?}`로 출력하는 것입니다.
 
-One more thing: you can also use `print!` without `ln` if you don't want a new line.
+한 가지 더: 줄바꿈을 원하지 않으면 `ln`이 없는 `print!`를 쓸 수도 있습니다.
 
 ```rust
 fn main() {
@@ -712,15 +715,15 @@ fn main() {
 }
 ```
 
-This prints `This will not print a new line so this will be on the same line`.
+이 코드는 `This will not print a new line so this will be on the same line`을 출력합니다.
 
-### Smallest and largest numbers
+### 가장 작은 수와 가장 큰 수
 
-If you want to see the smallest and biggest numbers, you can use MIN and MAX after the name of the type:
+가장 작은 수와 가장 큰 수를 보고 싶다면 타입 이름 뒤에 MIN과 MAX를 사용할 수 있습니다.
 
 ```rust
 fn main() {
-    println!("The smallest i8 is {} and the biggest i8 is {}.", i8::MIN, i8::MAX); // hint: printing std::i8::MIN means "print MIN inside of the i8 section in the standard library"
+    println!("The smallest i8 is {} and the biggest i8 is {}.", i8::MIN, i8::MAX); // 힌트: std::i8::MIN을 출력한다는 건 "표준 라이브러리의 i8 섹션 안의 MIN을 출력한다"는 뜻입니다
     println!("The smallest u8 is {} and the biggest u8 is {}.", u8::MIN, u8::MAX);
     println!("The smallest i16 is {} and the biggest i16 is {}.", i16::MIN, i16::MAX);
     println!("The smallest u16 is {} and the biggest u16 is {}.", u16::MIN, u16::MAX);
@@ -734,7 +737,7 @@ fn main() {
 }
 ```
 
-This will print:
+출력 결과는 다음과 같습니다.
 
 ```text
 The smallest i8 is -128 and the biggest i8 is 127.
@@ -749,12 +752,12 @@ The smallest i128 is -170141183460469231731687303715884105728 and the biggest i1
 The smallest u128 is 0 and the biggest u128 is 340282366920938463463374607431768211455.
 ```
 
-## Mutability (changing)
-**[See this chapter on YouTube](https://youtu.be/Nyyd6qn7dZY)**
+## 가변성(값 바꾸기)
+**[이 챕터를 유튜브에서 보기](https://youtu.be/Nyyd6qn7dZY)**
 
-When you declare a variable with `let`, it is immutable (cannot be changed).
+`let`으로 변수를 선언하면 불변(바꿀 수 없음)입니다.
 
-This will not work:
+다음 코드는 동작하지 않습니다.
 
 ```rust
 fn main() {
@@ -763,9 +766,9 @@ fn main() {
 }
 ```
 
-The compiler says: `error[E0384]: cannot assign twice to immutable variable my_number`. This is because variables are immutable if you only write `let`.
+컴파일러는 `error[E0384]: cannot assign twice to immutable variable my_number`라고 말합니다. `let`만 쓰면 변수가 불변이기 때문입니다.
 
-But sometimes you want to change your variable. To make a variable that you can change, add `mut` after `let`:
+하지만 변수를 바꾸고 싶을 때가 있습니다. 바꿀 수 있는 변수를 만들려면 `let` 뒤에 `mut`를 붙입니다.
 
 ```rust
 fn main() {
@@ -774,56 +777,56 @@ fn main() {
 }
 ```
 
-Now there is no problem.
+이제 문제 없습니다.
 
-However, you cannot change the type: even `mut` doesn't let you do that. This will not work:
+하지만 타입은 바꿀 수 없습니다. `mut`여도 마찬가지입니다. 아래 코드는 동작하지 않습니다.
 
 ```rust
 fn main() {
-    let mut my_variable = 8; // it is now an i32. That can't be changed
+    let mut my_variable = 8; // 지금 이 변수는 i32입니다. 타입은 바꿀 수 없습니다
     my_variable = "Hello, world!"; // ⚠️
 }
 ```
 
-You will see the same "expected" message from the compiler: `expected integer, found &str`. `&str` is a string type that we will learn soon.
+컴파일러가 같은 "expected" 메시지를 보여 줄 것입니다: `expected integer, found &str`. `&str`은 곧 배울 문자열 타입입니다.
 
-### Shadowing
-**[See this chapter on YouTube](https://youtu.be/InULHyRGw7g)**
+### 섀도잉
+**[이 챕터를 유튜브에서 보기](https://youtu.be/InULHyRGw7g)**
 
-Shadowing means using `let` to declare a new variable with the same name as another variable. It looks like mutability, but it is completely different. Shadowing looks like this:
+섀도잉은 다른 변수와 같은 이름으로 `let`을 사용해 새 변수를 선언하는 것을 말합니다. 겉보기에는 가변성과 비슷하지만 완전히 다릅니다. 섀도잉은 이렇게 합니다.
 
 ```rust
 fn main() {
-    let my_number = 8; // This is an i32
-    println!("{}", my_number); // prints 8
-    let my_number = 9.2; // This is an f64 with the same name. But it's not the first my_number - it is completely different!
-    println!("{}", my_number) // Prints 9.2
+    let my_number = 8; // i32입니다
+    println!("{}", my_number); // 8을 출력합니다
+    let my_number = 9.2; // 같은 이름의 f64입니다. 하지만 첫 번째 my_number가 아니라 완전히 다른 변수입니다!
+    println!("{}", my_number) // 9.2를 출력합니다
 }
 ```
 
-Here we say that we "shadowed" `my_number` with a new "let binding".
+이렇게 새 "let 바인딩"으로 `my_number`를 "섀도잉했다"고 말합니다.
 
-So is the first `my_number` destroyed? No, but when we call `my_number` we now get `my_number` the `f64`. And because they are in the same scope block (the same `{}`), we can't see the first `my_number` anymore.
+그렇다면 첫 번째 `my_number`는 사라질까요? 그렇지 않습니다. 다만 이제 `my_number`를 부르면 `f64`인 `my_number`가 나옵니다. 두 변수 모두 같은 스코프 블록(같은 `{}`) 안에 있기 때문에 첫 번째 `my_number`는 더 이상 보이지 않습니다.
 
-But if they are in different blocks, we can see both. For example:
+하지만 서로 다른 블록에 있으면 둘 다 볼 수 있습니다. 예를 들어:
 
 ```rust
 fn main() {
-    let my_number = 8; // This is an i32
-    println!("{}", my_number); // prints 8
+    let my_number = 8; // i32입니다
+    println!("{}", my_number); // 8을 출력합니다
     {
-        let my_number = 9.2; // This is an f64. It is not my_number - it is completely different!
-        println!("{}", my_number) // Prints 9.2
-                                  // But the shadowed my_number only lives until here.
-                                  // The first my_number is still alive!
+        let my_number = 9.2; // f64입니다. 첫 번째 my_number가 아니라 완전히 다른 변수입니다!
+        println!("{}", my_number) // 9.2를 출력합니다
+                                  // 하지만 섀도잉된 my_number는 여기까지만 삽니다.
+                                  // 첫 번째 my_number는 아직 살아 있습니다!
     }
-    println!("{}", my_number); // prints 8
+    println!("{}", my_number); // 8을 출력합니다
 }
 ```
 
-So when you shadow a variable, you don't destroy it. You **block** it.
+섀도잉을 하면 변수를 파괴하는 것이 아니라 **가립니다**.
 
-So what is the advantage of shadowing? Shadowing is good when you need to change a variable a lot. Imagine that you want to do a lot of simple math with a variable:
+섀도잉의 장점은 무엇일까요? 변수를 여러 번 바꿔야 할 때 섀도잉이 좋습니다. 변수를 가지고 간단한 계산을 많이 해야 한다고 해 봅시다.
 
 ```rust
 fn times_two(number: i32) -> i32 {
@@ -833,16 +836,16 @@ fn times_two(number: i32) -> i32 {
 fn main() {
     let final_number = {
         let y = 10;
-        let x = 9; // x starts at 9
-        let x = times_two(x); // shadow with new x: 18
-        let x = x + y; // shadow with new x: 28
-        x // return x: final_number is now the value of x
+        let x = 9; // x는 9로 시작합니다
+        let x = times_two(x); // 새 x로 섀도잉: 18
+        let x = x + y; // 새 x로 섀도잉: 28
+        x // x를 반환합니다: final_number는 이제 x의 값입니다
     };
     println!("The number is now: {}", final_number)
 }
 ```
 
-Without shadowing you would have to think of different names, even though you don't care about x:
+섀도잉이 없다면 x에 관심이 없어도 다른 이름을 계속 생각해야 합니다.
 
 ```rust
 fn times_two(number: i32) -> i32 {
@@ -850,31 +853,31 @@ fn times_two(number: i32) -> i32 {
 }
 
 fn main() {
-    // Pretending we are using Rust without shadowing
+    // 섀도잉이 없는 Rust라고 가정해 봅시다
     let final_number = {
         let y = 10;
-        let x = 9; // x starts at 9
-        let x_twice = times_two(x); // second name for x
-        let x_twice_and_y = x_twice + y; // third name for x!
-        x_twice_and_y // too bad we didn't have shadowing - we could have just used x
+        let x = 9; // x는 9로 시작합니다
+        let x_twice = times_two(x); // x의 두 번째 이름
+        let x_twice_and_y = x_twice + y; // x의 세 번째 이름!
+        x_twice_and_y // 섀도잉이 없어서 안타깝네요 - 그냥 x를 계속 쓸 수 있었을 텐데
     };
     println!("The number is now: {}", final_number)
 }
 ```
 
-In general, you see shadowing in Rust in this case. It happens where you want to quickly take variable, do something to it, and do something else again. And you usually use it for quick variables that you don't care too much about.
+보통 Rust에서 섀도잉은 이런 경우에 사용합니다. 변수를 하나 빨리 잡아서 뭔가 하고, 또 다른 일을 하고 싶을 때입니다. 주로 크게 신경 쓰지 않는 임시 변수에 자주 씁니다.
 
-## The stack, the heap, and pointers
+## 스택, 힙, 그리고 포인터
 
-The stack, the heap, and pointers are very important in Rust.
+스택, 힙, 포인터는 Rust에서 매우 중요합니다.
 
-The stack and the heap are two places to keep memory in computers. The important differences are:
+스택과 힙은 컴퓨터에서 메모리를 보관하는 두 곳입니다. 중요한 차이는 다음과 같습니다.
 
-- The stack is very fast, but the heap is not so fast. It's not super slow either, but the stack is always faster. But you can't just use the stack all the time, because:
-- Rust needs to know the size of a variable at compile time. So simple variables like `i32` go on the stack, because we know their exact size. You always know that an `i32` is going to be 4 bytes, because 32 bits = 4 bytes. So `i32` can always go on the stack.
-- But some types don't know the size at compile time. But the stack needs to know the exact size. So what do you do? First you put the data in the heap, because the heap can have any size of data. And then to find it a pointer goes on the stack. This is fine because we always know the size of a pointer. So then the computer first goes to the stack, reads the pointer, and follows it to the heap where the data is.
+- 스택은 매우 빠르지만 힙은 그렇게 빠르지 않습니다. 그렇다고 아주 느린 건 아니지만 스택이 항상 더 빠릅니다. 그렇다고 스택만 쓸 수는 없습니다. 그 이유는:
+- Rust는 컴파일 시점에 변수의 크기를 알아야 합니다. 그래서 `i32` 같은 단순한 변수는 정확한 크기를 알기 때문에 스택에 둡니다. `i32`가 항상 4바이트라는 사실을 알고 있으니 스택에 둘 수 있습니다.
+- 하지만 어떤 타입은 컴파일 시점에 크기를 알 수 없습니다. 스택은 정확한 크기를 알아야 하니 어떻게 해야 할까요? 먼저 데이터를 힙에 둡니다. 힙은 어떤 크기의 데이터도 담을 수 있습니다. 그리고 그 데이터를 찾기 위해 포인터를 스택에 둡니다. 포인터의 크기는 항상 알고 있으니 문제가 없습니다. 그래서 컴퓨터는 먼저 스택에서 포인터를 읽고, 포인터를 따라 힙에 있는 데이터로 갑니다.
 
-Pointers sound complicated, but they are easy. Pointers are like a table of contents in a book. Imagine this book:
+포인터는 복잡해 보이지만 쉽습니다. 포인터는 책의 목차와 비슷합니다. 이런 책을 생각해 봅시다.
 
 ```text
 MY BOOK
@@ -889,56 +892,56 @@ Chapter 4: My family            30
 Chapter 5: Future plans         43
 ```
 
-So this is like five pointers. You can read them and find the information they are talking about. Where is the chapter "My life"? It's on page 1 (it *points* to page 1). Where is the chapter "My job?" It's on page 23.
+이건 포인터 다섯 개와 같습니다. 목차를 읽고 원하는 정보를 찾을 수 있습니다. "My life" 장은 어디 있을까요? 1쪽입니다(1쪽을 *가리킵니다*). "My job" 장은 어디 있을까요? 23쪽입니다.
 
-The pointer you usually see in Rust is called a **reference**. This is the important part to know: a reference points to the memory of another value. A reference means you *borrow* the value, but you don't own it. It's the same as our book: the table of contents doesn't own the information. It's the chapters that own the information. In Rust, references have a `&` in front of them. So:
+Rust에서 보통 보는 포인터는 **레퍼런스**라고 합니다. 여기서 중요한 점: 레퍼런스는 다른 값의 메모리를 가리킵니다. 레퍼런스는 값을 *빌려 쓰는* 것이지 소유하는 게 아닙니다. 책의 예와 같습니다. 목차는 정보를 소유하지 않습니다. 정보는 각 장이 소유합니다. Rust에서 레퍼런스 앞에는 `&`가 붙습니다. 그래서:
 
-- `let my_variable = 8` makes a regular variable, but
-- `let my_reference = &my_variable` makes a reference.
+- `let my_variable = 8`은 일반 변수를 만들고,
+- `let my_reference = &my_variable`은 레퍼런스를 만듭니다.
 
-You read `my_reference = &my_variable` like this: "my_reference is a reference to my_variable". Or: "my_reference refers to my_variable".
+`my_reference = &my_variable`는 이렇게 읽습니다: "my_reference는 my_variable을 가리키는 레퍼런스다". 또는 "my_reference가 my_variable을 참조한다".
 
-This means that `my_reference` is only looking at the data of `my_variable`. `my_variable` still owns its data.
+이는 `my_reference`가 `my_variable`의 데이터를 보고만 있다는 뜻입니다. 데이터는 여전히 `my_variable`이 소유합니다.
 
-You can also have a reference to a reference, or any number of references.
+레퍼런스의 레퍼런스도 만들 수 있고, 원하는 만큼 여러 겹으로 만들 수 있습니다.
 
 ```rust
 fn main() {
-    let my_number = 15; // This is an i32
-    let single_reference = &my_number; //  This is a &i32
-    let double_reference = &single_reference; // This is a &&i32
-    let five_references = &&&&&my_number; // This is a &&&&&i32
+    let my_number = 15; // i32입니다
+    let single_reference = &my_number; //  &i32입니다
+    let double_reference = &single_reference; // &&i32입니다
+    let five_references = &&&&&my_number; // &&&&&i32입니다
 }
 ```
 
-These are all different types, just in the same way that "a friend of a friend" is different from "a friend".
+이들은 모두 다른 타입입니다. "친구의 친구"가 "친구"와 다른 것과 같습니다.
 
-## More about printing
+## 출력 더 알아보기
 
-In Rust you can print things in almost any way you want. Here are some more things to know about printing.
+Rust에서는 원하는 거의 모든 방식으로 출력할 수 있습니다. 출력에 대해 알아둘 점을 더 보겠습니다.
 
-Adding `\n` will make a new line, and `\t` will make a tab:
+`\n`을 넣으면 새 줄로 넘어가고, `\t`는 탭을 만듭니다.
 
 ```rust
 fn main() {
-    // Note: this is print!, not println!
+    // 참고: println!이 아니라 print!입니다
     print!("\t Start with a tab\nand move to a new line");
 }
 ```
 
-This prints:
+출력 결과는 다음과 같습니다.
 
 ```text
          Start with a tab
 and move to a new line
 ```
 
-Inside `""` you can write over many lines with no problem, but be careful with the spacing:
+`""` 안에서는 여러 줄에 걸쳐 써도 문제가 없습니다. 다만 들여쓰기에 주의하세요.
 
 ```rust
 fn main() {
-    // Note: After the first line you have to start on the far left.
-    // If you write directly under println!, it will add the spaces
+    // 참고: 첫 줄 이후에는 맨 왼쪽에서 시작해야 합니다.
+    // println! 바로 아래에 쓰면 공백이 추가됩니다
     println!("Inside quotes
 you can write over
 many lines
@@ -950,7 +953,7 @@ and it will print just fine.");
 }
 ```
 
-This prints:
+출력 결과는 다음과 같습니다.
 
 ```text
 Inside quotes
@@ -962,7 +965,7 @@ If you forget to write
     will be added when you print.
 ```
 
-If you want to print characters like `\n` (called "escape characters"), you can add an extra `\`:
+`\n` 같은 문자(이를 "이스케이프 문자"라고 부릅니다)를 그대로 출력하고 싶으면 `\`를 하나 더 붙이면 됩니다.
 
 ```rust
 fn main() {
@@ -970,46 +973,46 @@ fn main() {
 }
 ```
 
-This prints:
+출력 결과는 다음과 같습니다.
 
 ```text
 Here are two escape characters: \n and \t
 ```
 
-Sometimes you have too many `"` and escape characters, and want Rust to ignore everything. To do this, you can add `r#` to the beginning and `#` to the end.
+따옴표와 이스케이프 문자가 너무 많아서 Rust가 그냥 무시했으면 할 때가 있습니다. 그럴 때는 앞에 `r#`을 붙이고 끝에 `#`를 붙이면 됩니다.
 
 ```rust
 fn main() {
-    println!("He said, \"You can find the file at c:\\files\\my_documents\\file.txt.\" Then I found the file."); // We used \ five times here
+    println!("He said, \"You can find the file at c:\\files\\my_documents\\file.txt.\" Then I found the file."); // 여기서는 \를 다섯 번 썼습니다
     println!(r#"He said, "You can find the file at c:\files\my_documents\file.txt." Then I found the file."#)
 }
 ```
 
-This prints the same thing, but using `r#` makes it easier for humans to read.
+같은 내용을 출력하지만 `r#`을 쓰면 사람이 읽기 편합니다.
 
 ```text
 He said, "You can find the file at c:\files\my_documents\file.txt." Then I found the file.
 He said, "You can find the file at c:\files\my_documents\file.txt." Then I found the file.
 ```
 
-If you need to print with a `#` inside, then you can start with `r##` and end with `##`. And if you need more than one, you can add one more # on each side.
+안에 `#`를 넣고 싶다면 `r##`로 시작하고 `##`로 끝내면 됩니다. 더 필요하면 양쪽에 #을 하나씩 더 붙이면 됩니다.
 
-Here are four examples:
+예시 네 가지를 보겠습니다.
 
 ```rust
 fn main() {
 
-    let my_string = "'Ice to see you,' he said."; // single quotes
-    let quote_string = r#""Ice to see you," he said."#; // double quotes
-    let hashtag_string = r##"The hashtag #IceToSeeYou had become very popular."##; // Has one # so we need at least ##
-    let many_hashtags = r####""You don't have to type ### to use a hashtag. You can just use #.""####; // Has three ### so we need at least ####
+    let my_string = "'Ice to see you,' he said."; // 작은따옴표
+    let quote_string = r#""Ice to see you," he said."#; // 큰따옴표
+    let hashtag_string = r##"The hashtag #IceToSeeYou had become very popular."##; // #가 하나 있으니 최소한 ##가 필요합니다
+    let many_hashtags = r####""You don't have to type ### to use a hashtag. You can just use #.""####; // ###가 세 개 있으니 최소한 ####가 필요합니다
 
     println!("{}\n{}\n{}\n{}\n", my_string, quote_string, hashtag_string, many_hashtags);
 
 }
 ```
 
-This will print:
+출력 결과는 다음과 같습니다.
 
 ```text
 'Ice to see you,' he said.
@@ -1018,18 +1021,18 @@ The hashtag #IceToSeeYou had become very popular.
 "You don't have to type ### to use a hashtag. You can just use #."
 ```
 
-`r#` has another use: with it you can use a keyword (words like `let`, `fn`, etc.) as a variable name.
+`r#`는 다른 용도도 있습니다. 이것을 쓰면 `let`, `fn` 같은 키워드를 변수 이름으로 사용할 수 있습니다.
 
 ```rust
 fn main() {
-    let r#let = 6; // The variable's name is let
-    let mut r#mut = 10; // This variable's name is mut
+    let r#let = 6; // 변수 이름이 let입니다
+    let mut r#mut = 10; // 이 변수 이름은 mut입니다
 }
 ```
 
-`r#` has this function because older versions of Rust had fewer keywords than Rust now. So with `r#` you can avoid mistakes with variable names that were not keywords before.
+`r#`에 이런 기능이 있는 이유는 예전 Rust 버전에는 지금보다 키워드가 적었기 때문입니다. 그래서 예전에는 키워드가 아니던 이름을 변수에 쓸 때 실수를 피할 수 있습니다.
 
-Or maybe for some reason you *really* need a function to have a name like `return`. Then you can write this:
+혹시 어떤 이유로 `return` 같은 이름을 함수에 꼭 써야 한다면 이렇게 쓸 수 있습니다.
 
 ```rust
 fn r#return() -> u8 {
@@ -1043,24 +1046,24 @@ fn main() {
 }
 ```
 
-This prints:
+출력은 다음과 같습니다.
 
 ```text
 Here is your number.
 8
 ```
 
-So you probably won't need it, but if you really need to use a keyword for a variable then you can use `r#`.
+아마 필요할 일은 없겠지만, 정말 키워드를 변수 이름으로 써야 한다면 `r#`을 사용할 수 있습니다.
 
 
 
-If you want to print the bytes of a `&str` or a `char`, you can just write `b` before the string. This works for all ASCII characters. These are all the ASCII characters:
+`&str`나 `char`의 바이트를 출력하려면 문자열 앞에 `b`를 붙이면 됩니다. ASCII 문자라면 모두 동작합니다. ASCII 문자는 다음과 같습니다.
 
 ```text
 ☺☻♥♦♣♠♫☼►◄↕‼¶§▬↨↑↓→∟↔▲▼123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
 ```
 
-So when you print this:
+따라서 이렇게 출력하면:
 
 ```rust
 fn main() {
@@ -1068,16 +1071,16 @@ fn main() {
 }
 ```
 
-Here is the result:
+결과는 다음과 같습니다.
 
 ```text
 [84, 104, 105, 115, 32, 119, 105, 108, 108, 32, 108, 111, 111, 107, 32, 108, 105, 107, 101, 32, 110, 117, 109, 98, 101, 114, 115]
 ```
 
-For a `char` this is called a *byte*, and for a `&str` it's called a *byte string*.
+`char`에서는 이를 *바이트*라고 하고, `&str`에서는 *바이트 문자열*이라고 부릅니다.
 
 
-You can also put `b` and `r` together if you need to:
+필요하다면 `b`와 `r`을 함께 쓸 수도 있습니다.
 
 ```rust
 fn main() {
@@ -1085,28 +1088,28 @@ fn main() {
 }
 ```
 
-That will print `[73, 32, 108, 105, 107, 101, 32, 116, 111, 32, 119, 114, 105, 116, 101, 32, 34, 35, 34, 46]`.
+이 코드는 `[73, 32, 108, 105, 107, 101, 32, 116, 111, 32, 119, 114, 105, 116, 101, 32, 34, 35, 34, 46]`을 출력합니다.
 
 
 
-There is also a Unicode escape that lets you print any Unicode character inside a string: `\u{}`. A hexadecimal number goes inside the `{}` to print it. Here is a short example of how to get the Unicode number, and how to print it again.
+문자열 안에 어떤 유니코드 문자든 출력할 수 있는 유니코드 이스케이프 `\u{}`도 있습니다. `{}` 안에 16진수를 넣어 출력합니다. 유니코드 번호를 얻고 다시 출력하는 짧은 예시는 다음과 같습니다.
 
 ```rust
 fn main() {
-    println!("{:X}", '행' as u32); // Cast char as u32 to get the hexadecimal value
+    println!("{:X}", '행' as u32); // char를 u32로 캐스팅해 16진수 값을 얻습니다
     println!("{:X}", 'H' as u32);
     println!("{:X}", '居' as u32);
     println!("{:X}", 'い' as u32);
 
-    println!("\u{D589}, \u{48}, \u{5C45}, \u{3044}"); // Try printing them with unicode escape \u
+    println!("\u{D589}, \u{48}, \u{5C45}, \u{3044}"); // 유니코드 이스케이프 \u로 출력해 봅니다
 }
 ```
 
 
 
-We know that `println!` can print with `{}` (for Display) and `{:?}` (for Debug), plus `{:#?}` for pretty printing. But there are many other ways to print.
+`println!`이 `{}`(Display용)와 `{:?}`(Debug용), 그리고 예쁘게 출력하는 `{:#?}`로 출력할 수 있다는 걸 배웠습니다. 하지만 출력 방식은 더 많습니다.
 
-For example, if you have a reference, you can use `{:p}` to print the *pointer address*. Pointer address means the location in your computer's memory.
+예를 들어 레퍼런스가 있다면 `{:p}`로 *포인터 주소*를 출력할 수 있습니다. 포인터 주소란 컴퓨터 메모리에서의 위치를 뜻합니다.
 
 ```rust
 fn main() {
@@ -1116,9 +1119,9 @@ fn main() {
 }
 ```
 
-This prints `0xe2bc0ffcfc` or some other address. It might be different every time, depending on where your computer stores it.
+`0xe2bc0ffcfc` 같은 주소가 출력됩니다. 컴퓨터가 저장하는 위치에 따라 매번 다를 수 있습니다.
 
-Or you can print binary, hexadecimal and octal:
+또는 2진수, 16진수, 8진수로 출력할 수 있습니다.
 
 ```rust
 fn main() {
@@ -1127,9 +1130,9 @@ fn main() {
 }
 ```
 
-This prints `Binary: 1000101011, hexadecimal: 22b, octal: 1053`.
+`Binary: 1000101011, hexadecimal: 22b, octal: 1053`을 출력합니다.
 
-Or you can add numbers to change the order. The first variable will be in index 0, the next in index 1, and so on.
+또는 숫자를 넣어 순서를 바꿀 수 있습니다. 첫 번째 변수는 인덱스 0, 그다음은 1이 됩니다.
 
 ```rust
 fn main() {
@@ -1140,10 +1143,10 @@ fn main() {
 }
 ```
 
-`father_name` is in position 0, `son_name` is in position 1, and `family_name` is in position 2. So it prints `This is Adrian Fahrenheit Țepeș, son of Vlad Țepeș`.
+`father_name`은 0번, `son_name`은 1번, `family_name`은 2번 위치에 있습니다. 그래서 `This is Adrian Fahrenheit Țepeș, son of Vlad Țepeș`를 출력합니다.
 
 
-Maybe you have a very complex string to print with too many variables inside the `{}` curly brackets. Or maybe you need to print a variable more than one time. Then it can help to add names to the `{}`:
+중괄호 `{}` 안에 변수가 너무 많아 복잡한 문자열을 출력해야 할 수도 있습니다. 또는 같은 변수를 여러 번 출력해야 할 수도 있습니다. 그럴 때는 `{}`에 이름을 붙이면 도움이 됩니다.
 
 ```rust
 fn main() {
@@ -1158,7 +1161,7 @@ but {city3} is not in {country}.",
 }
 ```
 
-That will print:
+출력 결과는 다음과 같습니다.
 
 ```text
 Seoul is in Korea and Busan is also in Korea,
@@ -1200,16 +1203,16 @@ Here is an example of many types of formatting.
 ```rust
 fn main() {
     let title = "TODAY'S NEWS";
-    println!("{:-^30}", title); // no variable name, pad with -, put in centre, 30 characters long
+    println!("{:-^30}", title); // 변수 이름 없음, -로 채우고, 가운데 정렬, 길이는 30
     let bar = "|";
-    println!("{: <15}{: >15}", bar, bar); // no variable name, pad with space, 15 characters each, one to the left, one to the right
+    println!("{: <15}{: >15}", bar, bar); // 변수 이름 없음, 공백으로 채우기, 각각 길이 15, 하나는 왼쪽 정렬 하나는 오른쪽 정렬
     let a = "SEOUL";
     let b = "TOKYO";
-    println!("{city1:-<15}{city2:->15}", city1 = a, city2 = b); // variable names city1 and city2, pad with -, one to the left, one to the right
+    println!("{city1:-<15}{city2:->15}", city1 = a, city2 = b); // 변수 이름 city1과 city2, -로 채우기, 하나는 왼쪽 정렬 하나는 오른쪽 정렬
 }
 ```
 
-It prints:
+출력 결과는 다음과 같습니다.
 
 ```text
 ---------TODAY'S NEWS---------
@@ -1217,28 +1220,28 @@ It prints:
 SEOUL--------------------TOKYO
 ```
 
-## Strings
-**[See this chapter on YouTube](https://youtu.be/pSyaGzGg26o)**
+## 문자열
+**[이 챕터를 유튜브에서 보기](https://youtu.be/pSyaGzGg26o)**
 
-Rust has two main types of strings: `String` and `&str`. What is the difference?
+Rust에는 기본적인 문자열 타입이 두 가지 있습니다: `String`과 `&str`입니다. 둘의 차이는 무엇일까요?
 
-- `&str` is a simple string. When you write `let my_variable = "Hello, world!"`, you create a `&str`. A `&str` is very fast.
-- `String` is a more complicated string. It is a bit slower, but it has more functions. A `String` is a pointer, with data on the heap.
+- `&str`은 단순한 문자열입니다. `let my_variable = "Hello, world!"`라고 쓰면 `&str`을 만듭니다. `&str`은 매우 빠릅니다.
+- `String`은 좀 더 복잡한 문자열입니다. 약간 느리지만 기능이 더 많습니다. `String`은 포인터이고 데이터는 힙에 있습니다.
 
-Also note that `&str` has the `&` in front of it because you need a reference to use a `str`. That's because of the reason we saw above: the stack needs to know the size. So we give it a `&` that it knows the size of, and then it is happy. Also, because you use a `&` to interact with a `str`, you don't own it. But a `String` is an *owned* type. We will soon learn why that is important to know.
+또한 `&str` 앞에 `&`가 붙는 이유는 `str`을 사용하려면 레퍼런스가 필요하기 때문입니다. 앞서 본 것처럼 스택은 크기를 알아야 합니다. 크기를 아는 `&`를 주면 스택이 만족합니다. 또한 `&`로 `str`을 다루기 때문에 그것을 소유하지 않습니다. 하지만 `String`은 *소유* 타입입니다. 왜 이것이 중요한지는 곧 배우겠습니다.
 
-Both `&str` and `String` are UTF-8. For example, you can write:
+`&str`과 `String`은 모두 UTF-8입니다. 예를 들어 이렇게 쓸 수 있습니다.
 
 ```rust
 fn main() {
-    let name = "서태지"; // This is a Korean name. No problem, because a &str is UTF-8.
-    let other_name = String::from("Adrian Fahrenheit Țepeș"); // Ț and ș are no problem in UTF-8.
+    let name = "서태지"; // 한국 이름입니다. &str은 UTF-8이라 문제 없습니다.
+    let other_name = String::from("Adrian Fahrenheit Țepeș"); // UTF-8이라 Ț와 ș도 문제 없습니다.
 }
 ```
 
-You can see in `String::from("Adrian Fahrenheit Țepeș")` that it is easy to make a `String` from a `&str`. The two types are very closely linked together, even though they are different.
+`String::from("Adrian Fahrenheit Țepeș")`에서 보듯이 `&str`에서 `String`을 만드는 일은 쉽습니다. 두 타입은 서로 다르지만 밀접하게 연결되어 있습니다.
 
-You can even write emojis, thanks to UTF-8.
+UTF-8 덕분에 이모지도 쓸 수 있습니다.
 
 ```rust
 fn main() {
@@ -1247,24 +1250,24 @@ fn main() {
 }
 ```
 
-On your computer that will print `My name is actually 😂` unless your command line can't print it. Then it will show `My name is actually �`. But Rust has no problem with emojis or any other Unicode.
+명령줄이 표시할 수만 있다면 컴퓨터에서 `My name is actually 😂`가 출력됩니다. 표시하지 못하면 `My name is actually �`가 보일 겁니다. 하지만 Rust는 이모지나 다른 유니코드도 문제없이 처리합니다.
 
-Let's look at the reason for using a `&` for `str`s again to make sure we understand.
+이해를 확실히 하기 위해 `str`에 `&`를 쓰는 이유를 다시 살펴보겠습니다.
 
-- `str` is a dynamically sized type (dynamically sized = the size can be different). For example, the names "서태지" and "Adrian Fahrenheit Țepeș" are not the same size:
+- `str`은 동적으로 크기가 정해지는 타입입니다(크기가 달라질 수 있다는 뜻). 예를 들어 "서태지"와 "Adrian Fahrenheit Țepeș"라는 이름은 크기가 다릅니다.
 
 ```rust
 fn main() {
 
-    println!("A String is always {:?} bytes. It is Sized.", std::mem::size_of::<String>()); // std::mem::size_of::<Type>() gives you the size in bytes of a type
+    println!("A String is always {:?} bytes. It is Sized.", std::mem::size_of::<String>()); // std::mem::size_of::<Type>()는 타입의 바이트 크기를 알려 줍니다
     println!("And an i8 is always {:?} bytes. It is Sized.", std::mem::size_of::<i8>());
     println!("And an f64 is always {:?} bytes. It is Sized.", std::mem::size_of::<f64>());
-    println!("But a &str? It can be anything. '서태지' is {:?} bytes. It is not Sized.", std::mem::size_of_val("서태지")); // std::mem::size_of_val() gives you the size in bytes of a variable
+    println!("But a &str? It can be anything. '서태지' is {:?} bytes. It is not Sized.", std::mem::size_of_val("서태지")); // std::mem::size_of_val()은 변수의 바이트 크기를 알려 줍니다
     println!("And 'Adrian Fahrenheit Țepeș' is {:?} bytes. It is not Sized.", std::mem::size_of_val("Adrian Fahrenheit Țepeș"));
 }
 ```
 
-This prints:
+출력 결과는 다음과 같습니다.
 
 ```text
 A String is always 24 bytes. It is Sized.
@@ -1274,15 +1277,15 @@ But a &str? It can be anything. '서태지' is 9 bytes. It is not Sized.
 And 'Adrian Fahrenheit Țepeș' is 25 bytes. It is not Sized.
 ```
 
-That is why we need a &, because `&` makes a pointer, and Rust knows the size of the pointer. So the pointer goes on the stack. If we wrote `str`, Rust wouldn't know what to do because it doesn't know the size.
+그래서 `&`가 필요합니다. `&`는 포인터를 만들고, Rust는 포인터 크기를 알고 있습니다. 그래서 포인터가 스택에 들어갑니다. 그냥 `str`이라고 쓰면 크기를 몰라서 Rust는 어떻게 해야 할지 모릅니다.
 
 
 
-There are many ways to make a `String`. Here are some:
+`String`을 만드는 방법은 많습니다. 몇 가지를 보겠습니다.
 
-- `String::from("This is the string text");` This is a method for String that takes text and creates a String.
-- `"This is the string text".to_string()`. This is a method for &str that makes it a String.
-- The `format!` macro. This is like `println!` except it creates a String instead of printing. So you can do this:
+- `String::from("This is the string text");` String용 메서드로, 텍스트를 받아 String을 만듭니다.
+- `"This is the string text".to_string()`. &str용 메서드로, 이를 String으로 만듭니다.
+- `format!` 매크로. `println!`과 비슷하지만 출력하지 않고 String을 만듭니다. 그래서 이렇게 쓸 수 있습니다.
 
 ```rust
 fn main() {
@@ -1297,9 +1300,9 @@ fn main() {
 }
 ```
 
-Now we have a String named *together*, but did not print it yet.
+이제 *together*라는 String이 있지만 아직 출력하지는 않았습니다.
 
-One other way to make a String is called `.into()` but it is a bit different because `.into()` isn't just for making a `String`. Some types can easily convert to and from another type using `From` and `.into()`. And if you have `From`, then you also have `.into()`. `From` is clearer because you already know the types: you know that `String::from("Some str")` is a `String` from a `&str`. But with `.into()`, sometimes the compiler doesn't know:
+String을 만드는 또 다른 방법은 `.into()`인데, `.into()`는 `String`만을 위한 것이 아니라는 점이 조금 다릅니다. 어떤 타입들은 `From`과 `.into()`를 사용해 서로 쉽게 변환할 수 있습니다. `From`이 있다면 `.into()`도 있습니다. `From`은 타입을 명확히 알 수 있어서 더 분명합니다. `String::from("Some str")`가 `&str`에서 만든 `String`이라는 걸 알 수 있기 때문입니다. 하지만 `.into()`는 컴파일러가 모를 때가 있습니다.
 
 ```rust
 fn main() {
@@ -1307,7 +1310,7 @@ fn main() {
 }
 ```
 
-Rust doesn't know what type you want, because many types can be made from a `&str`. It says, "I can make a &str into a lot of things. Which one do you want?"
+Rust는 어떤 타입을 원하는지 모릅니다. `&str`로 만들 수 있는 타입이 많기 때문입니다. "나는 &str을 여러 가지로 만들 수 있는데, 무엇을 원하니?"라고 말합니다.
 
 ```text
 error[E0282]: type annotations needed
@@ -1317,7 +1320,7 @@ error[E0282]: type annotations needed
   |         ^^^^^^^^^ consider giving `my_string` a type
 ```
 
-So you can do this:
+그래서 이렇게 쓸 수 있습니다.
 
 ```rust
 fn main() {
@@ -1325,26 +1328,26 @@ fn main() {
 }
 ```
 
-And now you get a String.
+이제 String을 얻습니다.
 
-## const and static
-**[See this chapter on YouTube](https://youtu.be/Ky3HqkWUcI0)**
+## const와 static
+**[이 챕터를 유튜브에서 보기](https://youtu.be/Ky3HqkWUcI0)**
 
-There are two other ways to declare values, not just with `let`. These are `const` and `static`. Also, Rust won't use type inference: you need to write the type for them. These are for values that don't change (`const` means constant). The difference is that:
+값을 선언하는 방법은 `let`만 있는 것이 아닙니다. `const`와 `static`이 있습니다. 이들은 타입 추론을 쓰지 않으므로 타입을 직접 적어야 합니다. 변하지 않는 값(`const`는 constant를 뜻합니다)을 위해 사용합니다. 차이는 다음과 같습니다.
 
-- `const` is for values that don't change, the name is replaced with the value when it's used,
-- `static` is similar to `const`, but has a fixed memory location and can act as a global variable.
+- `const`는 변하지 않는 값에 사용하며, 사용할 때 이름이 값으로 대체됩니다.
+- `static`은 `const`와 비슷하지만 메모리 위치가 고정되어 있고 전역 변수처럼 사용할 수 있습니다.
 
-So they are almost the same. Rust programmers almost always use `const`.
+둘은 거의 같습니다. Rust 프로그래머는 거의 항상 `const`를 사용합니다.
 
-You write them with ALL CAPITAL LETTERS, and usually outside of `main` so that they can live for the whole program.
+모두 대문자로 쓰고, 보통 프로그램 전체에서 살 수 있도록 `main` 밖에 적습니다.
 
-Two examples are: `const NUMBER_OF_MONTHS: u32 = 12;` and `static SEASONS: [&str; 4] = ["Spring", "Summer", "Fall", "Winter"];`
+예시는 `const NUMBER_OF_MONTHS: u32 = 12;`, `static SEASONS: [&str; 4] = ["Spring", "Summer", "Fall", "Winter"];` 입니다.
 
-## More on references
-**[See this chapter on YouTube](https://youtu.be/R13sQ8SNoEQ)**
+## 레퍼런스 더 알아보기
+**[이 챕터를 유튜브에서 보기](https://youtu.be/R13sQ8SNoEQ)**
 
-References are very important in Rust. Rust uses references to make sure that all memory access is safe. We know that we use `&` to create a reference:
+레퍼런스는 Rust에서 매우 중요합니다. Rust는 레퍼런스로 모든 메모리 접근이 안전하도록 합니다. 레퍼런스를 만들 때 `&`를 쓴다는 것을 알고 있습니다.
 
 ```rust
 fn main() {
@@ -1356,11 +1359,11 @@ fn main() {
 }
 ```
 
-This prints `Austria`.
+이 코드는 `Austria`를 출력합니다.
 
-In the code, `country` is a `String`. We then created two references to `country`. They have the type `&String`, which you say is a "reference to a String". We could create three references or one hundred references to `country` and it would be no problem.
+이 코드에서 `country`는 `String`입니다. `country`에 대한 레퍼런스를 두 개 만들었습니다. 이들은 `&String` 타입이며 "String에 대한 레퍼런스"라고 말합니다. `country`에 대해 세 개든 백 개든 레퍼런스를 만들어도 문제 없습니다.
 
-But this is a problem:
+하지만 이런 경우는 문제가 됩니다.
 
 ```rust
 fn return_str() -> &str {
@@ -1374,31 +1377,31 @@ fn main() {
 }
 ```
 
-The function `return_str()` creates a String, then it creates a reference to the String. Then it tries to return the reference. But the String `country` only lives inside the function, and then it dies. Once a variable is gone, the computer will clean up the memory and use it for something else. So after the function is over, `country_ref` is referring to memory that is already gone, and that's not okay. Rust prevents us from making a mistake with memory here.
+`return_str()` 함수는 String을 만든 뒤 그에 대한 레퍼런스를 만듭니다. 그리고 레퍼런스를 반환하려고 합니다. 하지만 String `country`는 함수 안에서만 살고 그 뒤에는 사라집니다. 변수가 사라지면 컴퓨터가 메모리를 정리하고 다른 곳에 씁니다. 그래서 함수가 끝난 뒤에는 `country_ref`가 이미 사라진 메모리를 가리키게 되는데, 이는 안전하지 않습니다. Rust는 이런 메모리 실수를 막습니다.
 
-This is the important part about the "owned" type that we talked about above. Because you own a `String`, you can pass it around. But a `&String` will die if its `String` dies, so you don't pass around "ownership" with it.
+위에서 이야기한 "소유" 타입이 중요한 이유가 여기 있습니다. `String`을 소유하고 있으니 자유롭게 넘길 수 있습니다. 하지만 `String`이 사라지면 `&String`도 사라지므로, 레퍼런스로는 "소유권"을 넘길 수 없습니다.
 
-## Mutable references
-**[See this chapter on YouTube](https://youtu.be/G48z6Rv76vc)**
+## 가변 레퍼런스
+**[이 챕터를 유튜브에서 보기](https://youtu.be/G48z6Rv76vc)**
 
-If you want to use a reference to change data, you can use a mutable reference. For a mutable reference, you write `&mut` instead of `&`.
+레퍼런스로 데이터를 바꾸고 싶다면 가변 레퍼런스를 사용하면 됩니다. 가변 레퍼런스는 `&` 대신 `&mut`을 씁니다.
 
 ```rust
 fn main() {
-    let mut my_number = 8; // don't forget to write mut here!
+    let mut my_number = 8; // 여기 mut를 쓰는 것을 잊지 마세요!
     let num_ref = &mut my_number;
 }
 ```
 
-So what are the two types? `my_number` is an `i32`, and `num_ref` is `&mut i32` (we say a "mutable reference to an `i32`").
+그렇다면 두 타입은 무엇일까요? `my_number`는 `i32`, `num_ref`는 `&mut i32`입니다(`i32`에 대한 가변 레퍼런스라고 말합니다).
 
-So let's use it to add 10 to my_number. But you can't write `num_ref += 10`, because `num_ref` is not the `i32` value, it is a `&i32`. The value is actually inside the `i32`. To reach the place where the value is, we use `*`. `*` means "I don't want the reference, I want the value behind the reference". In other words, one `*` is the opposite of `&`. Also, one `*` erases one `&`.
+이걸 써서 my_number에 10을 더해 봅시다. 하지만 `num_ref += 10`이라고 쓸 수는 없습니다. `num_ref`는 `i32` 값이 아니라 `&i32`이기 때문입니다. 값은 실제로 `i32` 안에 있습니다. 값이 있는 곳에 닿으려면 `*`를 씁니다. `*`는 "레퍼런스가 아니라 레퍼런스 뒤의 값을 원한다"는 뜻입니다. 즉, 하나의 `*`는 `&`의 반대입니다. 또한 `*` 하나가 `&` 하나를 지웁니다.
 
 ```rust
 fn main() {
     let mut my_number = 8;
     let num_ref = &mut my_number;
-    *num_ref += 10; // Use * to change the i32 value.
+    *num_ref += 10; // *를 사용해 i32 값을 바꿉니다.
     println!("{}", my_number);
 
     let second_number = 800;
@@ -1407,38 +1410,38 @@ fn main() {
 }
 ```
 
-This prints:
+출력 결과는 다음과 같습니다.
 
 ```text
 18
 Second_number = triple_reference? true
 ```
 
-Because using `&` is called "referencing", using `*` is called "**de**referencing".
+`&`를 쓰는 것을 "레퍼런싱"이라고 하니, `*`를 쓰는 것은 "디레퍼런싱"이라고 부릅니다.
 
-Rust has two rules for mutable and immutable references. They are very important, but also easy to remember because they make sense.
+Rust에는 가변 레퍼런스와 불변 레퍼런스에 대한 두 가지 규칙이 있습니다. 아주 중요하지만, 논리적이라 기억하기 쉽습니다.
 
-- **Rule 1**: If you have only immutable references, you can have as many as you want. 1 is fine, 3 is fine, 1000 is fine. No problem.
-- **Rule 2**: If you have a mutable reference, you can only have one. Also, you can't have an immutable reference **and** a mutable reference together.
+- **규칙 1**: 불변 레퍼런스만 있다면 원하는 만큼 가질 수 있습니다. 1개도, 3개도, 1000개도 괜찮습니다.
+- **규칙 2**: 가변 레퍼런스가 있다면 오직 하나만 가질 수 있습니다. 또한 불변 레퍼런스와 가변 레퍼런스를 동시에 가질 수 없습니다.
 
-This is because mutable references can change the data. You could get problems if you change the data when other references are reading it.
+가변 레퍼런스는 데이터를 바꿀 수 있기 때문입니다. 다른 레퍼런스가 데이터를 읽고 있을 때 바꾸면 문제가 생길 수 있습니다.
 
 
-A good way to understand is to think of a Powerpoint presentation.
+이해하기 쉬운 방법은 파워포인트 발표 상황을 떠올리는 것입니다.
 
-Situation one is about **only one mutable reference**.
+상황 1은 **가변 레퍼런스 하나만 있는 경우**입니다.
 
-Situation one: An employee is writing a Powerpoint presentation. He wants his manager to help him. The employee gives his login information to his manager, and asks him to help by making edits. Now the manager has a "mutable reference" to the employee's presentation. The manager can make any changes he wants, and give the computer back later. This is fine, because nobody else is looking at the presentation.
+상황 1: 한 직원이 파워포인트 발표 자료를 작성하고 있습니다. 매니저에게 도와 달라고 합니다. 직원은 로그인 정보를 매니저에게 주고 수정해 달라고 부탁합니다. 이제 매니저는 직원 발표 자료에 대한 "가변 레퍼런스"를 가지게 됩니다. 매니저는 원하는 대로 바꾸고 나중에 컴퓨터를 돌려줄 수 있습니다. 다른 사람이 발표 자료를 보고 있지 않으니 괜찮습니다.
 
-Situation two is about **only immutable references**.
+상황 2는 **불변 레퍼런스만 있는 경우**입니다.
 
-Situation two: The employee is giving the presentation to 100 people. All 100 people can now see the employee's data. They all have an "immutable reference" to the employee's presentation. This is fine, because they can see it but nobody can change the data.
+상황 2: 직원이 100명에게 발표를 하고 있습니다. 100명 모두 직원 자료를 볼 수 있습니다. 모두가 직원 발표 자료에 대한 "불변 레퍼런스"를 가진 셈입니다. 보는 것뿐이고 누구도 데이터를 바꾸지 않으니 괜찮습니다.
 
-Situation three is **the problem situation**.
+상황 3은 **문제가 되는 경우**입니다.
 
-Situation three: The Employee gives his manager his login information. His manager now has a "mutable reference". Then the employee went to give the presentation to 100 people, but the manager can still login. This is not fine, because the manager can log in and do anything. Maybe his manager will log into the computer and start typing an email to his mother! Now the 100 people have to watch the manager write an email to his mother instead of the presentation. That's not what they expected to see.
+상황 3: 직원이 매니저에게 로그인 정보를 줬습니다. 매니저는 "가변 레퍼런스"를 갖게 되었습니다. 그런데 직원이 100명에게 발표를 하러 갔는데, 매니저는 여전히 로그인할 수 있습니다. 이것은 좋지 않습니다. 매니저가 로그인해서 아무거나 할 수 있기 때문입니다. 매니저가 컴퓨터에 로그인해 어머니께 이메일을 쓰기 시작할지도 모릅니다! 이제 100명은 발표 대신 매니저가 어머니께 이메일을 쓰는 모습을 보게 됩니다. 이건 예상한 모습이 아닙니다.
 
-Here is an example of a mutable borrow with an immutable borrow:
+가변 대여와 불변 대여가 함께 있는 예제입니다.
 
 ```rust
 fn main() {
@@ -1450,7 +1453,7 @@ fn main() {
 }
 ```
 
-The compiler prints a helpful message to show us the problem.
+컴파일러가 문제를 알려 주는 유용한 메시지를 출력합니다.
 
 ```text
 error[E0502]: cannot borrow `number` as mutable because it is also borrowed as immutable
@@ -1477,13 +1480,13 @@ fn main() {
 }
 ```
 
-It prints `20` with no problem. It works because the compiler is smart enough to understand our code. It knows that we used `number_change` to change `number`, but didn't use it again. So here there is no problem. We are not using immutable and mutable references together.
+`20`을 문제없이 출력합니다. 컴파일러가 코드를 이해할 만큼 똑똑하기 때문입니다. `number_change`를 사용해 `number`를 바꿨지만 다시 사용하지 않았다는 것을 알고 있습니다. 그래서 여기서는 문제가 없습니다. 불변 레퍼런스와 가변 레퍼런스를 동시에 사용하지 않았기 때문입니다.
 
-Earlier in Rust this kind of code actually generated an error, but the compiler is smarter now. It can understand not just what we type, but how we use everything.
+예전 Rust에서는 이런 코드도 오류를 냈지만, 이제 컴파일러가 더 똑똑해졌습니다. 우리가 무엇을 썼는지뿐 아니라 어떻게 사용하는지도 이해합니다.
 
-### Shadowing again
+### 다시 섀도잉
 
-Remember when we said that shadowing doesn't **destroy** a value but **blocks** it? Now we can use references to see this.
+섀도잉이 값을 **파괴**하는 것이 아니라 **가린다**고 했던 것을 기억하나요? 이제 레퍼런스로 확인해 봅시다.
 
 ```rust
 fn main() {
@@ -1494,7 +1497,7 @@ fn main() {
 }
 ```
 
-Does this print `Austria, 8` or `8, 8`? It prints `Austria, 8`. First we declare a `String` called `country`. Then we create a reference `country_ref` to this string. Then we shadow country with 8, which is an `i32`. But the first `country` was not destroyed, so `country_ref` still says "Austria", not "8". Here is the same code with some comments to show how it works:
+`Austria, 8`이 출력될까요, `8, 8`이 출력될까요? 정답은 `Austria, 8`입니다. 먼저 `country`라는 `String`을 선언합니다. 그리고 이 문자열에 대한 레퍼런스 `country_ref`를 만듭니다. 그다음 `i32`인 8로 country를 섀도잉합니다. 하지만 첫 번째 `country`는 파괴되지 않았으므로 `country_ref`는 여전히 "Austria"를 가리키지 "8"을 가리키지 않습니다. 동작 방식을 보여 주는 주석을 추가한 동일한 코드입니다.
 
 ```rust
 fn main() {
@@ -1505,12 +1508,12 @@ fn main() {
 }
 ```
 
-## Giving references to functions
-**See this chapter on YouTube: [immutable references](https://youtu.be/mKWXt9YTavc) and [mutable references](https://youtu.be/kJV1wIvAbyk)**
+## 함수에 레퍼런스 넘기기
+**이 챕터를 유튜브에서 보기: [불변 레퍼런스](https://youtu.be/mKWXt9YTavc), [가변 레퍼런스](https://youtu.be/kJV1wIvAbyk)**
 
-References are very useful for functions. The rule in Rust on values is: a value can only have one owner.
+레퍼런스는 함수에서 매우 유용합니다. Rust에서 값에 대한 규칙은 "값의 소유자는 하나뿐"입니다.
 
-This code will not work:
+다음 코드는 동작하지 않습니다.
 
 ```rust
 fn print_country(country_name: String) {
@@ -1524,13 +1527,13 @@ fn main() {
 }
 ```
 
-It does not work because `country` is destroyed. Here's how:
+`country`가 사라지기 때문에 동작하지 않습니다. 이유는 다음과 같습니다.
 
-- Step 1: We create the `String` called `country`. `country` is the owner.
-- Step 2: We give `country` to `print_country`. `print_country` doesn't have an `->`, so it doesn't return anything. After `print_country` finishes, our `String` is now dead.
-- Step 3: We try to give `country` to `print_country`, but we already did that. We don't have `country` to give anymore.
+- 1단계: `country`라는 `String`을 만듭니다. `country`가 소유자입니다.
+- 2단계: `country`를 `print_country`에 줍니다. `print_country`에는 `->`가 없으니 아무 것도 반환하지 않습니다. `print_country`가 끝나면 우리의 `String`은 사라집니다.
+- 3단계: 다시 `country`를 `print_country`에 주려고 하지만 이미 줬습니다. 이제 `country`가 없습니다.
 
-We can make `print_country` give the `String` back, but it is a bit awkward.
+`print_country`가 `String`을 돌려주게 할 수도 있지만 조금 어색합니다.
 
 ```rust
 fn print_country(country_name: String) -> String {
@@ -1545,14 +1548,14 @@ fn main() {
 }
 ```
 
-Now it prints:
+이제 출력은 다음과 같습니다.
 
 ```text
 Austria
 Austria
 ```
 
-The much better way to fix this is by adding `&`.
+훨씬 좋은 방법은 `&`를 추가하는 것입니다.
 
 ```rust
 fn print_country(country_name: &String) {
@@ -1566,31 +1569,31 @@ fn main() {
 }
 ```
 
-Now `print_country()` is a function that takes a reference to a `String`: a `&String`. Also, we give it a reference to country by writing `&country`. This says "you can look at it, but I will keep it".
+이제 `print_country()`는 `String`에 대한 레퍼런스, 즉 `&String`을 받는 함수입니다. 또한 `&country`라고 적어 country의 레퍼런스를 넘겨 줍니다. 이는 "볼 수는 있지만 소유권은 내가 가진다"는 뜻입니다.
 
-Now let's do something similar with a mutable reference. Here is an example of a function that uses a mutable variable.
+이번에는 가변 레퍼런스로 비슷한 일을 해 보겠습니다. 가변 변수를 사용하는 함수 예제입니다.
 
 ```rust
-fn add_hungary(country_name: &mut String) { // first we say that the function takes a mutable reference
-    country_name.push_str("-Hungary"); // push_str() adds a &str to a String
+fn add_hungary(country_name: &mut String) { // 먼저 함수가 가변 레퍼런스를 받는다고 선언합니다
+    country_name.push_str("-Hungary"); // push_str()는 String에 &str을 더합니다
     println!("Now it says: {}", country_name);
 }
 
 fn main() {
     let mut country = String::from("Austria");
-    add_hungary(&mut country); // we also need to give it a mutable reference.
+    add_hungary(&mut country); // 가변 레퍼런스도 넘겨야 합니다.
 }
 ```
 
-This prints `Now it says: Austria-Hungary`.
+`Now it says: Austria-Hungary`가 출력됩니다.
 
-So to conclude:
+정리하면 다음과 같습니다.
 
-- `fn function_name(variable: String)` takes a `String` and owns it. If it doesn't return anything, then the variable dies inside the function.
-- `fn function_name(variable: &String)` borrows a `String` and can look at it
-- `fn function_name(variable: &mut String)` borrows a `String` and can change it
+- `fn function_name(variable: String)`은 `String`을 받아 소유합니다. 아무 것도 반환하지 않으면 함수 안에서 변수가 사라집니다.
+- `fn function_name(variable: &String)`은 `String`을 빌려 보고 읽을 수 있습니다.
+- `fn function_name(variable: &mut String)`은 `String`을 빌려 바꿀 수 있습니다.
 
-Here is an example that looks like a mutable reference, but it is different.
+가변 레퍼런스처럼 보이지만 다른 예제도 있습니다.
 
 ```rust
 fn main() {
@@ -1598,31 +1601,31 @@ fn main() {
     adds_hungary(country);
 }
 
-fn adds_hungary(mut country: String) { // Here's how: adds_hungary takes the String and declares it mutable!
+fn adds_hungary(mut country: String) { // 이렇게 합니다: adds_hungary가 String을 받아서 가변으로 선언합니다!
     country.push_str("-Hungary");
     println!("{}", country);
 }
 ```
 
-How is this possible? It is because `mut country` is not a reference: `adds_hungary` owns `country` now. (Remember, it takes `String` and not `&String`). The moment you call `adds_hungary`, it becomes the full owner. `country` has nothing to do with `String::from("Austria")` anymore. So `adds_hungary` can take `country` as mutable, and it is perfectly safe to do so.
+어떻게 가능할까요? `mut country`는 레퍼런스가 아니기 때문입니다. 이제 `adds_hungary`가 `country`를 소유합니다. (`&String`이 아니라 `String`을 받는다는 점을 기억하세요.) `adds_hungary`를 호출하는 순간 완전한 소유자가 됩니다. `country`는 더 이상 `String::from("Austria")`와 관계가 없습니다. 그래서 `adds_hungary`가 `country`를 가변으로 받아도 완전히 안전합니다.
 
-Remember our employee Powerpoint and manager situation above? In this situation it is like the employee just giving his whole computer to the manager. The employee won't ever touch it again, so the manager can do anything he wants to it.
+앞서 이야기한 직원과 매니저 상황을 기억하시나요? 이 상황은 직원이 아예 컴퓨터 전체를 매니저에게 넘기는 것과 같습니다. 직원은 다시는 그 컴퓨터를 건드리지 않을 테니 매니저가 무엇이든 할 수 있습니다.
 
 ## Copy types
 
-Some types in Rust are very simple. They are called **copy types**. These simple types are all on the stack, and the compiler knows their size. That means that they are very easy to copy, so the compiler always copies when you send it to a function. It always copies because they are so small and easy that there is no reason not to copy. So you don't need to worry about ownership for these types.
+Rust에는 아주 단순한 타입이 있습니다. 이를 **copy 타입**이라고 부릅니다. 이런 단순 타입은 모두 스택에 있고, 컴파일러가 크기를 알고 있습니다. 복사하기 아주 쉽기 때문에 함수에 보낼 때마다 컴파일러가 복사합니다. 너무 작고 쉬워서 복사하지 않을 이유가 없으니까요. 그래서 이런 타입은 소유권을 걱정할 필요가 없습니다.
 
-These simple types include: integers, floats, booleans (`true` and `false`), and `char`.
+이 단순 타입에는 정수, 부동소수점, 불리언(`true`, `false`), `char` 등이 있습니다.
 
-How do you know if a type **implements** copy? (implements = can use) You can check the documentation. For example, here is the documentation for char:
+어떤 타입이 copy를 **구현**했는지(구현했다 = 사용할 수 있다)는 어떻게 알까요? 문서를 보면 됩니다. 예를 들어 char의 문서는 다음과 같습니다.
 
 [https://doc.rust-lang.org/std/primitive.char.html](https://doc.rust-lang.org/std/primitive.char.html)
 
-On the left you can see **Trait Implementations**. You can see for example **Copy**, **Debug**, and **Display**. So you know that a `char`:
+왼쪽에 **Trait Implementations**가 보일 것입니다. 그 안에서 **Copy**, **Debug**, **Display** 등을 볼 수 있습니다. 그래서 `char`가:
 
-- is copied when you send it to a function (**Copy**)
-- can use `{}` to print (**Display**)
-- can use `{:?}` to print (**Debug**)
+- 함수에 보낼 때 복사되고(**Copy**)
+- `{}`로 출력할 수 있고(**Display**)
+- `{:?}`로 출력할 수 있다는(**Debug**) 것을 알 수 있습니다.
 
 ```rust
 fn prints_number(number: i32) { // There is no -> so it's not returning anything
@@ -1639,13 +1642,13 @@ fn main() {
 }
 ```
 
-But if you look at the documentation for String, it is not copy type.
+하지만 String 문서를 보면 copy 타입이 아닙니다.
 
 [https://doc.rust-lang.org/std/string/struct.String.html](https://doc.rust-lang.org/std/string/struct.String.html)
 
-On the left in **Trait Implementations** you can look in alphabetical order. A, B, C... there is no **Copy** in C. But there is **Clone**. **Clone** is similar to **Copy**, but usually needs more memory. Also, you have to call it with `.clone()` - it won't clone just by itself.
+왼쪽 **Trait Implementations**에서 알파벳 순으로 보면 A, B, C... C에 **Copy**가 없습니다. 대신 **Clone**이 있습니다. **Clone**은 **Copy**와 비슷하지만 보통 더 많은 메모리가 필요합니다. 또한 `.clone()`을 호출해야 합니다. 저절로 클론되지 않습니다.
 
-In this example, `prints_country()` prints the country name, a `String`. We want to print it two times, but we can't:
+이 예제에서 `prints_country()`는 `String`인 나라 이름을 출력합니다. 두 번 출력하고 싶지만 그럴 수 없습니다.
 
 ```rust
 fn prints_country(country_name: String) {
@@ -1659,7 +1662,7 @@ fn main() {
 }
 ```
 
-But now we understand the message.
+하지만 이제 메시지를 이해할 수 있습니다.
 
 ```text
 error[E0382]: use of moved value: `country`
@@ -1673,7 +1676,7 @@ error[E0382]: use of moved value: `country`
   |                    ^^^^^^^ value used here after move
 ```
 
-The important part is `which does not implement the Copy trait`. But in the documentation we saw that String implements the `Clone` trait. So we can add `.clone()` to our code. This creates a clone, and we send the clone to the function. Now `country` is still alive, so we can use it.
+중요한 부분은 `which does not implement the Copy trait`입니다. 하지만 문서에서 String이 `Clone` 트레이트를 구현한 것을 봤습니다. 그러니 코드에 `.clone()`을 붙일 수 있습니다. 이렇게 하면 클론을 만들고, 그 클론을 함수에 보냅니다. 이제 `country`는 여전히 살아 있으니 사용할 수 있습니다.
 
 ```rust
 fn prints_country(country_name: String) {
@@ -1687,7 +1690,7 @@ fn main() {
 }
 ```
 
-Of course, if the `String` is very large, `.clone()` can use a lot of memory. One `String` can be a whole book in length, and every time we call `.clone()` it will copy the book. So using `&` for a reference is faster, if you can. For example, this code pushes a `&str` onto a `String` and then makes a clone every time it gets used in a function:
+물론 `String`이 아주 크다면 `.clone()`이 많은 메모리를 쓸 수 있습니다. `String` 하나가 책 한 권만큼 길 수도 있고, `.clone()`을 호출할 때마다 그 책을 통째로 복사하게 됩니다. 그래서 가능하다면 `&`로 레퍼런스를 쓰는 편이 더 빠릅니다. 예를 들어 다음 코드는 `String`에 `&str`을 추가한 뒤 함수에서 쓸 때마다 클론을 만듭니다.
 
 ```rust
 fn get_length(input: String) { // Takes ownership of a String
@@ -1703,7 +1706,7 @@ fn main() {
 }
 ```
 
-It prints:
+출력은 다음과 같습니다.
 
 ```text
 It's 5 words long.
@@ -1712,7 +1715,7 @@ It's 10 words long.
 It's 250 words long.
 ```
 
-That's 50 clones. Here it is using a reference instead, which is better:
+무려 50개의 클론입니다. 레퍼런스를 사용한 더 나은 예는 다음과 같습니다.
 
 ```rust
 fn get_length(input: &String) {
@@ -1728,13 +1731,13 @@ fn main() {
 }
 ```
 
-Instead of 50 clones, it's zero.
+50개의 클론 대신 0개입니다.
 
 
 
 ### Variables without values
 
-A variable without a value is called an "uninitialized" variable. Uninitialized means "hasn't started yet". They are simple: just write `let` and the variable name:
+값이 없는 변수를 "초기화되지 않은" 변수라고 합니다. 초기화되지 않았다는 것은 "아직 시작하지 않았다"는 뜻입니다. 단순합니다. `let`과 변수 이름만 씁니다.
 
 ```rust
 fn main() {
@@ -1742,12 +1745,12 @@ fn main() {
 }
 ```
 
-But you can't use it yet, and Rust won't compile if anything is uninitialized.
+하지만 아직 사용할 수 없으며, 초기화되지 않은 것이 하나라도 있으면 Rust는 컴파일하지 않습니다.
 
-But sometimes they can be useful. A good example is when:
+하지만 때로는 유용합니다. 좋은 예는 다음과 같습니다.
 
-- You have a code block and the value for your variable is inside it, and
-- The variable needs to live outside of the code block.
+- 코드 블록이 있고, 변수 값이 그 안에 있으며
+- 변수가 코드 블록 밖에서도 살아 있어야 할 때
 
 ```rust
 fn loop_then_return(mut counter: i32) -> i32 {
@@ -1778,11 +1781,11 @@ fn main() {
 }
 ```
 
-This prints `100`.
+이 코드는 `100`을 출력합니다.
 
-You can see that `my_number` was declared in the `main()` function, so it lives until the end. But it gets its value from inside a loop. However, that value lives as long as `my_number`, because `my_number` has the value. And if you wrote `let my_number = loop_then_return(number)` inside the block, it would just die right away.
+`my_number`가 `main()` 함수에서 선언되어 끝까지 살아 있는 것을 볼 수 있습니다. 하지만 값은 루프 안에서 가져옵니다. 그러나 그 값은 `my_number`가 가지고 있으므로 `my_number`가 살아 있는 동안 함께 살아 있습니다. 만약 블록 안에서 `let my_number = loop_then_return(number)`라고 썼다면 바로 사라졌을 것입니다.
 
-It helps to imagine if you simplify the code. `loop_then_return(number)` gives the result 100, so let's delete it and write `100` instead. Also, now we don't need `number` so we will delete it too. Now it looks like this:
+코드를 단순하게 생각해 보면 도움이 됩니다. `loop_then_return(number)`가 결과 100을 주니, 지우고 대신 `100`을 쓰겠습니다. 이제 `number`도 필요 없으니 지우겠습니다. 그러면 이렇게 됩니다.
 
 ```rust
 fn main() {
@@ -1795,24 +1798,24 @@ fn main() {
 }
 ```
 
-So it's almost like saying `let my_number = { 100 };`.
+거의 `let my_number = { 100 };`이라고 말하는 것과 같습니다.
 
-Also note that `my_number` is not `mut`. It didn't get a value until it got 100, so it never changed its value. In the end, the real code for `my_number` is just `let my_number = 100;`.
+또한 `my_number`에 `mut`가 없다는 점에 주목하세요. 100을 받기 전까지 값이 없었으니 값이 바뀐 적이 없습니다. 결국 `my_number`를 위한 실제 코드는 `let my_number = 100;`일 뿐입니다.
 
-## Collection types
+## 컬렉션 타입
 
-Rust has a lot of types for making a collection. Collections are for when you need more than one value in one spot. For example, you could have information on all the cities in your country inside one variable. We will start with arrays, which are fastest but also have the least functionality. They are kind of like `&str` in that way.
+Rust에는 컬렉션을 만들기 위한 타입이 많습니다. 컬렉션은 한 자리에서 둘 이상의 값을 필요로 할 때 사용합니다. 예를 들어 한 변수에 국가의 모든 도시 정보를 담을 수 있습니다. 가장 빠르지만 기능이 적은 배열부터 시작하겠습니다. 그 점에서 `&str`과 비슷합니다.
 
-### Arrays
+### 배열
 
-An array is data inside square brackets: `[]`. Arrays:
+배열은 대괄호 `[]` 안에 있는 데이터입니다. 배열은
 
-- must not change their size,
-- must only contain the same type.
+- 크기가 바뀌지 않아야 하고,
+- 같은 타입만 담아야 합니다.
 
-They are very fast, however.
+그 대신 매우 빠릅니다.
 
-The type of an array is: `[type; number]`. For example, the type of `["One", "Two"]` is `[&str; 2]`. This means that even these two arrays have different types:
+배열 타입 표기는 `[타입; 개수]`입니다. 예를 들어 `["One", "Two"]`의 타입은 `[&str; 2]`입니다. 이 말은 아래 두 배열도 서로 다른 타입이라는 뜻입니다.
 
 ```rust
 fn main() {
@@ -1821,7 +1824,7 @@ fn main() {
 }
 ```
 
-Here is a good tip: to know the type of a variable, you can "ask" the compiler by giving it bad instructions. For example:
+좋은 팁이 하나 있습니다. 변수의 타입을 알고 싶다면 일부러 잘못된 지시를 해서 컴파일러에게 "물어보면" 됩니다. 예를 들어:
 
 ```rust
 fn main() {
@@ -1832,7 +1835,7 @@ fn main() {
 }
 ```
 
-The compiler says, "What? There's no `.ddd()` method for seasons and no `.thd()` method for seasons 2 either!!" as you can see:
+컴파일러는 "뭐라고? seasons에 `.ddd()` 메서드도 없고 seasons2에 `.thd()` 메서드도 없어!!"라고 말합니다.
 
 ```text
 error[E0599]: no method named `ddd` found for array `[&str; 4]` in the current scope
@@ -1848,9 +1851,9 @@ error[E0599]: no method named `thd` found for array `[&str; 5]` in the current s
   |              ^^^ method not found in `[&str; 5]`
 ```
 
-So it tells you `` method not found in `[&str; 4]` ``, which is the type.
+결국 `` method not found in `[&str; 4]` ``라고 말하는데, 여기 `[&str; 4]`가 타입입니다.
 
-If you want an array with all the same value, you can declare it like this:
+모두 같은 값을 가진 배열을 만들고 싶다면 이렇게 선언할 수 있습니다.
 
 ```rust
 fn main() {
@@ -1859,11 +1862,11 @@ fn main() {
 }
 ```
 
-This prints `["a", "a", "a", "a", "a", "a", "a", "a", "a", "a"]`.
+`["a", "a", "a", "a", "a", "a", "a", "a", "a", "a"]`를 출력합니다.
 
-This method is used a lot to create buffers. For example, `let mut buffer = [0; 640]` creates an array of 640 zeroes. Then we can change zero to other numbers in order to add data.
+이 방법은 버퍼를 만들 때 자주 쓰입니다. 예를 들어 `let mut buffer = [0; 640]`은 0이 640개 있는 배열을 만듭니다. 이후 0을 다른 숫자로 바꿔 데이터를 추가할 수 있습니다.
 
-You can index (get) entries in an array with []. The first entry is [0], the second is [1], and so on.
+배열의 값을 가져올 때는 []로 인덱싱합니다. 첫 번째 값은 [0], 두 번째는 [1]입니다.
 
 ```rust
 fn main() {
@@ -1872,9 +1875,9 @@ fn main() {
 }
 ```
 
-You can get a slice (a piece) of an array. First you need a &, because the compiler doesn't know the size. Then you can use `..` to show the range.
+배열의 일부를 슬라이스로 가져올 수 있습니다. 먼저 크기를 알 수 없으니 &가 필요합니다. 그런 다음 `..`으로 범위를 나타낼 수 있습니다.
 
-For example, let's use this array: `[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`.
+예를 들어 `[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]` 배열을 사용해 봅시다.
 
 ```rust
 fn main() {
@@ -1889,21 +1892,21 @@ fn main() {
 }
 ```
 
-Remember that:
+기억할 점:
 
-- Index numbers start at 0 (not 1)
-- Index ranges are **exclusive** (they do not include the last number)
+- 인덱스 번호는 0부터 시작합니다(1이 아님).
+- 인덱스 범위는 **포함하지 않습니다**. 마지막 숫자를 포함하지 않는다는 뜻입니다.
 
-So `[0..2]` means the first index and the second index (0 and 1). Or you can call it the "zeroth and first" index. It doesn't have the third item, which is index 2.
+따라서 `[0..2]`는 첫 번째와 두 번째 인덱스(0과 1)를 의미합니다. "0번째와 1번째"라고 불러도 됩니다. 2번 인덱스인 세 번째 항목은 포함하지 않습니다.
 
-You can also have an **inclusive** range, which means it includes the last number too. To do this, add `=` to write `..=` instead of `..`. So instead of `[0..2]` you can write `[0..=2]` if you want the first, second, and third item.
+마지막 숫자까지 포함하는 **포함 범위**도 있습니다. 그러려면 `..` 대신 `..=`처럼 `=`를 붙이면 됩니다. 첫 번째, 두 번째, 세 번째 항목을 원한다면 `[0..2]` 대신 `[0..=2]`라고 쓸 수 있습니다.
 
 ## Vectors
 **[See this chapter on YouTube](https://youtu.be/Eh-DsRnDKmw)**
 
-In the same way that we have `&str` and `String`, we have arrays and vectors. Arrays are faster with less functionality, and vectors are slower with more functionality. (Of course, Rust is always very fast so vectors are not slow, just slow*er* than arrays.) The type is written `Vec`, and you can also just call it a "vec".
+`&str`과 `String`이 있는 것처럼 배열과 벡터가 있습니다. 배열은 빠르지만 기능이 적고, 벡터는 더 느리지만 기능이 많습니다. (물론 Rust는 항상 빠르므로 벡터가 느리다는 것도 배열보다 느리다는 뜻일 뿐입니다.) 타입은 `Vec`라고 쓰며 그냥 "벡"이라고 부르기도 합니다.
 
-There are two main ways to declare a vector. One is like with `String` using `new`:
+벡터를 선언하는 주요 방법은 두 가지입니다. 하나는 `String`처럼 `new`를 사용하는 방법입니다.
 
 ```rust
 fn main() {
@@ -1919,12 +1922,12 @@ fn main() {
 }
 ```
 
-You can see that a `Vec` always has something else inside it, and that's what the `<>` (angle brackets) are for. A `Vec<String>` is a vector with one or more `String`s. You can also have more types inside. For example:
+`Vec`에는 항상 다른 무언가가 들어가며, 이를 나타내기 위해 `<>`(꺾쇠 괄호)를 사용합니다. `Vec<String>`은 하나 이상의 `String`을 가진 벡터입니다. 안에 더 복잡한 타입을 넣을 수도 있습니다. 예:
 
-- `Vec<(i32, i32)>` this is a `Vec` where each item is a tuple: `(i32, i32)`.
-- `Vec<Vec<String>>` this is a `Vec` that has `Vec`s of `Strings`. Say for example you wanted to save your favourite book as a `Vec<String>`. Then you do it again with another book, and get another `Vec<String>`. To hold both books, you would put them into another `Vec` and that would be a `Vec<Vec<String>>`.
+- `Vec<(i32, i32)>`: 각 항목이 `(i32, i32)` 튜플인 `Vec`입니다.
+- `Vec<Vec<String>>`: `String`으로 이루어진 `Vec`를 담는 `Vec`입니다. 예를 들어 좋아하는 책을 `Vec<String>`으로 저장했다고 합시다. 다른 책도 같은 식으로 저장하면 또 다른 `Vec<String>`이 생깁니다. 두 책을 모두 담으려면 다시 다른 `Vec`에 넣으면 되고, 이것이 `Vec<Vec<String>>`입니다.
 
-Instead of using `.push()` to make Rust decide the type, you can just declare the type.
+`.push()`로 Rust에게 타입을 추측하게 만드는 대신 직접 타입을 선언할 수도 있습니다.
 
 ```rust
 fn main() {
@@ -1933,9 +1936,9 @@ fn main() {
 }
 ```
 
-You can see that items in vectors must have the same type.
+벡터 안의 항목들은 모두 같은 타입이어야 함을 알 수 있습니다.
 
-Another easy way to create a vector is with the `vec!` macro. It looks like an array declaration, but has `vec!` in front of it.
+벡터를 만드는 또 다른 쉬운 방법은 `vec!` 매크로를 사용하는 것입니다. 배열 선언과 비슷하게 생겼지만 앞에 `vec!`이 붙습니다.
 
 ```rust
 fn main() {
@@ -1943,9 +1946,9 @@ fn main() {
 }
 ```
 
-The type is `Vec<i32>`. You call it a "Vec of i32s". And a `Vec<String>` is a "Vec of strings". And a `Vec<Vec<String>>` is a "Vec of a vec of strings".
+타입은 `Vec<i32>`입니다. "i32의 벡"이라고 부릅니다. `Vec<String>`은 "문자열의 벡", `Vec<Vec<String>>`은 "문자열 벡의 벡"입니다.
 
-You can slice a vector too, just like in an array.
+벡터도 배열처럼 슬라이스할 수 있습니다.
 
 ```rust
 fn main() {
@@ -1965,7 +1968,7 @@ everything: {:?}", three_to_five, start_at_two, end_at_five, everything);
 
 Because a vec is slower than an array, we can use some methods to make it faster. A vec has a **capacity**, which means the space given to the vector. When you push a new item on the vector, it gets closer and closer to the capacity. Then if you go past the capacity, it will make its capacity double and copy the items into the new space. This is called reallocation. We'll use a method called `.capacity()` to look at the capacity of a vector as we add items to it.
 
-For example:
+예를 들어:
 
 ```rust
 fn main() {
@@ -1982,7 +1985,7 @@ fn main() {
 }
 ```
 
-This prints:
+출력은 다음과 같습니다.
 
 ```text
 0
@@ -1991,7 +1994,7 @@ This prints:
 8
 ```
 
-So this vector has two reallocations: 0 to 4, and 4 to 8. We can make it faster:
+따라서 이 벡터는 0에서 4, 4에서 8 두 번 재할당합니다. 더 빠르게 만들 수 있습니다.
 
 ```rust
 fn main() {
@@ -2008,9 +2011,9 @@ fn main() {
 }
 ```
 
-This vector has 0 reallocations, which is better. So if you think you know how many elements you need, you can use `Vec::with_capacity()` to make it faster.
+이 벡터는 재할당이 0번이라 더 좋습니다. 필요한 원소 수를 대략 알겠다면 `Vec::with_capacity()`로 더 빠르게 만들 수 있습니다.
 
-You remember that you can use `.into()` to make a `&str` into a `String`. You can also use it to make an array into a `Vec`. You have to tell `.into()` that you want a `Vec`, but you don't have to choose the type of `Vec`. If you don't want to choose, you can write `Vec<_>`.
+`&str`을 `String`으로 만들 때 `.into()`를 쓸 수 있던 것을 기억하나요? 배열을 `Vec`으로 만들 때도 사용할 수 있습니다. `.into()`에 `Vec`을 원한다고 알려 줘야 하지만 `Vec` 안의 타입까지 고를 필요는 없습니다. 고르고 싶지 않다면 `Vec<_>`라고 적을 수 있습니다.
 
 ```rust
 fn main() {
@@ -2023,7 +2026,7 @@ fn main() {
 ## Tuples
 **[See this chapter on YouTube](https://youtu.be/U67Diy6SlTg)**
 
-Tuples in Rust use `()`. We have seen many empty tuples already, because *nothing* in a function actually means an empty tuple:
+Rust의 튜플은 `()`를 사용합니다. 이미 빈 튜플을 많이 봤습니다. 함수의 *아무 것도 없음*이 실제로는 빈 튜플을 의미하기 때문입니다.
 
 ```text
 fn do_something() {}
@@ -2035,7 +2038,7 @@ is actually short for:
 fn do_something() -> () {}
 ```
 
-That function gets nothing (an empty tuple), and returns nothing (an empty tuple). So we have been using tuples a lot already. When you don't return anything in a function, you actually return an empty tuple.
+이 함수는 아무 것도 받지 않고(빈 튜플) 아무 것도 반환하지 않습니다(빈 튜플). 이미 튜플을 많이 사용하고 있었던 셈입니다. 함수가 아무 것도 반환하지 않으면 사실 빈 튜플을 반환하는 것입니다.
 
 ```rust
 fn just_prints() {
@@ -2045,7 +2048,7 @@ fn just_prints() {
 fn main() {}
 ```
 
-But tuples can hold many things, and can hold different types too. Items inside a tuple are also indexed with numbers 0, 1, 2, and so on. But to access them, you use a `.` instead of a `[]`. Let's put a whole bunch of types into a single tuple.
+하지만 튜플은 여러 가지를 담을 수 있고, 서로 다른 타입도 담을 수 있습니다. 튜플 안의 항목도 0, 1, 2처럼 번호로 인덱싱됩니다. 다만 접근할 때는 `[]` 대신 `.`를 씁니다. 여러 타입을 한 튜플에 넣어 보겠습니다.
 
 ```rust
 fn main() {
@@ -2067,7 +2070,7 @@ Sixth item: {:?}",
 }
 ```
 
-This prints:
+출력 결과는 다음과 같습니다.
 
 ```text
 Inside the tuple is: First item: "Here is a name"
@@ -2078,10 +2081,10 @@ Fifth item: [8, 9, 10]
 Sixth item: 7.7
 ```
 
-That tuple is of type `(&str, i32, Vec<char>, char, [i32; 3], f64)`.
+이 튜플의 타입은 `(&str, i32, Vec<char>, char, [i32; 3], f64)`입니다.
 
 
-You can use a tuple to create multiple variables. Take a look at this code:
+튜플을 사용해 여러 변수를 만들 수 있습니다. 다음 코드를 보세요.
 
 ```rust
 fn main() {
@@ -2089,7 +2092,7 @@ fn main() {
 }
 ```
 
-`str_vec` has three items in it. What if we want to pull them out? That's where we can use a tuple.
+`str_vec`에는 세 항목이 있습니다. 이것들을 꺼내고 싶다면 튜플을 사용할 수 있습니다.
 
 ```rust
 fn main() {
@@ -2100,9 +2103,9 @@ fn main() {
 }
 ```
 
-That prints `"two"`, which is what `b` is. This is called *destructuring*. That is because first the variables are inside a structure, but then we made `a`, `b`, and `c` that are not inside a structure.
+`b`가 `"two"`이므로 `"two"`가 출력됩니다. 이를 *디스트럭처링*이라고 합니다. 처음에는 구조 안에 있던 변수가 이제 구조 밖으로 `a`, `b`, `c`로 나온 것이기 때문입니다.
 
-If you need to destructure but don't want all the variables, you can use `_`.
+디스트럭처링이 필요하지만 모든 변수를 원하지 않는다면 `_`를 사용할 수 있습니다.
 
 ```rust
 fn main() {
@@ -2112,14 +2115,14 @@ fn main() {
 }
 ```
 
-Now it only creates a variable called `variable` but doesn't make a variable for the others.
+이제 `variable`이라는 변수만 만들고 나머지는 만들지 않습니다.
 
-There are many more collection types, and many more ways to use arrays, vecs, and tuples. We will learn more about them too, but first we will learn control flow.
+컬렉션 타입은 더 많고, 배열, 벡터, 튜플을 사용하는 방법도 더 많습니다. 그것도 배울 것이지만 먼저 제어 흐름을 살펴보겠습니다.
 
 ## Control flow
 **See this chapter on YouTube: [Part 1](https://youtu.be/UAymDOpv_us) and [Part 2](https://youtu.be/eqysTfiiQZs)**
 
-Control flow means telling your code what to do in different situations. The simplest control flow is `if`.
+제어 흐름은 상황에 따라 코드가 무엇을 해야 할지 알려 주는 것입니다. 가장 단순한 제어 흐름은 `if`입니다.
 
 ```rust
 fn main() {
@@ -2130,9 +2133,9 @@ fn main() {
 }
 ```
 
-Also note that you use `==` and not `=`. `==` is to compare, `=` is to *assign* (to give a value). Also note that we wrote `if my_number == 7` and not `if (my_number == 7)`. You don't need brackets with `if` in Rust.
+`=`이 아니라 `==`를 사용하는 점에 주목하세요. `==`는 비교, `=`는 *대입*입니다. 또한 `if (my_number == 7)`이 아니라 `if my_number == 7`이라고 쓴다는 점도 기억하세요. Rust에서는 `if`에 괄호가 필요 없습니다.
 
-`else if` and `else` give you more control:
+`else if`와 `else`를 사용하면 더 많은 경우를 다룰 수 있습니다.
 
 ```rust
 fn main() {
@@ -2147,14 +2150,14 @@ fn main() {
 }
 ```
 
-This prints `It's a different number` because it's not equal to 7 or 6.
+7이나 6이 아니기 때문에 `It's a different number`가 출력됩니다.
 
-You can add more conditions with `&&` (and) and `||` (or).
+`&&`(and)와 `||`(or)로 조건을 더 추가할 수 있습니다.
 
 ```rust
 fn main() {
     let my_number = 5;
-    if my_number % 2 == 1 && my_number > 0 { // % 2 means the number that remains after diving by two
+    if my_number % 2 == 1 && my_number > 0 { // % 2는 2로 나누고 남은 수를 뜻합니다
         println!("It's a positive odd number");
     } else if my_number == 6 {
         println!("It's six")
@@ -2164,10 +2167,10 @@ fn main() {
 }
 ```
 
-This prints `It's a positive odd number` because when you divide it by 2 you have a remainder of 1, and it's greater than 0.
+2로 나눴을 때 나머지가 1이고 0보다 크기 때문에 `It's a positive odd number`가 출력됩니다.
 
 
-You can see that too much `if`, `else`, and `else if` can be difficult to read. In this case you can use `match` instead, which looks much cleaner. But you must match for every possible result. For example, this will not work:
+`if`, `else`, `else if`가 너무 많으면 읽기 어려울 수 있습니다. 이럴 때는 `match`를 쓸 수 있으며 훨씬 깔끔합니다. 다만 가능한 모든 결과를 다뤄야 합니다. 예를 들어 아래 코드는 동작하지 않습니다.
 
 ```rust
 fn main() {
@@ -2181,7 +2184,7 @@ fn main() {
 }
 ```
 
-The compiler says:
+컴파일러는 이렇게 말합니다.
 
 ```text
 error[E0004]: non-exhaustive patterns: `3u8..=std::u8::MAX` not covered
@@ -2191,7 +2194,7 @@ error[E0004]: non-exhaustive patterns: `3u8..=std::u8::MAX` not covered
   |           ^^^^^^^^^ pattern `3u8..=std::u8::MAX` not covered
 ```
 
-This means "you told me about 0 to 2, but `u8`s can go up to 255. What about 3? What about 4? What about 5?" And so on. So you can add `_` which means "anything else".
+이는 "0부터 2까지는 말해 줬지만 `u8`은 255까지 있을 수 있어. 3은? 4는? 5는?"라는 뜻입니다. 그래서 "다른 모든 경우"를 뜻하는 `_`를 추가할 수 있습니다.
 
 ```rust
 fn main() {
@@ -2205,16 +2208,16 @@ fn main() {
 }
 ```
 
-That prints `It's some other number`.
+`It's some other number`가 출력됩니다.
 
-Remember this for match:
+`match`에서 기억할 점:
 
-- You write `match` and then make a `{}` code block.
-- Write the *pattern* on the left and use a `=>` fat arrow to say what to do when it matches.
-- Each line is called an "arm".
-- Put a comma between the arms (not a semicolon).
+- `match`를 쓰고 `{}` 코드 블록을 만듭니다.
+- 왼쪽에 *패턴*을 쓰고, fat arrow `=>`로 매치되었을 때 할 일을 씁니다.
+- 각 줄을 "팔(arm)"이라고 부릅니다.
+- 팔 사이에는 쉼표를 넣습니다(세미콜론 아님).
 
-You can declare a value with a match:
+`match`로 값을 선언할 수도 있습니다.
 
 ```rust
 fn main() {
@@ -2227,10 +2230,10 @@ fn main() {
 }
 ```
 
-`second_number` will be 10. Do you see the semicolon at the end? That is because, after the match is over, we actually told the compiler this: `let second_number = 10;`
+`second_number`는 10이 됩니다. 마지막에 세미콜론이 있는 것 보이나요? match가 끝난 뒤 사실상 컴파일러에게 `let second_number = 10;`이라고 말한 셈이기 때문입니다.
 
 
-You can match on more complicated things too. You use a tuple to do it.
+더 복잡한 것에도 매치할 수 있습니다. 이를 위해 튜플을 사용합니다.
 
 ```rust
 fn main() {
@@ -2246,9 +2249,9 @@ fn main() {
 }
 ```
 
-This prints `It's dark but not bad` because it matches "cloudy" and "warm" for `sky` and `temperature`.
+`sky`와 `temperature`가 "cloudy"와 "warm"에 매치되기 때문에 `It's dark but not bad`를 출력합니다.
 
-You can even put `if` inside of `match`. This is called a "match guard":
+`match` 안에 `if`를 넣을 수도 있습니다. 이를 "매치 가드"라고 합니다.
 
 ```rust
 fn main() {
@@ -2263,9 +2266,9 @@ fn main() {
 }
 ```
 
-This will print `Married? true. Number of children: 5.`
+`Married? true. Number of children: 5.`를 출력합니다.
 
-You can use _ as many times as you want in a match. In this match on colours, we have three but only check one at a time.
+`match`에서 `_`는 원하는 만큼 사용할 수 있습니다. 이 색상 매치에서는 세 가지 값을 두고 한 번에 하나씩만 검사합니다.
 
 ```rust
 fn match_colours(rbg: (i32, i32, i32)) {
@@ -2289,7 +2292,7 @@ fn main() {
 }
 ```
 
-This prints:
+출력 결과는 다음과 같습니다.
 
 ```text
 Not much blue
@@ -2297,11 +2300,11 @@ Each colour has at least 10
 Not much green
 ```
 
-This also shows how `match` statements work, because in the first example it only printed `Not much blue`. But `first` also has not much green. A `match` statement always stops when it finds a match, and doesn't check the rest. This is a good example of code that compiles well but is not the code you want.
+이것은 `match`가 어떻게 동작하는지도 보여 줍니다. 첫 번째 예에서는 `Not much blue`만 출력했습니다. 하지만 `first`에는 초록도 적습니다. `match`는 매치되는 순간 멈추고 나머지는 검사하지 않습니다. 컴파일은 잘 되지만 원하는 동작은 아닌 좋은 예입니다.
 
-You can make a really big `match` statement to fix it, but it is probably better to use a `for` loop. We will talk about loops soon.
+이를 고치려면 아주 큰 `match`를 만들 수도 있지만, `for` 루프를 사용하는 편이 아마 더 좋습니다. 곧 반복문을 이야기하겠습니다.
 
-A match has to return the same type. So you can't do this:
+`match`는 같은 타입을 반환해야 합니다. 그래서 아래처럼 쓸 수 없습니다.
 
 ```rust
 fn main() {
@@ -2313,7 +2316,7 @@ fn main() {
 }
 ```
 
-The compiler tells you that:
+컴파일러가 이렇게 알려 줍니다.
 
 ```text
 error[E0308]: `match` arms have incompatible types
@@ -2329,7 +2332,7 @@ error[E0308]: `match` arms have incompatible types
    | |_____- `match` arms have incompatible types
 ```
 
-This will also not work, for the same reason:
+같은 이유로 다음도 동작하지 않습니다.
 
 ```rust
 fn main() {
@@ -2337,7 +2340,7 @@ fn main() {
 }
 ```
 
-But this works, because it's not a `match` so you have a different `let` statement each time:
+하지만 다음은 동작합니다. `match`가 아니므로 매번 다른 `let` 문을 쓰기 때문입니다.
 
 ```rust
 fn main() {
@@ -2351,7 +2354,7 @@ fn main() {
 }
 ```
 
-You can also use `@` to give a name to the value of a `match` expression, and then you can use it. In this example we match an `i32` input in a function. If it's 4 or 13 we want to use that number in a `println!` statement. Otherwise, we don't need to use it.
+`@`를 사용해 `match` 표현식의 값에 이름을 붙이고 그 값을 사용할 수도 있습니다. 이 예제에서는 함수에 들어온 `i32`를 매치합니다. 4나 13이면 그 숫자를 `println!`에서 사용하고, 그 외에는 필요 없습니다.
 
 ```rust
 fn match_number(input: i32) {
@@ -2369,7 +2372,7 @@ fn main() {
 }
 ```
 
-This prints:
+출력 결과는 다음과 같습니다.
 
 ```text
 Looks like a normal number
@@ -2380,16 +2383,16 @@ Looks like a normal number
 ## Structs
 **See this chapter on YouTube: [Part 1](https://youtu.be/W23uQghBOFk) and [Part 2](https://youtu.be/GSVhrjLCuNA)**
 
-With structs, you can create your own type. You will use structs all the time in Rust because they are so convenient. Structs are created with the keyword `struct`. The name of a struct should be in UpperCamelCase (capital letter for each word, no spaces). If you write a struct in all lowercase, the compiler will tell you.
+구조체로 자신만의 타입을 만들 수 있습니다. 구조체는 매우 편리해서 Rust에서 자주 사용합니다. `struct` 키워드로 만듭니다. 구조체 이름은 UpperCamelCase(단어마다 대문자, 공백 없음)로 써야 합니다. 모두 소문자로 쓰면 컴파일러가 알려 줍니다.
 
-There are three types of structs. One is a "unit struct". Unit means "doesn't have anything". For a unit struct, you just write the name and a semicolon.
+구조체는 세 종류가 있습니다. 하나는 "유닛 구조체"입니다. 유닛은 "아무 것도 없다"는 뜻입니다. 유닛 구조체는 이름과 세미콜론만 쓰면 됩니다.
 
 ```rust
 struct FileDirectory;
 fn main() {}
 ```
 
-The next is a tuple struct, or an unnamed struct. It is "unnamed" because you only need to write the types, not the field names. Tuple structs are good when you need a simple struct and don't need to remember names.
+다음은 튜플 구조체 또는 이름 없는 구조체입니다. 필드 이름을 쓰지 않고 타입만 적기 때문에 "이름 없다"고 합니다. 튜플 구조체는 간단한 구조체가 필요하고 이름을 기억할 필요가 없을 때 좋습니다.
 
 ```rust
 struct Colour(u8, u8, u8);
@@ -2400,9 +2403,9 @@ fn main() {
 }
 ```
 
-This prints `The second part of the colour is: 0`.
+`The second part of the colour is: 0`을 출력합니다.
 
-The third type is the named struct. This is probably the most common struct. In this struct you declare field names and types inside a `{}` code block. Note that you don't write a semicolon after a named struct, because there is a whole code block after it.
+세 번째는 이름 있는 구조체입니다. 아마 가장 흔한 구조체일 것입니다. 이 구조체에서는 `{}` 코드 블록 안에 필드 이름과 타입을 선언합니다. 이름 있는 구조체 뒤에는 세미콜론을 쓰지 않습니다. 뒤에 코드 블록 전체가 있기 때문입니다.
 
 ```rust
 struct Colour(u8, u8, u8); // Declare the same Colour tuple struct
@@ -2422,7 +2425,7 @@ fn main() {
 }
 ```
 
-You separate fields by commas in a named struct too. For the last field you can add a comma or not - it's up to you. `SizeAndColour` had a comma after `colour`:
+이름 있는 구조체에서도 필드를 쉼표로 구분합니다. 마지막 필드에 쉼표를 붙여도 되고 안 붙여도 됩니다. `SizeAndColour`에서는 `colour` 뒤에 쉼표를 넣었습니다.
 
 ```rust
 struct Colour(u8, u8, u8); // Declare the same Colour tuple struct
@@ -2435,7 +2438,7 @@ struct SizeAndColour {
 fn main() {}
 ```
 
-but you don't need it. But it can be a good idea to always put a comma, because sometimes you will change the order of the fields:
+없어도 됩니다. 하지만 필드 순서를 바꿀 때가 있으니 항상 쉼표를 붙이는 것도 좋은 생각입니다.
 
 ```rust
 struct Colour(u8, u8, u8); // Declare the same Colour tuple struct
@@ -2448,7 +2451,7 @@ struct SizeAndColour {
 fn main() {}
 ```
 
-Then we decide to change the order...
+그리고 순서를 바꾸기로 했습니다...
 
 ```rust
 struct SizeAndColour {
@@ -2459,10 +2462,10 @@ struct SizeAndColour {
 fn main() {}
 ```
 
-But it is not very important either way so you can choose whether to use a comma or not.
+하지만 아주 중요한 문제는 아니니 쉼표를 쓸지 말지는 선택하면 됩니다.
 
 
-Let's create a `Country` struct to give an example. The `Country` struct has the fields `population`, `capital`, and `leader_name`.
+예시로 `Country` 구조체를 만들어 봅시다. `Country` 구조체에는 `population`, `capital`, `leader_name` 필드가 있습니다.
 
 ```rust
 struct Country {
@@ -2484,7 +2487,7 @@ fn main() {
 }
 ```
 
-Did you notice that we wrote the same thing twice? We wrote `population: population`, `capital: capital`, and `leader_name: leader_name`. Actually, you don't need to do that. If the field name and variable name are the same, you don't have to write it twice.
+같은 말을 두 번 쓴 것을 눈치챘나요? `population: population`, `capital: capital`, `leader_name: leader_name`라고 썼습니다. 사실 그럴 필요는 없습니다. 필드 이름과 변수 이름이 같다면 두 번 쓸 필요가 없습니다.
 
 ```rust
 struct Country {
@@ -2509,14 +2512,14 @@ fn main() {
 ## Enums
 **See this chapter on YouTube: [Part 1](https://youtu.be/SRnqNTJUgjs), [Part 2](https://youtu.be/F_EcbWM63lk), [Part 3](https://youtu.be/2uh64U9JesA) and [Part 4](https://youtu.be/LOHVUYTc5Us)**
 
-An `enum` is short for enumerations. They look very similar to a struct, but are different. Here is the difference:
+`enum`은 열거형을 뜻합니다. 구조체와 매우 비슷해 보이지만 다릅니다. 차이는 다음과 같습니다.
 
-- Use a `struct` when you want one thing **AND** another thing.
-- Use an `enum` when you want one thing **OR** another thing.
+- 무언가 **그리고** 다른 것을 함께 갖고 싶다면 `struct`를 사용합니다.
+- 무언가 **또는** 다른 것을 선택하고 싶다면 `enum`을 사용합니다.
 
-So structs are for **many things** together, while enums are for **many choices** together.
+즉 구조체는 **여러 가지를 함께** 담고, enum은 **여러 선택지를 함께** 담습니다.
 
-To declare an enum, write `enum` and use a code block with the options, separated by commas. Just like a `struct`, the last part can have a comma or not. We will create an enum called `ThingsInTheSky`:
+enum을 선언하려면 `enum`을 쓰고, 선택지를 쉼표로 구분해 코드 블록 안에 적습니다. `struct`와 마찬가지로 마지막 부분에 쉼표를 붙여도 되고 안 붙여도 됩니다. `ThingsInTheSky`라는 enum을 만들어 봅시다.
 
 ```rust
 enum ThingsInTheSky {
@@ -2527,7 +2530,7 @@ enum ThingsInTheSky {
 fn main() {}
 ```
 
-This is an enum because you can either see the sun, **or** the stars: you have to choose one. These are called **variants**.
+해나 별 중 하나만 볼 수 있으니 enum입니다. 이런 선택지를 **variant**라고 합니다.
 
 ```rust
 // create the enum with two choices
@@ -2559,9 +2562,9 @@ fn main() {
 }
 ```
 
-This prints `I can see the sun!`.
+`I can see the sun!`을 출력합니다.
 
-You can add data to an enum too.
+enum에 데이터를 넣을 수도 있습니다.
 
 ```rust
 enum ThingsInTheSky {
@@ -2590,9 +2593,9 @@ fn main() {
 }
 ```
 
-This prints the same thing: `I can see the sun!`
+역시 `I can see the sun!`을 출력합니다.
 
-You can also "import" an enum so you don't have to type so much. Here's an example where we have to type `Mood::` every time we match on our mood:
+enum을 "가져와서" 적을 글자를 줄일 수도 있습니다. 아래 예제에서는 기분을 매치할 때마다 `Mood::`를 적어야 합니다.
 
 ```rust
 enum Mood {
@@ -2619,7 +2622,7 @@ fn main() {
 }
 ```
 
-It prints `Out of 1 to 10, my happiness is 7`. Let's import so we can type less. To import everything, write `*`. Note: it's the same key as `*` for dereferencing but is completely different.
+`Out of 1 to 10, my happiness is 7`을 출력합니다. 이제 가져와서 덜 타이핑해 봅시다. 모든 것을 가져오려면 `*`를 씁니다. 참고: 디레퍼런싱에 쓰는 `*`와 같은 키이지만 완전히 다른 의미입니다.
 
 ```rust
 enum Mood {
@@ -2648,7 +2651,7 @@ fn main() {
 ```
 
 
-Parts of an `enum` can also be turned into an integer. That's because Rust gives each arm of an `enum` a number that starts with 0 for its own use. You can do things with it if your enum doesn't have any other data in it.
+`enum`의 각 부분을 정수로 바꿀 수도 있습니다. Rust가 내부적으로 `enum`의 각 팔에 0부터 시작하는 번호를 주기 때문입니다. enum에 다른 데이터가 없으면 이 값을 활용할 수 있습니다.
 
 ```rust
 enum Season {
@@ -2667,7 +2670,7 @@ fn main() {
 }
 ```
 
-This prints:
+출력 결과는 다음과 같습니다.
 
 ```text
 0
@@ -2676,7 +2679,7 @@ This prints:
 3
 ```
 
-Though you can give it a different number, if you want - Rust doesn't care and can use it in the same way. Just add an `=` and your number to the variant that you want to have a number. You don't have to give all of them a number. But if you don't, Rust will just add 1 from the arm before to give it a number.
+원한다면 다른 숫자를 줄 수도 있습니다. Rust는 신경 쓰지 않고 똑같이 사용할 수 있습니다. 숫자를 주고 싶은 variant에 `=`와 숫자를 적기만 하면 됩니다. 모두에게 숫자를 줄 필요는 없습니다. 주지 않으면 Rust가 바로 앞 팔에 1을 더해 숫자를 붙입니다.
 
 ```rust
 enum Star {
@@ -2701,7 +2704,7 @@ fn main() {
 }
 ```
 
-This prints:
+출력 결과는 다음과 같습니다.
 
 
 ```text
@@ -2712,11 +2715,11 @@ This is a good-sized star.
 What about DeadStar? It's the number 1001.
 ```
 
-`DeadStar` would have been number 4, but now it's 1001.
+`DeadStar`는 원래 4가 되었겠지만 이제 1001이 되었습니다.
 
 ### Enums to use multiple types
 
-You know that items in a `Vec`, array, etc. all need the same type (only tuples are different). But you can actually use an enum to put different types in. Imagine we want to have a `Vec` with `u32`s or `i32`s. Of course, you can make a `Vec<(u32, i32)>` (a vec with `(u32, i32)` tuples) but we only want one each time. So here you can use an enum. Here is a simple example:
+`Vec`, 배열 등은 모두 같은 타입을 가져야 한다는 것을 알고 있습니다(튜플만 예외입니다). 하지만 enum을 사용하면 서로 다른 타입을 넣을 수 있습니다. `u32`나 `i32`를 넣는 `Vec`을 만들고 싶다고 해 봅시다. 물론 `(u32, i32)` 튜플을 담는 `Vec<(u32, i32)>`를 만들 수도 있지만, 우리는 매번 둘 중 하나만 원합니다. 이런 경우 enum을 사용할 수 있습니다. 간단한 예시는 다음과 같습니다.
 
 ```rust
 enum Number {
@@ -2727,11 +2730,11 @@ enum Number {
 fn main() {}
 ```
 
-So there are two variants: the `U32` variant with a `u32` inside, and the `I32` variant with `i32` inside. `U32` and `I32` are just names we made. They could have been `UThirtyTwo` or `IThirtyTwo` or anything else.
+variant가 두 개 있습니다. 하나는 `u32`를 담는 `U32`, 다른 하나는 `i32`를 담는 `I32`입니다. `U32`와 `I32`는 우리가 만든 이름일 뿐입니다. `UThirtyTwo`, `IThirtyTwo` 등 어떤 이름이어도 됩니다.
 
-Now, if we put them into a `Vec` we just have a `Vec<Number>`, and the compiler is happy because it's all the same type. The compiler doesn't care that we have either `u32` or `i32` because they are all inside a single type called `Number`. And because it's an enum, you have to pick one, which is what we want. We will use the `.is_positive()` method to pick. If it's `true` then we will choose `U32`, and if it's `false` then we will choose `I32`.
+이제 이것들을 `Vec`에 넣으면 `Vec<Number>` 하나가 되고, 모두 같은 타입이니 컴파일러도 만족합니다. `u32`든 `i32`든 `Number`라는 단일 타입 안에 있으니 신경 쓰지 않습니다. 또한 enum이기 때문에 둘 중 하나를 선택해야 하는데, 우리가 원하는 바입니다. `.is_positive()` 메서드를 사용해 선택하겠습니다. `true`면 `U32`, `false`면 `I32`를 고릅니다.
 
-Now the code looks like this:
+이제 코드는 이렇게 됩니다.
 
 ```rust
 enum Number {
@@ -2760,7 +2763,7 @@ fn main() {
 }
 ```
 
-This prints what we wanted to see:
+원하던 출력은 다음과 같습니다.
 
 ```text
 It's an i32 with the value -800
@@ -2768,9 +2771,9 @@ It's a u32 with the value 8
 ```
 
 
-## Loops
+## 반복문
 
-With loops you can tell Rust to continue something until you want it to stop. You use `loop` to start a loop that does not stop, unless you tell it when to `break`.
+반복문을 사용하면 멈추라고 할 때까지 계속 실행하도록 Rust에 지시할 수 있습니다. `loop`는 `break`라고 말하지 않는 한 멈추지 않는 루프를 시작합니다.
 
 ```rust
 fn main() { // This program will never stop
@@ -2780,7 +2783,7 @@ fn main() { // This program will never stop
 }
 ```
 
-So let's tell the compiler when it can break.
+이제 언제 멈춰야 할지 컴파일러에게 알려 줍시다.
 
 ```rust
 fn main() {
@@ -2795,7 +2798,7 @@ fn main() {
 }
 ```
 
-This will print:
+출력은 다음과 같습니다.
 
 ```text
 The counter is now: 1
@@ -2805,7 +2808,7 @@ The counter is now: 4
 The counter is now: 5
 ```
 
-If you have a loop inside of a loop, you can give them names. With names, you can tell Rust which loop to `break` out of. Use `'` (called a "tick") and a `:` to give it a name:
+루프 안에 루프가 있을 때는 이름을 붙일 수 있습니다. 이름을 붙이면 Rust에 어떤 루프를 `break`할지 알려 줄 수 있습니다. 이름을 붙일 때는 `'`(tick)과 `:`를 사용합니다.
 
 ```rust
 fn main() {
@@ -2834,7 +2837,7 @@ fn main() {
 }
 ```
 
-This will print:
+출력은 다음과 같습니다.
 
 ```text
 Now entering the first loop.
@@ -2854,7 +2857,7 @@ The second counter is now: 1
 The second counter is now: 2
 ```
 
-A `while` loop is a loop that continues while something is still `true`. Each loop, Rust will check if it is still `true`. If it becomes `false`, Rust will stop the loop.
+`while` 루프는 어떤 조건이 `true`인 동안 계속되는 루프입니다. 매 반복마다 Rust는 여전히 `true`인지 확인합니다. `false`가 되면 루프를 멈춥니다.
 
 ```rust
 fn main() {
@@ -2884,7 +2887,7 @@ fn main() {
 }
 ```
 
-This prints:
+출력:
 
 ```text
 The number is: 0
@@ -2908,7 +2911,7 @@ fn main() {
 }
 ```
 
-This prints:
+출력:
 
 ```text
 Printing the same thing three times
@@ -2987,7 +2990,7 @@ fn main() {
 }
 ```
 
-This prints:
+출력은 다음과 같습니다.
 
 ```text
 Comparing a colour with 200 red, 0 blue, and 0 green:
@@ -3001,16 +3004,16 @@ Comparing a colour with 200 red, 50 blue, and 0 green:
 Not much green.
 ```
 
-## Implementing structs and enums
+## 구조체와 열거형 구현하기
 
-This is where you can start to give your structs and enums some real power. To call functions on a `struct` or an `enum`, use an `impl` block. These functions are called **methods**. There are two kinds of methods in an `impl` block.
+이제 구조체와 enum에 진짜 힘을 줄 수 있는 부분입니다. `struct`나 `enum`에 함수를 붙이려면 `impl` 블록을 사용합니다. 이런 함수들을 **메서드**라고 부릅니다. `impl` 블록에는 두 종류의 메서드가 있습니다.
 
-- Methods: these take **self** (or **&self** or **&mut self**). Regular methods use a `.` (a period). `.clone()` is an example of a regular method.
-- Associated functions (known as "static" methods in some languages): these do not take self. Associated means "related to". They are written differently, using `::`. `String::from()` is an associated function, and so is `Vec::new()`. You see associated functions most often used to create new variables.
+- 메서드: **self**(또는 **&self**, **&mut self**)를 받습니다. 일반 메서드는 `.`(점)을 사용합니다. `.clone()`이 그 예입니다.
+- 연관 함수(다른 언어에서 "static" 메서드라고도 함): self를 받지 않습니다. associated는 "관련된"이라는 뜻입니다. `::`로 호출하며, `String::from()`, `Vec::new()` 등이 연관 함수입니다. 보통 새 변수를 만들 때 가장 자주 쓰입니다.
 
-In our example we are going to create animals and print them.
+이번 예제에서는 동물을 만들고 출력해 보겠습니다.
 
-For a new `struct` or `enum`, you need to give it **Debug** if you want to use `{:?}` to print, so we will do that. If you write `#[derive(Debug)]` above the struct or enum then you can print it with `{:?}`. These messages with `#[]` are called **attributes**. You can sometimes use them to tell the compiler to give your struct an ability like `Debug`. There are many attributes and we will learn about them later. But `derive` is probably the most common and you see it a lot above structs and enums.
+새 `struct`나 `enum`을 `{:?}`로 출력하고 싶다면 **Debug**를 붙여야 합니다. 구조체나 enum 위에 `#[derive(Debug)]`를 적으면 `{:?}`로 출력할 수 있습니다. `#[]`로 적는 이런 메시지를 **애트리뷰트**라고 합니다. 애트리뷰트로 컴파일러에게 `Debug` 같은 능력을 구조체에 달라고 말할 수 있습니다. 애트리뷰트는 많고 나중에 더 배울 것입니다. 그중 `derive`는 아마 가장 흔해서 구조체와 enum 위에서 자주 보게 됩니다.
 
 ```rust
 #[derive(Debug)]
@@ -3073,7 +3076,7 @@ fn main() {
 }
 ```
 
-This prints:
+출력은 다음과 같습니다.
 
 ```text
 The animal is a cat
@@ -3084,11 +3087,11 @@ The animal is a cat
 ```
 
 
-Remember that Self (the type Self) and self (the variable self) are abbreviations. (abbreviation = short way to write)
+Self(타입 Self)와 self(변수 self)는 모두 줄임말입니다. (abbreviation = 짧게 쓰는 방식)
 
-So in our code, Self = Animal. Also, `fn change_to_dog(&mut self)` means `fn change_to_dog(&mut Animal)`.
+즉 우리 코드에서 Self = Animal입니다. 또한 `fn change_to_dog(&mut self)`는 `fn change_to_dog(&mut Animal)`을 의미합니다.
 
-Here is one more small example. This time we will use `impl` on an `enum`:
+작은 예제를 하나 더 보겠습니다. 이번에는 `enum`에 `impl`을 씁니다.
 
 ```rust
 enum Mood {
@@ -3113,11 +3116,11 @@ fn main() {
 }
 ```
 
-This prints `Need sleep NOW`.
+`Need sleep NOW`가 출력됩니다.
 
-## Destructuring
+## 디스트럭처링
 
-Let's look at some more destructuring. You can get the values from a struct or enum by using `let` backwards. We learned that this is  `destructuring`, because you get variables that are not part of a structure. Now you have the values separately. First a simple example:
+디스트럭처링을 더 살펴봅시다. `let`을 거꾸로 사용해 구조체나 enum에서 값을 꺼낼 수 있습니다. 이를 **디스트럭처링**이라고 배웠습니다. 구조 밖에 있는 변수들을 얻어 따로 값을 갖게 되기 때문입니다. 먼저 간단한 예를 보겠습니다.
 
 ```rust
 struct Person { // make a simple struct for a person
@@ -3146,13 +3149,13 @@ fn main() {
 }
 ```
 
-This prints: `They call him Papa Doc but his real name is Clarence. He is 170 cm tall and is he happy? false`
+출력: `They call him Papa Doc but his real name is Clarence. He is 170 cm tall and is he happy? false`
 
-You can see that it's backwards. First we say `let papa_doc = Person { fields }` to create the struct. Then we say `let Person { fields } = papa_doc` to destructure it.
+거꾸로 된 것을 볼 수 있습니다. 먼저 `let papa_doc = Person { fields }`로 구조체를 만듭니다. 그다음 `let Person { fields } = papa_doc`로 디스트럭처링합니다.
 
-You don't have to write `name: a` - you can just write `name`. But here we write `name: a` because we want to use a variable with the name `a`.
+`name: a`처럼 쓰지 않고 `name`만 써도 됩니다. 여기서는 `a`라는 변수 이름을 쓰고 싶어서 `name: a`로 썼습니다.
 
-Now a bigger example. In this example we have a `City` struct. We give it a `new` function to make it. Then we have a `process_city_values` function to do things with the values. In the function we just create a `Vec`, but you can imagine that we can do much more after we destructure it.
+이제 좀 더 큰 예입니다. 여기서는 `City` 구조체가 있습니다. 만들기 위해 `new` 함수를 주었고, 값을 가지고 무언가를 할 `process_city_values` 함수가 있습니다. 함수에서는 단순히 `Vec`을 만들었지만, 디스트럭처링 후 더 많은 일을 할 수 있다고 생각해 보세요.
 
 ```rust
 struct City {
@@ -3191,12 +3194,12 @@ fn main() {
 }
 ```
 
-This prints `The city's two names are ["Tallinn", "Reval"]`.
+`The city's two names are ["Tallinn", "Reval"]`을 출력합니다.
 
 
-## References and the dot operator
+## 레퍼런스와 점 연산자
 
-We learned that when you have a reference, you need to use `*` to get to the value. A reference is a different type, so this won't work:
+레퍼런스를 사용할 때 값에 접근하려면 `*`를 써야 한다고 배웠습니다. 레퍼런스는 다른 타입이기 때문에 아래 코드는 동작하지 않습니다.
 
 ```rust
 fn main() {
@@ -3217,11 +3220,11 @@ error[E0277]: can't compare `{integer}` with `&{integer}`
   |                              ^^ no implementation for `{integer} == &{integer}`
 ```
 
-So we change line 5 to `println!("{}", my_number == *reference);` and now it prints `true` because it's now `i32` == `i32`, not `i32` == `&i32`. This is called dereferencing.
+그래서 5번째 줄을 `println!("{}", my_number == *reference);`로 바꾸면 `true`가 출력됩니다. 이제 `i32` == `i32`이지 `i32` == `&i32`가 아니기 때문입니다. 이를 디레퍼런싱이라고 합니다.
 
-But when you use a method, Rust will dereference for you. The `.` in a method is called the dot operator, and it does dereferencing for free.
+하지만 메서드를 사용할 때는 Rust가 알아서 디레퍼런싱합니다. 메서드에 쓰는 `.`를 점 연산자라고 하는데, 점 연산자가 자동으로 디레퍼런싱을 해 줍니다.
 
-First, let's make a struct with one `u8` field. Then we will make a reference to it and try to compare. It will not work:
+먼저 `u8` 필드 하나를 가진 구조체를 만들어 봅시다. 그다음 레퍼런스를 만들어 비교하려 하면 동작하지 않습니다.
 
 ```rust
 struct Item {
@@ -3239,9 +3242,9 @@ fn main() {
 }
 ```
 
-To make it work, we need to dereference: `println!("{}", *reference_number == 8);`.
+작동하게 하려면 디레퍼런싱을 해야 합니다: `println!("{}", *reference_number == 8);`
 
-But with the dot operator, we don't need `*`. For example:
+하지만 점 연산자를 쓰면 `*`가 필요 없습니다. 예를 들어:
 
 ```rust
 struct Item {
@@ -3259,7 +3262,7 @@ fn main() {
 }
 ```
 
-Now let's create a method for `Item` that compares `number` to another number. We don't need to use `*` anywhere:
+이제 `Item`에 `number`를 다른 숫자와 비교하는 메서드를 만들어 봅시다. 어디에도 `*`를 쓸 필요가 없습니다.
 
 ```rust
 struct Item {
@@ -3288,14 +3291,14 @@ fn main() {
 }
 ```
 
-So just remember: when you use the `.` operator, you don't need to worry about `*`.
+요약하면 `.` 연산자를 쓸 때는 `*`를 신경 쓸 필요가 없습니다.
 
 
 
 
-## Generics
+## 제네릭
 
-In functions, you write what type to take as input:
+함수에서는 입력으로 받을 타입을 적습니다.
 
 ```rust
 fn return_number(number: i32) -> i32 {
@@ -3308,11 +3311,11 @@ fn main() {
 }
 ```
 
-But what if you want to take more than just `i32`? You can use generics for this. Generics means "maybe one type, maybe another type".
+하지만 `i32` 말고도 받고 싶다면 어떻게 할까요? 제네릭을 사용하면 됩니다. 제네릭은 "이 타입일 수도 있고 저 타입일 수도 있다"는 뜻입니다.
 
-For generics, you use angle brackets with the type inside, like this: `<T>` This means "any type you put into the function". Usually, generics uses types with one capital letter (T, U, V, etc.), though you don't have to just use one letter.
+제네릭을 쓸 때는 타입을 꺾쇠 괄호 안에 넣습니다: `<T>` 이렇게 쓰면 "이 함수에 넣는 어떤 타입이든"을 뜻합니다. 보통 제네릭 타입 이름은 대문자 한 글자(T, U, V 등)를 사용하지만 꼭 한 글자일 필요는 없습니다.
 
-This is how you change the function to make it generic:
+함수를 제네릭으로 바꾸면 이렇게 됩니다.
 
 ```rust
 fn return_number<T>(number: T) -> T {
@@ -3325,9 +3328,9 @@ fn main() {
 }
 ```
 
-The important part is the `<T>` after the function name. Without this, Rust will think that T is a concrete (concrete = not generic) type, like `String` or `i8`.
+중요한 부분은 함수 이름 뒤의 `<T>`입니다. 이것이 없으면 Rust는 T를 `String`이나 `i8` 같은 구체 타입(제네릭이 아닌 타입)으로 생각합니다.
 
-This is easier to understand if we write out a type name. See what happens when we change `T` to `MyType`:
+타입 이름을 길게 쓰면 더 이해하기 쉽습니다. `T`를 `MyType`으로 바꿔 보겠습니다.
 
 ```rust
 fn return_number(number: MyType) -> MyType { // ⚠️
@@ -3336,7 +3339,7 @@ fn return_number(number: MyType) -> MyType { // ⚠️
 }
 ```
 
-As you can see, `MyType` is concrete, not generic. So we need to write this and so now it works:
+보다시피 `MyType`은 제네릭이 아닌 구체 타입입니다. 그래서 이렇게 써야 합니다. 그러면 동작합니다.
 
 ```rust
 fn return_number<MyType>(number: MyType) -> MyType {
@@ -3349,11 +3352,11 @@ fn main() {
 }
 ```
 
-So the single letter `T` is for human eyes, but the part after the function name is for the compiler's "eyes". Without it, it's not generic.
+즉 한 글자 `T`는 사람이 보기 위한 것이고, 함수 이름 뒤의 부분은 컴파일러가 "보는" 부분입니다. 그것이 없으면 제네릭이 아닙니다.
 
-Now we will go back to type `T`, because Rust code usually uses `T`.
+Rust 코드에서는 보통 `T`를 쓰므로 다시 `T`로 돌아가겠습니다.
 
-You will remember that some types in Rust are **Copy**, some are **Clone**, some are **Display**, some are **Debug**, and so on. With **Debug**, we can print with `{:?}`. So now you can see that we have a problem if we want to print `T`:
+Rust에서 어떤 타입은 **Copy**, 어떤 타입은 **Clone**, 어떤 타입은 **Display**, 어떤 타입은 **Debug** 등을 가진다는 것을 기억할 것입니다. **Debug**가 있으면 `{:?}`로 출력할 수 있습니다. 그래서 `T`를 출력하려면 문제가 생깁니다.
 
 ```rust
 fn print_number<T>(number: T) {
@@ -3365,7 +3368,7 @@ fn main() {
 }
 ```
 
-`print_number` needs **Debug** to print `number`, but is `T` a type with `Debug`? Maybe not. Maybe it doesn't have `#[derive(Debug)]`, who knows. The compiler doesn't know either, so it gives an error:
+`print_number`가 `number`를 출력하려면 **Debug**가 필요합니다. 하지만 `T`가 Debug를 가진 타입일까요? 아닐 수도 있습니다. `#[derive(Debug)]`가 없을지도 모릅니다. 컴파일러도 모르니 에러를 냅니다.
 
 ```text
 error[E0277]: `T` doesn't implement `std::fmt::Debug`
@@ -3375,7 +3378,7 @@ error[E0277]: `T` doesn't implement `std::fmt::Debug`
    |                                           ^^^^^^ `T` cannot be formatted using `{:?}` because it doesn't implement `std::fmt::Debug`
 ```
 
-T doesn't implement **Debug**. So do we implement Debug for T? No, because we don't know what T is. But we can tell the function: "Don't worry, because any type T for this function will have Debug".
+T가 **Debug**를 구현하지 않았습니다. 그럼 T에 Debug를 구현할까요? 아닙니다. T가 무엇인지 모르기 때문입니다. 하지만 함수에 이렇게 말할 수 있습니다. "걱정하지 마. 이 함수에서 쓸 T는 모두 Debug가 있을 거야."
 
 ```rust
 use std::fmt::Debug; // Debug is located at std::fmt::Debug. So now we can just write 'Debug'.
@@ -3389,9 +3392,9 @@ fn main() {
 }
 ```
 
-So now the compiler knows: "Okay, this type T is going to have Debug". Now the code works, because `i32` has Debug. Now we can give it many types: `String`, `&str`, and so on, because they all have Debug.
+이제 컴파일러는 "좋아, 이 타입 T에는 Debug가 있겠구나"라고 압니다. `i32`에 Debug가 있으니 코드가 동작합니다. `String`, `&str` 등 Debug가 있는 여러 타입을 넣을 수 있습니다.
 
-Now we can create a struct and give it Debug with #[derive(Debug)], so now we can print it too. Our function can take `i32`, the struct Animal, and more:
+이제 구조체를 하나 만들고 #[derive(Debug)]로 Debug를 붙여서 출력해 보겠습니다. 이 함수는 `i32`, Animal 구조체 등 다양한 타입을 받을 수 있습니다.
 
 ```rust
 use std::fmt::Debug;
@@ -3426,9 +3429,9 @@ Here is your item: Animal { name: "Charlie", age: 1 }
 Here is your item: 55
 ```
 
-Sometimes we need more than one type in a generic function. We have to write out each type name, and think about how we want to use it. In this example, we want two types. First we want to print a statement for type T. Printing with `{}` is nicer, so we will require `Display` for `T`.
+가끔 제네릭 함수에 한 가지 이상의 타입이 필요합니다. 각 타입 이름을 적고 어떻게 쓸지 생각해야 합니다. 이 예제에서는 두 타입이 필요합니다. 먼저 T 타입 문장을 출력하려고 합니다. `{}`로 출력하려면 `T`에 `Display`를 요구합니다.
 
-Next is type U, and the two variables `num_1` and `num_2` have type U (U is some sort of number). We want to compare them, so we need `PartialOrd`. That trait lets us use things like `<`, `>`, `==`, and so on. We want to print them too, so we require `Display` for `U` as well.
+다음은 U 타입입니다. `num_1`, `num_2` 두 변수가 U 타입(어떤 숫자 타입)입니다. 비교하려면 `PartialOrd`가 필요합니다. 이 트레이트가 `<`, `>`, `==` 등을 쓸 수 있게 해 줍니다. 출력도 하고 싶으니 `U`에도 `Display`를 요구합니다.
 
 ```rust
 use std::fmt::Display;
@@ -3443,17 +3446,17 @@ fn main() {
 }
 ```
 
-This prints `Listen up!! Is 9 greater than 8? true`.
+`Listen up!! Is 9 greater than 8? true`를 출력합니다.
 
-So `fn compare_and_display<T: Display, U: Display + PartialOrd>(statement: T, num_1: U, num_2: U)` says:
+따라서 `fn compare_and_display<T: Display, U: Display + PartialOrd>(statement: T, num_1: U, num_2: U)`는 이렇게 말합니다.
 
-- The function name is `compare_and_display`,
-- The first type is T, and it is generic. It must be a type that can print with {}.
-- The next type is U, and it is generic. It must be a type that can print with {}. Also, it must be a type that can compare (use `>`, `<`, and `==`).
+- 함수 이름은 `compare_and_display`입니다.
+- 첫 번째 타입은 제네릭 T이며, `{}`로 출력할 수 있어야 합니다.
+- 다음 타입은 제네릭 U이며, `{}`로 출력할 수 있어야 합니다. 또한 `>`, `<`, `==`로 비교할 수 있어야 합니다.
 
-Now we can give `compare_and_display` different types. `statement` can be a `String`, a `&str`, anything with Display.
+이제 `compare_and_display`에 여러 타입을 넘길 수 있습니다. `statement`는 `String`, `&str`, Display가 있는 무엇이든 될 수 있습니다.
 
-To make generic functions easier to read, we can also write it like this with `where` right before the code block:
+제네릭 함수를 읽기 쉽게 하려면 코드 블록 앞에 `where`를 써서 이렇게 적을 수도 있습니다.
 
 ```rust
 use std::cmp::PartialOrd;
@@ -3472,12 +3475,12 @@ fn main() {
 }
 ```
 
-Using `where` is a good idea when you have many generic types.
+제네릭 타입이 많을 때 `where`를 사용하는 것이 좋습니다.
 
-Also note:
+또한 다음을 기억하세요.
 
-- If you have one type T and another type T, they must be the same.
-- If you have one type T and another type U, they can be different. But they can also be the same.
+- 하나가 T 타입이고 다른 하나도 T 타입이면 둘은 같아야 합니다.
+- 하나가 T 타입이고 다른 하나가 U 타입이면 달라도 되고 같아도 됩니다.
 
 For example:
 
@@ -3495,22 +3498,22 @@ fn main() {
 }
 ```
 
-This prints:
+출력은 다음과 같습니다.
 
 ```text
 I have two things to say: Hello there! and I hate sand.
 I have two things to say: Where is Padme? and Is she all right?
 ```
 
-## Option and Result
+## Option과 Result
 
-We understand enums and generics now, so we can understand `Option` and `Result`. Rust uses these two enums to make code safer.
+이제 enum과 제네릭을 이해했으니 `Option`과 `Result`도 이해할 수 있습니다. Rust는 이 두 enum을 사용해 코드를 더 안전하게 만듭니다.
 
-We will start with `Option`.
+`Option`부터 시작하겠습니다.
 
 ### Option
 
-You use `Option` when you have a value that might exist, or might not exist. When a value exists it is `Some(value)` and when it doesn't it's just `None`, Here is an example of bad code that can be improved with `Option`.
+값이 있을 수도 있고 없을 수도 있을 때 `Option`을 사용합니다. 값이 있으면 `Some(value)`, 없으면 그냥 `None`입니다. `Option`으로 개선할 수 있는 좋지 않은 코드 예가 있습니다.
 
 ```rust
     // ⚠️
@@ -3524,7 +3527,7 @@ fn main() {
 }
 ```
 
-When we run the code, it panics. Here is the message:
+코드를 실행하면 패닉이 납니다. 메시지는 다음과 같습니다.
 
 ```text
 thread 'main' panicked at 'index out of bounds: the len is 2 but the index is 4', src\main.rs:34:5
@@ -3532,7 +3535,9 @@ thread 'main' panicked at 'index out of bounds: the len is 2 but the index is 4'
 
 Panic means that the program stops before the problem happens. Rust sees that the function wants something impossible, and stops. It "unwinds the stack" (takes the values off the stack) and tells you "sorry, I can't do that".
 
-So now we will change the return type from `i32` to `Option<i32>`. This means "give me a `Some(i32)` if it's there, and give me `None` if it's not". We say that the `i32` is "wrapped" in an `Option`, which means that it's inside an `Option`. You have to do something to get the value out.
+패닉은 문제가 일어나기 전에 프로그램이 멈추는 것입니다. Rust는 함수가 불가능한 일을 하려는 것을 보고 멈춥니다. "스택을 풀어"(스택에서 값을 꺼내며) "미안, 그건 못 해"라고 말합니다.
+
+이제 반환 타입을 `i32`에서 `Option<i32>`로 바꿔 보겠습니다. 이것은 "값이 있으면 `Some(i32)`를 주고, 없으면 `None`을 준다"는 뜻입니다. `i32`가 `Option`에 "랩핑"되었다고 하는데, `Option` 안에 들어 있다는 뜻입니다. 값을 꺼내려면 무언가를 해야 합니다.
 
 ```rust
 fn take_fifth(value: Vec<i32>) -> Option<i32> {
@@ -3551,9 +3556,9 @@ fn main() {
 }
 ```
 
-This prints `None, Some(5)`. This is good, because now we don't panic anymore. But how do we get the value 5?
+`None, Some(5)`를 출력합니다. 이제 패닉이 없으니 좋습니다. 하지만 값 5를 어떻게 꺼낼까요?
 
-We can get the value inside an option with `.unwrap()`, but be careful with `.unwrap()`. It's just like unwrapping a present: maybe there's something good inside, or maybe there's an angry snake inside. You only want to `.unwrap()` if you are sure. If you unwrap a value that is `None`, the program will panic.
+`.unwrap()`으로 Option 안의 값을 꺼낼 수 있지만 주의해야 합니다. 선물을 뜯는 것과 같습니다. 좋은 것이 들어 있을 수도 있고 화난 뱀이 들어 있을 수도 있습니다. 확실할 때만 `.unwrap()`을 사용하세요. `None`인 값을 언랩하면 프로그램이 패닉합니다.
 
 ```rust
 // ⚠️
@@ -3575,13 +3580,13 @@ fn main() {
 }
 ```
 
-The message is:
+메시지는 다음과 같습니다.
 
 ```text
 thread 'main' panicked at 'called `Option::unwrap()` on a `None` value', src\main.rs:14:9
 ```
 
-But we don't have to use `.unwrap()`. We can use a `match`. Then we can print the value we have `Some`, and not touch it if we have `None`. For example:
+하지만 `.unwrap()`을 꼭 써야 하는 건 아닙니다. `match`를 사용할 수 있습니다. 그러면 `Some`일 때는 값을 출력하고, `None`이면 건드리지 않을 수 있습니다. 예를 들어:
 
 ```rust
 fn take_fifth(value: Vec<i32>) -> Option<i32> {
@@ -3615,14 +3620,14 @@ fn main() {
 }
 ```
 
-This prints:
+출력은 다음과 같습니다.
 
 ```text
 Found a None!
 Found a 5!
 ```
 
-Because we know generics, we are able to read the code for `Option`. It looks like this:
+제네릭을 알기 때문에 `Option` 코드도 읽을 수 있습니다. 모습은 이렇습니다.
 
 ```rust
 enum Option<T> {
@@ -3633,9 +3638,9 @@ enum Option<T> {
 fn main() {}
 ```
 
-The important point to remember: with `Some`, you have a value of type `T` (any type). Also note that the angle brackets after the `enum` name around `T` is what tells the compiler that it's generic. It has no trait like `Display` or anything to limit it, so it can be anything. But with `None`, you don't have anything.
+기억할 중요한 점: `Some`에는 타입 `T`(어떤 타입이든)의 값이 있습니다. 또한 `enum` 이름 뒤에 `T`를 감싼 꺾쇠 괄호가 제네릭임을 컴파일러에 알려 줍니다. `Display` 같은 제한 트레이트가 없으니 아무 타입이나 올 수 있습니다. 하지만 `None`에는 아무 것도 없습니다.
 
-So in a `match` statement for Option you can't say:
+그래서 Option을 `match`할 때 이렇게 쓸 수 없습니다.
 
 ```rust
 // 🚧
@@ -3643,9 +3648,9 @@ Some(value) => println!("The value is {}", value),
 None(value) => println!("The value is {}", value),
 ```
 
-because `None` is just `None`.
+`None`은 그저 `None`이기 때문입니다.
 
-Of course, there are easier ways to use Option. In this code, we will use a method called `.is_some()` to tell us if it is `Some`. (Yes, there is also a method called `.is_none()`.) In this easier way, we don't need `handle_option()` anymore. We also don't need a vec for the Options.
+물론 Option을 더 쉽게 사용하는 방법도 있습니다. 여기서는 `.is_some()` 메서드를 사용해 `Some`인지 확인합니다. (네, `.is_none()`도 있습니다.) 이 간단한 방법에서는 더 이상 `handle_option()`이 필요 없고, Option을 담을 벡터도 필요 없습니다.
 
 ```rust
 fn take_fifth(value: Vec<i32>) -> Option<i32> {
@@ -3681,14 +3686,14 @@ We got: 5
 
 ### Result
 
-Result is similar to Option, but here is the difference:
+Result는 Option과 비슷하지만 차이가 있습니다.
 
-- Option is about `Some` or `None` (value or no value),
-- Result is about `Ok` or `Err` (okay result, or error result).
+- Option은 `Some` 또는 `None`(값이 있거나 없음)을 다룹니다.
+- Result는 `Ok` 또는 `Err`(정상 결과 또는 오류 결과)을 다룹니다.
 
-So `Option` is if you are thinking: "Maybe there will be something, and maybe there won't." But `Result` is if you are thinking: "Maybe it will fail."
+즉 Option은 "있을 수도 있고 없을 수도 있다"는 생각을 할 때, Result는 "실패할 수도 있다"는 생각을 할 때 씁니다.
 
-To compare, here are the signatures for Option and Result.
+비교를 위해 Option과 Result의 시그니처를 보겠습니다.
 
 ```rust
 enum Option<T> {
@@ -3704,9 +3709,9 @@ enum Result<T, E> {
 fn main() {}
 ```
 
-So Result has a value inside of `Ok`, and a value inside of `Err`. That is because errors usually contain information that describes the error.
+Result에는 `Ok` 안에 값이 있고 `Err` 안에도 값이 있습니다. 오류에는 보통 오류를 설명하는 정보가 들어 있기 때문입니다.
 
-`Result<T, E>` means you need to think of what you want to return for `Ok`, and what you want to return for `Err`. Actually, you can decide anything. Even this is okay:
+`Result<T, E>`는 `Ok`일 때 무엇을, `Err`일 때 무엇을 반환할지 생각해야 한다는 뜻입니다. 사실 무엇이든 정할 수 있습니다. 이런 것도 괜찮습니다.
 
 ```rust
 fn check_error() -> Result<(), ()> {
@@ -3718,9 +3723,9 @@ fn main() {
 }
 ```
 
-`check_error` says "return `()` if we get `Ok`, and return `()` if we get `Err`". Then we return `Ok` with a `()`.
+`check_error`는 "Ok이면 `()`를, Err여도 `()`를 반환한다"는 뜻입니다. 그리고 `()`를 담아 `Ok`를 반환했습니다.
 
-The compiler gives us an interesting warning:
+컴파일러가 흥미로운 경고를 줍니다.
 
 ```text
 warning: unused `std::result::Result` that must be used
@@ -3733,7 +3738,7 @@ warning: unused `std::result::Result` that must be used
   = note: this `Result` may be an `Err` variant, which should be handled
 ```
 
-This is true: we only returned the `Result` but it could have been an `Err`. So let's handle the error a bit, even though we're still not really doing anything.
+맞는 말입니다. `Result`를 그냥 반환했는데 `Err`일 수도 있습니다. 아직 별다른 일을 하지 않더라도 조금은 오류를 처리해 보겠습니다.
 
 ```rust
 fn give_result(input: i32) -> Result<(), ()> {
@@ -3753,12 +3758,12 @@ fn main() {
 }
 ```
 
-This prints `It's an error, guys`. So we just handled our first error.
+`It's an error, guys`를 출력합니다. 첫 오류를 처리했습니다.
 
-Remember, the four methods to easily check are `.is_some()`, `is_none()`, `is_ok()`, and `is_err()`.
+간단히 확인할 수 있는 네 가지 메서드를 기억하세요: `.is_some()`, `is_none()`, `is_ok()`, `is_err()`.
 
 
-Sometimes a function with Result will use a `String` for the `Err` value. This is not the best method to use, but it is a little better than what we've done so far.
+Result를 쓰는 함수가 `Err` 값으로 `String`을 사용할 때도 있습니다. 최선의 방법은 아니지만 지금까지보다 조금 낫습니다.
 
 ```rust
 fn check_if_five(number: i32) -> Result<i32, String> {
@@ -3779,14 +3784,14 @@ fn main() {
 }
 ```
 
-Our vec prints:
+벡터는 다음과 같이 출력됩니다.
 
 ```text
 [Err("Sorry, the number wasn\'t five."), Err("Sorry, the number wasn\'t five."), Err("Sorry, the number wasn\'t five."), Ok(5),
 Err("Sorry, the number wasn\'t five.")]
 ```
 
-Just like Option, `.unwrap()` on `Err` will panic.
+Option과 마찬가지로 `Err`에서 `.unwrap()`을 호출하면 패닉합니다.
 
 ```rust
     // ⚠️
@@ -3796,24 +3801,24 @@ fn main() {
 }
 ```
 
-The program panics, and prints:
+프로그램이 패닉하며 다음을 출력합니다.
 
 ```text
 thread 'main' panicked at 'called `Result::unwrap()` on an `Err` value: "There was an error"', src\main.rs:30:20
 ```
 
-This information helps you fix your code. `src\main.rs:30:20` means "inside main.rs in directory src, on line 30 and column 20". So you can go there to look at your code and fix the problem.
+이 정보는 코드를 고치는 데 도움이 됩니다. `src\main.rs:30:20`은 "src 디렉터리의 main.rs 30번째 줄 20번째 칸"이라는 뜻입니다. 그 위치에서 문제를 고칠 수 있습니다.
 
-You can also create your own error types. Result functions in the standard library and other people's code usually do this. For example, this function from the standard library:
+직접 오류 타입을 만들 수도 있습니다. 표준 라이브러리와 다른 사람의 코드에 있는 Result 함수는 보통 이렇게 합니다. 예를 들어 표준 라이브러리의 이 함수가 있습니다.
 
 ```rust
 // 🚧
 pub fn from_utf8(vec: Vec<u8>) -> Result<String, FromUtf8Error>
 ```
 
-This function takes a vector of bytes (`u8`) and tries to make a `String`. So the success case for the Result is a `String` and the error case is `FromUtf8Error`. You can give your error type any name you want.
+이 함수는 바이트(`u8`) 벡터를 받아 `String`을 만들려고 합니다. 그래서 성공 타입은 `String`, 오류 타입은 `FromUtf8Error`입니다. 오류 타입 이름은 원하는 대로 지을 수 있습니다.
 
-Using a `match` with `Option` and `Result` sometimes requires a lot of code. For example, the `.get()` method returns an `Option` on a `Vec`.
+`Option`과 `Result`를 `match`로 다루다 보면 코드가 길어질 때가 있습니다. 예를 들어 `Vec`의 `.get()` 메서드는 `Option`을 반환합니다.
 
 ```rust
 fn main() {
@@ -3825,14 +3830,14 @@ fn main() {
 }
 ```
 
-This prints
+출력 결과
 
 ```text
 Some(2)
 None
 ```
 
-So now we can match to get the values. Let's use a range from 0 to 10 to see if it matches the numbers in `my_vec`.
+이제 값을 얻기 위해 match를 사용할 수 있습니다. `my_vec`의 숫자와 매치되는지 0부터 10까지 범위를 써 보겠습니다.
 
 ```rust
 fn main() {
@@ -3847,7 +3852,7 @@ fn main() {
 }
 ```
 
-This is good, but we don't do anything for `None` because we don't care. Here we can make the code smaller by using `if let`. `if let` means "do something if it matches, and don't do anything if it doesn't". `if let` is when you don't care about matching for everything.
+좋습니다. 다만 `None`에 대해서는 아무 것도 하지 않습니다. 이럴 때는 `if let`으로 코드를 줄일 수 있습니다. `if let`은 "매치되면 뭔가 하고, 아니면 아무 것도 하지 않는다"는 뜻입니다. 모든 경우를 매치할 필요가 없을 때 씁니다.
 
 ```rust
 fn main() {
@@ -3861,20 +3866,20 @@ fn main() {
 }
 ```
 
-**Important to remember**: `if let Some(number) = my_vec.get(index)` means "if you get `Some(number)` from `my_vec.get(index)`".
+**중요**: `if let Some(number) = my_vec.get(index)`는 "`my_vec.get(index)`에서 `Some(number)`를 받으면"이라는 뜻입니다.
 
-Also note: it uses one `=`. It is not a boolean.
+또한 `=`가 하나입니다. 불린이 아닙니다.
 
-`while let` is like a while loop for `if let`. Imagine that we have weather station data like this:
+`while let`은 `if let`의 while 버전입니다. 다음과 같은 기상 데이터가 있다고 해 봅시다.
 
 ```text
 ["Berlin", "cloudy", "5", "-7", "78"]
 ["Athens", "sunny", "not humid", "20", "10", "50"]
 ```
 
-We want to get the numbers, but not the words. For the numbers, we can use a method called `parse::<i32>()`. `parse()` is the method, and `::<i32>` is the type. It will try to turn the `&str` into an `i32`, and give it to us if it can. It returns a `Result`, because it might not work (like if you wanted it to parse "Billybrobby" - that's not a number).
+숫자만 가져오고 단어는 건너뛰고 싶습니다. 숫자를 위해 `parse::<i32>()`라는 메서드를 쓸 수 있습니다. `parse()`가 메서드이고 `::<i32>`가 타입입니다. `&str`을 `i32`로 바꾸려고 시도하고 성공하면 그 값을 줍니다. 실패할 수도 있으니 `Result`를 반환합니다(예: "Billybrobby"는 숫자가 아닙니다).
 
-We will also use `.pop()`. This takes the last item off of the vector.
+`.pop()`도 사용할 것입니다. 벡터의 마지막 항목을 꺼냅니다.
 
 ```rust
 fn main() {
@@ -3911,15 +3916,15 @@ The number is: 10
 The number is: 20
 ```
 
-## Other collections
+## 다른 컬렉션
 
-Rust has many more types of collections. You can see them at https://doc.rust-lang.org/beta/std/collections/ in the standard library. That page has good explanations for why to use one type, so go there if you don't know what type you want. These collections are all inside `std::collections` in the standard library. The best way to use them is with a `use` statement, like we did with our `enums`. We will start with `HashMap`, which is very common.
+Rust에는 더 많은 컬렉션 타입이 있습니다. 표준 라이브러리의 https://doc.rust-lang.org/beta/std/collections/ 에서 확인할 수 있습니다. 어떤 타입을 써야 할지 모르겠다면 이 페이지에서 좋은 설명을 볼 수 있습니다. 이 컬렉션들은 모두 표준 라이브러리의 `std::collections` 안에 있습니다. `enums`에서 했던 것처럼 `use` 문으로 가져와 쓰는 것이 가장 좋습니다. 가장 흔한 `HashMap`부터 시작하겠습니다.
 
 ### HashMap (and BTreeMap)
 
-A HashMap is a collection made out of *keys* and *values*. You use the key to look up the value that matches the key. You can create a new `HashMap` with just `HashMap::new()` and use `.insert(key, value)` to insert items.
+HashMap은 *키*와 *값*으로 이루어진 컬렉션입니다. 키로 키에 맞는 값을 찾습니다. `HashMap::new()`만으로 새 `HashMap`을 만들고 `.insert(key, value)`로 항목을 넣을 수 있습니다.
 
-A `HashMap` is not in order, so if you print every key in a `HashMap` together it will probably print differently. We can see this in an example:
+`HashMap`은 순서가 없습니다. 그래서 모든 키를 한꺼번에 출력하면 매번 다르게 나올 수 있습니다. 예제로 확인해 봅시다.
 
 ```rust
 use std::collections::HashMap; // This is so we can just write HashMap instead of std::collections::HashMap every time
@@ -3963,9 +3968,9 @@ In the year 2020 the city of Tallinn had a population of 437619.
 In the year 1372 the city of Tallinn had a population of 3250.
 ```
 
-You can see that it's not in order.
+순서가 없다는 것을 알 수 있습니다.
 
-If you want a `HashMap` that you can sort, you can use a `BTreeMap`. Actually they are very similar to each other, so we can quickly change our `HashMap` to a `BTreeMap` to see. You can see that it is almost the same code.
+정렬할 수 있는 `HashMap`을 원한다면 `BTreeMap`을 사용할 수 있습니다. 두 타입은 사실 매우 비슷합니다. 방금 만든 `HashMap`을 `BTreeMap`으로 바꿔 보겠습니다. 거의 같은 코드임을 볼 수 있습니다.
 
 ```rust
 use std::collections::BTreeMap; // Just change HashMap to BTreeMap
@@ -4002,9 +4007,9 @@ In the year 2020 the city of Tallinn had a population of 437619.
 
 Now we will go back to `HashMap`.
 
-You can get a value in a `HashMap` by just putting the key in `[]` square brackets. In this next example we will bring up the value for the key `Bielefeld`, which is `Germany`. But be careful, because the program will crash if there is no key. If you write `println!("{:?}", city_hashmap["Bielefeldd"]);` for example then it will crash, because `Bielefeldd` doesn't exist.
+`[]` 대괄호 안에 키를 넣기만 하면 `HashMap`에서 값을 가져올 수 있습니다. 다음 예에서 `Bielefeld` 키에 대한 값을 가져오는데, 값은 `Germany`입니다. 하지만 키가 없으면 프로그램이 크래시되니 주의하세요. 예를 들어 `println!("{:?}", city_hashmap["Bielefeldd"]);`라고 하면 `Bielefeldd` 키가 없기 때문에 크래시됩니다.
 
-If you are not sure that there will be a key, you can use `.get()` which returns an `Option`. If it exists it will be `Some(value)`, and if not you will get `None` instead of crashing the program. That's why `.get()` is the safer way to get a value from a `HashMap`.
+키가 있을지 확실치 않다면 `Option`을 반환하는 `.get()`을 사용할 수 있습니다. 키가 있으면 `Some(value)`, 없으면 프로그램이 크래시되는 대신 `None`을 줍니다. 그래서 `.get()`이 `HashMap`에서 값을 가져오는 더 안전한 방법입니다.
 
 ```rust
 use std::collections::HashMap;
@@ -4028,7 +4033,7 @@ fn main() {
 }
 ```
 
-This prints:
+출력:
 
 ```text
 "Germany"
@@ -4036,9 +4041,9 @@ Some("Germany")
 None
 ```
 
-This is because *Bielefeld* exists, but *Bielefeldd* does not exist.
+*Bielefeld*는 있고 *Bielefeldd*는 없기 때문입니다.
 
-If a `HashMap` already has a key when you try to put it in, it will overwrite its value:
+`HashMap`에 이미 키가 있는데 또 넣으려고 하면 값을 덮어씁니다.
 
 ```rust
 use std::collections::HashMap;
@@ -4055,9 +4060,9 @@ fn main() {
 }
 ```
 
-This prints `Some("Eye of the World")`, because it was the last one you used `.insert()` for.
+`Some("Eye of the World")`가 출력됩니다. `.insert()`로 마지막에 넣은 값이기 때문입니다.
 
-It is easy to check if an entry exists, because you can check with `.get()` which gives an `Option`:
+항목 존재 여부를 확인하기도 쉽습니다. `Option`을 반환하는 `.get()`으로 확인하면 됩니다.
 
 ```rust
 use std::collections::HashMap;
@@ -4075,11 +4080,11 @@ fn main() {
 }
 ```
 
-This prints `Some("L\'Allemagne Moderne")` because there was already a key for `1`, so we didn't insert `Le Petit Prince`.
+`1` 키가 이미 있어서 `Le Petit Prince`를 넣지 않았으므로 `Some("L\'Allemagne Moderne")`가 출력됩니다.
 
-`HashMap` has a very interesting method called `.entry()` that you definitely want to try out. With it you can try to make an entry and use another method like `.or_insert()` to insert the value if there is no key. The interesting part is that it also gives a mutable reference so you can change it if you want. First is an example where we just insert `true` every time we insert a book title into the `HashMap`.
+`HashMap`에는 꼭 써 보고 싶은 `.entry()`라는 흥미로운 메서드가 있습니다. 이걸로 항목을 만들려고 시도하고, `.or_insert()` 같은 다른 메서드로 키가 없을 때 값을 넣을 수 있습니다. 재미있는 점은 가변 레퍼런스도 주어서 원하면 값을 바꿀 수 있다는 것입니다. 먼저 책 제목을 넣을 때마다 `true`를 넣는 예제입니다.
 
-Let's pretend that we have a library and want to keep track of our books.
+도서관이 있다고 가정하고 책을 관리해 봅시다.
 
 ```rust
 use std::collections::HashMap;
@@ -4098,7 +4103,7 @@ fn main() {
 }
 ```
 
-This prints:
+출력:
 
 ```text
 Do we have Eye of the World? true
@@ -4106,7 +4111,7 @@ Do we have Le Petit Prince? true
 Do we have L'Allemagne Moderne? true
 ```
 
-But that's not exactly what we want. Maybe it would be better to count the number of books so that we know that there are two copies of *Eye of the World*. First let's look at what `.entry()` does, and what `.or_insert()` does. `.entry()` actually returns an `enum` called `Entry`:
+하지만 원하는 결과는 아닙니다. *Eye of the World*가 두 권이라는 것을 알 수 있도록 책 수를 세는 것이 더 좋겠죠. 우선 `.entry()`와 `.or_insert()`가 무엇을 하는지 봅시다. `.entry()`는 실제로 `Entry`라는 `enum`을 반환합니다.
 
 ```rust
 pub fn entry(&mut self, key: K) -> Entry<K, V> // 🚧
@@ -4125,7 +4130,7 @@ enum Entry<K, V> {
 }
 ```
 
-Then when we call `.or_insert()`, it looks at the enum and decides what to do.
+`.or_insert()`를 호출하면 이 enum을 보고 무엇을 할지 결정합니다.
 
 ```rust
 fn or_insert(self, default: V) -> &mut V { // 🚧
@@ -4136,7 +4141,7 @@ fn or_insert(self, default: V) -> &mut V { // 🚧
 }
 ```
 
-The interesting part is that it returns a `mut` reference: `&mut V`. That means you can use `let` to attach it to a variable, and change the variable to change the value in the `HashMap`. So for every book we will insert a 0 if there is no entry. And if there is one, we will use `+= 1` on the reference to increase the number. Now it looks like this:
+흥미로운 점은 `mut` 레퍼런스 `&mut V`를 반환한다는 것입니다. 즉 `let`으로 변수에 묶은 뒤 그 변수를 바꾸면 `HashMap`의 값이 바뀝니다. 그래서 각 책마다 항목이 없으면 0을 넣고, 있으면 레퍼런스에 `+= 1`을 해서 숫자를 늘릴 것입니다. 이제 이렇게 됩니다.
 
 ```rust
 use std::collections::HashMap;
@@ -4158,7 +4163,7 @@ fn main() {
 ```
 
 
-The important part is `let return_value = book_hashmap.entry(book).or_insert(0);`. If you take out the `let`, you get `book_hashmap.entry(book).or_insert(0)`. Without `let` it does nothing: it inserts 0, and nobody takes the mutable reference to 0. So we bind it to `return_value` so we can keep the 0. Then we increase the value by 1, which gives at least 1 for every book in the `HashMap`. Then when `.entry()` looks at *Eye of the World* again it doesn't insert anything, but it gives us a mutable 1. Then we increase it to 2, and that's why it prints this:
+핵심은 `let return_value = book_hashmap.entry(book).or_insert(0);`입니다. `let`을 빼면 `book_hashmap.entry(book).or_insert(0)`만 남는데, 그러면 아무 일도 일어나지 않습니다. 0을 넣긴 하지만 0에 대한 가변 레퍼런스를 아무도 받지 않습니다. 그래서 `return_value`에 묶어 0을 유지한 뒤 값을 1 올립니다. 이렇게 하면 `HashMap`의 모든 책이 적어도 1을 가지게 됩니다. 그다음 `.entry()`가 다시 *Eye of the World*를 보면 아무 것도 넣지 않지만 가변 1을 주고, 이를 2로 올리니 다음처럼 출력됩니다.
 
 ```text
 L'Allemagne Moderne, 1
@@ -4167,7 +4172,7 @@ Eye of the World, 2
 ```
 
 
-You can also do things with `.or_insert()` like insert a vec and then push into the vec. Let's pretend that we asked men and women on the street what they think of a politician. They give a rating from 0 to 10. Then we want to put the numbers together to see if the politician is more popular with men or women. It can look like this:
+`.or_insert()`로 벡터를 넣고 그 벡터에 push하는 일도 할 수 있습니다. 거리에서 남성과 여성에게 한 정치인에 대한 생각을 물었다고 해 봅시다. 0부터 10까지 점수를 줍니다. 이제 숫자를 모아서 남녀 중 누구에게 더 인기가 있는지 보고 싶습니다. 다음처럼 할 수 있습니다.
 
 
 ```rust
@@ -4195,14 +4200,14 @@ fn main() {
 }
 ```
 
-This prints:
+출력:
 
 ```text
 "female", [5, 6, 5]
 "male", [9, 0, 10]
 ```
 
-The important line is: `survey_hash.entry(item.0).or_insert(Vec::new()).push(item.1);` So if it sees "female" it will check to see if there is "female" already in the `HashMap`. If not, it will insert a `Vec::new()`, then push the number in. If it sees "female" already in the `HashMap`, it will not insert a new Vec, and will just push the number into it.
+중요한 줄은 `survey_hash.entry(item.0).or_insert(Vec::new()).push(item.1);`입니다. "female"을 보면 `HashMap`에 "female"이 있는지 확인합니다. 없으면 `Vec::new()`를 넣고 숫자를 푸시합니다. 이미 "female"이 있으면 새 Vec을 넣지 않고 거기에 숫자를 푸시합니다.
 
 ### HashSet and BTreeSet
 
@@ -4256,7 +4261,7 @@ There are 66 unique numbers, so we are missing 34.
 It does not contain: 1 2 4 6 7 9 12 21 23 27 30 31 39 40 45 47 48 50 52 53 62 65 69 70 72 75 77 78 83 85 88 97 98 99
 ```
 
-A `BTreeSet` is similar to a `HashSet` in the same way that a `BTreeMap` is similar to a `HashMap`. If we print each item in the `HashSet`, we don't know what the order will be:
+`BTreeSet`은 `BTreeMap`과 `HashMap`의 관계처럼 `HashSet`과 비슷합니다. `HashSet`의 항목을 모두 출력하면 어떤 순서로 나올지 알 수 없습니다.
 
 ```rust
 for entry in number_hashset { // 🚧
@@ -4266,7 +4271,9 @@ for entry in number_hashset { // 🚧
 
 Maybe it will print this: `67 28 42 25 95 59 87 11 5 81 64 34 8 15 13 86 10 89 63 93 49 41 46 57 60 29 17 22 74 43 32 38 36 76 71 18 14 84 61 16 35 90 56 54 91 19 94 44 3 0 68 80 51 92 24 20 82 26 58 33 55 96 37 66 79 73`. But it will almost never print it in the same way again.
 
-Here as well, it is easy to change your `HashSet` to a `BTreeSet` if you decide you need ordering. In our code, we only need to make two changes to switch from a `HashSet` to a `BTreeSet`.
+이런 식으로 출력될 수도 있지만, 같은 순서로 다시 나올 일은 거의 없습니다.
+
+여기서도 정렬이 필요하다면 `HashSet`을 `BTreeSet`으로 바꾸기 쉽습니다. 코드에서 두 부분만 바꾸면 됩니다.
 
 ```rust
 use std::collections::BTreeSet; // Change HashSet to BTreeSet
@@ -4294,9 +4301,9 @@ Now it will print in order: `0 3 5 8 10 11 13 14 15 16 17 18 19 20 22 24 25 26 2
 
 ### BinaryHeap
 
-A `BinaryHeap` is an interesting collection type, because it is mostly unordered but has a bit of order. It keeps the largest item in the front, but the other items are in any order.
+`BinaryHeap`은 흥미로운 컬렉션 타입입니다. 거의 무작위지만 약간의 순서가 있습니다. 가장 큰 항목을 맨 앞에 두고 나머지는 아무 순서로나 있습니다.
 
-We will use another list of items for an example, but this time smaller.
+이번에는 더 작은 리스트로 예제를 보겠습니다.
 
 ```rust
 use std::collections::BinaryHeap;
@@ -4325,7 +4332,7 @@ fn main() {
 }
 ```
 
-This prints:
+출력:
 
 ```text
 Popped off 30. Remaining numbers are: [25, 15, 20, 0, 10, 5]
@@ -4337,9 +4344,9 @@ Popped off 5. Remaining numbers are: [0]
 Popped off 0. Remaining numbers are: []
 ```
 
-You can see that the number in the 0 index is always largest: 25, 20, 15, 10, 5, then 0. But the other ones are all different.
+0번 인덱스의 숫자가 항상 가장 큰 것을 볼 수 있습니다: 25, 20, 15, 10, 5, 그리고 0. 하지만 다른 값들의 순서는 제각각입니다.
 
-A good way to use a `BinaryHeap` is for a collection of things to do. Here we create a `BinaryHeap<(u8, &str)>` where the `u8` is a number for the importance of the task. The `&str` is a description of what to do.
+`BinaryHeap`은 해야 할 일 목록에 쓰기 좋습니다. 여기서는 `BinaryHeap<(u8, &str)>`을 만드는데, `u8`은 작업의 중요도이고 `&str`은 해야 할 일 설명입니다.
 
 ```rust
 use std::collections::BinaryHeap;
@@ -4360,7 +4367,7 @@ fn main() {
 }
 ```
 
-This will always print:
+항상 다음과 같이 출력됩니다.
 
 ```text
 You need to: Write back to email from the CEO
@@ -4372,7 +4379,7 @@ You need to: Watch some YouTube
 
 ### VecDeque
 
-A `VecDeque` is a `Vec` that is good at popping items both off the front and the back. Rust has `VecDeque` because a `Vec` is great for popping off the back (the last item), but not so great off the front. When you use `.pop()` on a `Vec`, it just takes off the last item on the right and nothing else is moved. But if you take it off another part, all the items to the right are moved over one position to the left. You can see this in the description for `.remove()`:
+`VecDeque`는 앞뒤 양쪽에서 pop을 잘하는 `Vec`입니다. `Vec`은 뒤쪽(마지막 항목)을 팝하는 데는 뛰어나지만 앞쪽은 그렇지 않아 `VecDeque`가 있습니다. `Vec`에서 `.pop()`을 쓰면 오른쪽 마지막 항목만 제거되고 다른 것은 움직이지 않습니다. 하지만 다른 위치의 항목을 제거하면 오른쪽에 있는 모든 항목이 한 칸씩 왼쪽으로 움직입니다. `.remove()` 설명에서 이를 볼 수 있습니다.
 
 
 ```text
@@ -4390,7 +4397,7 @@ fn main() {
 
 it will remove `9`. `8` in index 1 will move to index 0, `7` in index 2 will move to index 1, and so on. Imagine a big parking lot where every time one car leaves all the cars on the right side have to move over.
 
-This, for example, is a *lot* of work for the computer. In fact, if you run it on the Playground it will probably just give up because it's too much work.
+예를 들어 이것은 컴퓨터에게 *매우* 많은 일을 시킵니다. 실제로 Playground에서 실행하면 너무 많은 작업이라 포기할 수도 있습니다.
 
 ```rust
 fn main() {
@@ -4403,7 +4410,7 @@ fn main() {
 
 This is a `Vec` of 600,000 zeros. Every time you use `remove(0)` on it, it moves each zero left one space to the left. And then it does it 600,000 times.
 
-You don't have to worry about that with a `VecDeque`. It is usually a bit slower than a `Vec`, but if you have to do things on both ends then it is much faster. You can just use `VecDeque::from` with a `Vec` to make one. Our code above then looks like this:
+`VecDeque`에서는 그런 걱정을 할 필요가 없습니다. 보통 `Vec`보다 조금 느리지만 양쪽 끝을 다뤄야 할 때는 훨씬 빠릅니다. `Vec`을 `VecDeque::from`으로 감싸 만들면 됩니다. 위 코드는 이렇게 바뀝니다.
 
 ```rust
 use std::collections::VecDeque;
@@ -4416,11 +4423,11 @@ fn main() {
 }
 ```
 
-It is now much faster, and on the Playground it finishes in under a second instead of giving up.
+이제 훨씬 빨라졌고, Playground에서도 포기하지 않고 1초 안에 끝납니다.
 
-In this next example we have a `Vec` of things to do. Then we make a `VecDeque` and use `.push_front()` to put them at the front, so the first item we added will be on the right. But each item we push is a `(&str, bool)`: `&str` is the description and `false` means it's not done yet. We use our `done()` function to pop an item off the back, but we don't want to delete it. Instead, we change `false` to `true` and push it at the front so that we can keep it.
+다음 예제에서는 해야 할 일을 담은 `Vec`이 있습니다. 이후 `VecDeque`를 만들고 `.push_front()`로 앞에 넣어 처음 추가한 항목이 오른쪽에 오게 합니다. 하지만 넣는 각 항목은 `(&str, bool)`입니다. `&str`은 설명이고 `false`는 아직 완료되지 않았음을 뜻합니다. `done()` 함수를 써서 뒤에서 pop하지만 지우고 싶지는 않습니다. 대신 `false`를 `true`로 바꿔 앞에 다시 넣어 둡니다.
 
-It looks like this:
+코드는 다음과 같습니다.
 
 ```rust
 use std::collections::VecDeque;
@@ -4458,23 +4465,23 @@ fn main() {
 }
 ```
 
-This prints:
+출력:
 
 ```text
 You must: phone Loki back
 ("add new product to list", true) ("send email to customer", true) ("phone Loki back", false)
 ```
 
-## The ? operator
+## ? 연산자
 
-There is an even shorter way to deal with `Result` (and `Option`), shorter than `match` and even shorter than `if let`. It is called the "question mark operator", and is just `?`. After a function that returns a result, you can add `?`. This will:
+`Result`(와 `Option`)를 다루는 더 짧은 방법이 있습니다. `match`보다, `if let`보다도 짧습니다. 물음표 연산자라고 하며, 그냥 `?`입니다. 결과를 반환하는 함수 뒤에 `?`를 붙일 수 있습니다. 그러면 다음을 합니다.
 
-- return what is inside the `Result` if it is `Ok`
-- pass the error back if it is `Err`
+- `Ok`라면 `Result` 안의 값을 반환합니다.
+- `Err`라면 오류를 위로 전달합니다.
 
-In other words, it does almost everything for you.
+다시 말해 거의 모든 일을 대신해 줍니다.
 
-We can try this with `.parse()` again. We will write a function called `parse_str` that tries to turn a `&str` into a `i32`. It looks like this:
+`.parse()`로 다시 해 보겠습니다. `&str`을 `i32`로 바꾸려고 하는 `parse_str` 함수를 만들겠습니다. 모양은 이렇습니다.
 
 ```rust
 use std::num::ParseIntError;
@@ -4487,7 +4494,7 @@ fn parse_str(input: &str) -> Result<i32, ParseIntError> {
 fn main() {}
 ```
 
-This function takes a `&str`. If it is `Ok`, it gives an `i32` wrapped in `Ok`. If it is an `Err`, it returns a `ParseIntError`. Then we try to parse the number, and add `?`. That means "check if it is an error, and give what is inside the Result if it is okay". If it is not okay, it will return the error and end. But if it is okay, it will go to the next line. On the next line is the number inside of `Ok()`. We need to wrap it in `Ok` because the return is `Result<i32, ParseIntError>`, not `i32`.
+이 함수는 `&str`을 받습니다. `Ok`라면 `i32`를 `Ok`에 담아 줍니다. `Err`라면 `ParseIntError`를 반환합니다. 그다음 숫자를 파싱하고 `?`를 붙입니다. 이는 "오류인지 확인하고, 괜찮으면 Result 안의 값을 꺼내라"는 뜻입니다. 괜찮지 않으면 오류를 반환하고 끝납니다. 괜찮다면 다음 줄로 갑니다. 다음 줄에서는 `Ok()` 안의 숫자가 있습니다. 반환 타입이 `Result<i32, ParseIntError>`이지 `i32`가 아니므로 `Ok`로 감싸야 합니다.
 
 Now, we can try out our function. Let's see what it does with a vec of `&str`s.
 
@@ -4516,7 +4523,7 @@ Err(ParseIntError { kind: InvalidDigit })
 Ok(6060)
 ```
 
-How did we find `std::num::ParseIntError`? One easy way is to "ask" the compiler again.
+`std::num::ParseIntError`는 어떻게 찾았을까요? 컴파일러에게 다시 "물어보는" 쉬운 방법이 있습니다.
 
 ```rust
 fn main() {
@@ -4535,11 +4542,11 @@ error[E0599]: no method named `rbrbrb` found for enum `std::result::Result<i32, 
   |             ^^^^^^ method not found in `std::result::Result<i32, std::num::ParseIntError>`
 ```
 
-So `std::result::Result<i32, std::num::ParseIntError>` is the signature we need.
+그래서 필요한 시그니처가 `std::result::Result<i32, std::num::ParseIntError>`입니다.
 
-We don't need to write `std::result::Result` because `Result` is always "in scope" (in scope = ready to use). Rust does this for all the types we use a lot so we don't have to write `std::result::Result`, `std::collections::Vec`, etc.
+`Result`는 항상 "스코프 안"(즉, 바로 사용할 수 있는 상태)이므로 `std::result::Result`라고 쓸 필요는 없습니다. 자주 쓰는 타입에 대해 Rust가 이렇게 해 주기 때문에 `std::result::Result`, `std::collections::Vec` 등을 매번 쓰지 않아도 됩니다.
 
-We aren't working with things like files yet, so the ? operator doesn't look too useful yet. But here is a useless but quick example that shows how you can use it on a single line. Instead of making an `i32` with `.parse()`, we'll do a lot more. We'll make an `u16`, then turn it to a `String`, then a `u32`, then to a `String` again, and finally to a `i32`.
+아직 파일 같은 것을 다루지 않았으니 ? 연산자가 그다지 유용해 보이지 않을 수 있습니다. 하지만 한 줄에서 어떻게 쓸 수 있는지 보여 주는 간단한 예를 보겠습니다. `.parse()`로 `i32`를 만드는 대신 더 많은 일을 합니다. `u16`을 만든 뒤 `String`으로 바꾸고, `u32`로 바꾸고, 다시 `String`, 마지막으로 `i32`로 바꿉니다.
 
 ```rust
 use std::num::ParseIntError;
@@ -4558,13 +4565,13 @@ fn main() {
 }
 ```
 
-This prints the same thing, but this time we handled three `Result`s in a single line. Later on we will do this with files, because they always return `Result`s because many things can go wrong.
+같은 결과를 출력하지만 이번에는 한 줄에서 `Result`를 세 번 처리했습니다. 나중에 파일을 다룰 때 이렇게 할 것입니다. 파일 작업은 잘못될 수 있는 일이 많아 항상 `Result`를 반환하기 때문입니다.
 
-Imagine the following: you want to open a file, write to it, and close it. First you need to successfully find the file (that's a `Result`). Then you need to successfully write to it (that's a `Result`). With `?` you can do that on one line.
+다음을 생각해 봅시다. 파일을 열어 쓰고 닫고 싶습니다. 먼저 파일을 찾는 데 성공해야 합니다(`Result`). 그리고 성공적으로 써야 합니다(`Result`). `?`를 쓰면 한 줄에서 처리할 수 있습니다.
 
 ### When panic and unwrap are good
 
-Rust has a `panic!` macro that you can use to make it panic. It is easy to use:
+Rust에는 패닉을 일으키는 `panic!` 매크로가 있습니다. 사용법은 간단합니다.
 
 ```rust
 fn main() {
@@ -4572,11 +4579,11 @@ fn main() {
 }
 ```
 
-The message `"Time to panic!"` displays when you run the program: `thread 'main' panicked at 'Time to panic!', src\main.rs:2:3`
+프로그램을 실행하면 `"Time to panic!"` 메시지가 이렇게 표시됩니다: `thread 'main' panicked at 'Time to panic!', src\main.rs:2:3`
 
-You will remember that `src\main.rs` is the directory and file name, and `2:3` are the line and column numbers. With this information, you can find the code and fix it.
+`src\main.rs`가 디렉터리와 파일 이름이고, `2:3`이 줄과 열 번호라는 것을 기억하세요. 이 정보로 코드를 찾아 고칠 수 있습니다.
 
-`panic!` is a good macro to use to make sure that you know when something changes. For example, this function called `prints_three_things` always prints index [0], [1], and [2] from a vector. It is okay because we always give it a vector with three items:
+`panic!`은 무언가가 바뀌었을 때 알 수 있도록 사용할 좋은 매크로입니다. 예를 들어 `prints_three_things`라는 함수는 항상 벡터의 [0], [1], [2]를 출력합니다. 항상 세 개짜리 벡터를 주고 있으니 괜찮습니다.
 
 ```rust
 fn prints_three_things(vector: Vec<i32>) {
@@ -4591,7 +4598,7 @@ fn main() {
 
 It prints `8, 9, 10` and everything is fine.
 
-But imagine that later on we write more and more code, and forget that `my_vec` can only be three things. Now `my_vec` in this part has six things:
+하지만 나중에 코드를 더 쓰다 보면 `my_vec`이 세 개만 가져야 한다는 사실을 잊을 수 있습니다. 이제 이 부분의 `my_vec`에는 여섯 개가 들어 있다고 합시다.
 
 ```rust
 fn prints_three_things(vector: Vec<i32>) {
@@ -4604,7 +4611,7 @@ fn main() {
 }
 ```
 
-No error happens, because [0] and [1] and [2] are all inside this longer `Vec`. But what if it was really important to only have three things? We wouldn't know that there was a problem because the program doesn't panic. We should have done this instead:
+오류는 없습니다. [0], [1], [2]가 모두 이 긴 `Vec` 안에 있기 때문입니다. 하지만 정말 세 개만 있어야 하는 것이 중요했다면 어떨까요? 프로그램이 패닉하지 않으니 문제를 알 수 없습니다. 대신 이렇게 했어야 합니다.
 
 ```rust
 fn prints_three_things(vector: Vec<i32>) {
@@ -4620,7 +4627,7 @@ fn main() {
 }
 ```
 
-Now we will know if the vector has six items because it panics as it should:
+이제 벡터에 여섯 개가 있으면 제대로 패닉하니 알 수 있습니다.
 
 ```rust
     // ⚠️
@@ -4637,15 +4644,15 @@ fn main() {
 }
 ```
 
-This gives us `thread 'main' panicked at 'my_vec must always have three items', src\main.rs:8:9`. Thanks to `panic!`, we now remember that `my_vec` should only have three items. So `panic!` is a good macro to create reminders in your code.
+`thread 'main' panicked at 'my_vec must always have three items', src\main.rs:8:9`가 출력됩니다. `panic!` 덕분에 `my_vec`에 세 개만 있어야 한다는 것을 다시 기억하게 되었습니다. 그래서 `panic!`은 코드에 알림을 넣기 좋은 매크로입니다.
 
-There are three other macros that are similar to `panic!` that you use a lot in testing. They are: `assert!`, `assert_eq!`, and `assert_ne!`.
+`panic!`과 비슷하고 테스트에서 자주 쓰는 매크로 세 가지가 더 있습니다. `assert!`, `assert_eq!`, `assert_ne!`입니다.
 
-Here is what they mean:
+의미는 다음과 같습니다.
 
-- `assert!()`: if the part inside `()` is not true, the program will panic.
-- `assert_eq!()`: the two items inside `()` must be equal.
-- `assert_ne!()`: the two items inside `()` must not be equal. (*ne* means not equal)
+- `assert!()`: 괄호 안이 true가 아니면 프로그램이 패닉합니다.
+- `assert_eq!()`: 괄호 안 두 항목이 같아야 합니다.
+- `assert_ne!()`: 괄호 안 두 항목이 달라야 합니다(ne = not equal).
 
 Some examples:
 
@@ -4659,9 +4666,9 @@ fn main() {
 }
 ```
 
-This will do nothing, because all three assert macros are okay. (This is what we want)
+모두 올바르므로 아무 일도 일어나지 않습니다. (원하는 동작입니다)
 
-You can also add a message if you want.
+원하면 메시지를 덧붙일 수도 있습니다.
 
 ```rust
 fn main() {
@@ -4685,7 +4692,7 @@ fn main() {
 }
 ```
 
-These messages will only display if the program panics. So if you run this:
+이 메시지들은 프로그램이 패닉할 때만 표시됩니다. 따라서 다음을 실행하면:
 
 ```rust
 fn main() {
@@ -4699,7 +4706,7 @@ fn main() {
 }
 ```
 
-It will display:
+다음이 표시됩니다.
 
 ```text
 thread 'main' panicked at 'assertion failed: `(left != right)`
@@ -4707,11 +4714,11 @@ thread 'main' panicked at 'assertion failed: `(left != right)`
  right: `"Mithridates"`: You entered Mithridates. Input must not equal Mithridates', src\main.rs:4:5
 ```
 
-So it is saying "you said that left != right, but left == right". And it displays our message that says `You entered Mithridates. Input must not equal Mithridates`.
+즉 "left != right라고 했지만 실제로 left == right"라는 뜻입니다. 그리고 `You entered Mithridates. Input must not equal Mithridates`라는 우리의 메시지를 보여 줍니다.
 
-`unwrap` is also good when you are writing your program and you want it to crash when there is a problem. Later, when your code is finished it is good to change `unwrap` to something else that won't crash.
+`unwrap`도 프로그램을 작성할 때 문제가 있으면 크래시시키고 싶을 때 유용합니다. 나중에 코드가 완성되면 크래시하지 않는 다른 것으로 바꾸는 것이 좋습니다.
 
-You can also use `expect`, which is like `unwrap` but a bit better because you give it your own message. Textbooks usually give this advice: "If you use `.unwrap()` a lot, at least use `.expect()` for better error messages."
+`expect`를 사용할 수도 있습니다. `unwrap`과 비슷하지만 메시지를 직접 넣을 수 있어 조금 낫습니다. 교재에서는 보통 이렇게 조언합니다. "`unwrap()`을 많이 쓴다면 최소한 더 나은 에러 메시지를 위해 `.expect()`를 써라."
 
 This will crash:
 
@@ -4728,7 +4735,7 @@ fn main() {
 }
 ```
 
-The error message is `thread 'main' panicked at 'called Option::unwrap() on a None value', src\main.rs:7:18`.
+에러 메시지는 `thread 'main' panicked at 'called Option::unwrap() on a None value', src\main.rs:7:18`입니다.
 
 Now we write our own message with `expect`:
 
@@ -4745,7 +4752,7 @@ fn main() {
 }
 ```
 
-It crashes again, but the error is better: `thread 'main' panicked at 'Input vector needs at least 4 items', src\main.rs:7:18`. `.expect()` is a little better than `.unwrap()` because of this, but it will still panic on `None`. Now here is an example of a bad practice, a function that tries to unwrap two times. It takes a `Vec<Option<i32>>`, so maybe each part will have a `Some<i32>` or maybe a `None`.
+다시 크래시하지만 에러가 더 낫습니다: `thread 'main' panicked at 'Input vector needs at least 4 items', src\main.rs:7:18`. 이런 이유로 `.expect()`가 `.unwrap()`보다 조금 낫지만 `None`에서는 여전히 패닉합니다. 이제 좋지 않은 관례의 예를 보겠습니다. `unwrap`을 두 번 시도하는 함수입니다. `Vec<Option<i32>>`를 받으므로 각 요소가 `Some<i32>`일 수도 있고 `None`일 수도 있습니다.
 
 ```rust
 fn try_two_unwraps(input: Vec<Option<i32>>) {
@@ -4759,7 +4766,7 @@ fn main() {
 }
 ```
 
-The message is: ``thread 'main' panicked at 'called `Option::unwrap()` on a `None` value', src\main.rs:2:32``. We're not sure if it was the first `.unwrap()` or the second `.unwrap()` until we check the line. It would be better to check the length and also to not unwrap. But with `.expect()` at least it will be a *little* better. Here it is with `.expect()`:
+메시지는 ``thread 'main' panicked at 'called `Option::unwrap()` on a `None` value', src\main.rs:2:32``입니다. 첫 번째 `.unwrap()` 때문인지 두 번째 때문인지 줄을 보기 전에는 알 수 없습니다. 길이를 확인하고 언랩하지 않는 편이 낫겠습니다. 그래도 `.expect()`를 쓰면 *조금* 나아집니다. 이렇게 바꿔 보겠습니다.
 
 ```rust
 fn try_two_unwraps(input: Vec<Option<i32>>) {
@@ -4773,15 +4780,15 @@ fn main() {
 }
 ```
 
-So that is a bit better: `thread 'main' panicked at 'The first unwrap had a None!', src\main.rs:2:32`. We have the line number as well so we can find it.
+이렇게 조금 나아집니다: `thread 'main' panicked at 'The first unwrap had a None!', src\main.rs:2:32`. 줄 번호도 있어 찾기 쉽습니다.
 
 
-You can also use `unwrap_or` if you want to always have a value that you want to choose. If you do this it will never panic. That's:
+항상 원하는 값을 갖고 싶다면 `unwrap_or`를 사용할 수도 있습니다. 이렇게 하면 절대 패닉하지 않습니다. 이는
 
-- 1) good because your program won't panic, but
-- 2) maybe not good if you want the program to panic if there's a problem.
+- 1) 프로그램이 패닉하지 않아 좋지만
+- 2) 문제가 있을 때 프로그램이 패닉하길 원한다면 좋지 않을 수도 있습니다.
 
-But usually we don't want our program to panic, so `unwrap_or` is a good method to use.
+대부분은 프로그램이 패닉하지 않길 바라므로 `unwrap_or`는 좋은 메서드입니다.
 
 ```rust
 fn main() {
@@ -4796,7 +4803,7 @@ fn main() {
 }
 ```
 
-This prints `0` because `.unwrap_or(&0)` gives a 0 even if it is a `None`.
+`.unwrap_or(&0)`이 `None`이어도 0을 주기 때문에 `0`이 출력됩니다.
 
 ## Traits
 
@@ -4822,23 +4829,23 @@ struct ThingsToAdd {
 fn main() {}
 ```
 
-We can add `first_thing` and `second_thing`, but we need to give more information. Maybe we want an `f32`, so something like this:
+`first_thing`과 `second_thing`을 더할 수 있지만 더 많은 정보가 필요합니다. `f32`를 원할 수도 있으니 이런 식으로 할 수도 있고:
 
 ```rust
 // 🚧
 let result = self.second_thing + self.first_thing as f32
 ```
 
-But maybe we want an integer, so like this:
+정수를 원할 수도 있으니 이렇게 할 수도 있습니다.
 
 ```rust
 // 🚧
 let result = self.second_thing as u32 + self.first_thing
 ```
 
-Or maybe we want to just put `self.first_thing` next to `self.second_thing` and say that this is how we want to add. So if we add 55 to 33.4, we want to see 5533.4, not 88.4.
+혹은 `self.first_thing`을 `self.second_thing` 옆에 붙여서 그걸 더하기라고 정의할 수도 있습니다. 55와 33.4를 "더하면" 88.4가 아니라 5533.4를 보고 싶을 때처럼요.
 
-So first let's look at how to make a trait. The important thing to remember about `trait`s is that they are about behaviour. To make a trait, write `trait` and then create some functions.
+먼저 트레이트를 만드는 방법을 보겠습니다. `trait`는 동작을 정의한다는 점을 기억하세요. 트레이트를 만들려면 `trait`를 쓰고 함수들을 정의하면 됩니다.
 
 ```rust
 struct Animal { // A simple struct - an Animal only has a name
@@ -4866,7 +4873,7 @@ fn main() {
 }
 ```
 
-This is okay, but we don't want to print "The dog is running". You can change the methods that a `trait` gives you if you want, but you have to have the same signature. That means that it needs to take the same things, and return the same things. For example, we can change the method `.run()`, but we have to follow the signature. The signature says:
+이 정도면 괜찮지만 "The dog is running"을 출력하고 싶지 않을 수도 있습니다. 트레이트가 제공하는 메서드를 바꿀 수 있지만 시그니처는 같아야 합니다. 즉 같은 인자를 받고 같은 타입을 반환해야 합니다. 예를 들어 `.run()` 메서드를 바꿀 수 있지만 시그니처는 따라야 합니다. 시그니처는 다음과 같습니다.
 
 ```rust
 // 🚧
@@ -4875,7 +4882,7 @@ fn run(&self) {
 }
 ```
 
-`fn run(&self)` means "fn `run()` takes `&self`, and returns nothing". So you can't do this:
+`fn run(&self)`는 "`run()`이 `&self`를 받고 아무 것도 반환하지 않는다"는 뜻입니다. 그래서 이렇게 할 수는 없습니다.
 
 ```rust
 fn run(&self) -> i32 { // ⚠️
@@ -4883,14 +4890,14 @@ fn run(&self) -> i32 { // ⚠️
 }
 ```
 
-Rust will say:
+Rust는 이렇게 말할 것입니다.
 
 ```text
    = note: expected fn pointer `fn(&Animal)`
               found fn pointer `fn(&Animal) -> i32`
 ```
 
-But we can do this:
+하지만 이렇게는 할 수 있습니다.
 
 ```rust
 struct Animal { // A simple struct - an Animal only has a name
@@ -4922,10 +4929,10 @@ fn main() {
 }
 ```
 
-Now it prints `Rover is running!`. This is okay because we are returning `()`, or nothing, which is what the trait says.
+이제 `Rover is running!`을 출력합니다. 트레이트가 요구한 대로 `()`(즉 아무 것도 아님)를 반환하므로 괜찮습니다.
 
 
-When you are writing a trait, you can just write the function signature. But if you do that, the user will have to write the function. Let's try that. Now we change `bark()` and `run()` to just say `fn bark(&self);` and `fn run(&self);`. This is not a full function, so the user must write it.
+트레이트를 작성할 때 함수 시그니처만 적을 수도 있습니다. 그렇게 하면 사용자가 함수 본문을 직접 써야 합니다. 한번 해 봅시다. 이제 `bark()`와 `run()`을 `fn bark(&self);`, `fn run(&self);`처럼 바꿉니다. 이는 완전한 함수가 아니므로 사용자가 직접 작성해야 합니다.
 
 ```rust
 struct Animal {
@@ -4957,9 +4964,9 @@ fn main() {
 }
 ```
 
-So when you create a trait, you must think: "Which functions should I write? And which functions should the user write?" If you think the user should use the function the same way every time, then write out the function. If you think the user will use it differently, then just write the function signature.
+따라서 트레이트를 만들 때 "어떤 함수는 내가 써야 하고 어떤 함수는 사용자가 써야 할까?"를 생각해야 합니다. 사용자가 항상 같은 방식으로 쓰길 바란다면 본문까지 작성하세요. 다르게 쓸 가능성이 있다면 시그니처만 적어 두세요.
 
-So let's try implementing the Display trait for our struct. First we will make a simple struct:
+이제 구조체에 Display 트레이트를 구현해 봅시다. 먼저 간단한 구조체를 만듭니다.
 
 ```rust
 struct Cat {
@@ -4976,6 +4983,7 @@ fn main() {
 ```
 
 Now we want to print `mr_mantle`. Debug is easy to derive:
+이제 `mr_mantle`을 출력하고 싶습니다. Debug는 쉽게 derive할 수 있습니다.
 
 ```rust
 #[derive(Debug)]
@@ -4994,13 +5002,13 @@ fn main() {
 }
 ```
 
-but Debug print is not the prettiest way to print, because it looks like this.
+하지만 Debug 출력은 다음처럼 생겨 가장 예쁘지는 않습니다.
 
 ```text
 Mr. Mantle is a Cat { name: "Reggie Mantle", age: 4 }
 ```
 
-So we need to implement `Display` for `Cat` if we want nicer printing. On [https://doc.rust-lang.org/std/fmt/trait.Display.html](https://doc.rust-lang.org/std/fmt/trait.Display.html) we can see the information for Display, and one example. It says:
+더 예쁘게 출력하려면 `Cat`에 `Display`를 구현해야 합니다. [https://doc.rust-lang.org/std/fmt/trait.Display.html](https://doc.rust-lang.org/std/fmt/trait.Display.html)에서 Display 정보와 예제를 볼 수 있습니다. 거기에는 이렇게 나와 있습니다.
 
 ```rust
 use std::fmt;
@@ -5064,7 +5072,7 @@ fn main() {
 }
 ```
 
-Success! Now when we use `{}` to print, we get `Reggie Mantle is a cat who is 4 years old.`. This looks much better.
+성공입니다! 이제 `{}`로 출력하면 `Reggie Mantle is a cat who is 4 years old.`가 나옵니다. 훨씬 보기 좋습니다.
 
 
 By the way, if you implement `Display` then you get the `ToString` trait for free. That's because you use the `format!` macro for the `.fmt()` function, which lets you make a `String` with `.to_string()`. So we could do something like this where we pass `reggie_mantle` to a function that wants a `String`, or anything else.
@@ -5104,12 +5112,9 @@ Reggie Mantle is a cat who is 4 years old.
 Mr. Mantle's String is 42 letters long.
 ```
 
+트레이트에서 기억할 점은 동작을 정의한다는 것입니다. 당신의 `struct`는 어떻게 행동하나요? 무엇을 할 수 있나요? 그것을 결정하는 것이 트레이트입니다. 지금까지 본 트레이트를 생각해 보면 모두 동작에 관한 것임을 알 수 있습니다. `Copy`는 타입이 할 수 있는 일입니다. `Display`도 타입이 할 수 있는 일입니다. `ToString`도 타입이 할 수 있는 일로, `String`으로 변할 수 있다는 뜻입니다. 우리가 만든 `Dog` 트레이트에서 dog라는 단어 자체가 행동을 뜻하진 않지만, 그 덕분에 할 수 있는 메서드를 제공합니다. `struct Poodle`이나 `struct Beagle`에도 구현하면 모두 `Dog` 메서드를 갖게 됩니다.
 
-
-
-The thing to remember about traits is that they are about the behaviour of something. How does your `struct` act? What can it do? That's what traits are for. If you think of some of the traits we've seen so far, they are all about behaviour: `Copy` is something that a type can do. `Display` is also something that a type can do. `ToString` is another trait, and it's also something that a type can do: it can change into a `String`. In our `Dog` trait the word *dog* doesn't mean something you can do, but it gives some methods that let it do things. You could also implement it for a `struct Poodle` or `struct Beagle` and they would all get `Dog` methods.
-
-Let's look at another example that is even more connected to just behaviour. We'll imagine a fantasy game with some simple characters. One is a `Monster`, the other two are `Wizard` and `Ranger`. The `Monster` just has `health` so we can attack it, the other two don't have anything yet. But we made two traits. One is called `FightClose`, and lets you fight up close. The other is `FightFromDistance`, and lets you fight from far away. Only `Ranger` can use `FightFromDistance`. Here's what it looks like:
+동작에 더 집중된 다른 예를 봅시다. 간단한 캐릭터가 있는 판타지 게임을 상상해 봅니다. 하나는 `Monster`, 다른 둘은 `Wizard`와 `Ranger`입니다. `Monster`는 공격할 수 있도록 `health`만 있고, 나머지 둘은 아직 아무 것도 없습니다. 대신 두 개의 트레이트를 만들었습니다. 가까이에서 싸우게 해 주는 `FightClose`, 멀리서 싸우게 해 주는 `FightFromDistance`입니다. `FightFromDistance`는 `Ranger`만 사용할 수 있습니다. 모습은 다음과 같습니다.
 
 ```rust
 struct Monster {
@@ -5178,7 +5183,7 @@ You attack with your sword. Your opponent now has 30 health left.
 You attack with your bow. Your opponent now has 20 health left.
 ```
 
-We pass `self` inside our trait all the time, but we can't do much with it right now. That's because Rust doesn't know what type is going to use it. It could be a `Wizard`, it could be a `Ranger`, it could be a new struct called `Toefocfgetobjtnode` or anything else. To give `self` some functionality, we can add necessary traits to the trait. If we want to print with `{:?}` for example then we need `Debug`. You can add it to the trait just by writing it after `:` (a colon). Now our code looks like this:
+트레이트 안에서 `self`를 넘기지만, 지금은 할 수 있는 일이 많지 않습니다. Rust가 어떤 타입이 이를 쓸지 모르기 때문입니다. `Wizard`일 수도, `Ranger`일 수도, `Toefocfgetobjtnode`라는 새 구조체일 수도 있습니다. `self`에 기능을 주려면 필요한 트레이트를 트레이트에 추가할 수 있습니다. 예를 들어 `{:?}`로 출력하려면 `Debug`가 필요합니다. 콜론 뒤에 써서 트레이트에 추가하면 됩니다. 이제 코드는 이렇게 됩니다.
 
 
 ```rust
@@ -5254,11 +5259,11 @@ You attack with your sword. Your opponent now has 30 health left. You are now at
 You attack with your bow. Your opponent now has 20 health left.  You are now at: Ranger { health: 80 }
 ```
 
-In a real game it might be better to rewrite this for each type, because `You are now at: Wizard { health: 60 }` looks funny. That's also why methods inside traits are usually simple, because you don't know what type is going to use it. You can't write things like `self.0 += 10` for example. But this example shows that we can use other traits inside a trait we are writing. And when we do that, we get some methods that we can use.
+실제 게임에서는 각 타입에 맞게 다시 쓰는 편이 나을 것입니다. `You are now at: Wizard { health: 60 }` 같은 문장이 어색하기 때문입니다. 이런 이유로 트레이트 안의 메서드는 보통 단순합니다. 어떤 타입이 쓸지 모르기 때문입니다. 예를 들어 `self.0 += 10` 같은 건 쓸 수 없습니다. 하지만 이 예제는 우리가 작성하는 트레이트 안에서 다른 트레이트를 사용할 수 있다는 것을 보여 줍니다. 그렇게 하면 사용할 수 있는 메서드를 얻게 됩니다.
 
 
 
-One other way to use a trait is with what are called `trait bounds`. That means "limitations by a trait". Trait bounds are easy because a trait actually doesn't need any methods, or anything at all. Let's rewrite our code with something similar but different. This time our trait doesn't have any methods, but we have other functions that require traits to use.
+트레이트를 사용하는 또 다른 방법은 `trait bound`를 거는 것입니다. 이는 "트레이트로 제한을 건다"는 뜻입니다. 트레이트에는 사실 메서드가 하나도 없어도 되기 때문에 trait bound는 쉽습니다. 비슷하지만 다른 코드로 다시 작성해 봅시다. 이번에는 트레이트에 메서드가 없고, 대신 트레이트를 요구하는 함수들이 있습니다.
 
 ```rust
 use std::fmt::Debug;  // So we don't have to write std::fmt::Debug every time now
@@ -5323,7 +5328,7 @@ fn main() {
 }
 ```
 
-This prints almost the same thing:
+거의 같은 내용이 출력됩니다.
 
 ```text
 You attack with your sword. Your opponent now has 30 health left. You are now at: Wizard { health: 60 }
@@ -5331,13 +5336,13 @@ You attack with your bow. Your opponent now has 20 health left.  You are now at:
 You raise your hands and cast a fireball! Your opponent now has 0 health left. You are now at: Wizard { health: 60 }
 ```
 
-So you can see there are many ways to do the same thing when you use traits. It all depends on what makes the most sense for the program that you are writing.
+트레이트를 사용할 때 같은 일을 하는 방법이 많다는 것을 알 수 있습니다. 작성 중인 프로그램에서 무엇이 가장 합리적인지에 따라 달라집니다.
 
-Now let's look at how to implement some of the main traits you will use in Rust.
+이제 Rust에서 자주 사용하는 주요 트레이트를 구현하는 방법을 살펴봅시다.
 
 ### The From trait
 
-*From* is a very convenient trait to use, and you know this because you have seen it so much already. With *From* you can make a `String` from a `&str`, but you can make many types from many other types. For example, Vec uses *From* for the following:
+*From*은 매우 편리한 트레이트입니다. 지금까지 자주 봐서 알고 있을 것입니다. *From*으로 `&str`에서 `String`을 만들 수 있지만, 다른 여러 타입을 서로 바꿀 수도 있습니다. 예를 들어 Vec은 다음과 같은 *From* 구현을 가지고 있습니다.
 
 ```text
 From<&'_ [T]>
@@ -5355,7 +5360,7 @@ From<Vec<T>>
 From<VecDeque<T>>
 ```
 
-That is a lot of `Vec::from()` that we have not tried yet. Let's make a few and see what happens.
+시도하지 않은 `Vec::from()`이 많습니다. 몇 가지를 만들어 보겠습니다.
 
 ```rust
 use std::fmt::Display; // We will make a generic function to print them so we want Display
@@ -5380,7 +5385,7 @@ fn main() {
 }
 ```
 
-It prints the following:
+출력 결과는 다음과 같습니다.
 
 ```text
 8 9 10
@@ -5388,11 +5393,11 @@ It prints the following:
 87 104 97 116 32 107 105 110 100 32 111 102 32 118 101 99 32 119 105 108 108 32 97 32 83 116 114 105 110 103 32 98 101 63
 ```
 
-If you look at the type, the second and third vectors are `Vec<u8>`, which means the bytes of the `&str` and the `String`. So you can see that `From` is very flexible and used a lot. Let's try it with our own types.
+타입을 보면 두 번째와 세 번째 벡터가 `Vec<u8>`입니다. `&str`과 `String`의 바이트라는 뜻입니다. `From`이 매우 유연하고 많이 쓰인다는 것을 알 수 있습니다. 이제 우리 타입에 적용해 봅시다.
 
-We'll make two structs and then implement `From` for one of them. One struct will be `City`, and the other will be `Country`. We want to be able to do this: `let country_name = Country::from(vector_of_cities)`.
+두 구조체를 만들고 그중 하나에 `From`을 구현하겠습니다. 하나는 `City`, 다른 하나는 `Country`입니다. 이렇게 하고 싶습니다: `let country_name = Country::from(vector_of_cities)`.
 
-It looks like this:
+모습은 다음과 같습니다.
 
 ```rust
 #[derive(Debug)] // So we can print City
@@ -5442,14 +5447,14 @@ fn main() {
 }
 ```
 
-This prints:
+출력:
 
 ```text
 "Helsinki" has a population of 631695.
 "Turku" has a population of 186756.
 ```
 
-You can see that `From` is easy to implement from types you didn't create like `Vec`, `i32`, and so on. Here is one more example where we create a vector that has two vectors. The first vector holds even numbers, and the second holds odd numbers. With `From` you can give it a vector of `i32`s and it will turn it into a `Vec<Vec<i32>>`: a vector that holds vectors of `i32`.
+`Vec`, `i32`처럼 직접 만들지 않은 타입에도 `From`을 쉽게 구현할 수 있음을 알 수 있습니다. 예제를 하나 더 보겠습니다. 두 개의 벡터를 담는 벡터를 만듭니다. 첫 번째 벡터는 짝수를, 두 번째는 홀수를 담습니다. `From`을 사용하면 `i32` 벡터를 받아 `Vec<Vec<i32>>`(i32 벡터를 담는 벡터)로 바꿔 줄 수 있습니다.
 
 ```rust
 use std::convert::From;
@@ -5479,18 +5484,18 @@ fn main() {
 }
 ```
 
-This prints:
+출력:
 
 ```text
 Even numbers: [8, 222, 0, 8]
 Odd numbers: [7, -1, 3, 9787, -47, 77, 55, 7]
 ```
 
-A type like `EvenOddVec` is probably better as a generic `T` so we can use many number types. You can try to make the example generic if you want for practice.
+`EvenOddVec` 같은 타입은 많은 숫자 타입을 쓸 수 있도록 제네릭 `T`로 만드는 편이 더 좋을 것입니다. 연습 삼아 제네릭으로 바꿔 보세요.
 
 ### Taking a String and a &str in a function
 
-Sometimes you want a function that can take both a `String` and a `&str`. You can do this with generics and the `AsRef` trait. `AsRef` is used to give a reference from one type to another type. If you look at the documentation for `String`, you can see that it has `AsRef` for many types:
+가끔 `String`과 `&str`을 모두 받을 수 있는 함수를 만들고 싶을 때가 있습니다. 제네릭과 `AsRef` 트레이트를 사용하면 됩니다. `AsRef`는 한 타입에서 다른 타입으로 레퍼런스를 제공할 때 사용합니다. `String` 문서를 보면 여러 타입에 대한 `AsRef` 구현이 있음을 알 수 있습니다.
 
 [https://doc.rust-lang.org/std/string/struct.String.html](https://doc.rust-lang.org/std/string/struct.String.html)
 
@@ -5523,9 +5528,9 @@ impl AsRef<OsStr> for String
 fn as_ref(&self) -> &OsStr
 ```
 
-You can see that it takes `&self` and gives a reference to the other type. This means that if you have a generic type T, you can say that it needs `AsRef<str>`. If you do that, it will be able to take a `&str` and a `String`.
+`&self`를 받아 다른 타입의 레퍼런스를 준다는 것을 볼 수 있습니다. 즉 제네릭 타입 T가 있다면 `AsRef<str>`을 요구할 수 있습니다. 그러면 `&str`과 `String`을 모두 받을 수 있습니다.
 
-Let's start with the generic function. This doesn't work yet:
+제네릭 함수부터 시작해 봅시다. 아직은 동작하지 않습니다.
 
 ```rust
 fn print_it<T>(input: T) {
@@ -5537,7 +5542,7 @@ fn main() {
 }
 ```
 
-Rust says `error[E0277]: T doesn't implement std::fmt::Display`. So we will require T to implement Display.
+Rust는 `error[E0277]: T doesn't implement std::fmt::Display`라고 말합니다. 그래서 T가 Display를 구현하도록 요구하겠습니다.
 
 ```rust
 use std::fmt::Display;
@@ -5551,7 +5556,7 @@ fn main() {
 }
 ```
 
-Now it works and prints `Please print me`. That is good, but T can still be too many things. It can be an `i8`, an `f32` and anything else with just `Display`. So we add `AsRef<str>`, and now T needs both `AsRef<str>` and `Display`.
+이제 동작하며 `Please print me`를 출력합니다. 좋지만 T가 여전히 너무 많은 것을 의미할 수 있습니다. `Display`만 있으면 `i8`, `f32` 등 무엇이든 될 수 있습니다. 그래서 `AsRef<str>`를 추가해 T가 `AsRef<str>`과 `Display` 둘 다 필요하도록 합니다.
 
 ```rust
 use std::fmt::Display;
@@ -5567,9 +5572,9 @@ fn main() {
 }
 ```
 
-Now it won't take types like `i8`.
+이제 `i8` 같은 타입은 받을 수 없습니다.
 
-Don't forget that you can use `where` to write the function differently when it gets long. If we add Debug then it becomes `fn print_it<T: AsRef<str> + Display + Debug>(input: T)` which is long for one line. So we can write it like this:
+길어질 때는 `where`로 함수를 다르게 쓸 수 있다는 것을 잊지 마세요. Debug를 추가하면 `fn print_it<T: AsRef<str> + Display + Debug>(input: T)`처럼 한 줄이 길어집니다. 따라서 이렇게 쓸 수 있습니다.
 
 ```rust
 use std::fmt::{Debug, Display}; // add Debug
@@ -5618,9 +5623,9 @@ fn main() {
 }
 ```
 
-`.collect()` can make collections of many types, so we have to tell it the type.
+`.collect()`은 여러 컬렉션 타입을 만들 수 있으므로 타입을 알려 줘야 합니다.
 
-With functional style you can chain methods. "Chaining methods" means to put many methods together in a single statement. Here is an example of many methods chained together:
+함수형 스타일에서는 메서드를 체이닝할 수 있습니다. "메서드 체이닝"은 여러 메서드를 하나의 문으로 이어 붙이는 것을 말합니다. 아래는 메서드를 여러 개 체이닝한 예입니다.
 
 ```rust
 fn main() {
@@ -5632,7 +5637,7 @@ fn main() {
 }
 ```
 
-This creates a Vec with `[3, 4, 5, 6]`. This is a lot of information for one line, so it can help to put each method on a new line. Let's do that to make it easier to read:
+`[3, 4, 5, 6]`이 담긴 Vec를 만듭니다. 한 줄에 정보가 많으니 메서드를 줄바꿈해 쓰면 읽기 쉽습니다.
 
 ```rust
 fn main() {
@@ -5648,7 +5653,7 @@ fn main() {
 }
 ```
 
-You can use this functional style best when you understand closures and iterators. So we will learn them next.
+클로저와 이터레이터를 이해하면 이런 함수형 스타일을 가장 잘 활용할 수 있습니다. 다음에 배워 봅시다.
 
 ## Iterators
 
@@ -5660,7 +5665,7 @@ An iterator is a construct that can give you the items in the collection, one at
 
 A `for` loop is actually just an iterator that owns its values. That's why it can make it mutable and then you can change the values when you use it.
 
-We can use iterators like this:
+이터레이터는 이렇게 사용할 수 있습니다.
 
 ```rust
 fn main() {
@@ -5677,7 +5682,7 @@ fn main() {
 }
 ```
 
-This prints:
+출력:
 
 ```text
 [2, 3, 4]
@@ -5686,21 +5691,22 @@ This prints:
 ```
 
 The first two we used a method called `.map()`. This method lets you do something to every item, then pass it on. The last one we used is one called `.for_each()`. This method just lets you do something to every item. `.iter_mut()` plus `for_each()` is basically just a `for` loop. Inside each method we can give a name to every item (we just called it `x`) and use that to change it. These are called closures and we will learn about them in the next section.
+앞의 두 예에서는 `.map()`이라는 메서드를 사용했습니다. 이 메서드는 각 항목에 무언가를 한 다음 넘겨 줍니다. 마지막은 `.for_each()`를 사용했습니다. 이 메서드는 각 항목에 어떤 동작을 하도록 합니다. `.iter_mut()`와 `for_each()`는 사실상 `for` 루프와 같습니다. 각 메서드 안에서 항목마다 이름을 붙여(`x`라고 했습니다) 이를 활용해 값을 바꿀 수 있습니다. 이를 클로저라고 하며 다음 절에서 배웁니다.
 
-Let's go over them again, one at a time.
+각각 다시 살펴봅시다.
 
-First we used `.iter()` on `vector1` to get references. We added 1 to each, and made it into a new Vec. `vector1` is still alive because we only used references: we didn't take by value. Now we have `vector1`, and a new Vec called `vector1_a`. Because `.map()` just passes it on, we needed to use `.collect()` to make it into a `Vec`.
+먼저 `vector1`에 `.iter()`를 써서 레퍼런스를 얻었습니다. 각각에 1을 더해 새 Vec로 만들었습니다. 값이 아니라 레퍼런스를 썼기 때문에 `vector1`은 여전히 살아 있습니다. 이제 `vector1`과 `vector1_a`라는 새 Vec가 있습니다. `.map()`은 단순히 넘겨 주기만 하므로 `Vec`으로 만들기 위해 `.collect()`가 필요했습니다.
 
-Then we used `into_iter` to get an iterator by value from `vector1`. This destroys `vector1`, because that's what `into_iter()` does. So after we make `vector1_b` we can't use `vector1` again.
+그다음 `into_iter`를 사용해 `vector1`에서 값으로 이터레이터를 얻었습니다. `into_iter()`는 값을 가져가므로 `vector1`을 소비합니다. 그래서 `vector1_b`를 만든 뒤에는 `vector1`을 다시 사용할 수 없습니다.
 
-Finally we used `.iter_mut()` for `vector2`. It is mutable, so we don't need to use `.collect()` to create a new Vec. Instead, we change the values in the same Vec with mutable references. So `vector2` is still there. Because we don't need a new Vec, we use `for_each`: it's just like a `for` loop.
+마지막으로 `vector2`에는 `.iter_mut()`를 사용했습니다. 가변이므로 새 Vec를 만들기 위해 `.collect()`가 필요 없습니다. 대신 같은 Vec에서 가변 레퍼런스로 값을 바꿉니다. 그래서 `vector2`는 그대로 남아 있습니다. 새 Vec가 필요 없으니 `for_each`를 사용합니다. 이는 `for` 루프와 같습니다.
 
 
 ### How an iterator works
 
-An iterator works by using a method called `.next()`, which gives an `Option`. When you use an iterator, Rust calls `next()` over and over again. If it gets `Some`, it keeps going. If it gets `None`, it stops.
+이터레이터는 `.next()`라는 메서드로 동작하며, `Option`을 줍니다. 이터레이터를 사용하면 Rust가 계속해서 `next()`를 호출합니다. `Some`을 받으면 계속 가고, `None`을 받으면 멈춥니다.
 
-Do you remember the `assert_eq!` macro? In documentation, you see it all the time. Here it is showing how an iterator works.
+`assert_eq!` 매크로를 기억하시나요? 문서에서 자주 볼 수 있습니다. 이터레이터가 어떻게 동작하는지 보여 주는 예입니다.
 
 ```rust
 fn main() {
@@ -5717,7 +5723,7 @@ fn main() {
 }
 ```
 
-Implementing `Iterator` for your own struct or enum is not too hard. First let's make a book library and think about it.
+직접 만든 구조체나 enum에 `Iterator`를 구현하는 것도 어렵지 않습니다. 먼저 도서관 구조체를 만들어 생각해 보겠습니다.
 
 ```rust
 #[derive(Debug)] // we want to print it with {:?}
@@ -5758,6 +5764,7 @@ fn main() {
 ```
 
 That works well. Now we want to implement `Iterator` for the library so we can use it in a `for` loop. Right now if we try a `for` loop, it doesn't work:
+잘 동작합니다. 이제 라이브러리에 `Iterator`를 구현해서 `for` 루프에서 쓰고 싶습니다. 지금 `for` 루프를 쓰려 하면 동작하지 않습니다.
 
 ```rust
 for item in my_library {
@@ -5780,7 +5787,7 @@ error[E0277]: `Library` is not an iterator
 
 But we can make library into an iterator with `impl Iterator for Library`. Information on the `Iterator` trait is here in the standard library: [https://doc.rust-lang.org/std/iter/trait.Iterator.html](https://doc.rust-lang.org/std/iter/trait.Iterator.html)
 
-On the top left of the page it says: `Associated Types: Item` and `Required Methods: next`. An "associated type" means "a type that goes together". Our associated type will be `String`, because we want the iterator to give us Strings.
+페이지 왼쪽 위에는 `Associated Types: Item`, `Required Methods: next`라고 적혀 있습니다. "연관 타입"은 "함께 쓰이는 타입"을 뜻합니다. 우리는 이터레이터가 String을 주길 원하므로 연관 타입을 `String`으로 하겠습니다.
 
 In the page it has an example that looks like this:
 
@@ -5811,7 +5818,7 @@ fn main() {}
 
 You can see that under `impl Iterator for Alternate` it says `type Item = i32`. This is the associated type. Our iterator will be for our list of books, which is a `Vec<String>`. When we call next, it will give us a `String`. So we will write `type Item = String;`. That is the associated item.
 
-To implement `Iterator`, you need to write the `fn next()` function. This is where you decide what the iterator should do. For our `Library`, we want it to give us the last books first. So we will `match` with `.pop()` which takes the last item off if it is `Some`. We also want to print " is found!" for each item. Now it looks like this:
+`Iterator`를 구현하려면 `fn next()` 함수를 써야 합니다. 이터레이터가 무엇을 할지 여기서 결정합니다. `Library`에서는 마지막 책부터 주길 원합니다. 그래서 마지막 항목을 꺼내는 `.pop()`을 `match`합니다. 또한 각 항목에 대해 " is found!"를 출력하고 싶습니다. 이제 이렇게 됩니다.
 
 ```rust
 #[derive(Debug, Clone)]
@@ -5858,13 +5865,13 @@ fn main() {
     my_library.add_book("구운몽");
     my_library.add_book("吾輩は猫である");
 
-    for item in my_library.clone() { // we can use a for loop now. Give it a clone so Library won't be destroyed
+    for item in my_library.clone() { // 이제 for 루프를 사용할 수 있습니다. Library가 사라지지 않도록 clone을 줍니다
         println!("{}", item);
     }
 }
 ```
 
-This prints:
+출력:
 
 ```text
 吾輩は猫である is found!
@@ -5875,9 +5882,9 @@ The Doom of the Darksword is found!
 
 ## Closures
 
-Closures are like quick functions that don't need a name. Sometimes they are called lambdas. Closures are easy to find because they use `||` instead of `()`. They are very common in Rust, and once you learn to use them you will wonder how you lived without them.
+클로저는 이름이 필요 없는 간단한 함수와 같습니다. 람다라고 부르기도 합니다. `()` 대신 `||`를 사용하므로 쉽게 알아볼 수 있습니다. Rust에서 매우 흔하며, 익숙해지고 나면 없을 때 어떻게 코드를 썼나 싶을 겁니다.
 
-You can bind a closure to a variable, and then it looks exactly like a function when you use it:
+클로저를 변수에 묶을 수 있고, 그러면 사용할 때 함수와 똑같이 보입니다.
 
 ```rust
 fn main() {
@@ -5888,7 +5895,7 @@ fn main() {
 
 So this closure takes nothing: `||` and prints a message: `This is a closure`.
 
-In between the `||` we can add input variables and types, like inside `()` for a function:
+`||` 사이에 함수의 `()`처럼 입력 변수와 타입을 넣을 수 있습니다.
 
 ```rust
 fn main() {
@@ -5906,7 +5913,7 @@ This prints:
 10
 ```
 
-When the closure becomes more complicated, you can add a code block. Then it can be as long as you want.
+클로저가 복잡해지면 코드 블록을 붙일 수 있습니다. 그러면 함수처럼 원하는 만큼 길게 만들 수 있습니다.
 
 ```rust
 fn main() {
@@ -5921,7 +5928,7 @@ fn main() {
 }
 ```
 
-But closures are special because they can take variables that are outside the closure even if you only write `||`. So you can do this:
+하지만 클로저는 특별해서 `||`만 써도 클로저 밖의 변수를 가져올 수 있습니다. 그래서 이렇게 할 수 있습니다.
 
 ```rust
 fn main() {
@@ -5933,16 +5940,16 @@ fn main() {
 }
 ```
 
-So this prints `16`. You didn't need to put anything in `||` because it can just take `number_one` and `number_two` and add them.
+`16`을 출력합니다. `number_one`, `number_two`를 그냥 가져와 더할 수 있으니 `||` 안에 아무 것도 넣을 필요가 없었습니다.
 
 By the way, that is where the name **closure** comes from, because they take variables and "enclose" them inside. And if you want to be very correct:
 
 - a `||` that doesn't enclose a variable from outside is an "anonymous function". Anonymous means "doesn't have a name". It works more like a regular function.
 - a `||` that does enclose a variable from outside is a "closure". It "encloses" the variables around it to use them.
 
-But people will often call all `||` functions closures, so you don't have to worry about the name. We will just say "closure" for anything with a `||`, but remember that it can mean an "anonymous function".
+하지만 사람들은 모든 `||` 함수를 클로저라고 부르는 경우가 많으니 이름에 너무 신경 쓰지 않아도 됩니다. 우리는 `||`가 있으면 그냥 클로저라고 부르겠습니다. 다만 "익명 함수"일 수도 있다는 것을 기억하세요.
 
-Why is it good to know the difference? It's because an anonymous function actually makes the same machine code as a function with a name. They feel "high level", so sometimes people think that the machine code will be complicated. But the machine code that Rust makes from it is just as fast as a regular function.
+차이를 아는 게 왜 좋을까요? 익명 함수는 이름 있는 함수와 같은 머신 코드를 생성하기 때문입니다. "추상적"으로 느껴져서 머신 코드가 복잡할 것 같지만, Rust가 만드는 머신 코드는 일반 함수만큼 빠릅니다.
 
 
 So let's look at some more things that closures can do. You can also do this:
@@ -5959,7 +5966,7 @@ fn main() {
 
 This closure takes `number_one` and `number_two`. We also gave it a new variable `x` and said that `x` is 5. Then it adds all three together to print `21`.
 
-Usually you see closures in Rust inside of a method, because it is very convenient to have a closure inside. We saw closures in the last section with `.map()` and `.for_each()`. In that section we wrote `|x|` to bring in the next item in an iterator, and that was a closure.
+Rust에서는 보통 메서드 안에서 클로저를 봅니다. 클로저를 안에 두는 것이 매우 편리하기 때문입니다. 이전 절에서 `.map()`, `.for_each()`에 클로저를 사용했습니다. 그 절에서 이터레이터의 다음 항목을 가져오려고 `|x|`라고 썼는데, 그것이 클로저입니다.
 
 Here is another example: the `unwrap_or` method that we know that you can use to give a value if `unwrap` doesn't work. Before, we wrote: `let fourth = my_vec.get(3).unwrap_or(&0);`. But there is also an `unwrap_or_else` method that has a closure inside. So you can do this:
 
@@ -5981,7 +5988,7 @@ fn main() {
 
 Of course, a closure can be very simple. You can just write `let fourth = my_vec.get(3).unwrap_or_else(|| &0);` for example. You don't always need to use a `{}` and write complicated code just because there is a closure. As long as you put the `||` in, the compiler knows that you have put in the closure that you need.
 
-The most frequent closure method is maybe `.map()`. Let's take a look at it again. Here is one way to use it:
+가장 자주 쓰는 클로저 메서드는 아마 `.map()`일 것입니다. 다시 한번 살펴보겠습니다. 사용하는 한 가지 방법은 다음과 같습니다.
 
 ```rust
 fn main() {
@@ -5996,6 +6003,7 @@ fn main() {
 ```
 
 Another good example is with `.for_each()` after `.enumerate()`. The `.enumerate()` method gives an iterator with the index number and the item. For example: `[10, 9, 8]` becomes `(0, 10), (1, 9), (2, 8)`. The type for each item here is `(usize, i32)`. So you can do this:
+또 다른 좋은 예는 `.enumerate()` 뒤에 `.for_each()`를 붙이는 것입니다. `.enumerate()`는 인덱스와 항목이 함께 있는 이터레이터를 줍니다. 예를 들어 `[10, 9, 8]`은 `(0, 10), (1, 9), (2, 8)`이 됩니다. 각 항목의 타입은 `(usize, i32)`입니다. 이렇게 사용할 수 있습니다.
 
 ```rust
 fn main() {
@@ -6016,9 +6024,9 @@ Index number 1 has number 9
 Index number 2 has number 8
 ```
 
-In this case we use `for_each` instead of `map`. `map` is for **doing something to** each item and passing it on, and `for_each` is **doing something when you see each item**. Also, `map` doesn't do anything unless you use a method like `collect`.
+여기서는 `map` 대신 `for_each`를 사용합니다. `map`은 각 항목을 **변형하고** 넘겨줄 때, `for_each`는 각 항목을 **볼 때 무언가를 할 때** 사용합니다. 또 `map`은 `collect` 같은 메서드를 쓰지 않으면 아무 것도 하지 않습니다.
 
-Actually, this is the interesting thing about iterators. If you try to `map` without a method like `collect`, the compiler will tell you that it doesn't do anything. It won't panic, but the compiler will tell you that you didn't do anything.
+사실 이것이 이터레이터의 흥미로운 점입니다. `collect` 같은 메서드 없이 `map`을 시도하면 컴파일러가 아무 일도 하지 않았다고 알려 줍니다. 패닉하지는 않지만 아무 작업도 없었다고 알려 줍니다.
 
 ```rust
 fn main() {
@@ -6064,7 +6072,7 @@ All we did was make a more and more complicated structure. So this `Map<Enumerat
 Rust only wants to do one calculation, so it creates the structure and waits. Then if we say `.collect::<Vec<i32>>()` it knows what to do, and starts moving. This is what `iterators are lazy and do nothing unless consumed` means. The iterators don't do anything until you "consume" them (use them up).
 
 
-You can even create complicated things like `HashMap` using `.collect()`, so it is very powerful. Here is an example of how to put two vecs into a `HashMap`. First we make the two vectors, and then we will use `.into_iter()` on them to get an iterator of values. Then we use the `.zip()` method. This method takes two iterators and attaches them together, like a zipper. Finally, we use `.collect()` to make the `HashMap`.
+`.collect()`로 `HashMap` 같은 복잡한 것도 만들 수 있으니 매우 강력합니다. 두 벡터를 `HashMap`에 넣는 예를 보겠습니다. 먼저 두 벡터를 만들고, 값 이터레이터를 얻기 위해 `.into_iter()`를 씁니다. 그리고 `.zip()` 메서드를 사용합니다. 이 메서드는 두 이터레이터를 지퍼처럼 합칩니다. 마지막으로 `.collect()`로 `HashMap`을 만듭니다.
 
 Here is the code:
 
@@ -6090,7 +6098,7 @@ This prints:
 For key 2 we get two.
 ```
 
-You can see that we wrote `<HashMap<_, _>>` because that is enough information for Rust to decide on the type `HashMap<i32, &str>`. You can write `.collect::<HashMap<i32, &str>>();` if you want, or you can write it like this if you prefer:
+`<HashMap<_, _>>`라고만 적었는데도 Rust가 `HashMap<i32, &str>` 타입을 결정할 수 있습니다. 원한다면 `.collect::<HashMap<i32, &str>>();`라고 써도 되고, 아래처럼 써도 됩니다.
 
 ```rust
 use std::collections::HashMap;
@@ -6105,7 +6113,7 @@ fn main() {
 }
 ```
 
-There is another method that is like `.enumerate()` for `char`s: `char_indices()`. (Indices means "indexes"). You use it in the same way. Let's pretend we have a big string that made of 3-digit numbers.
+`char`용 `.enumerate()` 같은 메서드로 `char_indices()`가 있습니다(Indices는 인덱스라는 뜻). 사용하는 방법은 같습니다. 세 자리 숫자들로 이루어진 긴 문자열이 있다고 해 봅시다.
 
 ```rust
 fn main() {
@@ -6125,7 +6133,7 @@ This prints `140     399     923     481     800     622     623     218     009
 
 ### |_| in a closure
 
-Sometimes you see `|_|` in a closure. This means that the closure needs an argument (like `x`), but you don't want to use it. So `|_|` means "Okay, this closure takes an argument but I won't give it a name because I don't care about it".
+가끔 클로저에서 `|_|`를 볼 수 있습니다. 이는 클로저가 인자(예: `x`)를 받아야 하지만 사용하고 싶지 않을 때 씁니다. 그래서 `|_|`는 "인자를 받지만 신경 쓰지 않으니 이름을 붙이지 않겠다"는 뜻입니다.
 
 Here is an example of an error when you don't do that:
 
@@ -6161,7 +6169,7 @@ This is good advice. If you change `||` to `|_|` then it will work.
 
 ### Helpful methods for closures and iterators
 
-Rust becomes a very fun to language once you become comfortable with closures. With closures you can *chain* methods to each other and do a lot of things with very little code. Here are some closures and methods used with closures that we didn't see yet.
+클로저에 익숙해지면 Rust가 아주 재미있는 언어가 됩니다. 클로저를 사용하면 메서드를 *체이닝*해 아주 적은 코드로 많은 일을 할 수 있습니다. 아직 보지 않은 클로저 관련 메서드 몇 가지를 살펴보겠습니다.
 
 `.filter()`: This lets you keep the items in an iterator that you want to keep. Let's filter the months of the year.
 
@@ -6184,7 +6192,7 @@ This prints `["June", "July"]`.
 
 
 
-`.filter_map()`. This is called `filter_map()` because it does `.filter()` and `.map()`. The closure must return an `Option<T>`, and then `filter_map()` takes the value out of each `Option` if it is `Some`. So for example if you were to `.filter_map()` a `vec![Some(2), None, Some(3)]`, it would return `[2, 3]`.
+`.filter_map()`: `.filter()`와 `.map()`을 합친 것이어서 이렇게 부릅니다. 클로저가 `Option<T>`를 반환해야 하며, `filter_map()`은 각 `Option`이 `Some`이면 그 값을 꺼냅니다. 예를 들어 `vec![Some(2), None, Some(3)]`에 `.filter_map()`을 쓰면 `[2, 3]`을 돌려줍니다.
 
 We will write an example with a `Company` struct. Each company has a `name` so that field is `String`, but the CEO might have recently quit. So the `ceo` field is `Option<String>`. We will `.filter_map()` over some companies to just keep the CEO names.
 
@@ -6228,9 +6236,9 @@ fn main() {
 }
 ```
 
-This prints `["Unknown", "Doug Suttles"]`.
+`["Unknown", "Doug Suttles"]`가 출력됩니다.
 
-Since `.filter_map()` needs an `Option`, what about `Result`? No problem: there is a method called `.ok()` that turns `Result` into `Option`. It is called `.ok()` because all it can send is the `Ok` result (the `Err` information is gone). You remember that `Option` is `Option<T>` while `Result` is `Result<T, E>` with information for both `Ok` and `Err`. So when you use `.ok()`, any `Err` information is lost and it becomes `None`.
+`.filter_map()`은 `Option`을 필요로 하는데, `Result`는 어떻게 할까요? `.ok()`라는 메서드가 있어 `Result`를 `Option`으로 바꿀 수 있습니다. 이름이 `.ok()`인 이유는 `Ok` 결과만 전달할 수 있기 때문입니다(`Err` 정보는 사라집니다). `Option`이 `Option<T>`이고 `Result`가 `Ok`와 `Err` 정보를 가진 `Result<T, E>`라는 것을 기억하세요. `.ok()`를 쓰면 `Err` 정보가 사라지고 `None`이 됩니다.
 
 Using `.parse()` is an easy example for this, where we try to parse some user input. `.parse()` here takes a `&str` and tries to turn it into an `f32`. It returns a `Result`, but we are using `filter_map()` so we just throw out the errors. Anything that is `Err` becomes `None` and is filtered out by `.filter_map()`.
 
@@ -6247,9 +6255,9 @@ fn main() {
 }
 ```
 
-This prints `[8.9, 8.0, 7.6]`.
+`[8.9, 8.0, 7.6]`을 출력합니다.
 
-On the opposite side of `.ok()` is `.ok_or()` and `ok_or_else()`. This turns an `Option` into a `Result`. It is called `.ok_or()` because a `Result` gives an `Ok` **or** an `Err`, so you have to let it know what the `Err` value will be. That is because `None` in an `Option` doesn't have any information. Also, you can see now that the *else* part in the names of these methods means that it has a closure.
+`.ok()`의 반대편에는 `.ok_or()`와 `ok_or_else()`가 있습니다. 이는 `Option`을 `Result`로 바꿉니다. `Result`는 `Ok` **또는** `Err`를 주므로 `Err` 값이 무엇인지 알려 줘야 해서 `.ok_or()`라는 이름을 가졌습니다. `Option`의 `None`에는 정보가 없기 때문입니다. 또한 이름에 *else*가 붙으면 클로저를 받는다는 것을 이제 알 수 있습니다.
 
 We can take our `Option` from the `Company` struct and turn it into a `Result` this way. For long-term error handling it is good to create your own type of error. But for now we just give it an error message, so it becomes a `Result<String, &str>`.
 
@@ -6297,14 +6305,14 @@ fn main() {
 }
 ```
 
-This line is the biggest change:
+가장 크게 바뀐 줄은 다음입니다.
 
 ```rust
 // 🚧
 .for_each(|company| results_vec.push(company.get_ceo().ok_or("No CEO found")));
 ```
 
-It means: "For each company, use `get_ceo()`. If you get it, then pass on the value inside `Ok`. And if you don't, pass on "No CEO found" inside `Err`. Then push this into the vec."
+의미는 이렇습니다. "각 회사에 대해 `get_ceo()`를 사용하라. 값을 얻으면 `Ok` 안의 값을 넘기고, 얻지 못하면 `Err` 안에 "No CEO found"를 담아 넘겨라. 그리고 이것을 vec에 넣어라."
 
 So when we print `results_vec` we get this:
 
@@ -6315,7 +6323,7 @@ Err("No CEO found")
 Err("No CEO found")
 ```
 
-So now we have all four entries. Now let's use `.ok_or_else()` so we can use a closure and get a better error message. Now we have space to use `format!` to create a `String`, and put the company name in that. Then we return the `String`.
+이제 네 항목을 모두 얻었습니다. 이제 `.ok_or_else()`를 사용해 클로저를 쓰고 더 나은 에러 메시지를 받아 봅시다. 이제 `format!`으로 `String`을 만들 공간이 생기고, 거기에 회사 이름을 넣을 수 있습니다. 그런 다음 그 `String`을 반환합니다.
 
 ```rust
 // Everything before main() is exactly the same
@@ -6364,7 +6372,7 @@ fn main() {
 }
 ```
 
-This gives us:
+결과는 다음과 같습니다.
 
 ```text
 Ok("Unknown")
@@ -6375,6 +6383,7 @@ Err("No CEO found for Stark Enterprises")
 
 
 `.and_then()` is a helpful method that takes an `Option`, then lets you do something to its value and pass it on. So its input is an `Option`, and its output is also an `Option`. It is sort of like a safe "unwrap, then do something, then wrap again".
+`.and_then()`은 `Option`을 받아 값에 무언가를 하고 다시 넘길 수 있게 하는 유용한 메서드입니다. 입력도 `Option`, 출력도 `Option`입니다. "안전하게 언랩 → 작업 → 다시 랩"과 비슷합니다.
 
 An easy example is a number that we get from a vec using `.get()`, because that returns an `Option`. Now we can pass it to `and_then()`, and do some math on it if it is `Some`. If it is `None`, then the `None` just gets passed through.
 
@@ -6398,12 +6407,12 @@ fn main() {
 }
 ```
 
-This prints `[Some(14), Some(15), Some(6), None, None]`. You can see that `None` isn't filtered out, just passed on.
+`[Some(14), Some(15), Some(6), None, None]`을 출력합니다. `None`은 걸러지지 않고 그대로 넘어간다는 것을 볼 수 있습니다.
 
 
 
 
-`.and()` is sort of like a `bool` for `Option`. You can match many `Option`s to each other, and if they are all `Some` then it will give the last one. And if one of them is a `None`, then it will give `None`.
+`.and()`는 `Option`의 `bool` 같은 것입니다. 여러 `Option`을 잇대어 모두 `Some`이면 마지막 값을 주고, 하나라도 `None`이면 `None`을 줍니다.
 
 First here is a `bool` example to help imagine. You can see that if you are using `&&` (and), even one `false` makes everything `false`.
 
@@ -6419,7 +6428,7 @@ fn main() {
 }
 ```
 
-Now here is the same thing with `.and()`. Imagine we did five operations and put the results in a Vec<Option<&str>>. If we get a value, we push `Some("success!")` to the vec. Then we do this two more times. After that we use `.and()` to only show the indexes that got `Some` every time.
+이제 같은 일을 `.and()`로 해 봅시다. 다섯 번의 연산을 해서 결과를 Vec<Option<&str>>에 넣었다고 생각해 봅시다. 값을 얻으면 `Some("success!")`를 vec에 넣습니다. 이 과정을 두 번 더 합니다. 그다음 `.and()`를 사용해 매번 `Some`이었던 인덱스만 보여 줍니다.
 
 ```rust
 fn main() {
@@ -6443,15 +6452,15 @@ Some("success!")
 None
 ```
 
-The first one (index 0) is `None` because there is a `None` for index 0 in `second_try`. The second is `None` because there is a `None` in `first_try`. The next is `Some("success!")` because there is no `None` for `first_try`, `second try`, or `third_try`.
+첫 번째(인덱스 0)는 `second_try`의 0번 인덱스가 `None`이어서 `None`입니다. 두 번째도 `first_try`에 `None`이 있어서 `None`입니다. 그다음은 `first_try`, `second_try`, `third_try` 모두에 `None`이 없어서 `Some("success!")`입니다.
 
 
 
-`.any()` and `.all()` are very easy to use in iterators. They return a `bool` depending on your input. In this example we make a very large vec (about 20,000 items) with all the characters from `'a'` to `'働'`. Then we make a function to check if a character is inside it.
+`.any()`와 `.all()`은 이터레이터에서 매우 쉽게 사용할 수 있습니다. 입력에 따라 `bool`을 반환합니다. 이 예에서는 `'a'`부터 `'働'`까지 모든 문자를 담은 아주 큰 벡터(약 2만 개)를 만듭니다. 그런 다음 문자가 안에 있는지 확인하는 함수를 만듭니다.
 
-Next we make a smaller vec and ask it whether it is all alphabetic (with the `.is_alphabetic()` method). Then we ask it if all the characters are less than the Korean character `'행'`.
+그다음 더 작은 벡터를 만들고 모든 문자가 알파벳인지(`.is_alphabetic()` 메서드) 묻습니다. 이어서 모든 문자가 한글 `'행'`보다 작은지도 묻습니다.
 
-Also note that you put a reference in, because `.iter()` gives a reference and you need a `&` to compare with another `&`.
+또한 `.iter()`가 레퍼런스를 주기 때문에, 다른 `&`와 비교하려면 `&`를 사용해야 한다는 점도 기억하세요.
 
 ```rust
 fn in_char_vec(char_vec: &Vec<char>, check: char) {
@@ -6481,6 +6490,7 @@ All less than the character 행? true
 ```
 
 By the way, `.any()` only checks until it finds one matching item, and then it stops. It won't check them all if it has already found a match. If you are going to use `.any()` on a `Vec`, it might be a good idea to push the items that might match near the front. Or you can use `.rev()` after `.iter()` to reverse the iterator. Here's one vec like that:
+참고로 `.any()`는 하나라도 매치되는 항목을 찾으면 그만둡니다. 이미 찾았으면 모두 검사하지 않습니다. `Vec`에서 `.any()`를 쓸 거라면 매치될 가능성이 있는 항목을 앞쪽에 두는 것이 좋을 수도 있습니다. 아니면 `.iter()` 뒤에 `.rev()`를 붙여 이터레이터를 뒤집을 수 있습니다. 이런 벡터가 있다고 합시다.
 
 ```rust
 fn main() {
@@ -6509,7 +6519,7 @@ Some(5)
 Some(6)
 ```
 
-We were right: there is one `Some(5)` and then the 1000 `Some(6)` start. So we can write this:
+맞았습니다. `Some(5)`이 하나 나오고 1000개의 `Some(6)`이 이어집니다. 따라서 이렇게 쓸 수 있습니다.
 
 ```rust
 fn main() {
@@ -6521,6 +6531,7 @@ fn main() {
 ```
 
 And because it's `.rev()`, it only calls `.next()` one time and stops. If we don't use `.rev()` then it will call `.next()` 1001 times before it stops. This code shows it:
+`.rev()`를 사용했기 때문에 `.next()`를 한 번만 호출하고 멈춥니다. `.rev()`를 쓰지 않으면 멈추기 전에 `.next()`를 1001번 호출합니다. 다음 코드를 보면 알 수 있습니다.
 
 ```rust
 fn main() {
@@ -6540,15 +6551,15 @@ fn main() {
 }
 ```
 
-This prints `Final counter is: 1001` so we know that it had to call `.next()` 1001 times before it found 5.
+`Final counter is: 1001`이 출력되므로 5를 찾기 전에 `.next()`를 1001번 호출했다는 것을 알 수 있습니다.
 
 
 
 
-`.find()` tells you if an iterator has something, and `.position()` tells you where it is. `.find()` is different from `.any()` because it returns an `Option` with the value inside (or `None`). Meanwhile, `.position()` is also an `Option` with the position number, or `None`. In other words:
+`.find()`는 이터레이터에 무엇이 있는지 알려 주고, `.position()`은 어디에 있는지 알려 줍니다. `.find()`는 값이 들어 있는 `Option`(또는 `None`)을 반환한다는 점에서 `.any()`와 다릅니다. 한편 `.position()`도 위치 번호가 들어 있는 `Option` 또는 `None`입니다. 즉:
 
-- `.find()`: "I'll try to get it for you"
-- `.position()`: "I'll try to find where it is for you"
+- `.find()`: "값을 가져와 볼게"
+- `.position()`: "어디 있는지 찾아 볼게"
 
 Here is a simple example:
 
@@ -6577,6 +6588,7 @@ None
 
 
 With `.cycle()` you can create an iterator that loops forever. This type of iterator works well with `.zip()` to create something new, like this example which creates a `Vec<(i32, &str)>`:
+`.cycle()`로 무한히 도는 이터레이터를 만들 수 있습니다. 이런 이터레이터는 `.zip()`과 잘 어울려 새 것을 만들 수 있습니다. 아래 예제는 `Vec<(i32, &str)>`를 만듭니다.
 
 ```rust
 fn main() {
@@ -6596,6 +6608,7 @@ So even though `.cycle()` might never end, the other iterator only runs six time
 ```
 
 Something similar can be done with a range that doesn't have an ending. If you write `0..` then you create a range that never stops. You can use this very easily:
+끝이 없는 범위에도 비슷하게 할 수 있습니다. `0..`처럼 쓰면 끝없이 계속되는 범위를 만듭니다. 아주 쉽게 사용할 수 있습니다.
 
 ```rust
 fn main() {
@@ -6608,6 +6621,7 @@ fn main() {
 ```
 
 Both print ten characters, but the second one skipped 1300 places and prints ten letters in Armenian.
+두 출력 모두 10개의 문자를 보여 주지만, 두 번째는 1300개를 건너뛰어 아르메니아 문자 10개를 출력합니다.
 
 ```
 ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
@@ -6663,23 +6677,23 @@ This prints:
 
 
 
-There are many other convenient methods like:
+다른 편리한 메서드도 많이 있습니다.
 
-- `.take_while()` which takes into an iterator as long as it gets `true` (`take while x > 5` for example)
-- `.cloned()` which makes a clone inside the iterator. This turns a reference into a value.
-- `.by_ref()` which makes an iterator take a reference. This is good to make sure that you can use a `Vec` or something similar after you use it to make an iterator.
-- Many other `_while` methods: `.skip_while()`, `.map_while()`, and so on
-- `.sum()`: just adds everything together.
+- `.take_while()`: `true`를 반환하는 동안 이터레이터에서 가져옵니다(예: `take while x > 5`).
+- `.cloned()`: 이터레이터 안에서 클론을 만듭니다. 레퍼런스를 값으로 바꿉니다.
+- `.by_ref()`: 이터레이터를 레퍼런스로 만듭니다. 이터레이터를 만든 뒤에도 `Vec` 같은 것을 계속 쓰고 싶을 때 좋습니다.
+- 기타 `_while` 메서드: `.skip_while()`, `.map_while()` 등
+- `.sum()`: 모든 값을 더합니다.
 
 
 
-`.chunks()` and `.windows()` are two ways of cutting up a vector into a size you want. You put the size you want into the brackets. Let's say you have a vector with 10 items, and you want a size of 3. It will work like this:
+`.chunks()`와 `.windows()`는 벡터를 원하는 크기로 나누는 두 가지 방법입니다. 원하는 크기를 괄호 안에 넣습니다. 10개짜리 벡터가 있고 크기 3을 원한다고 해 봅시다. 이렇게 동작합니다.
 
 - `.chunks()` will give you four slices: [0, 1, 2], then [3, 4, 5], then [6, 7, 8], and finally [9]. So it will try to make a slice of three items, but if it doesn't have three then it won't panic. It will just give you what is left.
 
 - `.windows()` will first give you a slice of [0, 1, 2]. Then it will move over one and give you [1, 2, 3]. It will do that until it finally reaches the last slice of three and stop.
 
-So let's use them on a simple vector of numbers. It looks like this:
+숫자 벡터에 적용해 봅시다. 이렇게 됩니다.
 
 ```rust
 fn main() {
@@ -6713,11 +6727,11 @@ This prints:
 [8, 9, 0]
 ```
 
-By the way, `.chunks()` will panic if you give it nothing. You can write `.chunks(1000)` for a vector with one item, but you can't write `.chunks()` with anything with a length of 0. You can see that right in the function if you click on [src] because it says `assert!(chunk_size != 0);`.
+참고로 `.chunks()`에 0을 주면 패닉합니다. 하나짜리 벡터에 `.chunks(1000)`을 쓰는 것은 괜찮지만 길이가 0인 것에 `.chunks()`를 쓸 수는 없습니다. [src]를 클릭해 함수 안을 보면 `assert!(chunk_size != 0);`라고 되어 있는 것을 볼 수 있습니다.
 
 
 
-`.match_indices()` lets you pull out everything inside a `String` or `&str` that matches your input, and gives you the index too. It is similar to `.enumerate()` because it returns a tuple with two items.
+`.match_indices()`는 `String`이나 `&str`에서 입력과 일치하는 모든 것을 꺼내고 인덱스도 제공합니다. 두 항목이 든 튜플을 반환한다는 점에서 `.enumerate()`와 비슷합니다.
 
 ```rust
 fn main() {
@@ -6735,7 +6749,7 @@ This prints:
 
 
 
-`.peekable()` lets you make an iterator where you can see (peek at) the next item. It's like calling `.next()` (it gives an `Option`) except that the iterator doesn't move, so you can use it as many times as you want. You can actually think of peekable as "stoppable", because you can stop for as long as you want. Here is an example of us using `.peek()` three times for every item. We can use `.peek()` forever until we use `.next()` to move to the next item.
+`.peekable()`은 다음 항목을 들여다볼 수 있는 이터레이터를 만듭니다. `.next()`처럼 `Option`을 주지만, 이터레이터가 움직이지 않으므로 원하는 만큼 사용할 수 있습니다. peekable을 "멈출 수 있는" 것으로 생각해도 됩니다. `.next()`로 다음 항목으로 이동하기 전까지 원하는 만큼 멈춰 있을 수 있기 때문입니다. 아래 예에서는 항목 하나당 `.peek()`를 세 번 사용합니다. `.next()`를 쓰기 전까지는 계속 `.peek()`를 호출할 수 있습니다.
 
 ```rust
 fn main() {
@@ -6850,10 +6864,9 @@ Names { one_word: ["Caesar", "Data"], two_words: ["Frodo Baggins", "Bilbo Baggin
 ["Barack Hussein Obama", "Bill Jefferson Clinton"] }
 ```
 
+## dbg! 매크로와 .inspect
 
-## The dbg! macro and .inspect
-
-`dbg!` is a very useful macro that prints quick information. It is a good alternative to `println!` because it is faster to type and gives more information:
+`dbg!`는 빠르게 정보를 출력하는 매우 유용한 매크로입니다. 타이핑도 더 짧고 정보를 더 주기 때문에 `println!`의 좋은 대안입니다.
 
 ```rust
 fn main() {
@@ -6862,9 +6875,9 @@ fn main() {
 }
 ```
 
-This prints `[src\main.rs:4] my_number = 8`.
+`[src\main.rs:4] my_number = 8`을 출력합니다.
 
-But actually, you can put `dbg!` in many other places, and even wrap code in it. Look at this code for example:
+사실 `dbg!`는 더 많은 곳에 넣을 수 있고 코드 전체를 감쌀 수도 있습니다. 예를 들어 다음 코드를 보세요.
 
 ```rust
 fn main() {
@@ -6877,7 +6890,7 @@ fn main() {
 }
 ```
 
-This code creates a new mutable number and changes it. Then it creates a vec, and uses `iter` and `map` and `collect` to create a new vec. We can put `dbg!` almost everywhere in this code. `dbg!` asks the compiler: "What are you doing at this moment?" and tells you.
+이 코드는 새로운 가변 숫자를 만들고 값을 바꿉니다. 그런 다음 vec을 만들고 `iter`, `map`, `collect`로 새 vec을 만듭니다. 이 코드에는 거의 어디에나 `dbg!`를 넣을 수 있습니다. `dbg!`는 컴파일러에게 "지금 무엇을 하고 있니?"라고 묻고 그 내용을 알려 줍니다.
 
 ```rust
 fn main() {
@@ -6892,19 +6905,19 @@ fn main() {
 }
 ```
 
-So this prints:
+출력은 다음과 같습니다.
 
 ```text
 [src\main.rs:3] 9 = 9
 ```
 
-and:
+그리고:
 
 ```text
 [src\main.rs:4] my_number += 10 = ()
 ```
 
-and:
+그리고:
 
 ```text
 [src\main.rs:6] vec![8, 9, 10] = [
@@ -6914,7 +6927,7 @@ and:
 ]
 ```
 
-and this one, which even shows you the value of the expression:
+표현식의 값까지 보여 주는 출력:
 
 ```text
 [src\main.rs:8] new_vec.iter().map(|x| x * 2).collect::<Vec<i32>>() = [
@@ -6924,7 +6937,7 @@ and this one, which even shows you the value of the expression:
 ]
 ```
 
-and:
+그리고:
 
 ```text
 [src\main.rs:10] double_vec = [
@@ -6934,7 +6947,7 @@ and:
 ]
 ```
 
-`.inspect` is a bit similar to `dbg!` but you use it like `map` in an iterator. It gives you the iterator item and you can print it or do whatever you want. For example, let's look at our `double_vec` again.
+`.inspect`는 `dbg!`와 약간 비슷하지만 이터레이터에서 `map`처럼 사용합니다. 이터레이터 항목을 넘겨 주므로 출력하거나 원하는 일을 할 수 있습니다. 예를 들어 `double_vec`을 다시 보겠습니다.
 
 ```rust
 fn main() {
@@ -6947,7 +6960,7 @@ fn main() {
 }
 ```
 
-We want to know more information about what the code is doing. So we add `inspect()` in two places:
+코드가 무엇을 하는지 더 알고 싶어서 두 곳에 `inspect()`를 추가합니다.
 
 ```rust
 fn main() {
@@ -6962,7 +6975,7 @@ fn main() {
 }
 ```
 
-This prints:
+출력:
 
 ```text
 The item is: 8
@@ -6973,7 +6986,7 @@ The item is: 10
 Then it is: 20
 ```
 
-And because `.inspect` takes a closure, we can write as much as we want:
+`.inspect`는 클로저를 받으므로 원하는 만큼 코드를 쓸 수 있습니다.
 
 ```rust
 fn main() {
@@ -6994,7 +7007,7 @@ fn main() {
 }
 ```
 
-This prints:
+출력:
 
 ```text
 The item is: 8
@@ -7008,12 +7021,12 @@ It is even.
 In binary it is 1010.
 ```
 
-## Types of &str
+## &str 타입 종류
 
-There is more than one type of `&str`. We have:
+`&str`에도 여러 타입이 있습니다.
 
-- String literals: you make these when you write `let my_str = "I am a &str"`. They last for the whole program, because they are written directly into the binary. They have the type `&'static str`. `'` means its lifetime, and string literal have a lifetime called `static`.
-- Borrowed str: This is the regular `&str` form without a `static` lifetime. If you create a `String` and get a reference to it, Rust will convert it to a `&str` when you need it. For example:
+- 문자열 리터럴: `let my_str = "I am a &str"`처럼 쓸 때 생깁니다. 바이너리에 직접 쓰이므로 프로그램 전체 동안 존재합니다. 타입은 `&'static str`입니다. `'`는 수명을 뜻하며, 문자열 리터럴의 수명은 `static`입니다.
+- 빌린 str: `static` 수명 없이 쓰는 일반 `&str` 형태입니다. `String`을 만들고 그 레퍼런스를 얻으면 필요할 때 Rust가 이를 `&str`로 바꿉니다. 예:
 
 ```rust
 fn prints_str(my_str: &str) { // it can use &String like a &str
@@ -7028,9 +7041,9 @@ fn main() {
 
 So what is a lifetime? We will learn that now.
 
-## Lifetimes
+## 수명
 
-A lifetime means "how long the variable lives". You only need to think about lifetimes with references. This is because references can't live longer than the object they come from. For example, this function does not work:
+수명은 "변수가 얼마나 오래 사는가"를 뜻합니다. 수명은 레퍼런스를 다룰 때만 생각하면 됩니다. 레퍼런스는 원본 객체보다 오래 살 수 없기 때문입니다. 예를 들어 다음 함수는 동작하지 않습니다.
 
 ```rust
 fn returns_reference() -> &str {
@@ -7041,9 +7054,9 @@ fn returns_reference() -> &str {
 fn main() {}
 ```
 
-The problem is that `my_string` only lives inside `returns_reference`. We try to return `&my_string`, but `&my_string` can't exist without `my_string`. So the compiler says no.
+문제는 `my_string`이 `returns_reference` 안에서만 산다는 점입니다. `&my_string`을 반환하려 하지만 `my_string` 없이는 `&my_string`이 존재할 수 없습니다. 그래서 컴파일러가 거부합니다.
 
-This code also doesn't work:
+이 코드도 동작하지 않습니다.
 
 ```rust
 fn returns_str() -> &str {
@@ -7073,7 +7086,7 @@ help: consider using the `'static` lifetime
   |                     ^^^^^^^^
 ```
 
-`missing lifetime specifier` means that we need to add a `'` with the lifetime. Then it says that it `contains a borrowed value, but there is no value for it to be borrowed from`. That means that `I am a str` isn't borrowed from anything. It says `consider using the 'static lifetime` by writing `&'static str`. So it thinks we should try saying that this is a string literal.
+`missing lifetime specifier`는 수명을 나타내는 `'`을 추가해야 한다는 뜻입니다. 이어서 `contains a borrowed value, but there is no value for it to be borrowed from`이라고 합니다. `I am a str`이 어디에서도 빌려오지 않았다는 의미입니다. `&'static str`처럼 써서 `static` 수명을 사용하라고 합니다. 즉 이 문자열을 문자열 리터럴이라고 알려 달라는 뜻입니다.
 
 Now it works:
 
@@ -7089,13 +7102,13 @@ fn main() {
 }
 ```
 
-That's because we returned a `&str` with a lifetime of `static`. Meanwhile, `my_string` can only be returned as a `String`: we can't return a reference to it because it is going to die in the next line.
+`static` 수명을 가진 `&str`을 반환했기 때문입니다. 한편 `my_string`은 다음 줄에서 사라질 예정이므로 레퍼런스로 반환할 수 없고 `String`으로만 반환할 수 있습니다.
 
-So now `fn returns_str() -> &'static str` tells Rust: "don't worry, we will only return a string literal". String literals live for the whole program, so Rust is happy. You'll notice that this is similar to generics. When we tell the compiler something like `<T: Display>`, we promise that we will only use inputs with `Display`. Lifetimes are similar: we are not changing any variable lifetimes. We are just telling the compiler what the lifetimes of the inputs will be.
+따라서 `fn returns_str() -> &'static str`은 Rust에게 "걱정하지 마, 문자열 리터럴만 반환할 거야"라고 말하는 셈입니다. 문자열 리터럴은 프로그램 전체 동안 존재하므로 Rust는 만족합니다. 제네릭과 비슷하다는 점을 알 수 있습니다. `<T: Display>`처럼 컴파일러에게 말할 때 입력이 Display를 가진 것만 쓸 것이라고 약속합니다. 수명도 마찬가지입니다. 변수의 수명을 바꾸는 것이 아니라, 입력의 수명이 어떨지 컴파일러에 알려 주는 것입니다.
 
-But `'static` is not the only lifetime. Actually, every variable has a lifetime, but usually we don't have to write it. The compiler is pretty smart and can usually figure out for itself. We only have to write the lifetime when the compiler doesn't know.
+하지만 `'static`만 수명이 아닙니다. 사실 모든 변수에 수명이 있지만 보통 적어 줄 필요는 없습니다. 컴파일러가 꽤 똑똑해서 대부분 알아서 추론하기 때문입니다. 컴파일러가 모를 때만 수명을 적어 주면 됩니다.
 
-Here is an example of another lifetime. Imagine we want to create a `City` struct and give it a `&str` for the name. We might want to do that because it gives faster performance than with `String`. So we write it like this, but it won't work yet:
+다른 수명 예제를 봅시다. `City` 구조체를 만들면서 이름을 `&str`로 주고 싶다고 합시다. `String`보다 빠르기 때문에 이렇게 하고 싶을 수 있습니다. 이렇게 쓰지만 아직은 동작하지 않습니다.
 
 ```rust
 #[derive(Debug)]
@@ -7112,7 +7125,7 @@ fn main() {
 }
 ```
 
-The compiler says:
+컴파일러는 이렇게 말합니다.
 
 ```text
 error[E0106]: missing lifetime specifier
@@ -7130,7 +7143,7 @@ help: consider introducing a named lifetime parameter
 
 Rust needs a lifetime for `&str` because `&str` is a reference. What happens when the value that `name` points to is dropped? That would be unsafe.
 
-What about `'static`, will that work? We used it before. Let's try:
+`'static`을 쓰면 될까요? 전에 사용했던 방법입니다. 한번 시도해 봅시다.
 
 ```rust
 #[derive(Debug)]
@@ -7150,6 +7163,7 @@ fn main() {
 ```
 
 Okay, that works. And maybe this is what you wanted for the struct. However, note that we can only take "string literals", so not references to something else. So this will not work:
+잘 동작합니다. 아마 구조체에 원했던 모습일 겁니다. 다만 "문자열 리터럴"만 받을 수 있고, 다른 것에 대한 레퍼런스는 받을 수 없다는 점을 기억하세요. 그래서 아래는 동작하지 않습니다.
 
 ```rust
 #[derive(Debug)]
@@ -7171,6 +7185,7 @@ fn main() {
 ```
 
 The compiler says:
+컴파일러는 이렇게 말합니다.
 
 ```text
 error[E0597]: `city_names` does not live long enough
@@ -7186,9 +7201,9 @@ error[E0597]: `city_names` does not live long enough
    | - `city_names` dropped here while still borrowed
 ```
 
-This is important to understand, because the reference we gave it actually lives long enough. But we promised that we would only give it a `&'static str`, and that is the problem.
+이 부분을 이해하는 것이 중요합니다. 우리가 준 레퍼런스는 실제로 충분히 오래 살지만, `&'static str`만 주겠다고 약속한 것이 문제입니다.
 
-So now we will try what the compiler suggested before. It said to try writing `struct City<'a>` and `name: &'a str`. This means that it will only take a reference for `name` if it lives as long as `City`.
+이제 컴파일러가 아까 제안한 대로 해 봅시다. `struct City<'a>`와 `name: &'a str`을 써 보라는 것이었습니다. 이는 `name`이 `City`와 같은 동안 살아 있는 레퍼런스만 받겠다는 뜻입니다.
 
 ```rust
 #[derive(Debug)]
@@ -7210,6 +7225,7 @@ fn main() {
 ```
 
 Also remember that you can write anything instead of `'a` if you want. This is also similar to generics where we write `T` and `U` but can actually write anything.
+참고로 원한다면 `'a` 대신 아무 이름이나 쓸 수 있습니다. `T`, `U`라고 쓰지만 무엇이든 쓸 수 있는 제네릭과 비슷합니다.
 
 ```rust
 #[derive(Debug)]
@@ -7222,6 +7238,7 @@ fn main() {}
 ```
 
 So usually you will write `'a, 'b, 'c` etc. because it is quick and the usual way to write. But you can always change it if you want. One good tip is that changing the lifetime to a "human-readable" name can help you read code if it is very complicated.
+보통은 `'a`, `'b`, `'c`처럼 간단하게 쓰지만, 원한다면 언제든 바꿀 수 있습니다. 코드가 아주 복잡할 때는 수명을 사람이 읽기 쉬운 이름으로 바꾸면 이해에 도움이 됩니다.
 
 Let's look at the comparison to traits for generics again. For example:
 
@@ -7235,8 +7252,8 @@ fn prints<T: Display>(input: T) {
 fn main() {}
 ```
 
-When you write `T: Display`, it means "please only take T if it has Display".
-It does not mean: "I am giving Display to T".
+`T: Display`라고 쓰면 "Display를 가진 T만 받아 달라"는 뜻입니다.
+`T`에게 Display를 **주는** 것은 아닙니다.
 
 The same is true for lifetimes. When you write 'a here:
 
@@ -7250,8 +7267,8 @@ struct City<'a> {
 fn main() {}
 ```
 
-It means "please only take an input for `name` if it lives at least as long as `City`".
-It does not mean: "I will make the input for `name` live as long as `City`".
+"`name`이 `City`만큼 오래 사는 입력만 받아 달라"는 뜻입니다.
+`name` 입력을 `City`만큼 오래 살게 **만든다**는 뜻이 아닙니다.
 
 Now we can learn about `<'_>` that we saw before. This is called the "anonymous lifetime" and is an indicator that references are being used. Rust will suggest it to you when you are implementing structs, for example. Here is one struct that almost works, but not yet:
 
@@ -7300,13 +7317,13 @@ impl Adventurer<'_> {
 fn main() {}
 ```
 
-This lifetime was made so that you don't always have to write things like `impl<'a> Adventurer<'a>`, because the struct already shows the lifetime.
+이 수명 표기는 구조체에 이미 수명이 적혀 있으니 매번 `impl<'a> Adventurer<'a>`처럼 쓰지 않아도 되도록 마련된 것입니다.
 
-Lifetimes can be difficult in Rust, but here are some tips to avoid getting too stressed about them:
+수명은 Rust에서 어려울 수 있지만, 너무 스트레스 받지 않도록 몇 가지 팁을 소개합니다.
 
-- You can stay with owned types, use clones etc. if you want to avoid them for the time being.
-- Much of the time, when the compiler wants a lifetime you will just end up writing <'a> here and there and then it will work. It's just a way of saying "don't worry, I won't give you anything that doesn't live long enough".
-- You can explore lifetimes just a bit at a time. Write some code with owned values, then make one a reference. The compiler will start to complain, but also give some suggestions. And if it gets too complicated, you can undo it and try again next time.
+- 당분간 피하고 싶다면 소유 타입만 사용하거나 clone을 사용하는 방법도 있습니다.
+- 컴파일러가 수명을 요구할 때는 여기저기 `<\'a>`를 적으면 대부분 동작합니다. "걱정 마, 충분히 오래 사는 것만 줄게"라고 말하는 셈입니다.
+- 수명을 조금씩 탐색해 보세요. 소유 값을 쓰던 코드를 하나씩 레퍼런스로 바꿔 봅니다. 컴파일러가 불평하면서도 제안을 줄 것입니다. 너무 복잡해지면 되돌렸다가 다음에 다시 시도해도 됩니다.
 
 Let's do this with our code and see what the compiler says. First we'll go back and take the lifetimes out, and also implement `Display`. `Display` will just print the `Adventurer`'s name.
 
@@ -7333,7 +7350,7 @@ impl std::fmt::Display for Adventurer {
 fn main() {}
 ```
 
-First complaint is this:
+첫 번째 불평은 다음과 같습니다.
 
 ```text
 error[E0106]: missing lifetime specifier
@@ -7349,7 +7366,7 @@ help: consider introducing a named lifetime parameter
   |
 ```
 
-It suggests what to do: `<'a>` after Adventurer, and `&'a str`. So we do that:
+Adventurer 뒤에 `<'a>`를, `&'a str`을 쓰라고 합니다. 그대로 해 봅시다.
 
 ```rust
 // ⚠️
@@ -7374,7 +7391,7 @@ impl std::fmt::Display for Adventurer {
 fn main() {}
 ```
 
-Now it's happy with those parts, but is wondering about the `impl` blocks. It wants us to mention that it's using references:
+이제 그 부분은 만족했지만 `impl` 블록에 대해 궁금해합니다. 레퍼런스를 사용하고 있다는 것을 언급하길 원합니다.
 
 ```text
 error[E0726]: implicit elided lifetime not allowed here
@@ -7390,7 +7407,7 @@ error[E0726]: implicit elided lifetime not allowed here
    |                            ^^^^^^^^^^- help: indicate the anonymous lifetime: `<'_>`
 ```
 
-Okay, so we will write those in...and now it works! Now we can make an `Adventurer` and do some things with it.
+좋습니다. 그 부분을 적어 넣으니 이제 동작합니다! 이제 `Adventurer`를 만들어 사용할 수 있습니다.
 
 ```rust
 struct Adventurer<'a> {
@@ -7429,15 +7446,15 @@ Billy has 100000 hit points.
 Billy has 99980 hit points left!
 ```
 
-So you can see that lifetimes are often just the compiler wanting to make sure. And it is usually smart enough to almost guess at what lifetimes you want, and just needs you to tell it so it can be certain.
+수명은 대개 컴파일러가 확실히 하고 싶어서 요구하는 것임을 알 수 있습니다. 보통은 어떤 수명을 원할지 거의 추측할 정도로 똑똑하며, 확실히 하기 위해 우리가 알려 주길 바랄 뿐입니다.
 
 ## Interior mutability
 
 ### Cell
 
-**Interior mutability** means having a little bit of mutability on the inside. Remember how in Rust you need to use `mut` to change a variable? There are also some ways to change them without the word `mut`. This is because Rust has some ways to let you safely change values inside of a struct that is immutable. Each one of them follows some rules that make sure that changing the values is still safe.
+**내부 가변성**은 안쪽에 약간의 가변성이 있다는 뜻입니다. Rust에서는 변수를 바꾸려면 `mut`를 써야 한다는 것을 기억하세요? `mut` 없이도 바꿀 수 있는 방법이 있습니다. 불변 구조체 안의 값을 안전하게 바꾸도록 해 주는 수단들이 있습니다. 각각 값 변경이 여전히 안전하도록 규칙을 따릅니다.
 
-First, let's look at a simple example where we would want this. Imagine a `struct` called `PhoneModel` with many fields:
+먼저 이런 기능이 필요한 단순한 예를 보겠습니다. 필드가 많은 `PhoneModel`이라는 `struct`를 상상해 봅시다.
 
 ```rust
 struct PhoneModel {
@@ -7462,15 +7479,15 @@ fn main() {
 }
 ```
 
-It is better for the fields in `PhoneModel` to be immutable, because we don't want the data to change. The `date_issued` and `screen_size` never change, for example.
+`PhoneModel`의 필드는 불변인 편이 좋습니다. 데이터를 바꾸고 싶지 않기 때문입니다. 예를 들어 `date_issued`나 `screen_size`는 절대 변하지 않습니다.
 
-But inside is one field called `on_sale`. A phone model will first be on sale (`true`), but later the company will stop selling it. Can we make just this one field mutable? Because we don't want to write `let mut super_phone_3000`. If we do, then every field will become mutable.
+하지만 `on_sale`이라는 필드가 하나 있습니다. 처음에는 판매 중(`true`)이었다가 나중에 회사가 판매를 중단할 것입니다. 이 필드 하나만 가변으로 만들 수 있을까요? `let mut super_phone_3000`처럼 쓰고 싶지는 않습니다. 그렇게 하면 모든 필드가 가변이 됩니다.
 
-Rust has many ways to allow some safe mutability inside of something that is immutable. The most simple way is called `Cell`. First we use `use std::cell::Cell` so that we can just write `Cell` instead of `std::cell::Cell` every time.
+Rust에는 불변인 것 안에 안전하게 가변성을 허용하는 방법이 여러 가지 있습니다. 가장 단순한 방법이 `Cell`입니다. 먼저 `use std::cell::Cell`로 가져와 매번 `std::cell::Cell` 대신 `Cell`만 쓰도록 합니다.
 
-Then we change `on_sale: bool` to `on_sale: Cell<bool>`. Now it isn't a bool: it's a `Cell` that holds a `bool`.
+그다음 `on_sale: bool`을 `on_sale: Cell<bool>`로 바꿉니다. 이제 bool이 아니라 bool을 담는 `Cell`입니다.
 
-`Cell` has a method called `.set()` where you can change the value. We use `.set()` to change `on_sale: true` to `on_sale: Cell::new(true)`.
+`Cell`에는 값을 바꾸는 `.set()` 메서드가 있습니다. 이를 사용해 `on_sale: true`를 `on_sale: Cell::new(true)`로 바꿉니다.
 
 ```rust
 use std::cell::Cell;
@@ -7501,11 +7518,13 @@ fn main() {
 
 `Cell` works for all types, but works best for simple Copy types because it gives values, not references. `Cell` has a method called `get()` for example that only works on Copy types.
 
-Another type you can use is `RefCell`.
+`Cell`은 모든 타입에 쓸 수 있지만 값을(레퍼런스가 아닌) 주기 때문에 단순한 Copy 타입에 가장 잘 어울립니다. 예를 들어 `Cell`에는 Copy 타입에만 동작하는 `get()` 메서드가 있습니다.
+
+`RefCell`이라는 타입도 있습니다.
 
 ### RefCell
 
-A `RefCell` is another way to change values without needing to declare `mut`. It means "reference cell", and is like a `Cell` but uses references instead of copies.
+`RefCell`은 `mut` 선언 없이 값을 바꾸는 또 다른 방법입니다. "reference cell"을 뜻하며 `Cell`과 비슷하지만 복사본 대신 레퍼런스를 사용합니다.
 
 We will create a `User` struct. So far you can see that it is similar to `Cell`:
 
@@ -7533,15 +7552,15 @@ fn main() {
 }
 ```
 
-This prints `RefCell { value: true }`.
+`RefCell { value: true }`를 출력합니다.
 
-There are many methods for `RefCell`. Two of them are `.borrow()` and `.borrow_mut()`. With these methods, you can do the same thing you do with `&` and `&mut`. The rules are the same:
+`RefCell`에는 많은 메서드가 있습니다. 그중 `.borrow()`와 `.borrow_mut()` 두 가지는 `&`, `&mut`으로 하는 일을 그대로 할 수 있게 해 줍니다. 규칙도 같습니다.
 
-- Many borrows is fine,
-- one mutable borrow is fine,
-- but mutable and immutable together is not fine.
+- 불변 대여 여러 개는 괜찮습니다.
+- 가변 대여 하나도 괜찮습니다.
+- 가변과 불변을 동시에 가지는 것은 안 됩니다.
 
-So changing the value in a `RefCell` is very easy:
+그래서 `RefCell` 안의 값을 바꾸는 것은 아주 쉽습니다.
 
 ```rust
 // 🚧
@@ -7549,7 +7568,7 @@ user_1.active.replace(false);
 println!("{:?}", user_1.active);
 ```
 
-And there are many other methods like `replace_with` that uses a closure:
+클로저를 사용하는 `replace_with` 같은 메서드도 많습니다.
 
 ```rust
 // 🚧
@@ -7561,7 +7580,7 @@ user_1
 println!("{:?}", user_1.active);
 ```
 
-But you have to be careful with a `RefCell`, because it checks borrows at runtime, not compilation time. Runtime means when the program is actually running (after compilation). So this will compile, even though it is wrong:
+하지만 `RefCell`은 빌림을 컴파일 타임이 아니라 런타임에 검사하기 때문에 주의해야 합니다. 런타임은 프로그램이 실제로 실행되는 시점(컴파일 후)을 말합니다. 그래서 잘못된 코드라도 컴파일은 됩니다.
 
 ```rust
 use std::cell::RefCell;
@@ -7596,13 +7615,13 @@ note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 error: process didn't exit successfully: `target\debug\rust_book.exe` (exit code: 101)
 ```
 
-`already borrowed: BorrowMutError` is the important part. So when you use a `RefCell`, it is good to compile **and** run to check.
+여기서 중요한 부분은 `already borrowed: BorrowMutError`입니다. `RefCell`을 사용할 때는 컴파일뿐 아니라 실행도 해 보는 것이 좋습니다.
 
 ### Mutex
 
-`Mutex` is another way to change values without declaring `mut`. Mutex means `mutual exclusion`, which means "only one at a time". This is why a `Mutex` is safe, because it only lets one process change it at a time. To do this, it uses `.lock()`. `Lock` is like locking a door from the inside. You go into a room, lock the door, and now you can change things inside the room. Nobody else can come in and stop you, because you locked the door.
+`Mutex`도 `mut` 없이 값을 바꾸는 방법입니다. Mutex는 `mutual exclusion`의 줄임말로 "한 번에 하나"라는 뜻입니다. 그래서 `Mutex`는 안전합니다. 한 프로세스만 접근해 바꿀 수 있게 하기 때문입니다. 이를 위해 `.lock()`을 사용합니다. 문을 안에서 잠그는 것과 비슷합니다. 방에 들어가 문을 잠그면 안에서 마음대로 바꿀 수 있고, 문을 잠갔으니 아무도 들어와 방해할 수 없습니다.
 
-A `Mutex` is easier to understand through examples.
+`Mutex`는 예제를 통해 이해하기 쉽습니다.
 
 ```rust
 use std::sync::Mutex;
@@ -7626,7 +7645,7 @@ fn main() {
 }
 ```
 
-But `mutex_changer` still has a lock after it is done. How do we stop it? A `Mutex` is unlocked when the `MutexGuard` goes out of scope. "Go out of scope" means the code block is finished. For example:
+하지만 `mutex_changer`는 끝난 뒤에도 잠금을 쥐고 있습니다. 어떻게 풀까요? `MutexGuard`가 스코프를 벗어날 때 `Mutex`가 풀립니다. "스코프를 벗어난다"는 것은 코드 블록이 끝났다는 뜻입니다. 예를 들어:
 
 ```rust
 use std::sync::Mutex;
@@ -7642,7 +7661,7 @@ fn main() {
 }
 ```
 
-If you don't want to use a different `{}` code block, you can use `std::mem::drop(mutex_changer)`. `std::mem::drop` means "make this go out of scope".
+다른 `{}` 코드 블록을 쓰고 싶지 않다면 `std::mem::drop(mutex_changer)`를 사용할 수 있습니다. `std::mem::drop`은 "이것을 스코프 밖으로 보내라"는 뜻입니다.
 
 ```rust
 use std::sync::Mutex;
@@ -7658,7 +7677,7 @@ fn main() {
 }
 ```
 
-You have to be careful with a `Mutex` because if another variable tries to `lock` it, it will wait:
+`Mutex`는 주의해서 사용해야 합니다. 다른 변수가 `lock`을 시도하면 기다리게 됩니다.
 
 ```rust
 use std::sync::Mutex;
@@ -7675,7 +7694,7 @@ fn main() {
 }
 ```
 
-One other method is `try_lock()`. Then it will try once, and if it doesn't get the lock it will give up. Don't do `try_lock().unwrap()`, because it will panic if it doesn't work. `if let` or `match` is better:
+또 다른 메서드는 `try_lock()`입니다. 한 번 시도해보고 잠금을 얻지 못하면 포기합니다. `try_lock().unwrap()`은 잠금을 얻지 못하면 패닉하므로 쓰지 마세요. `if let`이나 `match`를 쓰는 것이 좋습니다.
 
 ```rust
 use std::sync::Mutex;
@@ -7693,7 +7712,7 @@ fn main() {
 }
 ```
 
-Also, you don't need to make a variable to change the `Mutex`. You can just do this:
+또한 `Mutex`를 바꾸기 위해 변수를 만들 필요는 없습니다. 그냥 이렇게 할 수 있습니다.
 
 ```rust
 use std::sync::Mutex;
@@ -7707,7 +7726,7 @@ fn main() {
 }
 ```
 
-`*my_mutex.lock().unwrap() = 6;` means "unlock my_mutex and make it 6". There is no variable that holds it so you don't need to call `std::mem::drop`. You can do it 100 times if you want - it doesn't matter:
+`*my_mutex.lock().unwrap() = 6;`은 "my_mutex를 잠금 해제하고 값을 6으로 만든다"는 뜻입니다. 이를 들고 있는 변수가 없으므로 `std::mem::drop`을 호출할 필요도 없습니다. 원한다면 100번 해도 상관없습니다.
 
 ```rust
 use std::sync::Mutex;
@@ -7725,13 +7744,14 @@ fn main() {
 
 ### RwLock
 
-`RwLock` means "read write lock". It is like a `Mutex` but also like a `RefCell`. You use `.write().unwrap()` instead of `.lock().unwrap()` to change it. But you can also use `.read().unwrap()` to get read access. It is like `RefCell` because it follows the rules:
+`RwLock`은 "read write lock"의 줄임말입니다. `Mutex` 같으면서 `RefCell` 같기도 합니다. 값을 바꿀 때는 `.lock().unwrap()` 대신 `.write().unwrap()`을 사용합니다. 읽기만 할 때는 `.read().unwrap()`을 사용할 수 있습니다. 규칙을 따르므로 `RefCell`과 비슷합니다.
 
 - many `.read()` variables is okay,
 - one `.write()` variable is okay,
 - but more than one `.write()` or `.read()` together with `.write()` is not okay.
 
 The program will run forever if you try to `.write()` when you can't get access:
+접근할 수 없는 상태에서 `.write()`를 시도하면 프로그램이 영원히 기다립니다.
 
 ```rust
 use std::sync::RwLock;
@@ -7773,6 +7793,7 @@ fn main() {
 ```
 
 And you can use `try_read()` and `try_write()` too.
+`try_read()`, `try_write()`도 사용할 수 있습니다.
 
 ```rust
 use std::sync::RwLock;
@@ -7794,7 +7815,7 @@ fn main() {
 
 ## Cow
 
-Cow is a very convenient enum. It means "clone on write" and lets you return a `&str` if you don't need a `String`, and a `String` if you need it. (It can also do the same with arrays vs. Vecs, etc.)
+Cow는 매우 편리한 enum입니다. "clone on write"의 줄임말로, `String`이 필요 없을 때는 `&str`을, 필요할 때는 `String`을 반환할 수 있게 해 줍니다(배열과 Vec 등에도 같은 방식으로 쓸 수 있습니다).
 
 To understand it, let's look at the signature. It says:
 
@@ -7810,17 +7831,17 @@ where
 fn main() {}
 ```
 
-You know right away that `'a` means it works with references. The `ToOwned` trait means that it is a type that can be turned into an owned type. For example, `str` is usually a reference (`&str`) and you can turn it into an owned `String`.
+`'a`가 레퍼런스와 함께 쓰인다는 것을 바로 알 수 있습니다. `ToOwned` 트레이트는 소유 타입으로 바꿀 수 있는 타입이라는 뜻입니다. 예를 들어 `str`은 보통 `&str` 레퍼런스이며 이를 소유 타입인 `String`으로 바꿀 수 있습니다.
 
-Next is `?Sized`. This means "maybe Sized, but maybe not". Almost every type in Rust is Sized, but types like `str` are not. That is why we need a `&` for a `str`, because the compiler doesn't know the size. So if you want a trait that can use something like a `str`, you add `?Sized.`
+다음은 `?Sized`입니다. "Sized일 수도 있고 아닐 수도 있다"는 뜻입니다. Rust의 거의 모든 타입은 Sized지만 `str` 같은 타입은 아닙니다. 컴파일러가 크기를 모르므로 `str`에는 `&`가 필요합니다. `str` 같은 것을 다루는 트레이트를 만들고 싶다면 `?Sized`를 붙입니다.
 
-Next are the `enum` variants. They are `Borrowed` and `Owned`.
+다음은 enum variant입니다. `Borrowed`와 `Owned`가 있습니다.
 
-Imagine that you have a function that returns `Cow<'static, str>`. If you tell the function to return `"My message".into()`, it will look at the type: "My message" is a `str`. This is a `Borrowed` type, so it chooses `Borrowed(&'a B)`. So it becomes `Cow::Borrowed(&'static str)`.
+`Cow<'static, str>`를 반환하는 함수가 있다고 합시다. `"My message".into()`를 반환하면 타입을 확인합니다. "My message"는 `str`입니다. `Borrowed` 타입이므로 `Borrowed(&'a B)`를 선택합니다. 즉 `Cow::Borrowed(&'static str)`이 됩니다.
 
-And if you give it a `format!("{}", "My message").into()` then it will look at the type. This time it is a `String`, because `format!` makes a `String`. So this time it will select "Owned".
+반대로 `format!("{}", "My message").into()`를 주면 이번에는 `format!`이 `String`을 만들기 때문에 `String` 타입입니다. 그래서 이번에는 "Owned"를 선택합니다.
 
-Here is an example to test `Cow`. We will put a number into a function that returns a `Cow<'static, str>`. Depending on the number, it will create a `&str` or a `String`. Then it uses `.into()` to turn it into a `Cow`. When you do that, it will choose either `Cow::Borrowed` or `Cow::Owned`. Then we will match to see which one it chose.
+`Cow`를 시험해 볼 예제입니다. 숫자를 받아 `Cow<'static, str>`을 반환하는 함수를 만듭니다. 숫자에 따라 `&str`을 만들거나 `String`을 만듭니다. 그다음 `.into()`로 `Cow`로 바꿉니다. 그러면 `Cow::Borrowed`나 `Cow::Owned` 중 하나를 선택합니다. 어느 쪽을 골랐는지 매치로 확인해 보겠습니다.
 
 ```rust
 use std::borrow::Cow;
@@ -7854,13 +7875,13 @@ This prints:
 6 went in. The Cow is borrowed with this message: Remainder is 0
 ```
 
-`Cow` has some other methods like `into_owned` or `into_borrowed` so you can change it if you need to.
+`Cow`에는 `into_owned`, `into_borrowed` 같은 메서드도 있어 필요에 따라 바꿀 수 있습니다.
 
 ## Type aliases
 
-A type alias means "giving a new name to another type". Type aliases are very easy. Usually you use them when you have a very long type and don't want to write it every time. It is also good when you want to give a type a better name that is easy to remember. Here are two examples of type aliases.
+타입 별칭은 "다른 타입에 새 이름을 붙이는 것"을 뜻합니다. 타입 별칭은 매우 간단합니다. 보통 타입이 너무 길어 매번 쓰기 싫을 때 사용합니다. 기억하기 쉬운 이름을 붙이고 싶을 때도 좋습니다. 두 가지 예를 봅시다.
 
-Here is a type that is not difficult, but you want to make your code easier to understand for other people (or for you):
+어렵지 않은 타입이지만 다른 사람(혹은 자신)이 이해하기 쉽게 만들고 싶을 때:
 
 ```rust
 type CharacterVec = Vec<char>;
@@ -7868,7 +7889,7 @@ type CharacterVec = Vec<char>;
 fn main() {}
 ```
 
-Here's a type that is very difficult to read:
+읽기 매우 어려운 타입이 있습니다.
 
 ```rust
 // this return type is extremely long
@@ -7880,6 +7901,7 @@ fn main() {}
 ```
 
 So you can change it to this:
+그래서 이렇게 바꿀 수 있습니다.
 
 ```rust
 type SkipFourTakeFive<'a> = std::iter::Take<std::iter::Skip<std::slice::Iter<'a, char>>>;
@@ -7892,6 +7914,7 @@ fn main() {}
 ```
 
 Of course, you can also import items to make the type shorter:
+물론 가져오기를 사용해 타입을 짧게 만들 수도 있습니다.
 
 ```rust
 use std::iter::{Take, Skip};
@@ -7905,8 +7928,9 @@ fn main() {}
 ```
 
 So you can decide what looks best in your code depending on what you like.
+따라서 취향에 따라 코드에서 무엇이 가장 보기 좋은지 결정하면 됩니다.
 
-Note that this doesn't create an actual new type. It's just a name to use instead of an existing type. So if you write `type File = String;`, the compiler just sees a `String`. So this will print `true`:
+이것이 실제 새 타입을 만드는 것은 아니라는 점에 유의하세요. 기존 타입 대신 사용할 이름만 지정하는 것입니다. `type File = String;`이라고 쓰면 컴파일러는 그저 `String`으로 봅니다. 그래서 다음은 `true`를 출력합니다.
 
 ```rust
 type File = String;
@@ -7918,9 +7942,9 @@ fn main() {
 }
 ```
 
-So what if you want an actual new type?
+그렇다면 실제 새 타입을 만들고 싶다면 어떻게 할까요?
 
-If you want a new file type that the compiler sees as a `File`, you can put it in a struct. (This is actually called the `newtype` idiom)
+컴파일러가 `File`로 보는 새 파일 타입을 원한다면 구조체로 감싸면 됩니다. (이를 `newtype` 관용구라고 합니다)
 
 ```rust
 struct File(String); // File is a wrapper around String
@@ -7932,6 +7956,7 @@ fn main() {
 ```
 
 Now this will not work, because they are two different types:
+이제 두 타입이 달라졌으므로 동작하지 않습니다.
 
 ```rust
 struct File(String); // File is a wrapper around String
@@ -7944,6 +7969,7 @@ fn main() {
 ```
 
 If you want to compare the String inside, you can use my_file.0:
+안의 String을 비교하고 싶다면 my_file.0을 사용할 수 있습니다.
 
 ```rust
 struct File(String);
@@ -7956,6 +7982,7 @@ fn main() {
 ```
 
 And now this type doesn't have any traits, so you can implement them yourself. This is not too surprising:
+이 타입에는 아직 트레이트가 없으니 직접 구현할 수 있습니다. 놀랄 일은 아닙니다.
 
 ```rust
 #[derive(Clone, Debug)]
@@ -7963,10 +7990,11 @@ struct File(String);
 ```
 
 So when you use the `File` type here you can clone it and Debug print it, but it doesn't have the traits of String unless you use `.0` to get to the String inside it. But in other people's code you can only use `.0` if it's marked `pub` for public. And that's why these sorts of types use the `Deref` trait a lot. We will learn about both `pub` and `Deref` later.
+여기서 `File` 타입을 사용하면 clone하고 Debug 출력할 수 있지만, 안의 String에 `.0`으로 접근하지 않는 한 String의 트레이트는 갖고 있지 않습니다. 다른 사람의 코드에서는 `.0`이 `pub`으로 공개되어 있을 때만 사용할 수 있습니다. 이런 타입들이 `Deref` 트레이트를 많이 사용하는 이유가 여기 있습니다. `pub`과 `Deref`는 나중에 배웁니다.
 
 ### Importing and renaming inside a function
 
-Usually you write `use` at the top of the program, like this:
+보통 `use`는 프로그램 상단에 이렇게 씁니다.
 
 ```rust
 use std::cell::{Cell, RefCell};
@@ -7974,7 +8002,7 @@ use std::cell::{Cell, RefCell};
 fn main() {}
 ```
 
-But we saw that you can do this anywhere, especially in functions with enums that have long names. Here is an example.
+하지만 어디서든 사용할 수 있으며, 특히 이름이 긴 enum을 다루는 함수에서 유용합니다. 예제를 봅시다.
 
 ```rust
 enum MapDirection {
@@ -8001,6 +8029,7 @@ fn give_direction(direction: &MapDirection) {
 ```
 
 So now we will import MapDirection inside the function. That means that inside the function you can just write `North` and so on.
+이제 함수 안에서 MapDirection을 가져올 것입니다. 그러면 함수 안에서는 `North`처럼 바로 쓸 수 있습니다.
 
 ```rust
 enum MapDirection {
@@ -8072,11 +8101,11 @@ fn give_filestate(input: &FileState) {
 fn main() {}
 ```
 
-So now you can write `OtherDirectory` instead of `FileState::SimilarFileNameInNextDirectory`.
+이제 `FileState::SimilarFileNameInNextDirectory` 대신 `OtherDirectory`라고 쓸 수 있습니다.
 
 ## The todo! macro
 
-Sometimes you want to write code in general to help you imagine your project. For example, imagine a simple project to do something with books. Here's what you think as you write it:
+프로젝트를 구상할 때 대략적으로 코드를 적어 보고 싶을 때가 있습니다. 예를 들어 책을 다루는 간단한 프로젝트를 떠올려 봅시다. 이렇게 생각하며 코드를 씁니다.
 
 ```rust
 struct Book {} // Okay, first I need a book struct.
@@ -8104,7 +8133,7 @@ fn main() {
 }
 ```
 
-But Rust is not happy with `get_book` and `delete_book`. It says:
+하지만 Rust는 `get_book`과 `delete_book`을 좋아하지 않습니다. 이렇게 말합니다.
 
 ```text
 error[E0308]: mismatched types
@@ -8130,7 +8159,7 @@ error[E0308]: mismatched types
            found unit type `()`
 ```
 
-But you don't care about `get_book` and `delete_book` right now. This is where you can use `todo!()`. If you add that to the function, Rust will not complain, and will compile.
+하지만 지금은 `get_book`, `delete_book`이 중요하지 않습니다. 여기서 `todo!()`를 사용할 수 있습니다. 함수에 이를 넣으면 Rust가 불평하지 않고 컴파일됩니다.
 
 ```rust
 struct Book {}
@@ -8146,11 +8175,11 @@ fn delete_book(book: Book) -> Result<(), String> {
 fn main() {}
 ```
 
-So now the code compiles and you can see the result of `check_book_type`: `It's hardcover`.
+이제 코드는 컴파일되고 `check_book_type` 결과인 `It's hardcover`를 볼 수 있습니다.
 
-But careful, because it only compiles - you can't use the function. If you call a function with `todo!()` inside it, it will panic.
+하지만 주의하세요. 컴파일만 될 뿐 함수는 사용할 수 없습니다. `todo!()`가 있는 함수를 호출하면 패닉합니다.
 
-Also, `todo!()` functions still need real input and output types. If you just write this, it will not compile:
+또한 `todo!()`가 있어도 입력과 출력 타입은 실제로 적어야 합니다. 아래처럼 쓰면 컴파일되지 않습니다.
 
 ```rust
 struct Book {}
@@ -8172,11 +8201,11 @@ error[E0412]: cannot find type `WorldsBestType` in this scope
    |                             ^^^^^^^^^^^^^^ not found in this scope
 ```
 
-`todo!()` is actually the same as another macro: `unimplemented!()`. Programmers were using `unimplemented!()` a lot but it was long to type, so they created `todo!()` which is shorter.
+`todo!()`는 사실 `unimplemented!()`라는 매크로와 같습니다. 예전에는 `unimplemented!()`를 많이 썼지만 길어서, 더 짧은 `todo!()`가 만들어졌습니다.
 
 ## Rc
 
-Rc means "reference counter". You know that in Rust, every variable can only have one owner. That is why this doesn't work:
+Rc는 "reference counter"를 뜻합니다. Rust에서는 모든 변수에 소유자가 하나뿐이라는 것을 알고 있습니다. 그래서 아래 코드가 동작하지 않습니다.
 
 ```rust
 fn takes_a_string(input: String) {
@@ -8195,9 +8224,9 @@ fn main() {
 }
 ```
 
-After `takes_a_string` takes `user_name`, you can't use it anymore. Here that is no problem: you can just give it `user_name.clone()`. But sometimes a variable is part of a struct, and maybe you can't clone the struct. Or maybe the `String` is really long and you don't want to clone it. These are some reasons for `Rc`, which lets you have more than one owner. An `Rc` is like a good office worker: `Rc` writes down who has ownership, and how many. Then once the number of owners goes down to 0, the variable can disappear.
+`takes_a_string`이 `user_name`을 가져가면 더 이상 사용할 수 없습니다. 여기서는 문제가 없습니다. `user_name.clone()`을 주면 되기 때문입니다. 하지만 변수가 구조체의 일부라서 구조체를 복제할 수 없을 수도 있습니다. 혹은 `String`이 너무 길어 복제하고 싶지 않을 수도 있습니다. 이런 경우 `Rc`가 유용합니다. 소유자를 여러 명 가질 수 있게 해 줍니다. `Rc`는 꼼꼼한 사무직 직원처럼 누가 몇 명 소유하고 있는지 기록합니다. 소유자 수가 0이 되면 변수가 사라집니다.
 
-Here's how you use an `Rc`. First imagine two structs: one called `City`, and another called `CityData`. `City` has information for one city, and `CityData` puts all the cities together in `Vec`s.
+`Rc`를 어떻게 쓰는지 봅시다. `City`라는 구조체 하나와 `CityData`라는 구조체 하나가 있다고 상상해 보세요. `City`는 한 도시의 정보를 담고, `CityData`는 모든 도시 정보를 `Vec`에 모아 둡니다.
 
 ```rust
 #[derive(Debug)]
@@ -8230,7 +8259,7 @@ fn main() {
 }
 ```
 
-Of course, it doesn't work because `canada_cities` now owns the data and `calgary` doesn't. It says:
+당연히 이렇게는 안 됩니다. 이제 `canada_cities`가 데이터를 소유하고 `calgary`는 소유권을 잃었기 때문입니다. 오류는 이렇게 나옵니다:
 
 ```text
 error[E0382]: borrow of moved value: `calgary.city_history`
@@ -8245,9 +8274,9 @@ error[E0382]: borrow of moved value: `calgary.city_history`
    = note: move occurs because `calgary.city_history` has type `std::string::String`, which does not implement the `Copy` trait
 ```
 
-We can clone the name: `names: vec![calgary.name.clone()]` but we don't want to clone the `city_history`, which is long. So we can use an `Rc`.
+이름은 `names: vec![calgary.name.clone()]`처럼 복제할 수 있지만, 길이가 긴 `city_history`는 복제하고 싶지 않습니다. 이럴 때 `Rc`를 쓰면 됩니다.
 
-Add the `use` declaration:
+먼저 `use` 선언을 추가합니다.
 
 ```rust
 use std::rc::Rc;
@@ -8255,7 +8284,7 @@ use std::rc::Rc;
 fn main() {}
 ```
 
-Then put `Rc` around `String`.
+이제 `String`을 `Rc`로 감싸 줍니다.
 
 ```rust
 use std::rc::Rc;
@@ -8276,9 +8305,9 @@ struct CityData {
 fn main() {}
 ```
 
-To add a new reference, you have to `clone` the `Rc`. But hold on, didn't we want to avoid using `.clone()`? Not exactly: we didn't want to clone the whole String. But a clone of an `Rc` just clones the pointer - it's basically free. It's like putting a name sticker on a box of books to show that two people own it, instead of making a whole new box.
+새 참조를 만들려면 `Rc`를 `clone`해야 합니다. 그런데 `.clone()`을 피하려고 했던 거 아닌가요? 정확히는 전체 `String`을 복제하고 싶지 않았던 겁니다. `Rc`를 복제하면 포인터만 복제하므로 비용이 거의 들지 않습니다. 책 상자에 이름 스티커만 하나 더 붙여 두 사람이 같이 쓴다는 표시를 하는 것과 같습니다. 새 상자를 만드는 게 아닙니다.
 
-You can clone an `Rc` called `item` with `item.clone()` or with `Rc::clone(&item)`. So calgary.city_history has 2 owners. We can check the number of owners with `Rc::strong_count(&item)`. Also let's add a new owner. Now our code looks like this:
+`item`이라는 `Rc`는 `item.clone()`이나 `Rc::clone(&item)`으로 복제할 수 있습니다. 이렇게 하면 `calgary.city_history`의 소유자가 2명이 됩니다. `Rc::strong_count(&item)`으로 소유자 수를 확인할 수도 있습니다. 새 소유자도 하나 더 만들어 보겠습니다. 이제 코드는 이렇게 됩니다.
 
 ```rust
 use std::rc::Rc;
@@ -8315,16 +8344,15 @@ fn main() {
 }
 ```
 
-This prints `2`. And `new_owner` is now an `Rc<String>`. Now if we use `println!("{}", Rc::strong_count(&calgary.city_history));`, we get `3`.
+이렇게 하면 `2`가 출력됩니다. `new_owner`도 이제 `Rc<String>`입니다. 여기에 `println!("{}", Rc::strong_count(&calgary.city_history));`를 한 번 더 쓰면 `3`이 찍힙니다.
 
-So if there are strong pointers, are there weak pointers? Yes, there are. Weak pointers are useful because if two `Rc`s point at each other, they can't die. This is called a "reference cycle". If item 1 has an Rc to item 2, and item 2 has an Rc to item 1, they can't get to 0. In this case you want to use weak references. Then `Rc` will count the references, but if it only has weak references then it can die. You use `Rc::downgrade(&item)` instead of `Rc::clone(&item)` to make weak references. Also, you use `Rc::weak_count(&item)` to see the weak count.
+강한 포인터가 있다면 약한 포인터도 있을까요? 있습니다. 약한 포인터는 두 `Rc`가 서로를 가리켜서 사라지지 못할 때 유용합니다. 이를 "참조 순환"이라고 합니다. 항목 1이 항목 2를 `Rc`로 잡고, 항목 2가 항목 1을 `Rc`로 잡고 있으면 참조 수가 0이 될 수 없습니다. 이럴 때 약한 참조를 써야 합니다. 그러면 `Rc`가 참조 수를 세지만, 약한 참조만 남으면 값이 사라집니다. 약한 참조를 만들 때는 `Rc::clone(&item)` 대신 `Rc::downgrade(&item)`을 씁니다. 약한 참조 수도 `Rc::weak_count(&item)`으로 볼 수 있습니다.
 
-## Multiple threads
+## 여러 개의 스레드
 
-If you use multiple threads, you can do many things at the same time. Modern computers have more than one core so they can do more than one thing at the same time, and Rust lets you use them. Rust uses threads that are called "OS threads". OS thread means the operating system creates the thread on a different core. (Some other languages use "green threads", which are less powerful)
+스레드를 여러 개 쓰면 동시에 많은 일을 할 수 있습니다. 요즘 컴퓨터는 코어가 여러 개라 여러 일을 한꺼번에 처리할 수 있고, Rust도 이것을 쓸 수 있게 해 줍니다. Rust는 운영 체제가 만들어 주는 "OS 스레드"를 사용합니다. (다른 언어에서는 그보다 가벼운 "그린 스레드"를 쓰기도 합니다)
 
-
-You create threads with `std::thread::spawn` and then a closure to tell it what to do. Threads are interesting because they run at the same time, and you can test it to see what happens. Here is a simple example:
+스레드는 `std::thread::spawn`으로 만들고, 안에 클로저를 넣어 무엇을 할지 알려 줍니다. 스레드는 동시에 실행되기 때문에 결과가 매번 달라지는 것을 실험해 볼 수 있습니다. 아주 단순한 예는 이렇습니다.
 
 ```rust
 fn main() {
@@ -8334,7 +8362,7 @@ fn main() {
 }
 ```
 
-If you run this, it will be different every time. Sometimes it will print, and sometimes it won't print (this depends on your computer speed too). That is because sometimes `main()` finishes before the thread finishes. And when `main()` finishes, the program is over. This is easier to see in a `for` loop:
+실행할 때마다 결과가 다릅니다. 어떤 때는 출력이 나오고, 어떤 때는 아무 것도 나오지 않을 수도 있습니다(컴퓨터 속도에 따라 다릅니다). `main()`이 스레드보다 먼저 끝나면 프로그램도 바로 끝나기 때문입니다. `for` 루프로 보면 더 잘 보입니다.
 
 ```rust
 fn main() {
@@ -8346,7 +8374,7 @@ fn main() {
 }       // How many can finish before main() ends here?
 ```
 
-Usually about four threads will print before `main` ends, but it is always different. If your computer is faster then it might not print any. Also, sometimes the threads will panic:
+보통은 `main`이 끝나기 전에 네 개 정도가 출력되지만 항상 같지는 않습니다. 더 빠른 컴퓨터라면 아무것도 안 찍히고 끝날 수도 있습니다. 가끔은 스레드가 패닉을 내기도 합니다.
 
 ```text
 thread 'thread 'I am printing something
@@ -8355,9 +8383,9 @@ thread '<unnamed><unnamed>thread '' panicked at '<unnamed>I am printing somethin
 shutdown
 ```
 
-This is the error when the thread tries to do something right when the program is shutting down.
+프로그램이 종료되는 바로 그 순간 스레드가 뭔가 하려고 해서 생기는 오류입니다.
 
-You can give the computer something to do so it won't shut down right away:
+프로그램이 바로 끝나지 않도록 컴퓨터에 할 일을 조금 더 줘 볼 수도 있습니다.
 
 ```rust
 fn main() {
@@ -8373,7 +8401,7 @@ fn main() {
 }
 ```
 
-But that is a silly way to give the threads time to finish. The better way is to bind the threads to a variable. If you add `let`, then you will create a `JoinHandle`. You can see this in the signature for `spawn`:
+하지만 이렇게 억지로 시간을 벌어 주는 건 좋은 방법이 아닙니다. 더 나은 방법은 스레드를 변수에 묶는 것입니다. `let`을 붙이면 `JoinHandle`이 만들어집니다. `spawn`의 시그니처를 보면 알 수 있습니다.
 
 ```text
 pub fn spawn<F, T>(f: F) -> JoinHandle<T>
@@ -8383,9 +8411,9 @@ where
     T: Send + 'static,
 ```
 
-(`f` is the closure - we will learn how to put closures into our functions later)
+(`f`가 바로 클로저입니다. 나중에 함수에 클로저를 넣는 방법을 더 배웁니다)
 
-So now we have a `JoinHandle` every time.
+이제 매번 `JoinHandle`을 얻게 됩니다.
 
 ```rust
 fn main() {
@@ -8398,7 +8426,7 @@ fn main() {
 }
 ```
 
-`handle` is now a `JoinHandle`. What do we do with it? We use a method called `.join()`. This method means "wait until all the threads are done" (it waits for the threads to join it). So now just write `handle.join()` and it will wait for each of the threads to finish.
+`handle`이 이제 `JoinHandle`입니다. 무엇에 쓸까요? `.join()`이라는 메서드를 씁니다. 이 메서드는 "모든 스레드가 끝날 때까지 기다린다"는 뜻입니다(스레드가 자기와 합쳐질 때까지 기다립니다). `handle.join()`을 호출하면 스레드가 끝날 때까지 기다립니다.
 
 ```rust
 fn main() {
@@ -8412,15 +8440,15 @@ fn main() {
 }
 ```
 
-Now we will learn about the three types of closures. The three types are:
+이제 세 가지 종류의 클로저를 살펴봅시다.
 
-- `FnOnce`: takes the whole value
-- `FnMut`: takes a mutable reference
-- `Fn`: takes a regular reference
+- `FnOnce`: 값을 통째로 가져감
+- `FnMut`: 가변 참조를 가져감
+- `Fn`: 일반 참조를 가져감
 
-A closure will try to use `Fn` if it can. But if it needs to change the value it will use `FnMut`, and if it needs to take the whole value, it will use `FnOnce`. `FnOnce` is a good name because it explains what it does: it takes the value once, and then it can't take it again.
+클로저는 가능하면 `Fn`을 택합니다. 값을 바꿔야 하면 `FnMut`를, 값을 통째로 가져야 하면 `FnOnce`를 택합니다. `FnOnce`라는 이름 그대로 한 번 값을 가져가면 다시는 못 가져갑니다.
 
-Here is an example:
+예를 하나 보겠습니다.
 
 ```rust
 fn main() {
@@ -8431,9 +8459,9 @@ fn main() {
 }
 ```
 
-`String` is not `Copy`, so `my_closure()` is `Fn`: it takes a reference.
+`String`은 `Copy`가 아니므로 `my_closure()`는 참조를 잡는 `Fn`입니다.
 
-If we change `my_string`, it will be `FnMut`.
+`my_string`을 바꾸면 `FnMut`가 됩니다.
 
 ```rust
 fn main() {
@@ -8447,14 +8475,14 @@ fn main() {
 }
 ```
 
-This prints:
+출력은 이렇습니다.
 
 ```text
 I will go into the closure now
 I will go into the closure now now
 ```
 
-And if you take by value, then it will be `FnOnce`.
+값을 통째로 가져오면 `FnOnce`가 됩니다.
 
 ```rust
 fn main() {
@@ -8471,9 +8499,9 @@ fn main() {
 }
 ```
 
-We took by value, so we can't run `my_closure()` more than once. That is where the name comes from.
+값을 가져갔기 때문에 `my_closure()`를 두 번 이상 호출할 수 없습니다. 그래서 이름에 Once가 붙습니다.
 
-So now back to threads. Let's try to use a value from outside:
+이제 스레드 이야기로 돌아옵니다. 스레드 밖의 값을 써 보겠습니다.
 
 ```rust
 fn main() {
@@ -8487,7 +8515,7 @@ fn main() {
 }
 ```
 
-The compiler says that this won't work.
+컴파일러가 이렇게는 안 된다고 합니다.
 
 ```text
 error[E0373]: closure may outlive the current function, but it borrows `my_string`, which is owned by the current function
@@ -8512,9 +8540,9 @@ help: to force the closure to take ownership of `my_string` (and any other refer
    |                                     ^^^^^^^
 ```
 
-It is a long message, but helpful: it says to ``use the `move` keyword``. The problem is that we can do anything to `my_string` while the thread is using it, but it doesn't own it. That would be unsafe.
+메시지가 길지만 친절합니다. ``use the `move` keyword``라고 알려 줍니다. 스레드가 `my_string`을 쓰는 동안 우리는 마음대로 바꿀 수 있는데 소유권은 없으니 위험하다는 뜻입니다.
 
-Let's try something else that doesn't work:
+다른 방식도 안 됩니다.
 
 ```rust
 fn main() {
@@ -8530,7 +8558,7 @@ fn main() {
 }
 ```
 
-So you have to take the value with `move`. Now it is safe:
+그래서 `move`로 값을 가져와야 합니다. 이렇게 하면 안전합니다.
 
 ```rust
 fn main() {
@@ -8546,7 +8574,7 @@ fn main() {
 }
 ```
 
-So we delete the `std::mem::drop`, and now it is okay. `handle` takes `my_string` and our code is safe.
+`std::mem::drop`을 지우면 이제 괜찮습니다. `handle`이 `my_string`을 가져갔으니 코드가 안전합니다.
 
 ```rust
 fn main() {
@@ -8560,16 +8588,15 @@ fn main() {
 }
 ```
 
-So just remember: if you need a value in a thread from outside the thread, you need to use `move`.
+정리하면, 스레드 밖의 값을 스레드 안에서 써야 하면 `move`를 붙여야 합니다.
 
 
 
-## Closures in functions
+## 함수 안의 클로저
 
-Closures are great. So how do we put them into our own functions?
+클로저는 매우 편리합니다. 그렇다면 우리 함수에 어떻게 넣을까요?
 
-You can make your own functions that take closures, but inside them it is less free and you have to decide the type. Outside a function a closure can decide by itself between `Fn`, `FnMut` and `FnOnce`, but inside you have to choose one. The best way to understand is to look at a few function signatures. Here is the one for `.all()`. We remember that it checks an iterator to see if everything is `true` (depending on what you decide is `true` or `false`). Part of its signature says this:
-
+클로저를 받는 함수를 직접 만들 수 있지만, 함수 안에서는 타입을 정해 줘야 합니다. 함수 밖에서는 클로저가 스스로 `Fn`, `FnMut`, `FnOnce` 중 무엇을 쓸지 결정하지만, 함수 안에서는 하나를 골라야 합니다. 가장 쉬운 방법은 몇 가지 함수 시그니처를 보는 것입니다. `.all()`의 시그니처 일부가 이렇게 생겼습니다. 이 메서드는 반복자를 검사해 모든 항목이 `true`인지 확인합니다(무엇을 `true`로 볼지는 우리가 정합니다).
 
 ```rust
     fn all<F>(&mut self, f: F) -> bool    // 🚧
@@ -8577,13 +8604,13 @@ You can make your own functions that take closures, but inside them it is less f
         F: FnMut(Self::Item) -> bool,
 ```
 
-`fn all<F>`: this tells you that there is a generic type `F`. A closure is always generic because every time it is a different type.
+`fn all<F>`는 제네릭 타입 `F`가 있다는 뜻입니다. 클로저는 매번 타입이 달라지기 때문에 항상 제네릭입니다.
 
-`(&mut self, f: F)`: `&mut self` tells you that it's a method. `f: F` is usually what you see for a closure: this is the variable name and the type.  Of course, there is nothing special about `f` and `F` and they could be different names. You could write `my_closure: Closure` if you wanted - it doesn't matter. But in signatures you almost always see `f: F`.
+`(&mut self, f: F)`에서 `&mut self`는 메서드라는 뜻이고, `f: F`는 클로저의 이름과 타입을 나타냅니다. 이름은 마음대로 바꿀 수 있습니다. `my_closure: Closure`처럼 써도 상관없지만, 시그니처에서는 보통 `f: F`처럼 씁니다.
 
-Next is the part about the closure: `F: FnMut(Self::Item) -> bool`. Here it decides that the closure is `FnMut`, so it can change the values. It changes the values of `Self::Item`, which is the iterator that it takes. And it has to return `true` or `false`.
+다음은 클로저에 대한 부분입니다. `F: FnMut(Self::Item) -> bool`은 클로저가 `FnMut`임을 결정합니다. 즉 값을 바꿀 수 있고, `Self::Item`(반복자가 넘겨 주는 항목)을 받아 `true`나 `false`를 반환해야 합니다.
 
-Here is a much simpler signature with a closure:
+훨씬 간단한 시그니처도 봅시다.
 
 ```rust
 fn do_something<F>(f: F)    // 🚧
@@ -8594,7 +8621,7 @@ where
 }
 ```
 
-This just says that it takes a closure, takes the value (`FnOnce` = takes the value), and doesn't return anything. So now we can call this closure that takes nothing and do whatever we like. We will create a `Vec` and then iterate over it just to show what we can do now.
+이 함수는 클로저를 하나 받아서(`FnOnce`니까 값을 가져갑니다) 아무것도 반환하지 않는다는 뜻입니다. 이제 아무것도 받지 않는 클로저를 넘겨서 원하는 일을 할 수 있습니다. 예제로 `Vec`을 하나 만든 뒤 이 함수를 호출해 보겠습니다.
 
 ```rust
 fn do_something<F>(f: F)
@@ -8614,9 +8641,9 @@ fn main() {
 }
 ```
 
-For a more real example, we will create a `City` struct again. This time the `City` struct has more data about years and populations. It has a `Vec<u32>` for all the years, and another `Vec<u32>` for all the populations.
+좀 더 실제처럼 만들어 보겠습니다. 다시 `City` 구조체를 만들 텐데 이번에는 연도와 인구 데이터를 더 넣습니다. 모든 연도는 `Vec<u32>`에, 모든 인구 수는 다른 `Vec<u32>`에 넣습니다.
 
-`City` has two functions: `new()` to create a new `City`, and `.city_data()` which has a closure. When we use `.city_data()`, it gives us the years and the populations and a closure, so we can do what we want with the data. The closure type is `FnMut` so we can change the data. It looks like this:
+`City`에는 `City`를 만드는 `new()` 함수와, 클로저를 받는 `.city_data()` 메서드가 있습니다. `.city_data()`를 쓰면 연도와 인구 데이터를 함께 넘겨주니 그걸 가지고 원하는 일을 하면 됩니다. 클로저 타입은 `FnMut`라 데이터를 바꿀 수 있습니다. 이렇게 생겼습니다.
 
 ```rust
 #[derive(Debug)]
@@ -8659,57 +8686,57 @@ fn main() {
     // Now we can create our city
     let mut tallinn = City::new("Tallinn", years, populations);
 
-    // Now we have a .city_data() method that has a closure. We can do anything we want.
+    // 이제 클로저를 받는 .city_data()가 생겼습니다. 마음대로 조작할 수 있습니다.
 
-    // First let's put the data for 5 years together and print it.
-    tallinn.city_data(|city_years, city_populations| { // We can call the input anything we want
+    // 먼저 앞의 5개 데이터를 묶어서 출력해 봅니다.
+    tallinn.city_data(|city_years, city_populations| { // 매개변수 이름은 마음대로 지어도 됩니다.
         let new_vec = city_years
             .into_iter()
-            .zip(city_populations.into_iter()) // Zip the two together
-            .take(5)                           // but only take the first 5
-            .collect::<Vec<(_, _)>>(); // Tell Rust to decide the type inside the tuple
+            .zip(city_populations.into_iter()) // 둘을 합쳐서
+            .take(5)                           // 앞의 5개만 뽑은 뒤
+            .collect::<Vec<(_, _)>>(); // 튜플 안의 타입은 Rust가 알아서 추론하게 둡니다.
         println!("{:?}", new_vec);
     });
 
-    // Now let's add some data for the year 2030
-    tallinn.city_data(|x, y| { // This time we just call the input x and y
+    // 2030년 데이터를 추가해 봅니다.
+    tallinn.city_data(|x, y| { // 이번에는 x, y로만 부릅니다.
         x.push(2030);
         y.push(500_000);
     });
 
-    // We don't want the 1834 data anymore
+    // 1834년 데이터는 더 이상 필요 없습니다.
     tallinn.city_data(|x, y| {
         let position_option = x.iter().position(|x| *x == 1834);
         if let Some(position) = position_option {
             println!(
-                "Going to delete {} at position {:?} now.",
-                x[position], position
-            ); // Confirm that we delete the right item
+                "이제 위치 {:?}에 있는 {}을(를) 지웁니다.",
+                position, x[position]
+            ); // 지우는 항목이 맞는지 확인합니다.
             x.remove(position);
             y.remove(position);
         }
     });
 
     println!(
-        "Years left are {:?}\nPopulations left are {:?}",
+        "남은 연도: {:?}\n남은 인구: {:?}",
         tallinn.years, tallinn.populations
     );
 }
 ```
 
-This will print the result of all the times we called `.city_data().` It is:
+`.city_data()`를 호출한 결과가 차례로 출력됩니다. 결과는 다음과 같습니다.
 
 ```text
 [(1372, 3250), (1834, 15300), (1851, 24000), (1881, 45900), (1897, 58800)]
-Going to delete 1834 at position 1 now.
-Years left are [1372, 1851, 1881, 1897, 1925, 1959, 1989, 2000, 2005, 2010, 2020, 2030]
-Populations left are [3250, 24000, 45900, 58800, 119800, 283071, 478974, 400378, 401694, 406703, 437619, 500000]
+위치 1에 있는 1834을(를) 지웁니다.
+남은 연도: [1372, 1851, 1881, 1897, 1925, 1959, 1989, 2000, 2005, 2010, 2020, 2030]
+남은 인구: [3250, 24000, 45900, 58800, 119800, 283071, 478974, 400378, 401694, 406703, 437619, 500000]
 ```
 
 
 ## impl Trait
 
-`impl Trait` is similar to generics. You remember that generics use a type `T` (or any other name) which then gets decided when the program compiles. First let's look at a concrete type:
+`impl Trait`는 제네릭과 비슷합니다. 제네릭은 `T` 같은 타입을 쓰고, 컴파일할 때 실제 타입으로 결정되죠. 먼저 구체적인 타입을 보겠습니다.
 
 ```rust
 fn gives_higher_i32(one: i32, two: i32) {
@@ -8724,7 +8751,7 @@ fn main() {
 
 This prints: `10 is higher.`.
 
-But this only takes `i32`, so now we will make it generic. We need to compare and we need to print with `{}`, so our type T needs `PartialOrd` and `Display`. Remember, this means "only take types that already have `PartialOrd` and `Display`".
+하지만 이 함수는 `i32`만 받습니다. 제네릭으로 바꿔 보겠습니다. 값을 비교하고 `{}`로 출력해야 하므로 T 타입에는 `PartialOrd`와 `Display`가 필요합니다. 즉 `PartialOrd`와 `Display`를 구현한 타입만 받겠다는 뜻입니다.
 
 ```rust
 use std::fmt::Display;
@@ -8739,7 +8766,7 @@ fn main() {
 }
 ```
 
-Now let's look at `impl Trait`, which is similar. Instead of a type `T`, we can bring in a type `impl Trait`. Then it will take in a type that implements that trait. It is almost the same:
+이제 비슷한 `impl Trait`를 봅시다. 타입 `T` 대신 `impl Trait`을 적으면 해당 트레이트를 구현한 타입을 받습니다. 거의 같은 표현입니다.
 
 ```rust
 fn prints_it(input: impl Into<String> + std::fmt::Display) { // Takes anything that can turn into a String and has Display
@@ -8754,7 +8781,7 @@ fn main() {
 }
 ```
 
-However, the more interesting part is that we can return `impl Trait`, and that lets us return closures because their function signatures are traits. You can see this in the signatures for methods that have them. For example, this is the signature for `.map()`:
+더 흥미로운 부분은 반환 타입에도 `impl Trait`을 쓸 수 있다는 점입니다. 덕분에 함수 시그니처가 트레이트인 클로저도 반환할 수 있습니다. 예를 들어 `.map()`의 시그니처를 보면 이렇습니다.
 
 ```rust
 fn map<B, F>(self, f: F) -> Map<Self, F>     // 🚧
@@ -8766,9 +8793,9 @@ fn map<B, F>(self, f: F) -> Map<Self, F>     // 🚧
     }
 ```
 
-`fn map<B, F>(self, f: F)` mean that it takes two generic types. `F` is a function that takes one item from the container implementing `.map()` and `B` is the return type of that function. Then after the `where` we see the trait bounds. ("Trait bound" means "it must have this trait".) One is `Sized`, and the next is the closure signature. It must be an `FnMut`, and do the closure on `Self::Item`, which is the iterator that you give it. Then it returns `B`.
+`fn map<B, F>(self, f: F)`는 제네릭 타입을 두 개 받는다는 뜻입니다. `F`는 `.map()`을 호출한 컨테이너의 항목을 하나 받아서 작업하는 함수이고, `B`는 그 결과 타입입니다. `where` 뒤에서 트레이트 바운드를 볼 수 있습니다(이 트레이트를 가져야 한다는 의미입니다). 하나는 `Sized`, 다른 하나는 클로저 시그니처입니다. `FnMut`이어야 하고, 넘겨 받은 반복자의 `Self::Item`에 대해 실행합니다. 반환 타입은 `B`입니다.
 
-So we can do the same thing to return a closure. To return a closure, use `impl` and then the closure signature. Once you return it, you can use it just like a function. Here is a small example of a function that gives you a closure depending on the text you put in. If you put "double" or "triple" in then it multiplies it by 2 or 3, and otherwise it gives you the same number. Because it's a closure we can do anything we want, so we also print a message.
+클로저를 반환할 때도 같은 방식을 쓰면 됩니다. 반환 타입에 `impl`과 클로저 시그니처를 적으면 되고, 반환된 클로저는 함수처럼 사용할 수 있습니다. 입력 문자열에 따라 서로 다른 클로저를 돌려주는 작은 예제를 보겠습니다. "double"이나 "triple"을 주면 각각 두 배, 세 배를 하고, 그 외에는 그대로 돌려줍니다. 클로저이니 메시지도 함께 출력해 봅니다.
 
 ```rust
 fn returns_a_closure(input: &str) -> impl FnMut(i32) -> i32 {
@@ -8804,7 +8831,7 @@ fn main() {
 }
 ```
 
-Here is a bit longer example. Let's imagine a game where your character is facing monsters that are stronger at night. We can make an enum called `TimeOfDay` to keep track of the day. Your character is named Simon and has a number called `character_fear`, which is an `f64`. It goes up at night and down during the day. We will make a `change_fear` function that changes his fear, but also does other things like write messages. It could look like this:
+조금 더 긴 예제로 넘어가 봅시다. 밤이 되면 몬스터가 강해지는 게임을 상상해 보세요. 하루의 흐름을 나타내기 위해 `TimeOfDay`라는 열거형을 만들겠습니다. 주인공은 Simon이고, `f64` 타입의 `character_fear` 값을 갖습니다. 밤에는 두려움이 올라가고 낮에는 줄어듭니다. 두려움을 바꾸면서 메시지도 출력하는 `change_fear` 함수를 만들어 보겠습니다.
 
 
 ```rust
@@ -8862,7 +8889,7 @@ fn main() {
 }
 ```
 
-This prints:
+출력은 다음과 같습니다.
 
 ```text
 What a nice day. Maybe put your feet up and rest a bit.
@@ -8877,7 +8904,7 @@ Your fear is now 7
 
 ## Arc
 
-You remember that we used an `Rc` to give a variable more than one owner. If we are doing the same thing in a thread, we need an `Arc`. `Arc` means "atomic reference counter". Atomic means that it uses the computer's processor so that data only gets written once each time. This is important because if two threads write data at the same time, you will get the wrong result. For example, imagine if you could do this in Rust:
+`Rc`를 사용해 소유자를 여러 명 만들었던 것을 기억할 겁니다. 같은 일을 스레드에서 하고 싶다면 `Arc`가 필요합니다. `Arc`는 "atomic reference counter"의 약자입니다. 원자적이라는 말은 프로세서를 사용해 한 번에 하나만 쓰도록 보장한다는 뜻입니다. 두 스레드가 동시에 데이터를 쓰면 잘못된 결과가 나오기 때문에 중요합니다. 예를 들어 Rust에서 이런 일을 할 수 있다고 상상해 보세요.
 
 ```rust
 // 🚧
@@ -8896,11 +8923,11 @@ If Thread 1 and Thread 2 just start together, maybe this will happen:
 - Thread 1 sees 10, writes 11. Then Thread 2 sees 11, writes 12. No problem so far.
 - Thread 1 sees 12. At the same time, Thread 2 sees 12. Thread 1 writes 13. And Thread 2 writes 13. Now we have 13, but it should be 14. That's a big problem.
 
-An `Arc` uses the processor to make sure this doesn't happen, so it is the method you must use when you have threads. You don't want an `Arc` for just one thread though, because `Rc` is a bit faster.
+`Arc`는 이런 일이 일어나지 않게 프로세서 수준에서 보호합니다. 스레드에서 소유자를 나눠 가질 때는 `Arc`를 써야 합니다. 다만 스레드가 하나뿐이라면 조금 더 빠른 `Rc`로 충분합니다.
 
-You can't change data with just an `Arc` though. So you wrap the data in a `Mutex`, and then you wrap the `Mutex` in an `Arc`.
+`Arc`만으로는 값을 바꿀 수 없습니다. 그래서 데이터를 `Mutex`로 감싸고, 그 `Mutex`를 다시 `Arc`로 감싸는 식으로 사용합니다.
 
-So let's use a `Mutex` inside an `Arc` to change the value of a number. First let's set up one thread:
+`Arc` 안에 `Mutex`를 넣어서 숫자 값을 바꿔 보겠습니다. 먼저 스레드 하나를 준비합니다.
 
 ```rust
 fn main() {
@@ -8914,14 +8941,14 @@ fn main() {
 }
 ```
 
-So far this just prints:
+지금까지는 단순히 이렇게 출력됩니다.
 
 ```text
 The thread is working!
 Exiting the program
 ```
 
-Good. Now let's put it in a `for` loop for `0..5`:
+좋습니다. 이제 `0..5` 범위의 `for` 루프 안에 넣어 봅시다.
 
 ```rust
 fn main() {
@@ -8937,7 +8964,7 @@ fn main() {
 }
 ```
 
-This works too. We get the following:
+이것도 잘 동작하고 출력은 다음과 같습니다.
 
 ```text
 The thread is working!
@@ -8948,7 +8975,7 @@ The thread is working!
 Exiting the program
 ```
 
-Now let's make one more thread. Each thread will do the same thing. You can see that the threads are working at the same time. Sometimes it will say `Thread 1 is working!` first, but other times `Thread 2 is working!` is first. This is called **concurrency**, which means "running together".
+스레드를 하나 더 만들어 둘 다 같은 일을 하게 해 봅시다. 스레드가 동시에 돌아가는 것을 볼 수 있습니다. 어떤 때는 `Thread 1 is working!`이 먼저 나오고, 어떤 때는 `Thread 2 is working!`이 먼저 나옵니다. 이런 것을 **동시성**이라고 합니다.
 
 ```rust
 fn main() {
@@ -8971,7 +8998,7 @@ fn main() {
 }
 ```
 
-This will print:
+출력은 다음과 같습니다.
 
 ```text
 Thread 1 is working!
@@ -8987,14 +9014,14 @@ Thread 2 is working!
 Exiting the program
 ```
 
-Now we want to change the value of `my_number`. Right now it is an `i32`. We will change it to an `Arc<Mutex<i32>>`: an `i32` that can be changed, protected by an `Arc`.
+이제 `my_number` 값을 바꿔 보겠습니다. 현재는 `i32`인데, `Arc<Mutex<i32>>`로 바꿉니다. 즉 `Arc`로 보호되고 `Mutex`로 바꿀 수 있는 `i32`입니다.
 
 ```rust
 // 🚧
 let my_number = Arc::new(Mutex::new(0));
 ```
 
-Now that we have this, we can clone it. Each clone can go into a different thread. We have two threads, so we will make two clones:
+이제 이렇게 만들었으니 복제할 수 있습니다. 각 복제본을 다른 스레드에 넣으면 됩니다. 스레드가 두 개이니 두 번 복제합시다.
 
 ```rust
 // 🚧
@@ -9004,7 +9031,7 @@ let my_number1 = Arc::clone(&my_number); // This clone goes into Thread 1
 let my_number2 = Arc::clone(&my_number); // This clone goes into Thread 2
 ```
 
-Now that we have safe clones attached to `my_number`, we can `move` them into other threads with no problem.
+안전한 복제본이 생겼으니 `move`로 다른 스레드에 넘겨도 문제가 없습니다.
 
 ```rust
 use std::sync::{Arc, Mutex};
@@ -9034,18 +9061,16 @@ fn main() {
 }
 ```
 
-The program prints:
+프로그램 출력은 이렇습니다.
 
 ```text
 Value is: Mutex { data: 20 }
 Exiting the program
 ```
 
-So it was a success.
+잘 동작했습니다.
 
-Then we can join the two threads together in a single `for` loop, and make the code smaller.
-
-We need to save the handles so we can call `.join()` on each one outside of the loop. If we do this inside the loop, it will wait for the first thread to finish before starting the new one.
+이제 `for` 루프 하나 안에서 스레드를 만들고 `join`까지 해 보겠습니다. 그러려면 핸들을 저장해 두었다가 루프 밖에서 `.join()`을 호출해야 합니다. 루프 안에서 바로 `join`하면 새 스레드를 만들기 전에 앞선 스레드를 다 기다리게 됩니다.
 
 ```rust
 use std::sync::{Arc, Mutex};
@@ -9070,9 +9095,9 @@ fn main() {
 }
 ```
 
-Finally this prints `Mutex { data: 20 }`.
+결과는 `Mutex { data: 20 }`입니다.
 
-This looks complicated but `Arc<Mutex<SomeType>>>` is used very often in Rust, so it becomes natural. Also, you can always write your code to make it cleaner. Here is the same code with one more `use` statement and two functions. The functions don't do anything new, but they move some code out of `main()`. You can try rewriting code like this if it is hard to read.
+복잡해 보이지만 Rust에서는 `Arc<Mutex<어떤 타입>>` 조합을 아주 자주 쓰니 금방 익숙해집니다. 또 코드를 조금 더 읽기 쉽게 만들 수도 있습니다. 아래는 `use`를 하나 더 추가하고 함수를 두 개 만든 예입니다. 기능은 똑같지만 `main()` 안의 코드를 조금 덜어냈습니다. 읽기 어렵다면 이렇게 다시 써 보세요.
 
 ```rust
 use std::sync::{Arc, Mutex};
@@ -9108,16 +9133,16 @@ fn main() {
 }
 ```
 
-## Channels
+## 채널
 
-A channel is an easy way to use many threads that send to one place. They are fairly popular because they are pretty simple to put together. You can create a channel in Rust with `std::sync::mpsc`. `mpsc` means "multiple producer, single consumer", so "many threads sending to one place". To start a channel, you use `channel()`. This creates a `Sender` and a `Receiver` that are tied together. You can see this in the function signature:
+채널은 여러 스레드가 한 곳으로 메시지를 보내도록 만드는 간단한 방법입니다. 구성하기 쉽기 때문에 꽤 자주 쓰입니다. Rust에서는 `std::sync::mpsc`로 채널을 만듭니다. `mpsc`는 "multiple producer, single consumer"의 약자로, 여러 개가 보내고 하나가 받는다는 뜻입니다. `channel()`을 호출하면 서로 연결된 `Sender`와 `Receiver`가 만들어집니다. 시그니처는 이렇게 생겼습니다.
 
 ```rust
 // 🚧
 pub fn channel<T>() -> (Sender<T>, Receiver<T>)
 ```
 
-So you have to choose one name for the sender and one for the receiver. Usually you see something like `let (sender, receiver) = channel();` to start. Because it's generic, Rust won't know the type if that is all you write:
+발신자와 수신자 이름을 하나씩 정하면 됩니다. 보통 `let (sender, receiver) = channel();`처럼 시작합니다. 제네릭 함수라서 이렇게만 쓰면 Rust가 타입을 알지 못합니다.
 
 ```rust
 use std::sync::mpsc::channel;
@@ -9127,7 +9152,7 @@ fn main() {
 }
 ```
 
-The compiler says:
+컴파일러는 이렇게 말합니다.
 
 ```text
 error[E0282]: type annotations needed for `(std::sync::mpsc::Sender<T>, std::sync::mpsc::Receiver<T>)`
@@ -9140,7 +9165,7 @@ error[E0282]: type annotations needed for `(std::sync::mpsc::Sender<T>, std::syn
 the type parameter `T` is specified
 ```
 
-It suggests adding a type for the `Sender` and `Receiver`. You can do that if you want:
+`Sender`와 `Receiver`에 타입을 적으라고 제안합니다. 원하면 이렇게 적을 수 있습니다.
 
 ```rust
 use std::sync::mpsc::{channel, Sender, Receiver}; // Added Sender and Receiver here
@@ -9150,9 +9175,9 @@ fn main() {
 }
 ```
 
-but you don't have to. Once you start using the `Sender` and `Receiver`, Rust can guess the type.
+하지만 필수는 아닙니다. `Sender`와 `Receiver`를 쓰기 시작하면 Rust가 타입을 추론해 줍니다.
 
-So let's look at the simplest way to use a channel.
+채널을 가장 단순하게 사용하는 방법을 봅시다.
 
 ```rust
 use std::sync::mpsc::channel;
@@ -9165,7 +9190,7 @@ fn main() {
 }
 ```
 
-Now the compiler knows the type. `sender` is a `Result<(), SendError<i32>>` and `receiver` is a `Result<i32, RecvError>`. So you can use `.unwrap()` to see if the sending works, or use better error handling. Let's add `.unwrap()` and also `println!` to see what we get:
+이제 컴파일러가 타입을 압니다. `sender`는 `Result<(), SendError<i32>>`, `receiver`는 `Result<i32, RecvError>`입니다. 전송이 잘 됐는지 확인하려면 `.unwrap()`을 쓰거나 더 나은 에러 처리를 하면 됩니다. `.unwrap()`을 붙이고 `println!`으로 출력해 보겠습니다.
 
 ```rust
 use std::sync::mpsc::channel;
@@ -9178,9 +9203,9 @@ fn main() {
 }
 ```
 
-This prints `5`.
+`5`가 출력됩니다.
 
-A `channel` is like an `Arc` because you can clone it and send the clones into other threads. Let's make two threads and send values to `receiver`. This code will work, but it is not exactly what we want.
+채널은 `Arc`처럼 복제해서 다른 스레드로 보낼 수 있습니다. 스레드 두 개를 만들고 `receiver`로 값을 보내 봅시다. 이 코드는 동작하지만 우리가 원하는 형태는 아닙니다.
 
 ```rust
 use std::sync::mpsc::channel;
@@ -9201,7 +9226,7 @@ fn main() {
 }
 ```
 
-The two threads start sending, and then we `println!`. It might say `Send a &str this time` or `And here is another &str`, depending on which thread finished first. Let's make a join handle to make them wait.
+두 스레드가 보내기 시작한 뒤 바로 `println!`을 호출합니다. 어떤 스레드가 먼저 끝났느냐에 따라 `Send a &str this time`이나 `And here is another &str` 중 하나가 출력됩니다. 스레드를 기다리게 하려면 핸들을 만들어 보겠습니다.
 
 ```rust
 use std::sync::mpsc::channel;
@@ -9209,30 +9234,30 @@ use std::sync::mpsc::channel;
 fn main() {
     let (sender, receiver) = channel();
     let sender_clone = sender.clone();
-    let mut handle_vec = vec![]; // Put our handles in here
+    let mut handle_vec = vec![]; // 핸들을 넣어 둘 벡터
 
-    handle_vec.push(std::thread::spawn(move|| {  // push this into the vec
+    handle_vec.push(std::thread::spawn(move|| {  // 벡터에 넣을 첫 번째 핸들
         sender.send("Send a &str this time").unwrap();
     }));
 
-    handle_vec.push(std::thread::spawn(move|| {  // and push this into the vec
+    handle_vec.push(std::thread::spawn(move|| {  // 두 번째 핸들도 넣습니다
         sender_clone.send("And here is another &str").unwrap();
     }));
 
-    for _ in handle_vec { // now handle_vec has 2 items. Let's print them
+    for _ in handle_vec { // 이제 handle_vec에 두 개가 있습니다. 출력해 봅시다.
         println!("{:?}", receiver.recv().unwrap());
     }
 }
 ```
 
-This prints:
+출력은 다음과 같습니다.
 
 ```text
 "Send a &str this time"
 "And here is another &str"
 ```
 
-Now let's make a `results_vec` instead of printing.
+이번에는 바로 출력하지 말고 `results_vec`에 담아 봅시다.
 
 ```rust
 use std::sync::mpsc::channel;
@@ -9259,9 +9284,9 @@ fn main() {
 }
 ```
 
-Now the results are in our vec: `["Send a &str this time", "And here is another &str"]`.
+이제 결과가 벡터에 들어 있습니다: `["Send a &str this time", "And here is another &str"]`.
 
-Now let's pretend that we have a lot of work to do, and want to use threads. We have a big vec with 1 million items, all 0. We want to change each 0 to a 1. We will use ten threads, and each thread will do one tenth of the work. We will create a new vec and use `.extend()` to put the work in.
+이제 할 일이 아주 많다고 가정해 봅시다. 0이 100만 개 들어 있는 큰 벡터가 있고, 모든 0을 1로 바꾸고 싶습니다. 스레드 10개를 사용해 각 스레드가 10분의 1씩 처리하게 하겠습니다. 새 벡터를 만들어 `.extend()`로 결과를 합칩니다.
 
 ```rust
 use std::sync::mpsc::channel;
@@ -9275,34 +9300,34 @@ fn main() {
 
     for i in 0..10 {
         let sender_clone = sender.clone();
-        let mut work: Vec<u8> = Vec::with_capacity(hugevec.len() / 10); // new vec to put the work in. 1/10th the size
-        work.extend(&hugevec[i*100_000..(i+1)*100_000]); // first part gets 0..100_000, next gets 100_000..200_000, etc.
-        let handle =spawn(move || { // make a handle
+        let mut work: Vec<u8> = Vec::with_capacity(hugevec.len() / 10); // 작업 결과를 넣을 새 벡터, 전체의 1/10 크기
+        work.extend(&hugevec[i*100_000..(i+1)*100_000]); // 첫 번째는 0..100_000, 다음은 100_000..200_000 식으로 나눕니다.
+        let handle =spawn(move || { // 핸들을 만듭니다.
 
-            for number in work.iter_mut() { // do the actual work
+            for number in work.iter_mut() { // 실제 작업
                 *number += 1;
             };
-            sender_clone.send(work).unwrap(); // use the sender_clone to send the work to the receiver
+            sender_clone.send(work).unwrap(); // sender_clone으로 결과를 보냅니다.
         });
         handle_vec.push(handle);
     }
     
-    for handle in handle_vec { // stop until the threads are done
+    for handle in handle_vec { // 스레드가 끝날 때까지 기다립니다.
         handle.join().unwrap();
     }
     
     while let Ok(results) = receiver.try_recv() {
-        newvec.push(results); // push the results from receiver.recv() into the vec
+        newvec.push(results); // receiver.recv()에서 받은 결과를 벡터에 넣습니다.
     }
 
-    // Now we have a Vec<Vec<u8>>. To put it together we can use .flatten()
-    let newvec = newvec.into_iter().flatten().collect::<Vec<u8>>(); // Now it's one vec of 1_000_000 u8 numbers
+    // 이제 Vec<Vec<u8>>가 생겼습니다. .flatten()으로 합칩니다.
+    let newvec = newvec.into_iter().flatten().collect::<Vec<u8>>(); // 이제 1_000_000개의 u8을 담은 벡터입니다.
     
-    println!("{:?}, {:?}, total length: {}", // Let's print out some numbers to make sure they are all 1
-        &newvec[0..10], &newvec[newvec.len()-10..newvec.len()], newvec.len() // And show that the length is 1_000_000 items
+    println!("{:?}, {:?}, total length: {}", // 앞뒤 일부를 출력해 모두 1인지 확인합니다.
+        &newvec[0..10], &newvec[newvec.len()-10..newvec.len()], newvec.len() // 길이가 1_000_000인지도 보여 줍니다.
     );
     
-    for number in newvec { // And let's tell Rust that it can panic if even one number is not 1
+    for number in newvec { // 하나라도 1이 아니면 패닉하게 합니다.
         if number != 1 {
             panic!();
         }
@@ -9310,13 +9335,13 @@ fn main() {
 }
 ```
 
-## Reading Rust documentation
+## Rust 문서 읽기
 
-It's important to know how to read documentation in Rust so you can understand what other people wrote. Here are some things to know in Rust documentation:
+Rust 문서를 읽는 법을 알아 두면 다른 사람이 쓴 코드를 이해하는 데 도움이 됩니다. 문서를 볼 때 알아 두면 좋은 몇 가지를 정리했습니다.
 
 ### assert_eq!
 
-You saw that `assert_eq!` is used when doing testing. You put two items inside the function and the program will panic if they are not equal. Here is a simple example where we need an even number.
+`assert_eq!`는 테스트에서 자주 봤을 겁니다. 두 값을 넣었을 때 같지 않으면 프로그램이 패닉합니다. 짝수만 필요한 간단한 예를 보겠습니다.
 
 ```rust
 fn main() {
@@ -9330,7 +9355,7 @@ fn prints_number(input: i32) {
 }
 ```
 
-Maybe you don't have any plans to use `assert_eq!` in your code, but it is everywhere in Rust documentation. This is because in a document you would need a lot of room to `println!` everything. Also, you would require `Display` or `Debug` for the things you want to print. That's why documentation has `assert_eq!` everywhere. Here is an example from here [https://doc.rust-lang.org/std/vec/struct.Vec.html](https://doc.rust-lang.org/std/vec/struct.Vec.html) showing how to use a Vec:
+당장 `assert_eq!`를 쓸 계획이 없더라도 Rust 문서 곳곳에서 보게 됩니다. 문서에서는 일일이 `println!`으로 보여 주기 어렵고, 출력하려면 `Display`나 `Debug`도 필요하기 때문입니다. 그래서 문서에서는 `assert_eq!`로 기대값을 보여 줍니다. [공식 Vec 문서](https://doc.rust-lang.org/std/vec/struct.Vec.html)에 있는 예를 보겠습니다.
 
 ```rust
 fn main() {
@@ -9356,7 +9381,7 @@ fn main() {
 }
 ```
 
-In these examples, you can just think of `assert_eq!(a, b)` as saying "a is b". Now look at the same example with comments on the right. The comments show what it actually means.
+이 예제에서 `assert_eq!(a, b)`는 "a가 b와 같다" 정도로 보면 됩니다. 오른쪽에 설명을 덧붙인 같은 예제를 보면 의미가 더 분명해집니다.
 
 ```rust
 fn main() {
@@ -9382,20 +9407,20 @@ fn main() {
 }
 ```
 
-### Searching
+### 검색
 
-The top bar of a Rust document is the search bar. It shows you results as you type. When you go down a page you can't see the search bar anymore, but if you press the **s** key on the keyboard you can search again. So pressing **s** anywhere lets you search right away.
+Rust 문서 위쪽에는 검색창이 있습니다. 입력할 때마다 결과가 바로 보입니다. 페이지 아래쪽으로 내려가면 검색창이 안 보이는데, 이때 키보드에서 **s**를 누르면 바로 검색할 수 있습니다. 어디에서든 **s**만 누르면 됩니다.
 
-### [src] button
+### [src] 버튼
 
-Usually the code for a method, struct, etc. will not be complete. This is because you don't usually need to see the full source to know how it works, and the full code can be confusing. But if you want to know more, you can click on [src] and see everything. For example, on the page for `String` you can see this signature for `.with_capacity()`:
+메서드나 구조체의 코드는 보통 일부만 보입니다. 동작을 이해하는 데 전체 소스가 꼭 필요하지 않고, 오히려 복잡할 수 있기 때문입니다. 더 보고 싶다면 [src]를 누르면 됩니다. 예를 들어 `String` 페이지에서 `.with_capacity()` 시그니처는 이렇게 나옵니다.
 
 ```rust
 // 🚧
 pub fn with_capacity(capacity: usize) -> String
 ```
 
-Okay, so you put a number in and it gives you a `String`. That's easy, but maybe we are curious and want to see more. If you click on [src] you can see this:
+숫자를 넣으면 `String`을 준다는 뜻입니다. 단순하지만 더 궁금하다면 [src]를 눌러 이렇게 전체 구현을 볼 수 있습니다.
 
 ```rust
 // 🚧
@@ -9404,19 +9429,19 @@ pub fn with_capacity(capacity: usize) -> String {
 }
 ```
 
-Interesting! Now you can see that a String is a kind of `Vec`. And actually a `String` is a vector of `u8` bytes, which is interesting to know. You didn't need to know that to use the `with_capacity` method so you only see it if you click [src]. So clicking on [src] is a good idea if the document doesn't have much detail and you want to know more.
+흥미롭죠? `String`이 내부적으로 `Vec`을 사용한다는 것을 알 수 있습니다. 실제로 `String`은 `u8` 바이트 벡터입니다. `.with_capacity()`를 쓰는 데 꼭 필요하지 않으니 기본 화면에는 나오지 않습니다. 문서가 간단해서 더 알고 싶을 때 [src]를 눌러 보면 좋습니다.
 
-### Information on traits
+### 트레이트 정보
 
-The important part of the documentation for a trait is "Required Methods" on the left. If you see Required Methods, it probably means that you have to write the method yourself. For example, for `Iterator` you need to write the `.next()` method. And for `From` you need to write the `.from()` method. But some traits can be implemented with just an **attribute**, like we see in `#[derive(Debug)]`. `Debug` needs the `.fmt()` method, but usually you just use `#[derive(Debug)]` unless you want to do it yourself. That's why the page on `std::fmt::Debug` says that "Generally speaking, you should just derive a Debug implementation."
+트레이트 문서에서 가장 중요한 부분은 왼쪽의 "Required Methods"입니다. 여기에 나오면 직접 메서드를 구현해야 한다는 뜻입니다. 예를 들어 `Iterator`라면 `.next()`를, `From`이라면 `.from()`을 작성해야 합니다. 반대로 `#[derive(Debug)]`처럼 **속성**만 붙이면 되는 트레이트도 있습니다. `Debug`는 사실 `.fmt()`가 필요하지만, 직접 구현하고 싶지 않다면 `#[derive(Debug)]`로 충분합니다. 그래서 `std::fmt::Debug` 문서에도 "일반적으로는 derive로 Debug를 구현하면 됩니다"라고 적혀 있습니다.
 
-## Attributes
+## 속성
 
-You have seen code like `#[derive(Debug)]` before: this type of code is called an *attribute*. These attributes are small pieces of code that give information to the compiler. They are not easy to create, but they are very easy to use. If you write an attribute with just `#` then it will affect the code on the next line. But if you write it with `#!` then it will affect everything in its own space.
+`#[derive(Debug)]` 같은 코드를 본 적이 있을 겁니다. 이런 코드를 *속성*이라고 부릅니다. 속성은 컴파일러에게 정보를 주는 작은 코드 조각입니다. 직접 만들기는 쉽지 않지만 사용하는 것은 간단합니다. `#` 하나로 쓰면 다음 한 줄에만 영향을 주고, `#!`로 쓰면 속성이 있는 공간 전체에 영향을 줍니다.
 
-Here are some attributes you will see a lot:
+자주 보게 될 속성 몇 가지를 살펴보겠습니다.
 
-`#[allow(dead_code)]` and `#[allow(unused_variables)]`. If you write code that you don't use, Rust will still compile but it will let you know. For example, here is a struct with nothing in it and one variable. We don't use either of them.
+`#[allow(dead_code)]`와 `#[allow(unused_variables)]`. 사용하지 않는 코드를 작성하면 Rust는 컴파일은 하지만 경고를 줍니다. 예를 들어 내용이 없는 구조체 하나와 변수를 하나 만들고 쓰지 않는다고 해 봅시다.
 
 ```rust
 struct JustAStruct {}
@@ -9426,7 +9451,7 @@ fn main() {
 }
 ```
 
-If you write this, Rust will remind you that you didn't use them:
+이렇게 작성하면 Rust가 사용하지 않았다고 알려 줍니다.
 
 ```text
 warning: unused variable: `some_char`
@@ -9446,7 +9471,7 @@ warning: struct is never constructed: `JustAStruct`
   = note: `#[warn(dead_code)]` on by default
 ```
 
-We know that you can write a `_` before the name to make the compiler be quiet:
+이름 앞에 `_`를 붙이면 컴파일러가 조용해지는 것도 알고 있습니다.
 
 ```rust
 struct _JustAStruct {}
@@ -9456,7 +9481,7 @@ fn main() {
 }
 ```
 
-but you can also use attributes. You'll notice in the message that it uses `#[warn(unused_variables)]` and `#[warn(dead_code)]`. In our code, `JustAStruct` is dead code, and `some_char` is an unused variable. The opposite of `warn` is `allow`, so we can write this and it will not say anything:
+하지만 속성으로도 해결할 수 있습니다. 경고 메시지에 `#[warn(unused_variables)]`, `#[warn(dead_code)]`가 보이는 것을 기억하세요. 우리 코드에서는 `JustAStruct`가 죽은 코드이고, `some_char`가 사용되지 않은 변수입니다. `warn`의 반대는 `allow`이므로 이렇게 쓰면 아무 말도 하지 않습니다.
 
 ```rust
 #![allow(dead_code)]
@@ -9476,9 +9501,9 @@ fn main() {
 }
 ```
 
-Of course, dealing with dead code and unused variables is important. But sometimes you want the compiler to be quiet for a while. Or you might need to show some code or teach people Rust and don't want to confuse them with compiler messages.
+물론 죽은 코드나 쓰지 않는 변수를 정리하는 게 중요합니다. 하지만 잠시 컴파일러를 조용히 하고 싶을 때가 있습니다. 예제를 보여 주거나 Rust를 설명할 때 경고가 나오면 혼란스러울 수 있으니까요.
 
-`#[derive(TraitName)]` lets you derive some traits for structs and enums that you create. This works with many common traits that can be automatically derived. Some like `Display` can't be automatically derived, because for `Display` you have to choose how to display:
+`#[derive(TraitName)]`는 우리가 만든 구조체나 열거형에 여러 트레이트를 자동으로 구현해 줍니다. 흔히 쓰이는 많은 트레이트는 자동으로 파생시킬 수 있습니다. 반면 `Display`처럼 출력 방식을 직접 정해야 하는 트레이트는 파생시킬 수 없습니다.
 
 ```rust
 // ⚠️
@@ -9494,7 +9519,7 @@ fn main() {
 }
 ```
 
-The error message will tell you that.
+에러 메시지가 바로 알려 줍니다.
 
 ```text
 error: cannot find derive macro `Display` in this scope
@@ -9504,7 +9529,7 @@ error: cannot find derive macro `Display` in this scope
   |
 ```
 
-But for traits that you can automatically derive, you can put in as many as you like. Let's give `HoldsAString` seven traits in a single line, just for fun, even though it only needs one.
+자동으로 파생할 수 있는 트레이트라면 원하는 만큼 나열할 수 있습니다. 꼭 필요하지는 않지만 `HoldsAString`에 일곱 가지 트레이트를 한 줄에 붙여 보겠습니다.
 
 ```rust
 #[derive(Debug, PartialEq, Eq, Ord, PartialOrd, Hash, Clone)]
@@ -9520,7 +9545,7 @@ fn main() {
 }
 ```
 
-Also, you can make a struct `Copy` if (and only if) its fields are all `Copy`. `HoldsAString` has `String` which is not `Copy` so you can't use `#[derive(Copy)]` for it. But for this struct you can:
+또한 필드가 모두 `Copy`인 경우에만 구조체를 `Copy`로 만들 수 있습니다. `HoldsAString`에는 `Copy`가 아닌 `String`이 있으므로 `#[derive(Copy)]`를 붙일 수 없습니다. 하지만 아래 구조체는 가능합니다.
 
 ```rust
 #[derive(Clone, Copy)] // You also need Clone to use Copy
@@ -9544,18 +9569,18 @@ fn main() {
 }
 ```
 
-`#[cfg()]` means configuration and tells the compiler whether to run code or not. You see it usually like this: `#[cfg(test)]`. You use that when writing test functions so that it knows not to run them unless you are testing. Then you can have tests next to your code but the compiler won't run them unless you tell it to.
+`#[cfg()]`는 "configuration"의 약자로, 코드를 실행할지 말지를 컴파일러에 알려 줍니다. 주로 `#[cfg(test)]`처럼 씁니다. 테스트 함수에 붙여 두면 테스트할 때만 실행되고 평소에는 실행되지 않습니다. 코드 옆에 테스트를 둬도 컴파일러는 필요할 때만 실행합니다.
 
-One other example using `cfg` is `#[cfg(target_os = "windows")]`. With that you can tell the compiler to only run the code on Windows, or Linux, or anything else.
+`cfg`의 다른 예로 `#[cfg(target_os = "windows")]`가 있습니다. 이를 통해 Windows에서만, 혹은 Linux에서만 실행하도록 지정할 수 있습니다.
 
-`#![no_std]` is an interesting attribute that tells Rust not to bring in the standard library. That means you don't have `Vec`, `String`, and anything else in the standard library. You will see this in code for small devices that don't have much memory or space.
+`#![no_std]`는 표준 라이브러리를 가져오지 말라는 속성입니다. 그러면 `Vec`, `String` 같은 표준 라이브러리 타입을 쓸 수 없습니다. 메모리나 저장공간이 작은 장치용 코드에서 볼 수 있습니다.
 
-You can see many more attributes [here](https://doc.rust-lang.org/reference/attributes.html).
+더 많은 속성은 [여기](https://doc.rust-lang.org/reference/attributes.html)에서 확인할 수 있습니다.
 
 
 ## Box
 
-`Box` is a very convenient type in Rust. When you use a `Box`, you can put a type on the heap instead of the stack. To make a new `Box`, just use `Box::new()` and put the item inside.
+`Box`는 Rust에서 매우 편리한 타입입니다. `Box`를 쓰면 값을 스택 대신 힙에 둘 수 있습니다. 새 `Box`는 `Box::new()`로 만들고 안에 값을 넣으면 됩니다.
 
 ```rust
 fn just_takes_a_variable<T>(item: T) {} // Takes anything and drops it.
@@ -9571,7 +9596,7 @@ fn main() {
 }
 ```
 
-At first it is hard to imagine where to use it, but you use it in Rust a lot. You remember that `&` is used for `str` because the compiler doesn't know the size of a `str`: it can be any length. But the `&` reference is always the same length, so the compiler can use it. `Box` is similar. Also, you can use `*` on a `Box` to get to the value, just like with `&`:
+처음에는 어디에 써야 할지 감이 안 올 수 있지만 Rust에서는 꽤 자주 사용합니다. 컴파일러가 `str`의 길이를 알 수 없기 때문에 `&`로 참조를 사용했던 것을 떠올려 보세요. `&`의 길이는 항상 같으니 컴파일러가 처리할 수 있죠. `Box`도 비슷합니다. `&`처럼 `*`을 써서 안의 값에 접근할 수도 있습니다.
 
 ```rust
 fn main() {
@@ -9582,9 +9607,9 @@ fn main() {
 }
 ```
 
-This is why Box is called a "smart pointer", because it is like a `&` reference (a kind of pointer) but can do more things.
+그래서 Box를 "스마트 포인터"라고 부릅니다. `&` 같은 포인터 역할을 하지만 좀 더 많은 일을 할 수 있기 때문입니다.
 
-You can also use a Box to create structs with the same struct inside. These are called *recursive*, which means that inside Struct A is maybe another Struct A. Sometimes you can use Boxes to create linked lists, although these lists are not very popular in Rust. But if you want to create a recursive struct, you can use a `Box`. Here's what happens if you try without a `Box`:
+또한 `Box`를 이용해 자기 자신을 포함하는 구조체를 만들 수도 있습니다. 이런 구조체를 *재귀적*이라고 부릅니다. Rust에서는 연결 리스트가 크게 인기 있지는 않지만, 그런 식으로 재귀적인 구조를 만들 때 `Box`를 씁니다. `Box` 없이 시도하면 어떻게 되는지 보겠습니다.
 
 
 ```rust
@@ -9593,7 +9618,7 @@ struct List {
 }
 ```
 
-This simple `List` has one item, that may be `Some<List>` (another list), or `None`. Because you can choose `None`, it will not be recursive forever. But the compiler still doesn't know the size:
+아주 단순한 `List`로, 항목이 `Some<List>`(다른 리스트)일 수도 있고 `None`일 수도 있습니다. `None`을 선택할 수 있으니 무한히 재귀가 이어지는 것은 아닙니다. 그래도 컴파일러는 크기를 알 수 없습니다.
 
 ```text
 error[E0072]: recursive type `List` has infinite size
@@ -9607,7 +9632,7 @@ error[E0072]: recursive type `List` has infinite size
    = help: insert indirection (e.g., a `Box`, `Rc`, or `&`) at some point to make `List` representable
 ```
 
-You can see that it even suggests trying a `Box`. So let's put a `Box` around List:
+컴파일러가 `Box`를 써 보라고 제안하는 것을 볼 수 있습니다. `List`를 `Box`로 감싸 봅시다.
 
 ```rust
 struct List {
@@ -9616,7 +9641,7 @@ struct List {
 fn main() {}
 ```
 
-Now the compiler is fine with the `List`, because everything is behind a `Box`, and it knows the size of a `Box`. Then a very simple list might look like this:
+이제 모든 것이 `Box` 뒤에 있으니 컴파일러가 크기를 알 수 있고, `List`도 문제 없습니다. 아주 단순한 리스트는 이렇게 만들 수 있습니다.
 
 ```rust
 struct List {
@@ -9636,13 +9661,13 @@ fn main() {
 }
 ```
 
-Even without data it is a bit complicated, and Rust does not use this type of pattern very much. This is because Rust has strict rules on borrowing and ownership, as you know. But if you want to start a list like this (a linked list), `Box` can help.
+데이터를 넣지 않아도 다소 복잡하고, 빌림과 소유권 규칙이 엄격해서 Rust에서는 이런 패턴을 많이 쓰지 않습니다. 그래도 연결 리스트처럼 재귀적인 구조를 만들고 싶다면 `Box`가 도움이 됩니다.
 
-A `Box` also lets you use `std::mem::drop` on it, because it's on the heap. That can be convenient sometimes.
+`Box`는 힙에 있으므로 `std::mem::drop`으로 명시적으로 버릴 수도 있습니다. 상황에 따라 편리하게 사용할 수 있습니다.
 
 ## Box around traits
 
-`Box` is very useful for returning traits. You know that you can write traits in generic functions like in this example:
+`Box`는 트레이트를 반환할 때도 유용합니다. 제네릭 함수에서 트레이트 바운드를 쓰는 방법은 이미 봤습니다.
 
 ```rust
 use std::fmt::Display;
@@ -9656,9 +9681,9 @@ fn displays_it<T: Display>(input: T) {
 fn main() {}
 ```
 
-This only takes something with `Display`, so it can't accept our struct `DoesntImplementDisplay`. But it can take in a lot of others like `String`.
+이 함수는 `Display`를 구현한 타입만 받으므로 `DoesntImplementDisplay`는 넘길 수 없습니다. 하지만 `String` 같은 다른 타입은 가능합니다.
 
-You also saw that we can use `impl Trait` to return other traits, or closures. `Box` can be used in a similar way. You can use a `Box` because otherwise the compiler won't know the size of the value. This example shows that a trait can be used on something of any size:
+또 `impl Trait`로 다른 트레이트나 클로저를 반환할 수 있다는 것도 봤습니다. `Box`도 비슷하게 쓸 수 있습니다. 그렇지 않으면 컴파일러가 크기를 알 수 없기 때문입니다. 트레이트가 다양한 크기의 타입에 적용될 수 있다는 것을 보여 주는 예를 보겠습니다.
 
 ```rust
 #![allow(dead_code)] // Tell the compiler to be quiet
@@ -9713,7 +9738,7 @@ fn main() {
 }
 ```
 
-When we print the size of these, we get `2, 3, 32, 32, 1002`. So if you were to do this, it would give an error:
+이들의 크기를 찍어 보면 `2, 3, 32, 32, 1002`가 나옵니다. 그런데 이렇게 작성하면 오류가 납니다.
 
 ```rust
 // ⚠️
@@ -9733,9 +9758,9 @@ error[E0746]: return type cannot have an unboxed trait object
    |                              ^^^^^^^^^^ doesn't have a size known at compile-time
 ```
 
-And this is true, because the size could be 2, 3, 32, 1002, or anything else. So we put it in a `Box` instead. Here we also add the keyword `dyn`. `dyn` is a word that shows you that you are talking about a trait, not a struct or anything else.
+당연합니다. 크기가 2일 수도, 3일 수도, 32나 1002일 수도 있기 때문입니다. 그래서 `Box`에 넣습니다. 여기서 `dyn`이라는 키워드도 함께 씁니다. `dyn`은 구조체가 아니라 트레이트라는 것을 보여 줍니다.
 
-So you can change the function to this:
+함수를 이렇게 바꿀 수 있습니다.
 
 ```rust
 // 🚧
@@ -9745,13 +9770,13 @@ fn returns_just_a_trait() -> Box<dyn JustATrait> {
 }
 ```
 
-And now it works, because on the stack is just a `Box` and we know the size of `Box`.
+이제 잘 동작합니다. 스택에는 `Box`만 올라오고 `Box`의 크기는 알고 있기 때문입니다.
 
-You see this a lot in the form `Box<dyn Error>`, because sometimes you can have more than one possible error.
+여러 종류의 에러를 반환할 수 있을 때 `Box<dyn Error>` 같은 형태를 자주 보게 됩니다.
 
-We can quickly create two error types to show this. To make an official error type, you have to implement `std::error::Error` for it. That part is easy: just write `impl std::error::Error {}`. But errors also need `Debug` and `Display` so they can give information on the problem. `Debug` is easy with `#[derive(Debug)]` but `Display` needs the `.fmt()` method. We did this once before.
+이를 보여 주기 위해 에러 타입 두 개를 빠르게 만들어 보겠습니다. 에러 타입을 만들려면 `std::error::Error`를 구현해야 합니다. `impl std::error::Error {}`만 적으면 됩니다. 또한 에러 정보를 보여 주려면 `Debug`와 `Display`도 필요합니다. `Debug`는 `#[derive(Debug)]`로 쉽게 붙일 수 있지만, `Display`는 `.fmt()` 메서드를 직접 구현해야 합니다. 전에 한 번 해 본 적이 있습니다.
 
-The code looks like this:
+코드는 이렇게 됩니다.
 
 ```rust
 use std::error::Error;
@@ -9804,7 +9829,7 @@ fn main() {
 }
 ```
 
-This will print:
+출력은 다음과 같습니다.
 
 ```text
 You got the first error!
@@ -9812,7 +9837,7 @@ You got the second error!
 Looks fine to me
 ```
 
-If we didn't have a `Box<dyn Error>` and wrote this, we would have a problem:
+`Box<dyn Error>`를 쓰지 않고 이렇게 작성하면 문제가 생깁니다.
 
 ```rust
 // ⚠️
@@ -9832,11 +9857,11 @@ It will tell you:
     |                                 ^^^^^^^^^^^^^^^^^^^^^ doesn't have a size known at compile-time
 ```
 
-This is not surprising, because we know that a trait can work on many things, and they each have different sizes.
+트레이트는 여러 타입에 적용될 수 있고, 각각 크기가 다르다는 것을 알고 있으니 당연한 결과입니다.
 
-## Default and the builder pattern
+## Default와 빌더 패턴
 
-You can implement the `Default` trait to give values to a `struct` or `enum` that you think will be most common. The builder pattern works nicely with this to let users easily make changes when they want. First let's look at `Default`. Actually, most general types in Rust already have `Default`. They are not surprising: 0, "" (empty strings), `false`, etc.
+자주 쓰일 기본값을 지정하고 싶다면 `Default` 트레이트를 구현하면 됩니다. 빌더 패턴과 함께 쓰면 사용자가 필요한 값만 쉽게 바꿀 수 있습니다. 먼저 `Default`부터 보겠습니다. 사실 Rust의 기본 타입 대부분은 이미 `Default`를 구현해 두었습니다. 값도 예상 가능하죠: 0, 빈 문자열 `""`, `false` 등입니다.
 
 ```rust
 fn main() {
@@ -9850,7 +9875,7 @@ fn main() {
 
 This prints `'0', '', 'false'`.
 
-So `Default` is like the `new` function except you don't have to enter anything. First we will make a `struct` that doesn't implement `Default` yet. It has a `new` function which we use to make a character named Billy with some stats.
+`Default`는 인자를 받지 않는 `new` 같은 것입니다. 우선 아직 `Default`를 구현하지 않은 구조체를 만들어 봅시다. `new` 함수로 Billy라는 캐릭터를 만들고 몇 가지 스탯을 넣습니다.
 
 ```rust
 struct Character {
@@ -9885,7 +9910,7 @@ fn main() {
 }
 ```
 
-But maybe in our world we want most of the characters to be named Billy, age 15, height 170, weight 70, and alive. We can implement `Default` so that we can just write `Character::default()`. It looks like this:
+하지만 우리 세계에서는 대부분의 캐릭터가 이름은 Billy, 나이는 15, 키 170, 몸무게 70, 살아 있는 상태라고 가정해 봅시다. `Default`를 구현하면 `Character::default()` 한 줄로 만들 수 있습니다. 이렇게 작성합니다.
 
 ```rust
 #[derive(Debug)]
@@ -9943,9 +9968,9 @@ fn main() {
 }
 ```
 
-It prints `The character "Billy" is 15 years old.` Much easier!
+`The character "Billy" is 15 years old.`라고 출력됩니다. 훨씬 간단하죠!
 
-Now comes the builder pattern. We will have many Billys, so we will keep the default. But a lot of other characters will be only a bit different. The builder pattern lets us chain very small methods to change one value each time. Here is one such method for `Character`:
+이제 빌더 패턴을 적용해 보겠습니다. Billy가 많을 테니 기본값은 그대로 두되, 다른 캐릭터들은 조금씩 다를 수 있습니다. 빌더 패턴을 쓰면 작은 메서드를 이어 붙여 값을 하나씩 바꿀 수 있습니다. `Character`에 이런 메서드를 하나 만들어 봅시다.
 
 ```rust
 fn height(mut self, height: u32) -> Self {    // 🚧
@@ -9954,9 +9979,9 @@ fn height(mut self, height: u32) -> Self {    // 🚧
 }
 ```
 
-Make sure to notice that it takes a `mut self`. We saw this once before, and it is not a mutable reference (`&mut self`). It takes ownership of `Self` and with `mut` it will be mutable, even if it wasn't mutable before. That's because `.height()` has full ownership and nobody else can touch it, so it is safe to be mutable. Then it just changes `self.height` and returns `Self` (which is `Character`).
+`mut self`를 받는다는 점을 주의하세요. 예전에 한 번 봤듯이 이것은 가변 참조(`&mut self`)가 아닙니다. `Self`의 소유권을 가져오고, `mut`라서 이전에 불변이었더라도 가변으로 다룰 수 있습니다. `.height()`가 값 전체를 가지고 있으니 다른 곳에서 건드릴 수 없어 안전합니다. 이렇게 `self.height`를 바꾸고 `Self`(`Character`)를 반환합니다.
 
-So let's have three of these builder methods. They are almost the same:
+이런 빌더 메서드를 세 개 만들어 보겠습니다. 거의 같은 모양입니다.
 
 ```rust
 fn height(mut self, height: u32) -> Self {     // 🚧
@@ -9975,7 +10000,7 @@ fn name(mut self, name: &str) -> Self {
 }
 ```
 
-Each one of those changes one variable and gives `Self` back: this is what you see in the builder pattern. So now we can write something like this to make a character: `let character_1 = Character::default().height(180).weight(60).name("Bobby");`. If you are building a library for someone else to use, this can make it easy for them. It's easy for the end user because it almost looks like natural English: "Give me a default character but with height of 180, weight of 60, and name of Bobby." So far our code looks like this:
+각 메서드는 변수 하나만 바꾸고 다시 `Self`를 돌려줍니다. 빌더 패턴에서 자주 보는 형태죠. 이제 `let character_1 = Character::default().height(180).weight(60).name("Bobby");`처럼 써서 캐릭터를 만들 수 있습니다. 라이브러리를 만든다면 이런 방식이 사용자가 쓰기 쉽습니다. 마치 자연어처럼 "기본 캐릭터인데 키는 180, 몸무게는 60, 이름은 Bobby로 해 줘"라고 말하는 것 같습니다. 지금까지의 코드는 다음과 같습니다.
 
 ```rust
 #[derive(Debug)]
@@ -10045,9 +10070,9 @@ fn main() {
 }
 ```
 
-One last method to add is usually called `.build()`. This method is a sort of final check. When you give a user a method like `.height()` you can make sure that they only put in a `u32()`, but what if they enter 5000 for height? That might not be okay in the game you are making. We will use a final method called `.build()` that returns a `Result`. Inside it we will check if the user input is okay, and if it is, we will return an `Ok(Self)`.
+마지막으로 보통 `.build()`라는 메서드를 하나 더 만듭니다. 이것은 최종 점검 역할을 합니다. `.height()` 같은 메서드로 사용자가 `u32`만 넣도록 막을 수는 있지만, 키를 5000으로 넣는다면 게임 규칙에 맞지 않을 수 있습니다. `.build()`에서 검사해 문제 없으면 `Ok(Self)`를 반환하고, 아니라면 에러를 돌려주겠습니다.
 
-First though let's change the `.new()` method. We don't want users to be free to create any kind of character anymore. So we'll move the values from `impl Default` to `.new()`. And now `.new()` doesn't take any input.
+먼저 `.new()`를 바꿔 보겠습니다. 이제 사용자가 아무 캐릭터나 만들 수 있게 하고 싶지 않으니, `impl Default`에 있던 값을 `.new()`로 옮기고 입력도 받지 않게 합니다.
 
 ```rust
     fn new() -> Self {    // 🚧
@@ -10061,9 +10086,9 @@ First though let's change the `.new()` method. We don't want users to be free to
     }
 ```
 
-That means we don't need `impl Default` anymore, because `.new()` has all the default values. So we can delete `impl Default`.
+이제 기본값을 `.new()`가 제공하므로 `impl Default`는 필요 없습니다.
 
-Now our code looks like this:
+코드는 이렇게 변했습니다.
 
 ```rust
 #[derive(Debug)]
@@ -10117,9 +10142,9 @@ fn main() {
 }
 ```
 
-This prints the same thing: `Character { name: "Bobby", age: 15, height: 180, weight: 60, lifestate: Alive }`.
+출력은 이전과 같습니다: `Character { name: "Bobby", age: 15, height: 180, weight: 60, lifestate: Alive }`.
 
-We are almost ready to write the method `.build()`, but there is one problem: how do we make the user use it? Right now a user can write `let x = Character::new().height(76767);` and get a `Character`. There are many ways to do this, and maybe you can imagine your own. But we will add a `can_use: bool` value to `Character`.
+이제 거의 `.build()`를 쓸 준비가 되었지만 한 가지 문제가 있습니다. 사용자가 반드시 `.build()`를 거치도록 하려면 어떻게 할까요? 지금은 `let x = Character::new().height(76767);`처럼 써도 `Character`가 나옵니다. 여러 방법이 있겠지만 여기서는 `can_use: bool` 값을 `Character`에 추가해 보겠습니다.
 
 ```rust
 #[derive(Debug)]       // 🚧
@@ -10146,9 +10171,9 @@ struct Character {
     }
 ```
 
-And for the other methods like `.height()`, we will set `can_use` to `false`. Only `.build()` will set it to `true` again, so now the user has to do a final check with `.build()`. We will make sure that `height` is not above 200 and `weight` is not above 300. Also, in our game there is a bad word called `smurf` that we don't want characters to use.
+`.height()` 같은 다른 메서드에서는 `can_use`를 `false`로 바꾸겠습니다. `.build()`에서만 다시 `true`로 바꾸니, 사용자는 최종 점검을 위해 반드시 `.build()`를 호출해야 합니다. 키는 200 이하, 몸무게는 300 이하, 그리고 이름에 `smurf`라는 단어가 들어가면 안 된다는 규칙을 넣어 봅시다.
 
-Our `.build()` method looks like this:
+`.build()`는 이렇게 생겼습니다.
 
 ```rust
 fn build(mut self) -> Result<Character, String> {      // 🚧
@@ -10165,11 +10190,11 @@ fn build(mut self) -> Result<Character, String> {      // 🚧
 }
 ```
 
-`!self.name.to_lowercase().contains("smurf")` makes sure that the user doesn't write something like "SMURF" or "IamSmurf" . It makes the whole `String` lowercase (small letters), and checks for `.contains()` instead of `==`. And the `!` in front means "not".
+`!self.name.to_lowercase().contains("smurf")`는 사용자가 "SMURF"나 "IamSmurf"처럼 입력하는 것도 막습니다. 전체 문자열을 소문자로 바꾸고 `==` 대신 `.contains()`로 검사합니다. 앞의 `!`는 "포함하지 않는다"는 뜻입니다.
 
-If everything is okay, we set `can_use` to `true`, and give the character to the user inside `Ok`.
+모든 조건이 맞으면 `can_use`를 `true`로 바꾸고, `Ok` 안에 넣어 캐릭터를 돌려줍니다.
 
-Now that our code is done, we will create three characters that don't work, and one character that does work. The final code looks like this:
+이제 코드를 모두 작성했으니, 실패하는 캐릭터 세 개와 성공하는 캐릭터 하나를 만들어 보겠습니다. 최종 코드는 아래와 같습니다.
 
 ```rust
 #[derive(Debug)]
@@ -10257,7 +10282,7 @@ fn main() {
 }
 ```
 
-This will print:
+출력은 다음과 같습니다.
 
 ```text
 Could not create character. Characters must have:
@@ -10280,11 +10305,11 @@ Character { name: "Billybrobby", age: 15, height: 180, weight: 100, lifestate: A
 
 
 
-## Deref and DerefMut
+## Deref와 DerefMut
 
-`Deref` is the trait that lets you use `*` to dereference something. We saw the word `Deref` before when using a tuple struct to make a new type, and now it's time to learn it.
+`Deref` 트레이트는 `*`을 써서 값을 역참조할 수 있게 해 줍니다. 튜플 구조체로 새 타입을 만들 때 `Deref`라는 단어를 봤었는데, 이제 제대로 살펴보겠습니다.
 
-We know that a reference is not the same as a value:
+참조는 값과 같지 않다는 것을 이미 알고 있습니다.
 
 ```rust
 // ⚠️
@@ -10295,7 +10320,7 @@ fn main() {
 }
 ```
 
-And Rust won't even give a `false` because it won't even compare the two.
+Rust는 비교 자체를 허락하지 않으니 `false`조차 나오지 않습니다.
 
 ```text
 error[E0277]: can't compare `{integer}` with `&{integer}`
@@ -10305,7 +10330,7 @@ error[E0277]: can't compare `{integer}` with `&{integer}`
   |                          ^^ no implementation for `{integer} == &{integer}`
 ```
 
-Of course, the solution here is `*`. So this will print `true`:
+해결 방법은 당연히 `*`입니다. 이렇게 하면 `true`가 출력됩니다.
 
 ```rust
 fn main() {
@@ -10316,9 +10341,9 @@ fn main() {
 ```
 
 
-Now let's imagine a simple type that just holds a number. It will be like a `Box`, and we have some ideas for some extra functions for it. But if we just give it a number, it won't be able to do much with it.
+이제 숫자 하나만 담는 간단한 타입을 상상해 봅시다. `Box`처럼 쓰면서 여기에 몇 가지 기능을 더하고 싶습니다. 그런데 숫자만 담고 있으면 할 수 있는 일이 많지 않습니다.
 
-We can't use `*` like we can with `Box`:
+`Box`처럼 `*`을 쓸 수도 없습니다.
 
 ```rust
 // ⚠️
@@ -10339,11 +10364,11 @@ error[E0614]: type `HoldsANumber` cannot be dereferenced
 24 |     println!("{:?}", *my_number + 20);
 ```
 
-We can of course do this: `println!("{:?}", my_number.0 + 20);`. But then we are just adding a separate `u8` to the 20. It would be nice if we could just add them together. The message `cannot be dereferenced` gives us a clue: we need to implement `Deref`. Something simple that implements `Deref` is sometimes called a "smart pointer". A smart pointer can point to its item, has information about it, and can use its methods. Because right now we can add `my_number.0`, which is a `u8`, but we can't do much else with a `HoldsANumber`: all it has so far is `Debug`.
+`println!("{:?}", my_number.0 + 20);`처럼 할 수는 있지만 이렇게 하면 단순히 `u8`을 하나 더하는 것뿐입니다. 그냥 더해 쓸 수 있으면 좋겠습니다. `cannot be dereferenced`라는 메시지가 힌트를 줍니다. `Deref`를 구현해야 합니다. 간단한 `Deref` 구현체를 보통 "스마트 포인터"라고 부릅니다. 자신이 가리키는 값을 알고 있고, 그 값의 메서드도 쓸 수 있습니다. 지금은 `my_number.0`이라는 `u8`만 더할 수 있고 `HoldsANumber` 자체로 할 수 있는 일은 `Debug` 정도뿐입니다.
 
-Interesting fact: `String` is actually a smart pointer to `&str` and `Vec` is a smart pointer to array (or other types). So we have actually been using smart pointers since the beginning.
+흥미로운 사실: `String`은 실제로 `&str`에 대한 스마트 포인터이고, `Vec`은 배열(또는 다른 타입)에 대한 스마트 포인터입니다. 처음부터 스마트 포인터를 계속 써 왔던 셈입니다.
 
-Implementing `Deref` is not too hard and the examples in the standard library are easy. [Here's the sample code from the standard library](https://doc.rust-lang.org/std/ops/trait.Deref.html):
+`Deref` 구현은 어렵지 않고, 표준 라이브러리 예제도 간단합니다. [표준 라이브러리의 샘플 코드](https://doc.rust-lang.org/std/ops/trait.Deref.html)는 이렇습니다.
 
 ```rust
 use std::ops::Deref;
@@ -10367,7 +10392,7 @@ fn main() {
 ```
 
 
-So we follow that and now our `Deref` looks like this:
+이를 따라 하면 `Deref` 구현이 이렇게 됩니다.
 
 ```rust
 // 🚧
@@ -10381,7 +10406,7 @@ impl Deref for HoldsANumber {
 }
 ```
 
-So now we can do this with `*`:
+이제 `*`을 써서 이렇게 할 수 있습니다.
 
 ```rust
 use std::ops::Deref;
@@ -10402,7 +10427,7 @@ fn main() {
 }
 ```
 
-So that will print `40` and we didn't need to write `my_number.0`. That means we get the methods of `u8` and we can write our own methods for `HoldsANumber`. We will add our own simple method and use another method we get from `u8` called `.checked_sub()`. The `.checked_sub()` method is a safe subtraction that returns an `Option`. If it can do the subtraction then it gives it to you inside `Some`, and if it can't do it then it gives a `None`. Remember, a `u8` can't be negative so it's safer to do `.checked_sub()` so we don't panic.
+이렇게 하면 `my_number.0`을 쓰지 않고도 `40`을 출력할 수 있습니다. 덕분에 `u8`의 메서드를 그대로 쓸 수 있고, `HoldsANumber`에 우리만의 메서드를 추가할 수도 있습니다. 간단한 메서드를 하나 추가하고, `u8`이 가진 `.checked_sub()`도 써 보겠습니다. `.checked_sub()`는 안전한 뺄셈으로, 성공하면 `Some`에 결과를 담아 주고 실패하면 `None`을 줍니다. `u8`은 음수가 될 수 없으니 패닉을 막으려면 `.checked_sub()`를 쓰는 편이 안전합니다.
 
 ```rust
 use std::ops::Deref;
@@ -10430,14 +10455,14 @@ fn main() {
 }
 ```
 
-This prints:
+출력은 다음과 같습니다.
 
 ```text
 None
 40
 ```
 
-We can also implement `DerefMut` so we can change the values through `*`. It looks almost the same. You need `Deref` before you can implement `DerefMut`.
+`*`로 값을 바꿀 수 있게 `DerefMut`도 구현할 수 있습니다. 거의 같은 모양입니다. `DerefMut`를 구현하려면 먼저 `Deref`가 있어야 합니다.
 
 ```rust
 use std::ops::{Deref, DerefMut};
@@ -10466,15 +10491,15 @@ impl DerefMut for HoldsANumber { // You don't need type Target = u8; here becaus
 
 fn main() {
     let mut my_number = HoldsANumber(20);
-    *my_number = 30; // DerefMut lets us do this
+    *my_number = 30; // DerefMut 덕분에 이렇게 할 수 있습니다.
     println!("{:?}", my_number.checked_sub(100));
     my_number.prints_the_number_times_two();
 }
 ```
 
-So you can see that `Deref` gives your type a lot of power.
+`Deref`가 타입에 얼마나 큰 힘을 주는지 알 수 있습니다.
 
-This is also why the standard library says: `Deref should only be implemented for smart pointers to avoid confusion`. That's because you can do some strange things with `Deref` for a complicated type. Let's imagine a really confusing example to understand what they mean. We'll start with `Character` struct for a game. A new `Character` needs some stats like intelligence and strength. So here is our first character:
+그래서 표준 라이브러리에서도 `Deref`는 혼동을 피하기 위해 스마트 포인터에만 구현하라고 권장합니다. 복잡한 타입에 `Deref`를 남용하면 이상한 코드가 될 수 있기 때문입니다. 이해를 위해 아주 헷갈리는 예를 만들어 보겠습니다. 게임에서 쓸 `Character` 구조체를 정의합니다. 새 `Character`에는 지능, 힘 같은 스탯이 필요합니다. 첫 번째 캐릭터는 이렇게 만듭니다.
 
 ```rust
 struct Character {
@@ -11076,11 +11101,11 @@ test tests::one_plus_one_is_two ... FAILED
 
 and all the information about ``thread 'tests::one_plus_one_is_two' panicked at 'assertion failed: `(left == right)` ``. We don't need to print it all here.
 
-Now to think about how to make the calculator. We will accept any number, and the symbols `+-`. We will allow spaces, but nothing else. So let's start with a `const` that contains all the values. Then we will use `.chars()` to iterate by character, and `.all()` to make sure they are all inside.
+이제 계산기 로직을 생각해 봅시다. 숫자와 기호 `+-`를 받도록 하고, 공백은 허용하지만 그 외 문자는 금지합니다. 먼저 모든 허용 문자를 담은 `const`를 만들고, `.chars()`로 한 글자씩 돌면서 `.all()`로 모두 허용 범위인지 확인하겠습니다.
 
-Then we will add a test that should panic. To do that, add `#[should_panic]` attribute: now if it panics the test will succeed.
+패닉이 나야 성공하는 테스트도 하나 추가해 보겠습니다. `#[should_panic]` 속성을 붙이면 됩니다.
 
-Now the code looks like this:
+현재 코드는 이렇게 생겼습니다.
 
 ```rust
 const OKAY_CHARACTERS: &str = "1234567890+- "; // Don't forget the space at the end
@@ -11117,7 +11142,7 @@ mod tests {
 }
 ```
 
-Now when we run the tests we get this result:
+테스트를 실행하면 다음과 같습니다.
 
 ```text
 running 4 tests
@@ -11127,19 +11152,18 @@ test tests::panics_when_characters_not_right ... ok
 test tests::one_plus_one_is_two ... FAILED
 ```
 
-One succeeded! Our `math()` function will only accept good input now.
+한 가지는 통과했습니다! 이제 `math()`는 올바른 입력만 받습니다.
 
+다음은 실제 계산기 구현입니다. 테스트를 먼저 쓰면 실제 코드는 나중에야 나오는데, 이 부분이 흥미롭습니다. 계산기 로직은 다음을 만족해야 합니다.
 
-The next step is to write the actual calculator. This is the interesting part about having tests first: the actual code starts much later. First we will put the logic together for the calculator. We want the following:
+- 공백은 모두 제거한다. `.filter()`로 쉽게 처리할 수 있습니다.
+- 입력을 `Vec`으로 바꾼다. `+` 자체는 결과에 필요 없지만 `+`를 보면 숫자가 끝났다는 것을 알아야 합니다. 예를 들어 `11+1`이라면 1) `1`을 보고 빈 문자열에 넣고, 2) 또 다른 1을 넣어 "11"을 만든 뒤, 3) `+`를 만나면 숫자가 끝났음을 알고 문자열을 벡터에 넣고 비웁니다.
+- `-`의 개수를 센다. 홀수(1, 3, 5...)면 뺄셈, 짝수(2, 4, 6...)면 덧셈입니다. 그래서 "1--9"는 -8이 아니라 10이 되어야 합니다.
+- 마지막 숫자 뒤의 기호는 모두 없앤다. `5+5+++++----`는 허용 문자로만 이루어져 있지만 최종적으로는 `5+5`가 되어야 합니다. `.trim_end_matches()`로 끝의 문자를 잘라내면 됩니다.
 
-- All empty spaces should be removed. This is easy with `.filter()`
-- The input should turn into a `Vec` with all the inputs. `+` doesn't need to be an input, but when the program sees `+` it should know that the number is done. For example, the input `11+1` should do something like this: 1) See `1`, push it into an empty string. 2) See another 1, push it into the string (it is now "11"). 3) See a `+`, know the number has ended. It will push the string into the vec, then clear the string.
-- The program must count the number of `-`. An odd number (1, 3, 5...) will mean subtract, an even number (2, 4, 6...) will mean add. So "1--9" should give 10, not -8.
-- The program should remove anything after the last number. `5+5+++++----` is made out of all the characters in `OKAY_CHARACTERS`, but it should turn to `5+5`. This is easy with `.trim_end_matches()`, where you remove anything that matches at the end of a `&str`.
+참고로 `.trim_end_matches()`와 `.trim_start_matches()`는 예전 이름이 `trim_right_matches()`, `trim_left_matches()`였습니다. 어떤 언어는 오른쪽에서 왼쪽으로 읽기 때문에 right/left라는 표현이 어울리지 않아 이름이 바뀌었습니다. 오래된 코드에서 예전 이름을 볼 수도 있지만 같은 기능입니다.
 
-(By the way, `.trim_end_matches()` and `.trim_start_matches()` used to be `trim_right_matches()` and `trim_left_matches()`. But then people noticed that some languages go from right to left (Persian, Hebrew, etc.) so right and left were wrong. You might still see the older names in some code but they are the same thing.)
-
-First we just want to pass all the tests. After we pass the tests, we can "refactor". Refactor means to make code better, usually through things like structs and enums and methods. Here is our code to make the tests pass:
+우선 테스트를 통과시키는 것이 목표입니다. 그다음에 리팩터링(코드를 더 깔끔하게 정리하는 것)을 할 수 있습니다. 테스트를 통과시키기 위한 코드는 다음과 같습니다.
 
 ```rust
 const OKAY_CHARACTERS: &str = "1234567890+- ";
@@ -11242,7 +11266,7 @@ mod tests {
 }
 ```
 
-And now the tests pass!
+이제 테스트가 모두 통과했습니다!
 
 ```text
 running 6 tests
@@ -11256,18 +11280,18 @@ test tests::panics_when_characters_not_right ... ok
 test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 ```
 
-You can see that there is a back and forth process in test-driven development. It's something like this:
+테스트 주도 개발에서는 이런 식으로 왔다 갔다 하는 과정을 거칩니다.
 
-- First you write all the tests you can think of.
-- Then you start writing the code.
-- As you write the code, you get ideas for other tests.
-- You add the tests, and your tests grow as you go. The more tests you have, the more times your code gets checked.
+- 떠오르는 모든 테스트를 먼저 쓴다.
+- 그다음 코드를 작성한다.
+- 코드를 쓰면서 새로운 테스트 아이디어가 떠오른다.
+- 테스트를 추가한다. 테스트가 많을수록 코드가 더 자주 검증된다.
 
-Of course, tests don't check everything and it is wrong to think that "passing all tests = the code is perfect". But tests are great for when you change your code. If you change your code later on and run the tests, if one of them doesn't work you will know what to fix.
+물론 테스트가 모든 것을 확인해 주지는 않으니 "모든 테스트 통과 = 완벽한 코드"라고 생각하면 안 됩니다. 하지만 코드를 바꿀 때 큰 도움이 됩니다. 나중에 코드를 수정하고 테스트했을 때 실패하는 항목이 있으면 무엇을 고쳐야 할지 바로 알 수 있습니다.
 
-Now we can rewrite (refactor) the code a bit. One good way to start is with clippy. If you installed Rust then you can type `cargo clippy`, and if you're using the Playground then click on `TOOLS` and select Clippy. Clippy will look at your code and give you tips to make it simpler. Our code doesn't have any mistakes, but it could be better.
+이제 코드를 조금 리팩터링해 보겠습니다. 시작하기 좋은 방법은 clippy를 돌려 보는 것입니다. 로컬에 Rust가 있다면 `cargo clippy`를, 플레이그라운드에서는 `TOOLS`에서 Clippy를 선택하면 됩니다. Clippy는 코드를 살펴보고 더 단순하게 만들 팁을 줍니다. 지금 코드는 틀린 부분은 없지만 더 나아질 여지가 있습니다.
 
-Clippy tells us two things:
+Clippy는 두 가지를 알려 줍니다.
 
 ```text
 warning: this loop could be written as a `for` loop
@@ -11289,9 +11313,9 @@ warning: equality checks against true are unnecessary
    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#bool_comparison
 ```
 
-This is true: `for entry in math_iter` is much simpler than `while let Some(entry) = math_iter.next()`. And a `for` loop is actually an iterator so we don't have any reason to write `.iter()`. Thanks, clippy! And also we didn't need to make `math_iter`: we can just write `for entry in result_vec`.
+`for entry in math_iter`가 `while let Some(entry) = math_iter.next()`보다 훨씬 간단한 것은 맞습니다. `for` 루프 자체가 이터레이터이니 `.iter()`를 쓸 이유도 없습니다. 고마워, clippy! 또한 굳이 `math_iter` 변수를 만들 필요 없이 `for entry in result_vec`라고 써도 됩니다.
 
-Now we'll start some real refactoring. Instead of separate variables, we will create a `Calculator` struct. This will have all the variables we used together. We will change two names to make it more clear. `result_vec` will become `results`, and `push_string` will become `current_input` (current means "now"). And so far it only has one method: new.
+본격적인 리팩터링을 해 봅시다. 변수를 따로따로 쓰지 말고 `Calculator`라는 구조체를 만들어 모두 담겠습니다. 이름도 두 개 바꿔 더 명확하게 하겠습니다. `result_vec`은 `results`, `push_string`은 현재 입력을 의미하는 `current_input`으로 바꿉니다. 지금은 `new` 메서드 하나만 있습니다.
 
 ```rust
 // 🚧
@@ -11315,7 +11339,7 @@ impl Calculator {
 }
 ```
 
-Now our code is actually a bit longer, but easier to read. For example, `if adds` is now `if calculator.adds`, which is exactly like reading English. It looks like this:
+코드가 조금 길어지긴 했지만 읽기 쉬워졌습니다. 예를 들어 `if adds` 대신 `if calculator.adds`라고 쓰니 의미가 명확합니다. 현재 코드는 다음과 같습니다.
 
 ```rust
 #[derive(Clone)]
@@ -11432,7 +11456,7 @@ mod tests {
 }
 ```
 
-Finally we add two new methods. One is called `.clear()` and clears the `current_input()`. The other one is called `push_char()` and pushes the input onto `current_input()`. Here is our refactored code:
+마지막으로 메서드 두 개를 더 추가합니다. 하나는 `current_input()`을 비우는 `.clear()`, 다른 하나는 입력 문자를 `current_input()`에 넣는 `push_char()`입니다. 리팩터링된 전체 코드는 다음과 같습니다.
 
 ```rust
 #[derive(Clone)]
@@ -11557,28 +11581,28 @@ mod tests {
 }
 ```
 
-This is probably good enough for now. We could write more methods but lines like `calculator.results.push(calculator.current_input.clone());` are already very clear. Refactoring is best when you can still easily read the code after you are done. You don't want to just refactor to make the code short: `clc.clr()` is much worse than `calculator.clear()`, for example.
+이 정도면 충분해 보입니다. 더 메서드를 만들 수도 있지만 `calculator.results.push(calculator.current_input.clone());` 같은 줄도 이미 충분히 읽기 쉽습니다. 리팩터링은 끝나고 나서도 코드가 잘 읽혀야 가장 좋습니다. 단순히 짧게 만들겠다고 `clc.clr()`처럼 줄여 쓰는 것은 `calculator.clear()`보다 훨씬 나쁩니다.
 
 
 
-## External crates
+## 외부 크레이트
 
-An external crate means "someone else's crate".
+외부 크레이트는 "다른 사람이 만든 크레이트"를 뜻합니다.
 
-For this section you *almost* need to install Rust, but we can still use just the Playground. Now we are going to learn how to import crates that other people have written. This is important in Rust because of two reasons:
+이 부분은 Rust를 설치해야 할 것 같지만, 여전히 플레이그라운드만으로도 살펴볼 수 있습니다. 이번에는 다른 사람이 만든 크레이트를 가져오는 방법을 배웁니다. Rust에서 이것이 중요한 이유는 두 가지입니다.
 
-- It is very easy to import other crates, and
-- The Rust standard library is quite small.
+- 다른 크레이트를 가져오기 매우 쉽고,
+- Rust 표준 라이브러리가 꽤 작기 때문입니다.
 
-That means that it is normal in Rust to bring in an external crate for a lot of basic functions. The idea is that if it is easy to use external crates, then you can choose the best one. Maybe one person will make a crate for one function, and then someone else will make a better one.
+그래서 기본 기능을 위해 외부 크레이트를 가져오는 것이 Rust에서는 일반적입니다. 외부 크레이트를 쉽게 쓸 수 있으면 그중 가장 좋은 것을 고를 수 있다는 아이디어입니다. 누군가 함수 하나짜리 크레이트를 만들면, 다른 사람이 더 나은 것을 만들 수도 있습니다.
 
-In this book we will only look at the most popular crates, the crates that everyone who uses Rust knows.
+이 책에서는 Rust 사용자라면 누구나 아는 인기 크레이트만 살펴봅니다.
 
-To begin learning external crates, we will start with the most common one: `rand`.
+외부 크레이트를 배우기 위해 가장 흔한 `rand`부터 시작합니다.
 
 ### rand
 
-Did you notice that we didn't use any random numbers yet? That's because random numbers aren't in the standard library. But there are a lot of crates that are "almost standard library" because everybody uses them. In any case, it's very easy to bring in a crate. If you have Rust on your computer, there is a file called `Cargo.toml` that has this information. A `Cargo.toml` file looks like this when you start:
+지금까지 난수를 쓰지 않았던 것을 눈치챘나요? 표준 라이브러리에 난수 생성기가 없기 때문입니다. 대신 거의 표준 라이브러리처럼 널리 쓰이는 크레이트가 여럿 있습니다. 어쨌든 크레이트를 가져오는 것은 아주 쉽습니다. 로컬에 Rust가 있다면 `Cargo.toml` 파일에 정보를 적어 둡니다. 처음에는 이렇게 생겼습니다.
 
 ```text
 [package]
@@ -11592,7 +11616,7 @@ edition = "2018"
 [dependencies]
 ```
 
-Now if you want to add the `rand` crate, search for it on `crates.io`, which is where all the crates go. That takes you to `https://crates.io/crates/rand`. And when you click on that, you can see a screen that says `Cargo.toml   rand = "0.7.3"`. All you do is add that under [dependencies] like this:
+`rand` 크레이트를 추가하려면 모든 크레이트가 올라오는 `crates.io`에서 검색합니다. 주소는 `https://crates.io/crates/rand`입니다. 들어가 보면 `Cargo.toml   rand = "0.7.3"`라고 적힌 부분이 있습니다. 이 내용을 [dependencies] 아래에 추가하면 됩니다.
 
 ```text
 [package]
@@ -11607,9 +11631,9 @@ edition = "2018"
 rand = "0.7.3"
 ```
 
-And then Cargo will do the rest for you. Then you can start writing code like [this example code](https://docs.rs/rand/0.7.3/rand/) on the `rand` document website. To get to the documents you can click on the `docs` button in [the page on crates.io](https://crates.io/crates/rand).
+그러면 Cargo가 나머지를 처리해 줍니다. 이후에는 `rand` 문서 사이트에 있는 [예제 코드](https://docs.rs/rand/0.7.3/rand/)처럼 작성할 수 있습니다. 문서는 [crates.io의 rand 페이지](https://crates.io/crates/rand)에서 `docs` 버튼을 누르면 볼 수 있습니다.
 
-So that's enough about Cargo: we are still using just the Playground. Luckily, the Playground already has the top 100 crates installed. So you don't need to write in `Cargo.toml` yet. On the Playground you can imagine that it has a long list like this with 100 crates:
+Cargo 이야기는 이 정도면 충분합니다. 지금은 여전히 플레이그라운드만 사용하고 있습니다. 다행히 플레이그라운드에는 인기 크레이트 100개 정도가 미리 설치되어 있습니다. 그래서 아직 `Cargo.toml`을 직접 적을 필요는 없습니다. 플레이그라운드에는 대략 이런 긴 목록이 있다고 상상하면 됩니다.
 
 ```text
 [dependencies]
@@ -11618,7 +11642,7 @@ some_other_crate = "0.1.0"
 another_nice_crate = "1.7"
 ```
 
-That means that to use `rand`, you can just do this.
+즉 `rand`를 쓰려면 그냥 이렇게 하면 됩니다.
 
 ```rust
 use rand; // This means the whole crate rand
@@ -11633,12 +11657,12 @@ fn main() {
 }
 ```
 
-It will print a different `u16` number every time, like `42266 52873 56528 46927 6867`.
+실행할 때마다 다른 `u16` 숫자가 출력됩니다. 예를 들면 `42266 52873 56528 46927 6867` 같은 식입니다.
 
 
-The main functions in `rand` are `random` and `thread_rng` (rng means "random number generator"). And actually if you look at `random` it says: "This is simply a shortcut for `thread_rng().gen()`". So it's actually just `thread_rng` that does almost everything.
+`rand`의 주요 함수는 `random`과 `thread_rng`입니다(rng는 "random number generator"의 약자). 사실 `random`을 보면 "This is simply a shortcut for `thread_rng().gen()`"이라고 적혀 있습니다. 즉 대부분의 일을 `thread_rng`가 하고, `random`은 그것을 짧게 부르는 함수입니다.
 
-Here is a simple example of numbers from 1 to 10. To get those numbers, we use `.gen_range()` between 1 and 11.
+1부터 10까지 범위의 수를 뽑는 간단한 예를 봅시다. 1 이상 11 미만 범위로 `.gen_range()`를 호출합니다.
 
 ```rust
 use rand::{thread_rng, Rng}; // Or just use rand::*; if we are lazy
@@ -11651,13 +11675,13 @@ fn main() {
 }
 ```
 
-This will print something like `7 2 4 8 6`.
+`7 2 4 8 6` 같은 출력이 나옵니다.
 
-With random numbers we can do fun things like make characters for a game. We will use `rand` and some other things we know to make them. In this game our characters have six stats, and you use a d6 for them. A d6 is a cube that gives 1, 2, 3, 4, 5, or 6 when you throw it. Each character rolls a d6 three times, so each stat is between 3 and 18.
+난수를 이용해 게임 캐릭터를 만들 수도 있습니다. `rand`와 지금까지 배운 것들을 써서 만들어 보겠습니다. 이 게임의 캐릭터에는 여섯 가지 능력치가 있고, 각 능력치는 여섯 면짜리 주사위(d6)를 굴려서 정합니다. d6는 1, 2, 3, 4, 5, 6 중 하나를 줍니다. 각 능력치는 주사위를 세 번 굴려 얻으니 3에서 18 사이가 됩니다.
 
-But sometimes it can be unfair if your character has something low like a 3 or 4. If your strength is 3 you can't carry anything, for example. So there is one more method that uses a d6 four times. You roll it four times, and throw away the lowest number. So if you roll 3, 3, 1, 6 then you keep 3, 3, 6 = 12. We will make this method too so the owner of the game can decide.
+하지만 주사위가 3이나 4처럼 너무 낮게 나오면 불공평할 수 있습니다. 힘이 3이면 아무 것도 들 수 없겠죠. 그래서 주사위를 네 번 굴리고 가장 낮은 숫자를 버리는 방식도 있습니다. 예를 들어 3, 3, 1, 6이 나오면 3, 3, 6만 남겨 12가 됩니다. 게임 진행자가 선택할 수 있도록 이 방식도 만들어 보겠습니다.
 
-Here is our simple character creator. We created a `Character` struct for the stats, and even implemented `Display` to print it the way we want.
+간단한 캐릭터 생성기를 만들어 봅시다. 능력치를 담을 `Character` 구조체를 만들고, 원하는 방식으로 출력하기 위해 `Display`도 구현했습니다.
 
 ```rust
 use rand::{thread_rng, Rng}; // Or just use rand::*; if we are lazy
@@ -11756,7 +11780,7 @@ fn main() {
 }
 ```
 
-It will print something like this:
+출력은 대략 이렇게 나옵니다.
 
 ```rust
 Your character has these stats:
@@ -11776,19 +11800,19 @@ wisdom: 16
 charisma: 10
 ```
 
-The character with four dice is usually a bit better at most things.
+네 번 굴린 캐릭터가 대체로 더 좋은 능력치를 갖게 됩니다.
 
 
 ### rayon
 
-`rayon` is a popular crate that lets you speed up your Rust code. It's popular because it creates threads without needing things like `thread::spawn`. In other words, it is popular because it is effective but easy to write. For example:
+`rayon`은 Rust 코드를 손쉽게 빠르게 만들어 주는 인기 크레이트입니다. `thread::spawn` 같은 것을 직접 쓰지 않아도 스레드를 만들어 주기 때문에 효과적이면서도 작성이 간단합니다. 예를 들어 다음과 같이 씁니다.
 
-- `.iter()`, `.iter_mut()`, `into_iter()` in rayon is written like this:
-- `.par_iter()`, `.par_iter_mut()`, `par_into_iter()`. So you just add `par_` and your code becomes much faster. (par means "parallel")
+- 기존 `.iter()`, `.iter_mut()`, `into_iter()`를 rayon에서는 이렇게 씁니다.
+- `.par_iter()`, `.par_iter_mut()`, `par_into_iter()`. 앞에 `par_`만 붙이면 코드가 훨씬 빨라집니다(par는 parallel의 줄임말입니다).
 
-Other methods are the same: `.chars()` is `.par_chars()`, and so on.
+다른 메서드도 마찬가지입니다. `.chars()`는 `.par_chars()`가 됩니다.
 
-Here is an example of a simple piece of code that is making the computer do a lot of work:
+컴퓨터에 꽤 많은 일을 시키는 간단한 코드 예제가 있습니다.
 ```rust
 fn main() {
     let mut my_vec = vec![0; 200_000];
@@ -11797,7 +11821,7 @@ fn main() {
 }
 ```
 
-It creates a vector with 200,000 items: each one is 0. Then it calls `.enumerate()` to get the index for each number, and changes the 0 to the index number. It's too long to print so we only print items 5000 to 5004. This is still very fast in Rust, but if you want you can make it faster with Rayon. The code is almost the same:
+200,000개의 항목이 있는 벡터를 만들고, 모두 0으로 채웁니다. 그다음 `.enumerate()`로 인덱스를 얻어 각 0을 인덱스 값으로 바꿉니다. 전부 출력하기엔 길어서 5000~5004만 찍었습니다. Rust에서도 충분히 빠르지만, 더 빠르게 하고 싶다면 Rayon을 쓸 수 있습니다. 코드는 거의 같습니다.
 
 ```rust
 use rayon::prelude::*; // Import rayon
@@ -11809,11 +11833,11 @@ fn main() {
 }
 ```
 
-And that's it. `rayon` has many other methods to customize what you want to do, but at its most simple it is just "add `_par` to make your program faster".
+이게 전부입니다. `rayon`에는 더 다양한 설정 메서드가 있지만 가장 간단하게는 "앞에 `_par`를 붙여 프로그램을 빠르게 만든다"로 기억하면 됩니다.
 
 ### serde
 
-`serde` is a popular crate that lets you convert to and from formats like JSON, YAML, etc. The most common way to use it is by creating a `struct` with two attributes on top. [It looks like this](https://serde.rs/):
+`serde`는 JSON, YAML 등 포맷을 서로 변환할 때 쓰는 인기 크레이트입니다. 가장 흔한 사용법은 구조체 위에 두 가지 속성을 붙이는 것입니다. [모양은 이렇습니다](https://serde.rs/).
 
 ```rust
 #[derive(Serialize, Deserialize, Debug)]
@@ -11823,24 +11847,24 @@ struct Point {
 }
 ```
 
-The `Serialize` and `Deserialize` traits are what make the conversion easy. (That's also where the name `serde` comes from) If you have them on your struct, then you can just call a method to turn it into and from JSON or anything else.
+`Serialize`와 `Deserialize` 트레이트가 변환을 쉽게 해 줍니다(`serde`라는 이름도 여기에서 왔습니다). 구조체에 이 둘을 파생해 두면 JSON 등으로 변환하거나 다시 읽어들이는 메서드를 곧바로 쓸 수 있습니다.
 
 ### regex
 
-The [regex](https://crates.io/crates/regex) crate lets you search through text using [regular expressions](https://en.wikipedia.org/wiki/Regular_expression). With that you can get matches for something like `colour`, `color`, `colours` and `colors` through a single search. Regular expressions are a whole other language to learn if you want to use them.
+[regex](https://crates.io/crates/regex) 크레이트는 [정규식](https://en.wikipedia.org/wiki/Regular_expression)으로 텍스트를 검색하게 해 줍니다. 이를 통해 `colour`, `color`, `colours`, `colors` 같은 것을 한 번에 찾을 수 있습니다. 정규식은 별도의 언어에 가깝기 때문에 쓰려면 따로 익혀야 합니다.
 
 ### chrono
 
-[chrono](https://crates.io/crates/chrono) is the main crate for people who need more functionality for time. We will look at the standard library now which has functions for time, but if you need more then this is a good crate to use.
+[chrono](https://crates.io/crates/chrono)는 시간 관련 기능이 더 필요할 때 사용하는 대표적인 크레이트입니다. 곧 표준 라이브러리의 시간 관련 기능도 보겠지만, 더 많은 기능이 필요하다면 이 크레이트가 좋은 선택입니다.
 
 
-## A tour of the standard library
+## 표준 라이브러리 둘러보기
 
-Now that you know a lot of Rust, you will be able to understand most things inside the standard library. The code inside it isn't so scary anymore. Let's take a look at some of the parts in it that we haven't learned yet. This tour will go over most parts of the standard library that you don't need to install Rust for. We will revisit a lot of items we already know so we can learn them with greater understanding.
+이제 Rust를 꽤 알게 되었으니 표준 라이브러리도 대부분 이해할 수 있을 것입니다. 내부 코드가 더 이상 무섭지 않습니다. 아직 배우지 않은 부분들을 몇 가지 살펴보겠습니다. Rust를 설치하지 않아도 볼 수 있는 부분을 중심으로 돌아볼 것이고, 이미 아는 항목도 다시 보면서 더 깊이 이해해 보겠습니다.
 
 ### Arrays
 
-In the past (before Rust 1.53), arrays didn't implement `Iterator` and you needed to use methods like `.iter()` on them in for `loops`. (People also used `&` to get a slice in `for` loops). So this didn't work in the past:
+예전(Rust 1.53 이전)에는 배열이 `Iterator`를 구현하지 않아서 `for` 루프에서 `.iter()` 같은 메서드를 써야 했습니다. (사람들은 `&`로 슬라이스를 얻어 반복하기도 했습니다) 그래서 과거에는 이런 코드가 작동하지 않았습니다.
 
 ```rust
 fn main() {
@@ -11852,7 +11876,7 @@ fn main() {
 }
 ```
 
-The compiler used to give this message:
+컴파일러는 다음과 같은 메시지를 냈습니다.
 
 ```text
 error[E0277]: `[&str; 3]` is not an iterator
@@ -11861,7 +11885,7 @@ error[E0277]: `[&str; 3]` is not an iterator
   |                 ^^^^^^^^^ borrow the array with `&` or call `.iter()` on it to iterate over it
 ```
 
-Luckily, that isn't a problem anymore! So all three of these work:
+다행히 이제는 문제가 없습니다. 아래 세 가지 모두 동작합니다.
 
 ```rust
 fn main() {
@@ -11879,7 +11903,7 @@ fn main() {
 }
 ```
 
-This prints:
+출력은 다음과 같습니다.
 
 ```text
 Beirut
@@ -11895,7 +11919,7 @@ Nicosia
 
 
 
-If you want to get variables from an array, you can put their names inside `[]` to destructure it. This is the same as using a tuple in `match` statements or destructuring to get variables from a struct.
+배열에서 값을 꺼내 변수로 받고 싶다면 `[]` 안에 이름을 적어 구조 분해할 수 있습니다. `match`에서 튜플을 풀거나 구조체를 분해하는 것과 같습니다.
 
 ```rust
 fn main() {
@@ -11905,11 +11929,11 @@ fn main() {
 }
 ```
 
-This prints `Beirut`.
+이 경우 `Beirut`가 출력됩니다.
 
 ### char
 
-You can use the `.escape_unicode()` method to get the Unicode number for a `char`:
+`.escape_unicode()` 메서드를 사용하면 `char`의 유니코드 값을 볼 수 있습니다.
 
 ```rust
 fn main() {
@@ -11920,10 +11944,10 @@ fn main() {
 }
 ```
 
-This prints `\u{ccad} \u{cd98} \u{c608} \u{cc2c}`.
+출력은 `\u{ccad} \u{cd98} \u{c608} \u{cc2c}`입니다.
 
 
-You can get a char from `u8` using the `From` trait, but for a `u32` you use `TryFrom` because it might not work. There are many more numbers in `u32` than characters in Unicode. We can see this with a simple demonstration.
+`u8`은 `From` 트레이트로 바로 `char`로 만들 수 있지만, `u32`는 실패할 수 있으므로 `TryFrom`을 써야 합니다. `u32` 값의 범위가 유니코드보다 훨씬 넓기 때문입니다. 간단한 예로 확인해 보겠습니다.
 
 ```rust
 use std::convert::TryFrom; // You need to bring TryFrom in to use it
@@ -11943,7 +11967,7 @@ fn main() {
 }
 ```
 
-Almost every time it will generate a `-`. This is part of the sort of output you will see:
+거의 매번 `-`가 나올 것입니다. 출력 일부는 이런 식입니다.
 
 ```text
 ------------------------------------------------------------------------𤒰---------------------
@@ -11961,18 +11985,16 @@ Almost every time it will generate a `-`. This is part of the sort of output you
 ------------򇍜----------------------------------------------------
 ```
 
-So it's a good thing you need to use `TryFrom`.
+그래서 `TryFrom`을 써야 한다는 것을 알 수 있습니다.
 
-Also, as of late August 2020 you can now get a `String` from a `char`. (`String` implements `From<char>`) Just write `String::from()` and put a `char` inside.
+또 2020년 8월 이후로는 `char`에서 바로 `String`을 만들 수 있습니다(`String`이 `From<char>`를 구현했습니다). `String::from()` 안에 `char`를 넣으면 됩니다.
 
 
 ### Integers
 
-There are a lot of math methods for these types, plus some others. Here are some of the most useful ones.
+정수 타입에는 수학 관련 메서드가 많습니다. 그중 자주 쓰이는 몇 가지를 보겠습니다.
 
-
-
-`.checked_add()`, `.checked_sub()`, `.checked_mul()`, `.checked_div()`. These are good methods if you think you might get a number that won't fit into a type. They return an `Option` so you can safely check that your math works without making the program panic.
+`.checked_add()`, `.checked_sub()`, `.checked_mul()`, `.checked_div()`. 계산 결과가 타입 범위를 넘을 수 있다고 생각되면 이런 메서드를 쓰는 것이 좋습니다. `Option`을 반환하므로 안전하게 확인할 수 있고, 프로그램이 패닉하지 않습니다.
 
 ```rust
 fn main() {
@@ -11984,7 +12006,7 @@ fn main() {
 }
 ```
 
-This prints:
+출력은 다음과 같습니다.
 
 ```text
 None
@@ -11992,9 +12014,9 @@ Some(201)
 ```
 
 
-You'll notice that on the page for integers it says `rhs` a lot. This means "right hand side", which is the right hand side when you do some math. For example, in `5 + 6`, `5` is on the left and `6` is on the right, so it's the `rhs`. This is not a keyword, but you will see it a lot so it's good to know.
+정수 문서에서 `rhs`라는 표현을 자주 보게 될 겁니다. "right hand side"의 약자로, 수식의 오른쪽에 있는 값을 뜻합니다. 예를 들어 `5 + 6`에서 `5`는 왼쪽, `6`은 오른쪽이니 `rhs`입니다. 키워드는 아니지만 자주 보니 알아 두면 좋습니다.
 
-While we are on the subject, let's learn how to implement `Add`. After you implement `Add`, you can use `+` on a type that you create. You need to implement `Add` yourself because add can mean a lot of things. Here's the example in the standard library page:
+이왕 말이 나온 김에 `Add`를 구현해 봅시다. `Add`를 구현하면 우리가 만든 타입에 `+`를 쓸 수 있습니다. 덧셈이 무엇을 의미할지는 각 타입마다 다르니 직접 구현해야 합니다. 표준 라이브러리 예제는 다음과 같습니다.
 
 ```rust
 use std::ops::Add; // first bring in Add
@@ -12018,7 +12040,7 @@ impl Add for Point {
 }
 ```
 
-Now let's implement `Add` for our own type. Let's imagine that we want to add two countries together so we can compare their economies. It looks like this:
+이제 우리 타입에 `Add`를 구현해 봅시다. 두 나라를 더해 경제 규모를 비교해 보려 한다고 상상해 보겠습니다. 코드는 이렇게 작성할 수 있습니다.
 
 ```rust
 use std::fmt;
@@ -12076,7 +12098,7 @@ fn main() {
 }
 ```
 
-This prints:
+출력은 다음과 같습니다.
 
 ```text
 In Nauru are 10670 people and a GDP of $160000000
@@ -12084,21 +12106,21 @@ In Nauru and Vanuatu are 318485 people and a GDP of $980000000
 In Nauru and Vanuatu and Micronesia are 422953 people and a GDP of $1347000000
 ```
 
-Later on in this code we could change `.fmt()` to display a number that is easier to read.
+나중에 `.fmt()`를 고쳐 숫자를 읽기 쉽게 만들 수도 있습니다.
 
-The three others are called `Sub`, `Mul`, and `Div`, and they are basically the same to implement. For `+=`, `-=`, `*=` and `/=`, just add `Assign`: `AddAssign`, `SubAssign`, `MulAssign`, and `DivAssign`. You can see the full list [here](https://doc.rust-lang.org/std/ops/index.html#structs), because there are many more. `%` for example is called `Rem`, `-` is called `Neg`, and so on.
+나머지 산술 트레이트는 `Sub`, `Mul`, `Div`이며 구현 방식은 거의 같습니다. `+=`, `-=`, `*=`, `/=` 같은 복합 대입 연산자는 `Assign`을 붙여 `AddAssign`, `SubAssign`, `MulAssign`, `DivAssign`을 구현하면 됩니다. 더 많은 목록은 [여기](https://doc.rust-lang.org/std/ops/index.html#structs)에서 볼 수 있습니다. 예를 들어 `%`는 `Rem`, 단항 `-`는 `Neg`입니다.
 
 
 ### Floats
 
-`f32` and `f64` have a very large number of methods that you use when doing math. We won't look at those, but here are some methods that you might use. They are: `.floor()`, `.ceil()`, `.round()`, and `.trunc()`. All of these return an `f32` or `f64` that is like an integer, with only `0` after the period. They do this:
+`f32`와 `f64`에는 수학용 메서드가 아주 많습니다. 모두 다 보진 않고 유용한 몇 가지를 소개하겠습니다. `.floor()`, `.ceil()`, `.round()`, `.trunc()`입니다. 모두 소수점 아래를 0으로 만들어 정수 비슷한 값을 반환합니다. 동작은 다음과 같습니다.
 
-- `.floor()`: gives you the next lowest integer.
-- `.ceil()`: gives you the next highest integer.
-- `.round()`: gives you a higher number if 0.5 or more, or the same number if less than 0.5. This is called rounding because it gives you a "round" number (a number that has a short, simple form).
-- `.trunc()`: just cuts off the part after the period. Truncate means "to cut off".
+- `.floor()`: 바로 아래 정수를 줍니다.
+- `.ceil()`: 바로 위 정수를 줍니다.
+- `.round()`: 0.5 이상이면 올리고, 0.5 미만이면 그대로 둡니다. 둥근 수를 준다는 뜻에서 반올림입니다.
+- `.trunc()`: 소수점 이하를 잘라냅니다.
 
-Here is a simple function to print them.
+아래는 이를 출력하는 간단한 함수입니다.
 
 ```rust
 fn four_operations(input: f64) {
@@ -12124,7 +12146,7 @@ fn main() {
 }
 ```
 
-This prints:
+출력은 다음과 같습니다.
 
 ```text
 For the number 9.1:
@@ -12152,7 +12174,7 @@ rounded: -20
 truncated: -19
 ```
 
-`f32` and `f64` have a method called `.max()` and `.min()` that gives you the higher or the lower of two numbers. (For other types you can just use `std::cmp::max` and `std::cmp::min`.) Here is a way to use this with `.fold()` to get the highest or lowest number. You can see again that `.fold()` isn't just for adding numbers.
+`f32`와 `f64`에는 두 값 중 큰 값이나 작은 값을 주는 `.max()`, `.min()`이 있습니다. (다른 타입에는 `std::cmp::max`, `std::cmp::min`을 쓰면 됩니다.) 이를 `.fold()`와 함께 써서 최댓값과 최솟값을 구할 수 있습니다. `.fold()`가 단순히 합계만을 위한 것이 아니라는 것을 다시 볼 수 있습니다.
 
 ```rust
 fn main() {
@@ -12165,7 +12187,7 @@ fn main() {
 
 ### bool
 
-In Rust you can turn a `bool` into an integer if you want, because it's safe to do that. But you can't do it the other way around. As you can see, `true` turns to 1 and `false` turns to 0.
+Rust에서는 `bool`을 정수로 바꿀 수 있습니다. 안전하기 때문입니다. 반대로 정수를 `bool`로는 바꿀 수 없습니다. `true`는 1, `false`는 0이 됩니다.
 
 ```rust
 fn main() {
@@ -12174,7 +12196,7 @@ fn main() {
 }
 ```
 
-This prints `1 0`. Or you can use `.into()` if you tell the compiler the type:
+결과는 `1 0`입니다. 타입을 알려 주면 `.into()`도 사용할 수 있습니다.
 
 ```rust
 fn main() {
@@ -12183,9 +12205,9 @@ fn main() {
 }
 ```
 
-This prints the same thing.
+출력은 동일합니다.
 
-As of Rust 1.50 (released in February 2021), there is now a method called `then()`, which turns a `bool` into an `Option`. With `then()` you write a closure, and the closure is called if the item is `true`. Also, whatever is returned from the closure goes inside the `Option`. Here's a small example:
+Rust 1.50(2021년 2월)부터 `bool`을 `Option`으로 바꾸는 `then()` 메서드가 추가되었습니다. `then()`에 클로저를 넘기면 값이 `true`일 때만 클로저가 호출되고, 그 반환값을 `Option`에 넣어 줍니다. 간단한 예는 다음과 같습니다.
 
 ```rust
 fn main() {
@@ -12195,9 +12217,9 @@ fn main() {
 }
 ```
 
-This just prints `Some(8), None`.
+결과는 `Some(8), None`입니다.
 
-And now a bit larger example:
+조금 더 큰 예제도 보겠습니다.
 
 ```rust
 fn main() {
@@ -12223,7 +12245,7 @@ fn main() {
 }
 ```
 
-And here's what this prints:
+출력은 다음과 같습니다.
 
 ```text
 Got a true!
@@ -12234,7 +12256,7 @@ And without the Nones: ["It\'s true, you know", "It\'s true, you know"]
 
 ### Vec
 
-Vec has a lot of methods that we haven't looked at yet. Let's start with `.sort()`. `.sort()` is not surprising at all. It uses a `&mut self` to sort a vector.
+Vec에는 아직 보지 않은 메서드가 많습니다. `.sort()`부터 보겠습니다. `.sort()`는 예상대로 동작합니다. `&mut self`를 받아 벡터를 정렬합니다.
 
 ```rust
 fn main() {
@@ -12244,10 +12266,9 @@ fn main() {
 }
 ```
 
-This prints `[0, 0, 0, 0, 0, 80, 90, 100]`. But there is one more interesting way to sort called `.sort_unstable()`, and it is usually faster. It can be faster because it doesn't care about the order of numbers if they are the same number. In regular `.sort()`, you know that the last `0, 0, 0, 0, 0` will be in the same order after `.sort()`. But `.sort_unstable()` might move the last zero to index 0, then the third last zero to index 2, etc.
+결과는 `[0, 0, 0, 0, 0, 80, 90, 100]`입니다. 한편 `.sort_unstable()`라는 정렬도 있는데, 보통 더 빠릅니다. 동일한 값의 상대적 순서를 신경 쓰지 않기 때문입니다. 일반 `.sort()`에서는 마지막에 있는 `0, 0, 0, 0, 0`의 순서가 그대로 유지되지만, `.sort_unstable()`에서는 마지막 0이 맨 앞 인덱스로 가거나 세 번째 0이 중간으로 갈 수도 있습니다.
 
-
-`.dedup()` means "de-duplicate". It will remove items that are the same in a vector, but only if they are next to each other. This next code will not just print `"sun", "moon"`:
+`.dedup()`은 "중복 제거"를 의미합니다. 인접한 동일 항목만 제거합니다. 따라서 다음 코드는 `"sun", "moon"`만 남기지 않습니다.
 
 ```rust
 fn main() {
@@ -12257,9 +12278,9 @@ fn main() {
 }
 ```
 
-It only gets rid of "sun" next to the other "sun", then "moon" next to one "moon", and again with "moon" next to another "moon". The result is: `["sun", "moon", "sun", "moon"]`.
+바로 옆에 붙어 있는 "sun"과 "moon"만 제거합니다. 결과는 `["sun", "moon", "sun", "moon"]`입니다.
 
-If you want to remove every duplicate, just `.sort()` first:
+모든 중복을 지우려면 먼저 `.sort()`를 하면 됩니다.
 
 ```rust
 fn main() {
@@ -12270,12 +12291,12 @@ fn main() {
 }
 ```
 
-Result: `["moon", "sun"]`.
+결과: `["moon", "sun"]`.
 
 
 ### String
 
-You will remember that a `String` is kind of like a `Vec`. It is so like a `Vec` that you can do a lot of the same methods. For example, you can start one with `String::with_capacity()`. You want that if you are always going to be pushing a `char` with `.push()` or pushing a `&str` with `.push_str()`. Here's an example of a `String` that has too many allocations.
+`String`이 `Vec`과 비슷하다는 것을 기억할 것입니다. 많은 메서드를 그대로 사용할 수 있을 정도로 유사합니다. 예를 들어 `String::with_capacity()`로 시작할 수 있습니다. `.push()`로 `char`를 계속 넣거나 `.push_str()`로 `&str`을 넣을 때 유용합니다. 아래는 할당을 너무 많이 하는 `String` 예입니다.
 
 ```rust
 fn main() {
@@ -12291,7 +12312,7 @@ fn main() {
 }
 ```
 
-This prints:
+출력은 다음과 같습니다.
 
 ```text
 35
@@ -12314,7 +12335,7 @@ This prints:
 4587520
 ```
 
-We had to reallocate (copy everything over) 18 times. But now we know the final capacity. So we'll give it the capacity right away, and we don't need to reallocate: just one `String` capacity is enough.
+총 18번 재할당(내용 복사)을 해야 했습니다. 이제 최종 용량을 알았으니 처음부터 그 용량을 주면 재할당 없이 한 번에 끝납니다.
 
 ```rust
 fn main() {
@@ -12330,9 +12351,9 @@ fn main() {
 }
 ```
 
-And this prints `4587520`. Perfect! We never had to allocate again.
+출력은 `4587520` 한 번뿐입니다. 더 이상 재할당이 일어나지 않았습니다.
 
-Of course, the actual length is certainly smaller than this. If you try 100,001 times, 101,000 times, etc., it'll still say `4587520`. That's because each time the capacity is two times what it was before. We can shrink it though with `.shrink_to_fit()` (same as for a `Vec`). Our `String` is very large and we don't want to add anything more to it, so we can make it a bit smaller. But only do this if you are sure. Here is why:
+물론 실제 길이는 이보다 작습니다. 100,001번, 101,000번을 시도해도 용량은 `4587520`으로 나옵니다. 용량이 매번 두 배씩 늘어나기 때문입니다. `.shrink_to_fit()`(Vec과 동일)을 사용해 줄일 수 있습니다. 이제 더 이상 추가하지 않을 큰 `String`이라면 조금 줄여도 좋습니다. 다만 확실할 때만 하세요. 이유는 다음과 같습니다.
 
 ```rust
 fn main() {
@@ -12354,7 +12375,7 @@ fn main() {
 }
 ```
 
-This prints:
+출력은 다음과 같습니다.
 
 ```text
 4587520
@@ -12363,9 +12384,9 @@ This prints:
 3500001
 ```
 
-So first we had a size of `4587520`, but we weren't using it all. We used `.shrink_to_fit()` and got the size down to `3500000`. But then we forget that we needed to push an `a` on. When we did that, Rust saw that we needed more space and gave us double: now it's `7000000`. Whoops! So we did `.shrink_to_fit()` again and now it's back down to `3500001`.
+처음 용량은 `4587520`이었지만 다 채우지 않았습니다. `.shrink_to_fit()`을 쓰면 `3500000`으로 줄어듭니다. 그런데 `a`를 하나 더 넣어야 한다는 것을 잊었다가 넣는 순간 Rust가 공간이 부족하다고 판단해 두 배로 늘립니다. 이제 `7000000`이 되었습니다. 다시 `.shrink_to_fit()`을 해서 `3500001`로 줄였습니다.
 
-`.pop()` works for a `String`, just like for a `Vec`.
+`.pop()`은 `Vec`처럼 `String`에서도 동작합니다.
 
 ```rust
 fn main() {
@@ -12380,9 +12401,9 @@ fn main() {
 }
 ```
 
-This prints `This string is a little bit hard to read.` because it starts from the last character.
+마지막 문자부터 꺼내기 때문에 `This string is a little bit hard to read.`를 출력합니다.
 
-`.retain()` is a method that uses a closure, which is rare for `String`. It's just like `.filter()` for an iterator.
+`.retain()`은 `String`에서는 드문, 클로저를 받는 메서드입니다. 이터레이터의 `.filter()`와 비슷합니다.
 
 ```rust
 fn main() {
@@ -12392,33 +12413,33 @@ fn main() {
 }
 ```
 
-This prints:
+출력은 다음과 같습니다.
 
 ```text
 [src\main.rs:4] my_string = "Age  Height  Weight "
 ```
 
 
-### OsString and CString
+### OsString과 CString
 
-`std::ffi` is the part of `std` that helps you use Rust with other languages or operating systems. It has types like `OsString` and `CString`, which are like `String` for the operating system or `String` for the language C. They each have their own `&str` type too: `OsStr` and `CStr`. `ffi` means "foreign function interface".
+`std::ffi`는 Rust를 다른 언어 또는 운영체제와 연결할 때 쓰는 표준 라이브러리 부분입니다. 운영체제용 문자열 `OsString`, C 언어용 문자열 `CString` 같은 타입이 있습니다. 각각에 대응하는 `&str`도 `OsStr`, `CStr`로 따로 있습니다. `ffi`는 "foreign function interface"의 약자입니다.
 
-You can use `OsString` when you have to work with an operating system that doesn't have Unicode. All Rust strings are unicode, but not every operating system has it. Here is the simple English explanation from the standard library on why we have `OsString`:
+유니코드가 아닌 운영체제와 작업해야 할 때 `OsString`을 사용할 수 있습니다. Rust의 문자열은 모두 유니코드지만, 모든 운영체제가 그렇지는 않습니다. 표준 라이브러리에서 `OsString`이 필요한 이유를 간단히 설명해 둔 부분이 있습니다.
 
-- A string on Unix (Linux, etc.) might be lots of bytes together that don't have zeros. And sometimes you read them as Unicode UTF-8.
-- A string on Windows might be made of random 16-bit values that don't have zeros. And sometimes you read them as Unicode UTF-16.
-- In Rust, strings are always valid UTF-8, which may contain zeros.
+- 유닉스(Linux 등)의 문자열은 0이 없는 바이트들의 모음일 수 있으며, 종종 UTF-8로 읽습니다.
+- Windows 문자열은 0이 없는 임의의 16비트 값들일 수 있으며, 종종 UTF-16으로 읽습니다.
+- Rust의 문자열은 항상 유효한 UTF-8이며, 0을 포함할 수도 있습니다.
 
-So an `OsString` is made to be read by all of them.
+`OsString`은 이 모두에서 읽을 수 있도록 만들어졌습니다.
 
-You can do all the regular things with an `OsString` like `OsString::from("Write something here")`. It also has an interesting method called `.into_string()` that tries to make it into a regular `String`. It returns a `Result`, but the `Err` part is just the original `OsString`:
+`OsString::from("Write something here")`처럼 일반적인 작업을 할 수 있습니다. 또 `.into_string()`이라는 흥미로운 메서드가 있는데, 이를 통해 일반 `String`으로 변환을 시도합니다. `Result`를 반환하지만 `Err`는 원래 `OsString` 그대로입니다.
 
 ```rust
 // 🚧
 pub fn into_string(self) -> Result<String, OsString>
 ```
 
-So if it doesn't work then you just get it back. You can't call `.unwrap()` because it will panic, but you can use `match` to get the `OsString` back. Let's test it out by calling methods that don't exist.
+변환에 실패하면 그대로 돌려받습니다. `.unwrap()`을 쓰면 패닉하니 `match`로 `OsString`을 다시 꺼낼 수 있습니다. 없는 메서드를 호출해 보면서 타입을 확인해 보겠습니다.
 
 ```rust
 use std::ffi::OsString;
@@ -12449,11 +12470,11 @@ error[E0599]: no method named `occg` found for struct `std::ffi::OsString` in th
   |                                     ^^^^ method not found in `std::ffi::OsString`
 ```
 
-We can see that the type of `valid` is `String` and the type of `not_valid` is `OsString`.
+`valid`의 타입은 `String`, `not_valid`의 타입은 `OsString`임을 확인할 수 있습니다.
 
 ### mem
 
-`std::mem` has some pretty interesting methods. We saw some of them already, such as `.size_of()`, `.size_of_val()` and `.drop()`:
+`std::mem`에는 흥미로운 메서드가 여럿 있습니다. 이미 `.size_of()`, `.size_of_val()`, `.drop()` 등을 본 적이 있습니다.
 
 
 ```rust
@@ -12469,18 +12490,18 @@ fn main() {
 }
 ```
 
-This prints:
+출력은 다음과 같습니다.
 
 ```text
 4
 200
 ```
 
-Here are some other methods in `mem`:
+다른 메서드들도 있습니다.
 
-`swap()`: with this you can change the values between two variables. You use a mutable reference for each to do it. This is helpful when you have two things you want to switch and Rust doesn't let you because of borrowing rules. Or just when you want to quickly switch two things.
+`swap()`: 두 변수의 값을 바꿉니다. 두 값 모두 가변 참조를 전달합니다. 빌림 규칙 때문에 직접 교환하기 어려울 때, 혹은 단순히 빠르게 바꾸고 싶을 때 유용합니다.
 
-Here's one example:
+예를 하나 보겠습니다.
 
 ```rust
 use std::{mem, fmt};
@@ -12515,14 +12536,14 @@ fn main() {
 }
 ```
 
-This will print:
+출력은 다음과 같습니다.
 
 ```text
 Frodo has the ring, Gollum used to have it, and Sauron wants it
 Gollum has the ring, Frodo used to have it, and Sauron wants it
 ```
 
-`replace()`: this is like swap, and actually uses swap inside it, as you can see:
+`replace()`: `swap`과 비슷하며 내부적으로 `swap`을 사용합니다.
 
 ```rust
 pub fn replace<T>(dest: &mut T, mut src: T) -> T {
@@ -12531,7 +12552,7 @@ pub fn replace<T>(dest: &mut T, mut src: T) -> T {
 }
 ```
 
-So it just does a swap and then returns the other item. With this you replace the value with something else you put in. And since it returns the old value, so you should use it with `let`. Here's a quick example.
+즉 `swap`을 한 뒤 다른 값을 반환합니다. 넣은 값으로 교체하고, 원래 값은 반환하므로 `let`으로 받는 것이 좋습니다. 간단한 예는 다음과 같습니다.
 
 ```rust
 use std::mem;
@@ -12558,9 +12579,9 @@ fn main() {
 }
 ```
 
-This prints `The city once called Constantinople is now called Istanbul.`.
+출력은 `The city once called Constantinople is now called Istanbul.`입니다.
 
-One function called `.take()` is like `.replace()` but it leaves the default value in the item. You will remember that default values are usually things like 0, "", and so on. Here is the signature:
+`.take()`라는 함수는 `.replace()`와 비슷하지만, 항목에는 기본값을 남겨 둡니다. 기본값은 보통 0, "", 같은 값이었던 것을 기억하세요. 시그니처는 이렇습니다.
 
 ```rust
 // 🚧
@@ -12569,7 +12590,7 @@ where
     T: Default,
 ```
 
-So you can do something like this:
+이렇게 사용할 수 있습니다.
 
 ```rust
 use std::mem;
@@ -12587,7 +12608,7 @@ fn main() {
 }
 ```
 
-And as you can see, it replaced all the numbers with 0: no index was deleted.
+보시다시피 모든 숫자가 0으로 대체되었습니다. 인덱스는 삭제되지 않았습니다.
 
 ```text
 [0, 0, 0, 0, 0, 0]
@@ -12595,7 +12616,7 @@ And as you can see, it replaced all the numbers with 0: no index was deleted.
 ```
 
 
-Of course, for your own type you can implement `Default` to whatever you want. Let's look at an example where we have a `Bank` and a `Robber`. Every time he robs the `Bank`, he gets the money at the desk. But the desk can take money from the back any time, so it always has 50. We will make our own type for this so it will always have 50. Here is how it works:
+물론 여러분의 타입에는 원하는 대로 `Default`를 구현할 수 있습니다. `Bank`와 `Robber` 예제를 보겠습니다. 도둑이 `Bank`를 털 때마다 창구에 있는 돈을 가져갑니다. 하지만 창구는 언제든 뒤에서 돈을 가져올 수 있어서 항상 50을 유지합니다. 이 값을 항상 50으로 유지하는 타입을 하나 만들어 보겠습니다. 작동 방식은 이렇습니다.
 
 ```rust
 use std::mem;
@@ -12677,7 +12698,7 @@ fn main() {
 }
 ```
 
-This will print:
+출력은 다음과 같습니다.
 
 ```text
 There is $5000 in the back and $50 at the desk.
@@ -12697,29 +12718,29 @@ The robber has $150 right now.
 There is $4900 in the back and $50 at the desk.
 ```
 
-You can see that there is always $50 at the desk.
+창구에는 항상 50달러가 있다는 것을 확인할 수 있습니다.
 
 
 ### prelude
 
-The standard library has a prelude too, which is why you don't have to write things like `use std::vec::Vec` to create a `Vec`. You can see all the items [here](https://doc.rust-lang.org/std/prelude/index.html#prelude-contents), and will already know almost all of them:
+표준 라이브러리에도 프렐류드가 있어서 `Vec`을 만들 때 `use std::vec::Vec` 같은 것을 쓰지 않아도 됩니다. 모든 항목은 [여기](https://doc.rust-lang.org/std/prelude/index.html#prelude-contents)서 볼 수 있으며, 대부분은 이미 친숙할 것입니다.
 
-- `std::marker::{Copy, Send, Sized, Sync, Unpin}`. You haven't seen `Unpin` before, because it is used for almost every type (like `Sized`, which is also very common). To "pin" means to not let something move. In this case a `Pin` means that it can't move in memory, but most items have `Unpin` so you can. That's why functions like `std::mem::replace` work, because they aren't pinned.
+- `std::marker::{Copy, Send, Sized, Sync, Unpin}`. `Unpin`은 거의 모든 타입(매우 흔한 `Sized`처럼)에 적용되기 때문에 아직 못 봤을 수 있습니다. "pin"은 이동을 막는다는 뜻입니다. 여기서는 메모리에서 움직이지 않는다는 의미인데, 대부분의 타입은 `Unpin`이라 이동할 수 있습니다. 그래서 `std::mem::replace` 같은 함수가 동작합니다.
 - `std::ops::{Drop, Fn, FnMut, FnOnce}`.
 - `std::mem::drop`
 - `std::boxed::Box`.
-- `std::borrow::ToOwned`. You saw this before a bit with `Cow`, which can take borrowed content and make it owned. It uses `.to_owned()` to do this. You can also use `.to_owned()` on a `&str` to get a `String`, and the same for other borrowed values.
+- `std::borrow::ToOwned`. 이전에 `Cow`와 함께 조금 본 적이 있습니다. 빌린 내용을 소유권 있는 값으로 바꿀 때 `.to_owned()`를 씁니다. `&str`을 `String`으로 바꿀 때도 `.to_owned()`를 사용할 수 있고, 다른 빌린 값도 마찬가지입니다.
 - `std::clone::Clone`
 - `std::cmp::{PartialEq, PartialOrd, Eq, Ord}`.
 - `std::convert::{AsRef, AsMut, Into, From}`.
 - `std::default::Default`.
-- `std::iter::{Iterator, Extend, IntoIterator, DoubleEndedIterator, ExactSizeIterator}`. We used `.rev()` for an iterator before: this actually makes a `DoubleEndedIterator`. An `ExactSizeIterator` is just something like `0..10`: it already knows that it has a `.len()` of 10. Other iterators don't know their length for sure.
+- `std::iter::{Iterator, Extend, IntoIterator, DoubleEndedIterator, ExactSizeIterator}`. 이전에 썼던 `.rev()`는 사실 `DoubleEndedIterator`를 만듭니다. `0..10` 같은 것은 처음부터 `.len()`을 알고 있으니 `ExactSizeIterator`입니다. 다른 반복자는 길이를 확실히 모를 수도 있습니다.
 - `std::option::Option::{self, Some, None}`.
 - `std::result::Result::{self, Ok, Err}`.
 - `std::string::{String, ToString}`.
 - `std::vec::Vec`.
 
-What if you don't want the prelude for some reason? Just add the attribute `#![no_implicit_prelude]`. Let's give it a try and watch the compiler complain:
+어떤 이유로든 프렐류드를 쓰고 싶지 않다면 `#![no_implicit_prelude]` 속성을 추가하면 됩니다. 한 번 적용해 보고 컴파일러의 반응을 봅시다.
 
 ```rust
 // ⚠️
@@ -12731,7 +12752,7 @@ fn main() {
 }
 ```
 
-Now Rust has no idea what you are trying to do:
+이제 Rust는 우리가 무엇을 하려는지 알 수 없습니다.
 
 ```text
 error: cannot find macro `println` in this scope
@@ -12755,7 +12776,7 @@ error[E0433]: failed to resolve: use of undeclared type or module `String`
 error: aborting due to 3 previous errors
 ```
 
-So for this simple code you need to tell Rust to use the `extern` (external) crate called `std`, and then the items you want. Here is everything we have to do just to create a Vec and a String and print it:
+따라서 이런 단순한 코드에도 외부 크레이트 `std`를 쓰겠다고 알려 주고 필요한 항목을 모두 가져와야 합니다. Vec과 String을 만들고 출력하기 위해 해야 할 일은 다음과 같습니다.
 
 ```rust
 #![no_implicit_prelude]
@@ -12773,21 +12794,21 @@ fn main() {
 }
 ```
 
-And now it finally works, printing `[8, 9, 10], This won't work`. So you can see why Rust uses the prelude. But if you want, you don't need to use it. And you can even use `#![no_std]` (we saw this once) for when you can't even use something like stack memory. But most of the time you don't have to think about not using the prelude or `std` at all.
+이제야 `[8, 9, 10], This won't work`가 출력됩니다. Rust가 프렐류드를 기본으로 두는 이유를 알 수 있습니다. 물론 원한다면 쓰지 않아도 되고, 스택 메모리 같은 것도 못 쓰는 환경에서는 `#![no_std]`(앞서 본 적 있습니다)를 사용할 수도 있습니다. 하지만 대부분의 경우 프렐류드나 `std`를 쓰지 않을 이유가 없습니다.
 
-So why didn't we see the `extern` keyword before? It's because you don't need it that much anymore. Before, when bringing in an external crate you had to use it. So to use `rand` in the past, you had to write:
+그렇다면 왜 지금까지 `extern` 키워드를 본 적이 없을까요? 이제는 거의 필요하지 않기 때문입니다. 예전에는 외부 크레이트를 가져올 때 꼭 써야 했습니다. 예를 들어 `rand`를 쓰려면 이렇게 써야 했습니다.
 
 ```rust
 extern crate rand;
 ```
 
-and then `use` statements for the mods, traits, etc. that you wanted to use. But the Rust compiler now doesn't need this help anymore - you can just use `use` and it knows where to find it. So you almost never need `extern crate` anymore, but in other people's Rust code you might still see it on the top.
+그리고 나서 필요한 모듈, 트레이트 등을 `use`로 가져와야 했습니다. 하지만 요즘 Rust 컴파일러는 굳이 이렇게 알려 줄 필요가 없습니다. 그냥 `use`만 적어도 어디서 찾아야 할지 압니다. 그래서 이제는 `extern crate`를 거의 쓸 일이 없지만, 다른 사람의 오래된 코드에서는 여전히 위쪽에서 볼 수도 있습니다.
 
 
 
 ### time
 
-`std::time` is where you can get functions for time. (If you want even more functions, a crate like `chrono` can work.) The simplest function is just getting the system time with `Instant::now()`.
+`std::time`에는 시간 관련 함수가 있습니다. (더 많은 기능이 필요하면 `chrono` 같은 크레이트를 쓰면 됩니다.) 가장 단순한 것은 `Instant::now()`로 시스템 시간을 얻는 것입니다.
 
 ```rust
 use std::time::Instant;
@@ -12798,9 +12819,9 @@ fn main() {
 }
 ```
 
-If you print it, you'll get something like this: `Instant { tv_sec: 2738771, tv_nsec: 685628140 }`. That's talking about seconds and nanoseconds, but it's not very useful. If you look at 2738771 seconds for example (written in August), it is 31.70 days. That doesn't have anything to do with the month or the day of the year. But the page on `Instant` tells us that it isn't supposed to be useful on its own. It says that it is "opaque and useful only with Duration." Opaque means "you can't figure it out", and duration means "how much time passed". So it's only useful when doing things like comparing times.
+출력하면 `Instant { tv_sec: 2738771, tv_nsec: 685628140 }` 같은 값이 나옵니다. 초와 나노초를 나타내지만 별로 유용하지 않습니다. 예를 들어 2738771초는 약 31.70일로, 월이나 날짜와는 관련이 없습니다. `Instant` 문서에도 단독으로는 유용하지 않다고 되어 있습니다. "opaque and useful only with Duration." 즉, 내부 값을 알 수 없고 `Duration`과 함께 쓸 때만 의미가 있습니다. 얼마나 시간이 지났는지 비교할 때 쓰인다는 뜻입니다.
 
-If you look at the traits on the left, one of them is `Sub<Instant>`. That means we can use `-` to subtract one from another. And when we click on [src] to see what it does, it says:
+왼쪽의 트레이트 목록을 보면 `Sub<Instant>`가 있습니다. `-`로 두 Instant를 뺄 수 있다는 의미입니다. [src]를 눌러 보면 이렇게 적혀 있습니다.
 
 ```rust
 impl Sub<Instant> for Instant {
@@ -12812,7 +12833,7 @@ impl Sub<Instant> for Instant {
 }
 ```
 
-So it takes an `Instant` and uses `.duration_since()` to give a `Duration`. Let's try printing that. We'll make two `Instant::now()`s right next to each other, then we'll make the program busy for a while. Then we'll make one more `Instant::now()`. Finally, we'll see how long it took.
+즉 `Instant`를 하나 받아 `.duration_since()`로 `Duration`을 반환합니다. 직접 출력해 보겠습니다. `Instant::now()`를 두 번 연달아 만들고, 프로그램을 잠시 바쁘게 만든 뒤 `Instant::now()`를 한 번 더 찍어 시간을 확인해 보겠습니다.
 
 ```rust
 use std::time::Instant;
@@ -12834,16 +12855,16 @@ fn main() {
 }
 ```
 
-This will print something like this:
+출력은 대략 이렇게 나옵니다.
 
 ```text
 1.025µs
 683.378µs
 ```
 
-So that's just over 1 microsecond vs. 683 microseconds. We can see that Rust did take some time to do it.
+약 1마이크로초와 683마이크로초 정도의 차이가 보입니다. 계산하는 데 시간이 조금 걸렸음을 알 수 있습니다.
 
-There is one fun thing we can do with just a single `Instant` though. We can turn it into a `String` with `format!("{:?}", Instant::now());`. It looks like this:
+`Instant` 하나만으로도 재미있는 일을 할 수 있습니다. `format!("{:?}", Instant::now());`로 문자열로 바꿀 수 있습니다. 모습은 다음과 같습니다.
 
 ```rust
 use std::time::Instant;
@@ -12854,7 +12875,7 @@ fn main() {
 }
 ```
 
-That prints something like `Instant { tv_sec: 2740773, tv_nsec: 632821036 }`. That's not useful, but if we use `.iter()` and `.rev()` and `.skip(2)`, we can skip the `}` and ` ` at the end. We can use it to make a random number generator.
+`Instant { tv_sec: 2740773, tv_nsec: 632821036 }` 같은 문자열이 출력됩니다. 그대로는 유용하지 않지만 `.iter()`, `.rev()`, `.skip(2)` 등을 쓰면 끝의 `}`와 공백을 건너뛸 수 있습니다. 이를 이용해 간단한 난수 생성기를 만들어 볼 수 있습니다.
 
 ```rust
 use std::time::Instant;
@@ -12892,9 +12913,9 @@ This will print something like:
 180
 ```
 
-The function is called `bad_random_number` because it's not a very good random number generator. Rust has better crates that make random numbers with less code than `rand` like `fastrand`. But it's a good example of how you can use your imagination to do something with `Instant`.
+이 함수 이름을 `bad_random_number`로 지은 것은 그리 좋은 난수 생성기가 아니기 때문입니다. Rust에는 `rand`보다 코드가 짧은 `fastrand` 같은 더 좋은 크레이트가 있습니다. 하지만 `Instant`로 이런 것도 할 수 있다는 예로는 괜찮습니다.
 
-When you have a thread, you can use `std::thread::sleep` to make it stop for a while. When you do this, you have to give it a duration. You don't have to make more than one thread to do this because every program is on at least one thread. `sleep` needs a `Duration` though, so it can know how long to sleep. You can pick the unit like this: `Duration::from_millis()`, `Duration::from_secs`, etc. Here's one example:
+스레드가 있을 때 `std::thread::sleep`으로 잠시 멈추게 할 수 있습니다. 이때는 얼마 동안 잘지 `Duration`을 넘겨야 합니다. 스레드를 하나만 만들어도 괜찮습니다. `Duration::from_millis()`, `Duration::from_secs` 등으로 단위를 선택할 수 있습니다. 예시는 다음과 같습니다.
 
 ```rust
 use std::time::Duration;
@@ -12908,26 +12929,25 @@ fn main() {
 }
 ```
 
-This will just print
+출력은 단순히 다음과 같습니다.
 
 ```text
 I must sleep now.
 Did I miss anything?
 ```
 
-but the thread will do nothing for three seconds. You usually use `.sleep()` when you have many threads that need to try something a lot, like connecting. You don't want the thread to use your processor to try 100,000 times in a second when you just want it to check sometimes. So then you can set a `Duration`, and it will try to do its task every time it wakes up.
+하지만 스레드는 3초 동안 아무 일도 하지 않습니다. 여러 스레드가 무언가를 반복적으로 시도해야 할 때 `.sleep()`을 자주 씁니다. 가끔만 확인하면 되는데 초당 10만 번씩 시도해 CPU를 잡아먹게 하고 싶지는 않을 테니까요. 그래서 `Duration`을 지정해, 깨어날 때마다 작업을 시도하게 합니다.
 
 
-### Other macros
+### 다른 매크로들
 
-
-Let's take a look at some other macros.
+다른 매크로 몇 가지를 살펴보겠습니다.
 
 `unreachable!()`
 
-This macro is kind of like `todo!()` except it's for code that you will never do. Maybe you have a `match` in an enum that you know will never choose one of the arms, so the code can never be reached. If that's so, you can write `unreachable!()` so the compiler knows that it can ignore that part.
+이 매크로는 `todo!()`와 비슷하지만, 절대 실행되지 않을 코드에 쓰입니다. 열거형의 `match`에서 어떤 분기가 절대 선택되지 않는다는 것을 알고 있다면 `unreachable!()`을 써서 컴파일러가 그 부분을 무시해도 된다고 알려 줄 수 있습니다.
 
-For example, let's say you have a program that writes something when you choose a place to live in. They are in Ukraine, and all of them are nice except Chernobyl. Your program doesn't let anyone choose Chernobyl, because it's not a good place to live right now. But the enum was made a long time ago in someone else's code, and you can't change it. So in the `match` arm you can use the macro here. It looks like this:
+예를 들어 살 곳을 선택하면 메시지를 출력하는 프로그램이 있다고 합시다. 우크라이나의 여러 도시가 있는데 체르노빌만은 현재 살기에 좋지 않아 선택할 수 없다고 가정합니다. 열거형은 오래전에 다른 사람이 만들어서 바꿀 수 없습니다. 이때 `match` 분기에서 이 매크로를 사용할 수 있습니다. 코드는 다음과 같습니다.
 
 ```rust
 enum UkrainePlaces {
@@ -12955,11 +12975,11 @@ fn main() {
 }
 ```
 
-This will print `You will live in Kiev`.
+출력은 `You will live in Kiev`입니다.
 
-`unreachable!()` is also nice for you to read because it reminds you that some part of the code is unreachable. You have to be sure that the code is actually unreachable though. If the compiler ever calls `unreachable!()`, the program will panic.
+`unreachable!()`을 쓰면 코드가 도달 불가능하다는 것을 스스로도 알 수 있어 읽기에도 좋습니다. 물론 실제로 도달할 수 없다는 확신이 있어야 합니다. 실행 중 이 매크로가 호출되면 프로그램은 패닉합니다.
 
-Also, if you ever have unreachable code that the compiler knows about, it will tell you. Here is a quick example:
+컴파일러가 알 수 있는 도달 불가능 코드가 있으면 따로 알려 줍니다. 간단한 예는 이렇습니다.
 
 ```rust
 fn main() {
@@ -12984,20 +13004,20 @@ warning: unreachable pattern
   |
 ```
 
-But `unreachable!()` is for when the compiler can't know, like our other example.
+`unreachable!()`은 컴파일러가 알아내지 못하는 경우를 위해 사용합니다.
 
 
 
 `column!`, `line!`, `file!`, `module_path!`
 
-These four macros are kind of like `dbg!()` because you just put them in to give you debug information. But they don't take any variables - you just use them with the brackets and nothing else. They are easy to learn together:
+이 네 매크로는 `dbg!()`처럼 디버그 정보를 출력하기 위해 넣습니다. 변수를 받지 않고 괄호만 붙여 쓰면 됩니다. 함께 외워 두기 쉽습니다.
 
-- `column!()` gives you the column where you wrote it,
-- `file!()` gives you the name of the file where you wrote it,
-- `line!()` gives you the line where you wrote it, and
-- `module_path!()` gives you the module where it is.
+- `column!()`: 작성한 열 번호
+- `file!()`: 작성한 파일 이름
+- `line!()`: 작성한 줄 번호
+- `module_path!()`: 해당 모듈 경로
 
-The next code shows all three in a simple example. We will pretend there is a lot more code (mods inside mods), because that is why we would want to use these macros. You can imagine a big Rust program over many mods and files.
+다음 예제는 간단한 코드에서 이들을 모두 사용해 봅니다. 실제로는 모듈이 많은 큰 프로그램이라고 상상해 보세요.
 
 ```rust
 pub mod something {
@@ -13041,7 +13061,7 @@ fn main() {
 }
 ```
 
-It prints this:
+출력은 다음과 같습니다.
 
 ```text
 Hello from file src/main.rs
@@ -13054,7 +13074,7 @@ The last country is Portugal inside the module rust_book::something::third_mod
 
 `cfg!`
 
-We know that you can use attributes like `#[cfg(test)]` and `#[cfg(windows)]` to tell the compiler what to do in certain cases. When you have `test`, it will run the code when you run Rust under testing mode (if it's on your computer you type `cargo test`). And when you use `windows`, it will run the code if the user is using Windows. But maybe you just want to change one tiny bit of code depending on the operating system, etc. That's when this macro is useful. It returns a `bool`.
+`#[cfg(test)]`, `#[cfg(windows)]` 같은 속성으로 상황별로 코드를 실행할지 결정할 수 있다는 것을 알고 있습니다. `test`이면 테스트 모드(`cargo test`)에서만 실행되고, `windows`이면 Windows에서만 실행됩니다. 하지만 운영체제 등에 따라 코드 일부만 바꾸고 싶을 때는 이 매크로가 유용합니다. `bool`을 반환합니다.
 
 ```rust
 fn main() {
@@ -13067,13 +13087,13 @@ fn main() {
 }
 ```
 
-This will print differently, depending on your system. The Rust Playground runs on Linux, so it will print:
+시스템에 따라 출력이 달라집니다. Rust 플레이그라운드는 Linux에서 돌기 때문에 이렇게 출력됩니다.
 
 ```text
 ...then in your hard drive, type the directory name followed by a slash. Then you...
 ```
 
-`cfg!()` works for any kind of configuration. Here is an example of a function that runs differently when you use it inside a test.
+`cfg!()`은 어떤 설정이든 사용할 수 있습니다. 테스트에서 사용할 때만 다르게 동작하는 함수를 만들어 보겠습니다.
 
 ```rust
 #[cfg(test)] // cfg! will know to look for the word test
@@ -13103,14 +13123,14 @@ fn main() {
 }
 ```
 
-Now it will run differently depending on the configuration. If you just run the program, it will give you this:
+이제 설정에 따라 다르게 실행됩니다. 그냥 실행하면 다음과 같습니다.
 
 ```text
 Returning 5. This is not a test
 This shouldn't run, returning 0.
 ```
 
-But if you run it in test mode (`cargo test` for Rust on your computer), it will actually run the test. And because the test always returns 5 in this case, it will pass.
+하지만 테스트 모드(`cargo test`)에서 실행하면 실제로 테스트가 돌고, 이 경우 항상 5를 반환하므로 테스트가 통과합니다.
 
 ```text
 running 1 test
@@ -13121,11 +13141,11 @@ test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out
 
 
 
-## Writing macros
+## 매크로 작성하기
 
-Writing macros can be very complicated. You almost never need to write one, but sometimes you might want to because they are very convenient. Writing macros is interesting because they are almost a different language. To write one, you actually use another macro called `macro_rules!`. Then you add your macro name and open a `{}` block. Inside is sort of like a `match` statement.
+매크로를 직접 작성하는 일은 꽤 복잡합니다. 거의 필요 없지만, 가끔은 아주 편리해서 만들고 싶을 때가 있습니다. 매크로 작성은 거의 다른 언어를 쓰는 것처럼 느껴집니다. `macro_rules!`라는 또 다른 매크로를 사용해 작성합니다. 매크로 이름을 적고 `{}` 블록을 열면 되는데, 내부는 `match` 문과 비슷한 형태입니다.
 
-Here's one that only takes `()`, then just returns 6:
+아래는 `()`만 받고 6을 반환하는 간단한 예입니다.
 
 ```rust
 macro_rules! give_six {
@@ -13140,7 +13160,7 @@ fn main() {
 }
 ```
 
-But it's not the same as a `match` statement, because a macro actually doesn't compile anything. It just takes an input and gives an output. Then the compiler checks to see if it makes sense. That's why a macro is like "code that writes code". You will remember that a true `match` statement needs to give the same type, so this won't work:
+하지만 `match`와 같지는 않습니다. 매크로는 실제로 아무것도 컴파일하지 않고 입력을 받아 출력만 만들어 냅니다. 그다음에야 컴파일러가 말이 되는지 확인합니다. 그래서 매크로를 "코드를 만드는 코드"라고 부릅니다. 진짜 `match`는 각 분기의 타입이 같아야 한다는 것을 기억해 보세요. 아래 코드는 동작하지 않습니다.
 
 ```rust
 fn main() {
@@ -13153,7 +13173,7 @@ fn main() {
 }
 ```
 
-It will complain that you want to return `()` in one case, and `i32` in the other.
+한 분기는 `()`, 다른 분기는 `i32`를 반환하려 한다고 불평합니다.
 
 ```text
 error[E0308]: `match` arms have incompatible types
@@ -13168,7 +13188,7 @@ error[E0308]: `match` arms have incompatible types
   | |_____- `match` arms have incompatible types
 ```
 
-But a macro doesn't care, because it's just giving an output. It's not a compiler - it's code before code. So you can do this:
+하지만 매크로는 신경 쓰지 않습니다. 단순히 출력만 만들 뿐, 아직 컴파일러가 아니기 때문입니다. 그래서 이런 코드가 가능합니다.
 
 ```rust
 macro_rules! six_or_print {
@@ -13186,7 +13206,7 @@ fn main() {
 }
 ```
 
-This is just fine, and prints `You didn't give me 6.`. You can also see that it's not a match arm because there's no `_` case. We can only give it `(6)`, or `()`. Anything else will make an error. And the `6` we give it isn't even an `i32`, it's just an input 6. You can actually set anything as the input for a macro, because it's just looking at input to see what it gets. For example:
+문제없이 동작하며 `You didn't give me 6.`을 출력합니다. `_` 분기가 없으니 `match`가 아니라는 것도 알 수 있습니다. `(6)`이나 `()`만 받을 수 있고, 다른 것은 오류입니다. 넘겨준 `6`은 `i32`도 아니고 그냥 입력값 6일 뿐입니다. 매크로는 입력만 보고 판단하므로 어떤 형태든 넣을 수 있습니다. 예를 들어:
 
 ```rust
 macro_rules! might_print {
@@ -13204,14 +13224,14 @@ fn main() {
 }
 ```
 
-So this strange macro only responds to two things: `()` and `(THis is strange input 하하はは哈哈 but it still works)`. Nothing else. It prints:
+이 이상한 매크로는 `()`와 `(THis is strange input 하하はは哈哈 but it still works)` 두 가지에만 반응합니다. 출력은 다음과 같습니다.
 
 ```text
 You guessed the secret message!
 You didn't guess it
 ```
 
-So a macro isn't exactly Rust syntax. But a macro can also understand different types of input that you give it. Take this example:
+매크로는 정확히 Rust 문법과 같지 않습니다. 하지만 전달하는 입력의 종류를 구분할 수도 있습니다. 다음 예를 봅시다.
 
 ```rust
 macro_rules! might_print {
@@ -13225,7 +13245,7 @@ fn main() {
 }
 ```
 
-This will print `You gave me: 6`. The `$input:expr` part is important. It means "for an expression, give it the variable name $input". In macros, variables start with a `$`. In this macro, if you give it one expression, it will print it. Let's try it out some more:
+`You gave me: 6`이 출력됩니다. `$input:expr` 부분이 중요합니다. "표현식을 하나 받아 변수 이름을 $input으로 써라"는 뜻입니다. 매크로의 변수는 `$`로 시작합니다. 이 매크로는 표현식 하나를 받으면 그대로 출력합니다. 몇 가지 더 시도해 봅시다.
 
 ```rust
 macro_rules! might_print {
@@ -13241,7 +13261,7 @@ fn main() {
 }
 ```
 
-This will print:
+출력은 다음과 같습니다.
 
 ```text
 You gave me: ()
@@ -13249,9 +13269,9 @@ You gave me: 6
 You gave me: [8, 9, 7, 10]
 ```
 
-Also note that we wrote `{:?}`, but it won't check to see if `&input` implements `Debug`. It'll just write the code and try to make it compile, and if it doesn't then it gives an error.
+`{:?}`를 썼지만, 매크로는 `&input`이 `Debug`를 구현했는지 확인하지 않습니다. 일단 코드를 만들어 컴파일을 시도하고, 실패하면 그때 에러를 냅니다.
 
-So what can a macro see besides `expr`? They are: `block | expr | ident | item | lifetime | literal  | meta | pat | path | stmt | tt | ty | vis`. This is the complicated part. You can see what each of them means [here](https://doc.rust-lang.org/beta/reference/macros-by-example.html), where it says:
+`expr` 외에 매크로가 볼 수 있는 패턴은 `block | expr | ident | item | lifetime | literal  | meta | pat | path | stmt | tt | ty | vis`입니다. 이 부분이 조금 복잡합니다. 각 의미는 [여기](https://doc.rust-lang.org/beta/reference/macros-by-example.html)에 설명돼 있습니다.
 
 ```text
 item: an Item
@@ -13269,9 +13289,9 @@ vis: a possibly empty Visibility qualifier
 literal: matches -?LiteralExpression
 ```
 
-There is another good site called cheats.rs that explains them [here](https://cheats.rs/#macros-attributes) and gives examples for each.
+cheats.rs라는 사이트에도 [설명](https://cheats.rs/#macros-attributes)과 예제가 잘 정리돼 있습니다.
 
-However, for most macros you will use `expr`, `ident`, and `tt`. `ident` means identifier and is for variable or function names. `tt` means token tree and sort of means any type of input. Let's try a simple macro with both.
+하지만 대부분의 매크로에서는 `expr`, `ident`, `tt` 정도만 사용합니다. `ident`는 변수나 함수 이름 같은 식별자, `tt`는 토큰 트리로 거의 모든 입력을 의미합니다. 둘을 섞은 간단한 매크로를 만들어 봅시다.
 
 ```rust
 macro_rules! check {
@@ -13294,7 +13314,7 @@ fn main() {
 }
 ```
 
-So this will take one `ident` (like a variable name) and an expression and see if they are the same. It prints:
+이 매크로는 `ident` 하나와 표현식 하나를 받아 같은지 비교합니다. 출력은 다음과 같습니다.
 
 ```text
 Is 6 equal to 6? true
@@ -13302,7 +13322,7 @@ Is [7, 8, 9] equal to [7, 8, 9]? true
 Is 6 equal to 10? false
 ```
 
-And here's one macro that takes a `tt` and prints it. It uses a macro called `stringify!` to make a string first.
+이번에는 `tt`를 받아 출력하는 매크로입니다. 먼저 `stringify!` 매크로로 문자열로 바꿉니다.
 
 ```rust
 macro_rules! print_anything {
@@ -13318,20 +13338,18 @@ fn main() {
 }
 ```
 
-This prints:
-
 ```text
 ththdoetd
 87575oehq75onth
 ```
 
-But it won't print if we give it something with spaces, commas, etc. It will think that we are giving it more than one item or extra information, so it will be confused.
+공백이나 쉼표가 들어간 입력은 출력하지 못합니다. 항목이 여러 개라고 생각해 헷갈리기 때문입니다.
 
-This is where macros start to get difficult.
+이 부분부터 매크로가 어려워지기 시작합니다.
 
-To give a macro more than one item at a time, we have to use a different syntax. Instead of `$input`, it will be `$($input1),*`. This means zero or more (this is what * means), separated by a comma. If you want one or more, use `+` instead of `*`.
+한 번에 여러 항목을 주려면 다른 문법을 써야 합니다. `$input` 대신 `$($input1),*`처럼 씁니다. `*`는 0개 이상을 뜻하며 쉼표로 구분합니다. 1개 이상이어야 한다면 `*` 대신 `+`를 사용합니다.
 
-Now our macro looks like this:
+매크로는 이제 이렇게 생겼습니다.
 
 ```rust
 macro_rules! print_anything {
@@ -13349,7 +13367,7 @@ fn main() {
 }
 ```
 
-So it takes any token tree separated by commas, and uses `stringify!` to make it into a string. Then it prints it. It prints:
+쉼표로 구분된 토큰 트리를 받아 `stringify!`로 문자열로 만들고 출력합니다. 결과는 다음과 같습니다.
 
 ```text
 ththdoetd, rcofe
@@ -13357,9 +13375,9 @@ ththdoetd, rcofe
 87575oehq75onth, ntohe, 987987o, 097
 ```
 
-If we used `+` instead of `*` it would give an error, because one time we gave it no input. So `*` is a bit safer option.
+`*` 대신 `+`를 썼다면 입력이 없는 경우 오류가 났을 것입니다. 그래서 `*`이 더 안전합니다.
 
-So now we can start to see the power of macros. In this next example we can actually make our own functions:
+이제 매크로의 힘을 조금 느낄 수 있습니다. 다음 예제에서는 아예 함수를 만들어 봅니다.
 
 ```rust
 macro_rules! make_a_function {
@@ -13380,7 +13398,7 @@ fn main() {
 }
 ```
 
-This prints:
+출력은 다음과 같습니다.
 
 ```text
 5, 5, 6, I
@@ -13388,7 +13406,7 @@ this, is, really, nice
 ```
 
 
-So now we can start to understand other macros. You can see that some of the macros we've already been using are pretty simple. Here's the one for `write!` that we used to write to files:
+이제 다른 매크로들도 이해할 수 있을 것입니다. 이미 사용했던 매크로들 중에도 꽤 단순한 것들이 있습니다. 파일에 쓸 때 썼던 `write!` 매크로를 보겠습니다.
 
 ```rust
 macro_rules! write {
@@ -13396,16 +13414,16 @@ macro_rules! write {
 }
 ```
 
-So to use it, you enter this:
+사용할 때는
 
-- an expression (`expr`) that gets the variable name `$dst`.
-- everything after that. If it wrote `$arg:tt` then it would only take one, but because it wrote `$($arg:tt)*` it takes zero, one, or any number.
+- 변수 이름을 담을 표현식(`expr`) `$dst`
+- 그 뒤에 오는 모든 인수. `$arg:tt`였다면 하나만 받지만 `$($arg:tt)*`라서 0개든 여러 개든 받습니다.
 
-Then it takes `$dst` and uses a method called `write_fmt` on it. Inside that, it uses another macro called `format_args!` that takes all `$($arg)*`, or all the arguments we put in.
+그다음 `$dst`에 `write_fmt` 메서드를 호출하고, 내부에서 우리가 넣은 모든 `$($arg)*`를 `format_args!` 매크로에 넘깁니다.
 
 
 
-Now let's take a look at the `todo!` macro. That's the one you use when you want the program to compile but haven't written your code yet. It looks like this:
+이제 `todo!` 매크로를 보겠습니다. 코드를 아직 안 썼지만 컴파일은 되게 하고 싶을 때 사용합니다. 모양은 이렇습니다.
 
 ```rust
 macro_rules! todo {
@@ -13414,12 +13432,12 @@ macro_rules! todo {
 }
 ```
 
-This one has two options: you can enter `()`, or a number of token trees (`tt`).
+두 가지 사용법이 있습니다. `()`를 주거나 여러 개의 토큰 트리(`tt`)를 줄 수 있습니다.
 
-- If you enter `()`, it just uses `panic!` with a message. So you could actually just write `panic!("not yet implemented")` instead of `todo!` and it would be the same.
-- If you enter some arguments, it will try to print them. You can see the same `format_args!` macro inside, which works like `println!`.
+- `()`를 주면 메시지와 함께 `panic!`을 호출합니다. 따라서 `todo!` 대신 `panic!("not yet implemented")`라고 써도 같습니다.
+- 인수를 주면 이를 출력하려고 시도합니다. 안쪽에 `println!`처럼 동작하는 `format_args!`가 보입니다.
 
-So if you write this, it will work too:
+그래서 이렇게 써도 됩니다.
 
 ```rust
 fn not_done() {
@@ -13433,14 +13451,14 @@ fn main() {
 }
 ```
 
-This will print:
+출력은 다음과 같습니다.
 
 ```text
 thread 'main' panicked at 'not yet implemented: Not done yet because of lack of time. Check back in 8 hours', src/main.rs:4:5
 ```
 
 
-Inside a macro you can even call the same macro. Here's one:
+매크로 내부에서 자기 자신을 호출할 수도 있습니다. 예를 들어:
 
 ```rust
 macro_rules! my_macro {
@@ -13463,9 +13481,9 @@ fn main() {
 }
 ```
 
-This one takes either `()`, or one expression, or many expressions. But it ignores all the expressions no matter what you put in, and just calls `my_macro!` on `()`. So the output is just `Let's print this`, four times.
+이 매크로는 `()`, 하나의 표현식, 여러 표현식 모두 받을 수 있지만, 입력과 상관없이 모두 무시하고 `my_macro!()`만 호출합니다. 그래서 출력은 `Let's print this`가 네 번입니다.
 
-You can see the same thing in the `dbg!` macro, which also calls itself.
+비슷한 구조를 `dbg!` 매크로에서도 볼 수 있습니다. 이것도 자기 자신을 다시 호출합니다.
 
 ```rust
 macro_rules! dbg {
@@ -13491,9 +13509,9 @@ macro_rules! dbg {
 }
 ```
 
-(`eprintln!` is the same as `println!` except it prints to `io::stderr` instead of `io::stdout`. There is also `eprint!` that doesn't add a new line)
+(`eprintln!`은 `println!`과 같지만 `io::stdout` 대신 `io::stderr`로 출력합니다. 새 줄을 추가하지 않는 `eprint!`도 있습니다)
 
-So we can try this out ourself.
+직접 시험해 봅시다.
 
 ```rust
 fn main() {
@@ -13501,9 +13519,9 @@ fn main() {
 }
 ```
 
-That matches the first arm, so it will print the file name and line name with the `file!` and `line!` macros. It prints `[src/main.rs:2]`.
+첫 번째 분기와 일치하므로 `file!`, `line!` 매크로로 파일 이름과 줄 번호를 출력합니다. `[src/main.rs:2]`가 찍힙니다.
 
-Let's try it with this:
+이번에는 이렇게 해 봅시다.
 
 ```rust
 fn main() {
@@ -13511,7 +13529,7 @@ fn main() {
 }
 ```
 
-This will match the next arm, because it's one expression. It will then call the input `tmp` and use this code: ` $crate::eprintln!("[{}:{}] {} = {:#?}", $crate::file!(), $crate::line!(), $crate::stringify!($val), &tmp);`. So it will print with `file!` and `line!`, then `$val` made into a `String`, and pretty print with `{:#?}` for `tmp`. So for our input it will write this:
+하나의 표현식이므로 다음 분기와 일치합니다. 입력을 `tmp`로 받아 ` $crate::eprintln!("[{}:{}] {} = {:#?}", $crate::file!(), $crate::line!(), $crate::stringify!($val), &tmp);`를 실행합니다. `file!`, `line!`으로 위치를 출력하고, `$val`을 문자열로 만든 뒤 `tmp`를 예쁘게 출력합니다. 우리의 입력에 대해선 이렇게 나옵니다.
 
 ```text
 [src/main.rs:2] vec![8, 9, 10] = [
@@ -13521,22 +13539,22 @@ This will match the next arm, because it's one expression. It will then call the
 ]
 ```
 
-And for the rest of it it just calls `dbg!` on itself even if you put in an extra comma.
+나머지 분기도 마찬가지로 `dbg!`를 다시 호출합니다. 쉼표가 하나 더 있어도 마찬가지입니다.
 
-As you can see, macros are very complicated! Usually you only want a macro to automatically do something that a simple function can't do very well. The best way to learn about macros is to look at other macro examples. Not many people can quickly write macros without problems. So don't think that you need to know everything about macros to know how to write in Rust. But if you read other macros, and change them a little, you can easily borrow their power. Then you might start to get comfortable with writing your own.
+보듯이 매크로는 꽤 복잡합니다. 보통 단순한 함수로 하기 어려운 일을 자동화하고 싶을 때만 매크로를 사용합니다. 매크로를 배우는 가장 좋은 방법은 다른 매크로 예제를 보는 것입니다. 많은 사람이 매크로를 금방 완벽히 작성하지는 못합니다. Rust를 잘 쓰려면 매크로를 모두 알아야 한다고 생각하지 마세요. 다른 매크로를 읽고 조금만 바꿔도 충분히 힘을 빌릴 수 있습니다. 그러다 보면 직접 작성하는 것도 편해질 것입니다.
 
 
-# Part 2 - Rust on your computer
+# Part 2 - 내 컴퓨터에서 Rust 사용하기
 
-You saw that we can learn almost anything in Rust just using the Playground. But if you learned everything so far, you will probably want Rust on your computer now. There are always things that you can't do with the Playground like using files or code in more than just one file. Some other things you need Rust on your computer for are input and flags. But most important is that with Rust on your computer you can use crates. We already learned about crates, but in the Playground you could only use the most popular ones. But with Rust on your computer you can use any crate in your program.
+플레이그라운드만으로도 Rust의 대부분을 배울 수 있었습니다. 하지만 여기까지 왔다면 이제 내 컴퓨터에 Rust를 설치하고 싶을 겁니다. 플레이그라운드로는 파일을 다루거나 여러 파일로 코드를 나누는 등 할 수 없는 일들이 있습니다. 입력 처리나 플래그도 그렇고, 가장 중요한 것은 크레이트 사용입니다. 크레이트는 이미 배웠지만 플레이그라운드에서는 인기 있는 것만 쓸 수 있었습니다. 로컬에 Rust를 설치하면 원하는 어떤 크레이트든 프로그램에 넣을 수 있습니다.
 
 ## cargo
 
-`rustc` means Rust compiler, and it's what does the actual compiling. A rust file ends with an `.rs`. But most people don't write something like `rustc main.rs` to compile. They use something called `cargo`, which is the main package manager for Rust.
+`rustc`는 Rust 컴파일러로, 실제 컴파일을 수행합니다. Rust 파일 확장자는 `.rs`입니다. 하지만 대부분 `rustc main.rs` 같은 명령으로 직접 컴파일하지 않고, Rust의 메인 패키지 매니저인 `cargo`를 사용합니다.
 
-One note about the name: it's called `cargo` because when you put crates together, you get cargo. A crate is a wooden box that you see on ships or trucks, but you remember that every Rust project is also called a crate. Then when you put them together you get the whole cargo.
+이름에 대한 작은 이야기: 상자를 모아 두면 cargo(화물)가 되므로 cargo라고 부릅니다. 나무 상자를 crate라고 하듯이 Rust 프로젝트도 crate라고 부르니, 여러 crate를 모으면 cargo가 됩니다.
 
-You can see this when you use cargo to run a project. Let's try something simple with `rand`: we'll just randomly choose between eight letters.
+프로젝트를 cargo로 실행할 때 이것을 볼 수 있습니다. `rand`를 사용한 간단한 예를 해 보겠습니다. 알파벳 8개 중 무작위로 고릅니다.
 
 ```rust
 use rand::seq::SliceRandom; // Use this for .choose over slices
@@ -13552,7 +13570,7 @@ fn main() {
 }
 ```
 
-This will print something like `b c g h e a`. But we want to see what `cargo` does first. To use `cargo` and run our program, usually we type `cargo run`. This will build our program and run it for us. But when it starts compiling, it does something like this:
+`b c g h e a` 같은 출력이 나옵니다. 먼저 `cargo`가 무엇을 하는지 살펴보겠습니다. 보통 `cargo run`을 입력하면 프로그램을 빌드하고 실행해 줍니다. 이때 컴파일을 시작하면 아래처럼 동작합니다.
 
 ```text
    Compiling getrandom v0.1.14
@@ -13567,9 +13585,9 @@ This will print something like `b c g h e a`. But we want to see what `cargo` do
 g f c f h b
 ```
 
-So it looks like it didn't just bring in `rand`, but some others too. That's because we need `rand` for our crate, but `rand` also has some code that needs other crates too. So `cargo` will find all the crates we need and put them together. In our case we only had seven, but on very big projects you may have 200 or more crates to bring in.
+`rand`뿐 아니라 다른 것들도 함께 가져온 것을 볼 수 있습니다. 우리의 크레이트가 `rand`를 필요로 하고, `rand`도 다른 크레이트들을 필요로 하기 때문입니다. `cargo`가 필요한 모든 크레이트를 찾아 모아 줍니다. 여기서는 일곱 개뿐이지만, 큰 프로젝트에서는 200개 이상이 될 수도 있습니다.
 
-This is where you can see the tradeoff for Rust. Rust is extremely fast, because it compiles ahead of time. It does this by looking through the code and looking to see what the code you write actually does. For example, you might write this generic code:
+이 지점에서 Rust의 트레이드오프를 볼 수 있습니다. Rust는 미리 컴파일하기 때문에 매우 빠릅니다. 코드를 모두 살펴보고 실제로 무엇을 하는지 파악해 빠르게 실행되는 프로그램을 만들어 줍니다. 예를 들어 이런 제네릭 코드를 작성했다고 해 봅시다.
 
 ```rust
 use std::fmt::Display;
@@ -13585,28 +13603,28 @@ fn main() {
 }
 ```
 
-This function can take anything with `Display`, so we gave it a `&str` and next gave it a `f64` and that is no problem for us. But the compiler doesn't look at generics, because it doesn't want to do anything at runtime. It wants to put together a program that can run by itself as fast as possible. So when it looks at the first part with `"Windy"`, it doesn't see `fn print_and_return_thing<T: Display>(input: T) -> T`. It sees something like `fn print_and_return_thing(input: &str) -> &str`. And next it sees `fn print_and_return_thing(input: f64) -> f64`. All the checking about traits and so on is done during compile time. That's why generics take longer to compile, because it needs to figure them out, and make it concrete.
+이 함수는 `Display`를 구현한 어떤 것이든 받을 수 있어 `&str`도 받고, `f64`도 문제 없습니다. 하지만 컴파일러는 런타임에 제네릭을 보고 싶어하지 않습니다. 가능한 한 빨리 실행될 독립적인 프로그램을 만들고 싶어 합니다. 그래서 `"Windy"`를 볼 때 `fn print_and_return_thing<T: Display>(input: T) -> T`가 아니라 `fn print_and_return_thing(input: &str) -> &str`처럼 구체화된 형태로 봅니다. 다음에는 `fn print_and_return_thing(input: f64) -> f64`처럼 봅니다. 트레이트 확인 등은 모두 컴파일 시점에 끝냅니다. 제네릭의 컴파일이 더 오래 걸리는 이유가 여기에 있습니다.
 
-One more thing: Rust in 2020 is working hard on compile time, because this part takes the longest. Every version of Rust is a little bit faster at compiling, and there are some other plans to speed it up. But in the meantime, here's what you should know:
+추가로, Rust는 2020년 이후 컴파일 시간을 줄이기 위해 계속 개선 중입니다. 버전이 올라갈수록 조금씩 빨라지고, 더 빨라질 계획도 있습니다. 당장은 아래만 기억하면 됩니다.
 
-- `cargo build` will build your program so you can run it
-- `cargo run` will build your program and run it
-- `cargo build --release` and `cargo run --release` will do the same but in release mode. What's that? Release mode is for when your code is finally done. Then Rust will take even longer to compile, but it does this because it uses everything it knows to make it faster. Release mode is actually a *lot* faster than the regular mode, which is called debug mode. That's because it compiles quicker and has more debug information. The regular `cargo build` is called a "debug build" and `cargo build --release` is called a "release build".
-- `cargo check` is a way to check your code. It's like compiling except that it won't actually make your program. This is a good way to check your code a lot because it doesn't take as long as `build` or `run`.
+- `cargo build`: 프로그램을 빌드해 실행할 수 있게 만듭니다.
+- `cargo run`: 빌드하고 곧바로 실행합니다.
+- `cargo build --release`, `cargo run --release`: 릴리스 모드로 빌드/실행합니다. 릴리스 모드는 코드가 완성되었을 때 사용합니다. 컴파일은 더 오래 걸리지만 가능한 최적화를 모두 적용합니다. 릴리스 빌드는 일반(디버그) 빌드보다 훨씬 빠르게 실행됩니다. 일반 `cargo build`는 "debug build", `cargo build --release`는 "release build"라고 부릅니다.
+- `cargo check`: 프로그램을 실제로 만들지 않고 코드만 빠르게 검사합니다. `build`나 `run`보다 짧은 시간에 자주 확인할 때 좋습니다.
 
-By the way, the `--release` part of the command is called a `flag`. That means extra information in a command.
+참고로 명령어의 `--release` 같은 것을 플래그라고 부릅니다. 명령에 붙이는 추가 정보입니다.
 
-Some other things you need to know are:
+알아 두면 좋은 다른 명령은 다음과 같습니다.
 
-- `cargo new`. You do this to create a new Rust project. After `new`, write the name of the project and `cargo` will make the folder and all the files you need.
-- `cargo clean`. When you add crates to `Cargo.toml`, the computer will download all the files it needs and they can take a lot of space. If you don't want them on your computer anymore, type `cargo clean`.
+- `cargo new`: 새 Rust 프로젝트를 만듭니다. `new` 뒤에 프로젝트 이름을 쓰면 필요한 폴더와 파일을 만들어 줍니다.
+- `cargo clean`: `Cargo.toml`에 크레이트를 추가하면 필요한 파일을 모두 다운로드해 용량을 꽤 차지할 수 있습니다. 더 이상 보관하고 싶지 않다면 `cargo clean`으로 지울 수 있습니다.
 
-One more thing about the compiler: it only takes the most time when you use `cargo build` or `cargo run` the first time. After that it will remember, and it will compile fast again. But if you use `cargo clean` and then run `cargo build`, it will have to compile slowly one more time.
+컴파일러에 대해 한 가지 더: `cargo build`나 `cargo run`을 처음 실행할 때 가장 오래 걸립니다. 그다음부터는 빌드 결과를 기억해 빠르게 컴파일합니다. 다만 `cargo clean`을 하면 다시 처음처럼 시간이 걸립니다.
 
 
-## Taking user input
+## 사용자 입력 받기
 
-One easy way to take input from the user is with `std::io::stdin`. This means "standard in", which is the input from the keyboard. With `stdin()` you can get user input, but then you will want to put it in a `&mut String` with `.read_line()`. Here is a simple example of that, but it both works and doesn't work:
+사용자 입력을 받는 쉬운 방법은 `std::io::stdin`을 사용하는 것입니다. 키보드 입력을 의미하는 "standard in"입니다. `stdin()`으로 입력을 받을 수 있지만, `.read_line()`으로 `&mut String`에 넣어야 합니다. 간단한 예를 보겠습니다. 일부는 잘 작동하고 일부는 그렇지 않습니다.
 
 ```rust
 use std::io;
@@ -13624,7 +13642,7 @@ fn main() {
 }
 ```
 
-Here is what an output looks like:
+출력은 다음과 같습니다.
 
 ```text
 Please type something, or x to escape:
@@ -13644,7 +13662,7 @@ x
 You wrote x
 ```
 
-It takes our input and gives it back, and it even knows that we typed `x`. But it doesn't exit the program. The only way to get out is to close the window, or type ctrl and c. Let's change the `{}` to `{:?}` in `println!` to get more information (or you could use `dbg!(&input_string)` if you like that macro). Now it says:
+입력한 값을 그대로 돌려주고 `x`를 입력한 것도 알지만 프로그램이 종료되지는 않습니다. 창을 닫거나 ctrl+c를 눌러야만 끝납니다. 더 자세히 보기 위해 `println!`의 `{}`를 `{:?}`로 바꿔 보겠습니다(혹은 `dbg!(&input_string)`을 써도 됩니다). 이제 이렇게 나옵니다.
 
 ```text
 Please type something, or x to escape:
@@ -13660,7 +13678,7 @@ You wrote "x\r\n"
 
 
 
-This is because the keyboard input is actually not just `something`, it is `something` and the `Enter` key. There is an easy method to fix this called `.trim()`, which removes all the whitespace. Whitespace, by the way, is all [these characters](https://doc.rust-lang.org/reference/whitespace.html):
+키보드 입력에는 `something`뿐 아니라 `Enter` 키도 함께 들어가기 때문입니다. `.trim()`을 쓰면 공백 문자를 모두 제거할 수 있습니다. 공백 문자에는 [다음과 같은 것들](https://doc.rust-lang.org/reference/whitespace.html)이 포함됩니다.
 
 ```text
 U+0009 (horizontal tab, '\t')
@@ -13676,7 +13694,7 @@ U+2028 (line separator)
 U+2029 (paragraph separator)
 ```
 
-So that will turn `x\r\n` into just `x`. Now it works:
+따라서 `x\r\n`이 `x`로 바뀝니다. 이제 제대로 동작합니다.
 
 ```rust
 use std::io;
@@ -13694,7 +13712,7 @@ fn main() {
 }
 ```
 
-Now it will print:
+출력은 다음과 같습니다.
 
 ```text
 Please type something, or x to escape:
@@ -13712,7 +13730,7 @@ See you later!
 
 
 
-There is another kind of user input called `std::env::Args` (env means environment). `Args` is what the user types when starting the program. There is actually always at least one `Arg` in a program. Let's write a program that only prints them using `std::env::args()` to see what they are.
+사용자 입력에는 `std::env::Args`도 있습니다(env는 environment의 약자). `Args`는 프로그램을 시작할 때 사용자가 입력한 인수입니다. 프로그램에는 항상 적어도 하나의 `Arg`가 있습니다. `std::env::args()`를 이용해 이것들만 출력하는 프로그램을 작성해 보겠습니다.
 
 ```rust
 fn main() {
@@ -13720,19 +13738,19 @@ fn main() {
 }
 ```
 
-If we write `cargo run` then it prints something like this:
+`cargo run`을 입력하면 다음과 같이 출력됩니다.
 
 ```text
 Args { inner: ["target\\debug\\rust_book.exe"] }
 ```
 
-Let's give it more input and see what it does. We'll type `cargo run but with some extra words`. It gives us:
+입력을 더 넣어 보겠습니다. `cargo run but with some extra words`를 입력하면 이렇게 나옵니다.
 
 ```text
 Args { inner: ["target\\debug\\rust_book.exe", "but", "with", "some", "extra", "words"] }
 ```
 
-Interesting. And when we look at [the page for Args](https://doc.rust-lang.org/std/env/struct.Args.html), we see that it implements `IntoIterator`. That means we can do all the things we know about iterators to read and change it. Let's try this:
+흥미롭습니다. [Args 문서](https://doc.rust-lang.org/std/env/struct.Args.html)를 보면 `IntoIterator`를 구현한 것을 알 수 있습니다. 따라서 반복자처럼 다룰 수 있습니다. 다음 코드를 보겠습니다.
 
 ```rust
 use std::env::args;
@@ -13757,7 +13775,7 @@ You entered: extra
 You entered: words
 ```
 
-You can see that the first argument is always the program name, so you will often want to skip it, like this:
+첫 번째 인수는 항상 프로그램 이름이니 보통 이렇게 건너뜁니다.
 
 ```rust
 use std::env::args;
@@ -13771,7 +13789,7 @@ fn main() {
 }
 ```
 
-That will print:
+출력은 다음과 같습니다.
 
 ```text
 You wrote but, which in capital letters is BUT
@@ -13781,7 +13799,7 @@ You wrote extra, which in capital letters is EXTRA
 You wrote words, which in capital letters is WORDS
 ```
 
-One common use for `Args` is for user settings. You can make sure that the user writes the input you need, and only run the program if it's right. Here's a small program that either makes letters big (capital) or small (lowercase):
+`Args`는 사용자 설정에 자주 활용됩니다. 필요한 입력이 맞을 때만 프로그램을 실행하도록 만들 수 있습니다. 아래는 입력에 따라 대문자나 소문자로 바꿔 주는 작은 프로그램입니다.
 
 ```rust
 use std::env::args;
@@ -13815,7 +13833,7 @@ fn main() {
 }
 ```
 
-Here are some examples of what it gives:
+몇 가지 실행 예를 보겠습니다.
 
 Input: `cargo run please make capitals`:
 
@@ -13850,7 +13868,7 @@ too?
 
 
 
-Besides `Args` given by the user, available in `std::env::args()`, there are also `Vars` which are the system variables. Those are the basic settings for the program that the user didn't type in. You can use `std::env::vars()` to see them all as a `(String, String)`. There are very many. For example:
+사용자가 넣은 `Args` 외에도 시스템 환경 변수가 있습니다. 기본 설정이며 사용자가 직접 입력하지 않은 값들입니다. `std::env::vars()`로 `(String, String)` 쌍을 모두 볼 수 있습니다. 매우 많습니다. 예를 들어:
 
 ```rust
 fn main() {
@@ -13860,7 +13878,7 @@ fn main() {
 }
 ```
 
-Just doing this shows you all the information about your user session. It will show information like this:
+이렇게 하면 사용자 세션에 대한 모든 정보를 볼 수 있습니다. 예시는 다음과 같습니다.
 
 ```text
 ("CARGO", "/playground/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo")
@@ -13894,9 +13912,9 @@ Just doing this shows you all the information about your user session. It will s
 ("_", "/usr/bin/timeout")
 ```
 
-So if you need this information, `Vars` is what you want.
+이런 정보가 필요하다면 `Vars`를 사용하면 됩니다.
 
-The easiest way to get a single `Var` is by using the `env!` macro. You just give it the name of the variable, and it will give you a `&str` with the value. It won't work if the variable is spelled wrong or does not exist, so if you aren't sure then use `option_env!` instead. If we write this on the Playground:
+단일 환경 변수를 얻는 가장 쉬운 방법은 `env!` 매크로입니다. 변수 이름을 넘기면 그 값을 `&str`로 줍니다. 잘못된 이름이거나 존재하지 않으면 동작하지 않으니 확실하지 않다면 `option_env!`를 사용하세요. 플레이그라운드에서 아래처럼 써 보겠습니다.
 
 ```rust
 fn main() {
@@ -13906,7 +13924,7 @@ fn main() {
 }
 ```
 
-then we get the output:
+출력은 다음과 같습니다.
 
 ```text
 playground
@@ -13914,15 +13932,15 @@ Can't find ROOT
 /playground/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/cargo
 ```
 
-So `option_env!` is always going to be the safer macro. `env!` is better if you actually want the program to crash when you can't find the environment variable.
+`option_env!`가 더 안전한 매크로임을 알 수 있습니다. 환경 변수가 없을 때 프로그램을 바로 종료시키고 싶다면 `env!`가 더 적합합니다.
 
 
 
-## Using files
+## 파일 다루기
 
-Now that we are using Rust on the computer, we can start working with files. You will notice that now we will start to see more and more `Result`s in our code. That is because once you start working with files and similar things, many things can go wrong. A file might not be there, or maybe the computer can't read it.
+이제 로컬에서 Rust를 쓰니 파일 작업을 해 볼 수 있습니다. 코드에 `Result`가 점점 더 많이 등장하는 것을 볼 겁니다. 파일 처리처럼 실패할 수 있는 일이 많기 때문입니다. 파일이 없을 수도 있고, 읽기 권한이 없을 수도 있습니다.
 
-You might remember that if you want to use the `?` operator, it has to return a `Result` in the function it is in. If you can't remember the error type, you can just give it nothing and let the compiler tell you. Let's try that with a function that tries to make a number with `.parse()`.
+`?` 연산자를 쓰려면 해당 함수가 `Result`를 반환해야 한다는 것을 기억하세요. 에러 타입을 기억하지 못하겠다면 일단 비워 두고 컴파일러가 알려주게 할 수 있습니다. `.parse()`로 숫자를 만들려는 함수로 시도해 보겠습니다.
 
 ```rust
 // ⚠️
@@ -13936,7 +13954,7 @@ fn main() {
 }
 ```
 
-The compiler tells us exactly what to do:
+컴파일러가 무엇을 해야 하는지 정확히 알려 줍니다.
 
 ```text
 error[E0308]: mismatched types
@@ -13951,7 +13969,7 @@ error[E0308]: mismatched types
              found enum `std::result::Result<_, std::num::ParseIntError>`
 ```
 
-Great! So we just change the return to what the compiler says:
+좋습니다! 컴파일러가 알려 준 대로 반환 타입을 바꿔 줍시다.
 
 ```rust
 use std::num::ParseIntError;
@@ -13966,14 +13984,14 @@ fn main() {
 }
 ```
 
-Now the program works!
+이제 프로그램이 잘 동작합니다.
 
 ```text
 Ok(88)
 Ok(5)
 ```
 
-So now we want to use `?` to just give us the value if it works, and the error if it doesn't. But how to do this in `fn main()`? If we try to use `?` in main, it won't work.
+이제 `?`를 사용해 성공하면 값만, 실패하면 에러만 넘기고 싶습니다. 그런데 `fn main()`에서 `?`를 쓰려고 하면 잘 되지 않습니다.
 
 ```rust
 // ⚠️
@@ -13989,7 +14007,7 @@ fn main() {
 }
 ```
 
-It says:
+메시지는 다음과 같습니다.
 
 ```text
 error[E0277]: the `?` operator can only be used in a function that returns `Result` or `Option` (or another type that implements `std::ops::Try`)
@@ -14003,7 +14021,7 @@ error[E0277]: the `?` operator can only be used in a function that returns `Resu
    | |_- this function should return `Result` or `Option` to accept `?`
 ```
 
-But actually `main()` can return a `Result`, just like any other function. If our function works, we don't want to return anything (main() isn't giving anything to anything else). And if it doesn't work, we will return the same error. So we can write it like this:
+하지만 `main()`도 다른 함수처럼 `Result`를 반환할 수 있습니다. 성공하면 돌려줄 값이 없고(어디에도 값을 주지 않으니) 실패하면 같은 에러를 반환하면 됩니다. 이렇게 작성할 수 있습니다.
 
 ```rust
 use std::num::ParseIntError;
@@ -14019,7 +14037,7 @@ fn main() -> Result<(), ParseIntError> {
 }
 ```
 
-Don't forget the `Ok(())` at the end: this is very common in Rust. It means `Ok`, inside of which is `()`, which is our return value. Now it prints:
+마지막의 `Ok(())`를 잊지 마세요. Rust에서 아주 흔합니다. `Ok` 안에 반환값 `()`가 있다는 뜻입니다. 이제 출력은 다음과 같습니다.
 
 ```text
 88
@@ -14027,21 +14045,21 @@ Don't forget the `Ok(())` at the end: this is very common in Rust. It means `Ok`
 ```
 
 
-This wasn't very useful when just using `.parse()`, but it will be with files. That's because `?` also changes error types for us. Here's what [the page for the ? operator](https://doc.rust-lang.org/std/macro.try.html) says in simple English:
+`.parse()`만으로는 크게 와닿지 않지만, 파일 작업에서는 유용합니다. `?`가 에러 타입을 바꿔주기도 하기 때문입니다. [? 연산자 페이지](https://doc.rust-lang.org/std/macro.try.html)에서는 이렇게 설명합니다.
 
 ```text
 If you get an `Err`, it will get the inner error. Then `?` does a conversion using `From`. With that it can change specialized errors to more general ones. The error it gets is then returned.
 ```
 
-Also, Rust has a convenient `Result` type when using `File`s and similar things. It's called `std::io::Result`, and this is what you usually see in `main()` when you are using `?` to open and do things to files. It's actually a type alias. It looks like this:
+또한 파일 관련 작업에는 편리한 `Result` 타입인 `std::io::Result`가 있습니다. 파일 작업에서 `?`를 쓸 때 `main()`의 반환 타입으로 자주 보게 될 겁니다. 사실 타입 별칭이며, 이렇게 정의되어 있습니다.
 
 ```text
 type Result<T> = Result<T, Error>;
 ```
 
-So it is a `Result<T, Error>`, but we only need to write the `Result<T>` part.
+즉 `Result<T, Error>`지만 `Result<T>`만 적으면 됩니다.
 
-Now let's try working with files for the first time. `std::fs` is where the methods are for working with files, and with `std::io::Write` you can write in them. With that we can use `.write_all()` to write into the file.
+이제 실제로 파일을 다뤄 봅시다. 파일 관련 메서드는 `std::fs`에 있고, `std::io::Write`를 사용하면 파일에 쓸 수 있습니다. `.write_all()`로 파일에 내용을 기록해 보겠습니다.
 
 ```rust
 use std::fs;
@@ -14056,9 +14074,9 @@ fn main() -> std::io::Result<()> {
 }
 ```
 
-Then if you click on the new file `myfilename.txt`, it will say `Let's put this in the file`.
+새로 생긴 `myfilename.txt`를 열어 보면 `Let's put this in the file`이 들어 있습니다.
 
-We don't need to do this on two lines though, because we have the `?` operator. It will pass on the result we want if it works, kind of like when you use lots of methods on an iterator. This is when `?` becomes very convenient.
+`?` 연산자가 있으니 두 줄로 쓸 필요는 없습니다. 성공하면 결과를 그대로 넘겨 주므로 이터레이터에 메서드를 줄줄이 붙이는 것과 비슷합니다. 이럴 때 `?`가 아주 편리합니다.
 
 ```rust
 use std::fs;
@@ -14070,17 +14088,17 @@ fn main() -> std::io::Result<()> {
 }
 ```
 
-So this is saying "Please try to create a file and check if it worked. If it did, then use `.write_all()` and then check if that worked."
+즉 "파일을 만들고 성공했는지 확인한 다음, 성공했다면 `.write_all()`을 호출하고 그것도 성공했는지 확인하라"는 뜻입니다.
 
-And in fact, there is also a function that does both of these things together. It's called `std::fs::write`. Inside it you give it the file name you want, and the content you want to put inside. Again, careful! It will delete everything in that file if it already exists. Also, it lets you write a `&str` without `b` in front, because of this:
+두 작업을 한 번에 해 주는 함수도 있습니다. `std::fs::write`입니다. 파일 이름과 넣을 내용을 인수로 전달하면 됩니다. 다시 한번 주의! 같은 이름의 파일이 있으면 내용을 모두 지웁니다. 또 시그니처 덕분에 앞에 `b`를 붙이지 않은 `&str`도 쓸 수 있습니다.
 
 ```rust
 pub fn write<P: AsRef<Path>, C: AsRef<[u8]>>(path: P, contents: C) -> Result<()>
 ```
 
-`AsRef<[u8]>` is why you can give it either one.
+`AsRef<[u8]>` 덕분에 둘 다 사용할 수 있습니다.
 
-It's very simple:
+사용법은 아주 간단합니다.
 
 ```rust
 use std::fs;
@@ -14096,11 +14114,10 @@ Dad: Yep. The world didn't turn color until sometimes in the 1930s...")?;
 }
 ```
 
-So that's the file we will use. It's a conversation with a comic book character named Calvin and his dad, who is not serious about his question. With this we can create a file to use every time.
+이 파일을 계속 사용할 것입니다. 만화 캐릭터 Calvin과 장난치는 아버지의 대화입니다. 이렇게 해서 파일을 하나 만들어 두었습니다.
 
 
-
-Opening a file is just as easy as creating one. You just use `open()` instead of `create()`. After that (if it finds your file), you can do things like `read_to_string()`. To do that you can create a mutable `String` and read the file into there. It looks like this:
+파일을 여는 것도 만드는 것만큼 쉽습니다. `create()` 대신 `open()`을 쓰면 됩니다. 이후(파일을 찾았을 때)는 `read_to_string()` 같은 작업을 할 수 있습니다. 가변 `String`을 만들어 파일 내용을 읽어 넣으면 됩니다. 코드는 다음과 같습니다.
 
 ```rust
 use std::fs;
@@ -14125,14 +14142,14 @@ Dad: Yep. The world didn't turn color until sometimes in the 1930s...")?;
 }
 ```
 
-That will print:
+출력은 다음과 같습니다.
 
 ```rust
 CALVIN: DAD, HOW COME OLD PHOTOGRAPHS ARE ALWAYS BLACK AND WHITE? DIDN'T THEY HAVE COLOR FILM BACK THEN? DAD: SURE THEY DID. IN 
 FACT, THOSE PHOTOGRAPHS *ARE* IN COLOR. IT'S JUST THE *WORLD* WAS BLACK AND WHITE THEN. CALVIN: REALLY? DAD: YEP. THE WORLD DIDN'T TURN COLOR UNTIL SOMETIMES IN THE 1930S...
 ```
 
-Okay, what if we want to create a file but not do it if there is already another file with the same name? Maybe you don't want to delete the other file if it's already there just to make a new one. To do this, there is a struct called `OpenOptions`. Actually, we've been using `OpenOptions` all this time and didn't know it. Take a look at the source for `File::open`:
+만약 같은 이름의 파일이 이미 있을 때는 새로 만들지 않고 싶다면 어떻게 할까요? 기존 파일을 지우고 싶지 않을 수도 있습니다. 이럴 때 `OpenOptions`라는 구조체를 씁니다. 사실 `OpenOptions`는 지금까지도 계속 써 왔습니다. `File::open`의 소스를 보면 알 수 있습니다.
 
 ```rust
 pub fn open<P: AsRef<Path>>(path: P) -> io::Result<File> {
@@ -14140,7 +14157,7 @@ pub fn open<P: AsRef<Path>>(path: P) -> io::Result<File> {
     }
 ```
 
-Interesting, that looks like the builder pattern that we learned. It's the same for `File::create`:
+배웠던 빌더 패턴처럼 보입니다. `File::create`도 마찬가지입니다.
 
 ```rust
 pub fn create<P: AsRef<Path>>(path: P) -> io::Result<File> {
@@ -14148,16 +14165,16 @@ pub fn create<P: AsRef<Path>>(path: P) -> io::Result<File> {
     }
 ```
 
-If you go to [the page for OpenOptions](https://doc.rust-lang.org/std/fs/struct.OpenOptions.html), you can see all the methods that you can choose from. Most take a `bool`:
+[OpenOptions 페이지](https://doc.rust-lang.org/std/fs/struct.OpenOptions.html)에 가면 선택할 수 있는 모든 메서드를 볼 수 있습니다. 대부분 `bool`을 받습니다.
 
-- `append()`: This means "add to the content that's already there instead of deleting".
-- `create()`: This lets `OpenOptions` create a file.
-- `create_new()`: This means it will only create a file if it's not there already.
-- `read()`: Set this to `true` if you want it to be able to read a file.
-- `truncate()`: Set this to true if you want to cut the file content to 0 (delete the contents) when you open it.
-- `write()`: This lets it write to a file.
+- `append()`: 내용을 삭제하지 않고 뒤에 덧붙입니다.
+- `create()`: `OpenOptions`가 파일을 만들 수 있게 합니다.
+- `create_new()`: 파일이 없을 때만 새로 만듭니다.
+- `read()`: 읽을 수 있게 하려면 `true`.
+- `truncate()`: 열 때 내용을 0으로 자릅니다(삭제).
+- `write()`: 파일에 쓸 수 있게 합니다.
 
-Then at the end you use `.open()` with the file name, and that will give you a `Result`. Let's look at one example:
+마지막에 `.open()`에 파일 이름을 넘기면 `Result`를 돌려줍니다. 예를 봅시다.
 
 ```rust
 // ⚠️
@@ -14177,15 +14194,15 @@ Dad: Yep. The world didn't turn color until sometimes in the 1930s...")?;
 }
 ```
 
-First we made an `OpenOptions` with `new` (always start with `new`). Then we gave it the ability to `write`. After that we set `create_new()` to `true`, and tried to open the file we made. It won't work, which is what we want:
+먼저 `new`로 `OpenOptions`를 만들었습니다(항상 `new`로 시작). 그다음 `write` 권한을 주고, `create_new()`를 `true`로 설정한 뒤 파일을 열려고 했습니다. 예상대로 동작하지 않습니다.
 
 ```text
 Error: Os { code: 80, kind: AlreadyExists, message: "The file exists." }
 ```
 
-Let's try using `.append()` so we can write to a file. To write to the file we can use `.write_all()`, which is a method that tries to write in everything you give it.
+`.append()`를 사용해 파일 뒤에 내용을 덧붙여 보겠습니다. 파일에 쓰려면 우리가 준 내용을 모두 쓰려고 시도하는 `.write_all()` 메서드를 쓸 수 있습니다.
 
-Also, we will use the `write!` macro to do the same thing. You will remember this macro from when we did `impl Display` for our structs. This time we are using it on a file though instead of a buffer.
+또한 같은 일을 `write!` 매크로로도 해 보겠습니다. 구조체에 `impl Display`를 붙일 때 봤던 매크로입니다. 이번에는 버퍼 대신 파일에 씁니다.
 
 ```rust
 use std::fs;
@@ -14213,7 +14230,7 @@ Dad: Yep. The world didn't turn color until sometimes in the 1930s...")?;
 }
 ```
 
-This prints:
+출력은 다음과 같습니다.
 
 ```text
 Calvin: Dad, how come old photographs are always black and white? Didn't they have color film back then?
@@ -14226,9 +14243,9 @@ Well, truth is stranger than fiction.
 
 ## cargo doc
 
-You might have noticed that Rust documentation always looks almost the same. On the left side you can see `struct`s and `trait`s, code examples are on the right, etc. This is because you can automatically make documentation just by typing `cargo doc`.
+Rust 문서의 모양이 항상 비슷하다는 것을 눈치챘을 것입니다. 왼쪽에 `struct`, `trait` 목록이 있고, 오른쪽에 코드 예제가 있는 식입니다. `cargo doc`만 입력하면 문서를 자동으로 만들 수 있기 때문입니다.
 
-Even making a project with nothing can help you learn about traits in Rust. For example, here are two structs that do almost nothing, and a `fn main()` that also does nothing.
+아무 것도 없는 프로젝트를 만들기만 해도 Rust의 트레이트를 배우는 데 도움이 됩니다. 예를 들어 거의 아무 일도 하지 않는 구조체 두 개와, 아무 것도 하지 않는 `fn main()`이 있다고 해 봅시다.
 
 ```rust
 struct DoesNothing {}
@@ -14244,7 +14261,7 @@ fn main() {}
 ```
 
 
-But if you type `cargo doc --open`, you can see a lot more information than you expected. First it shows you this:
+여기서 `cargo doc --open`을 실행하면 기대 이상으로 많은 정보를 볼 수 있습니다. 먼저 이렇게 보입니다.
 
 ```text
 Crate rust_book
@@ -14257,7 +14274,7 @@ Functions
 main
 ```
 
-But if you click on one of the structs, it will show you a lot of traits that you didn't think were there:
+구조체 중 하나를 클릭하면 예상치 못한 많은 트레이트가 보입니다.
 
 ```text
 Struct rust_book::DoesNothing
@@ -14302,16 +14319,16 @@ where
     U: TryFrom<T>,
 ```
 
-This is because of all the traits that Rust automatically makes for every type.
+이는 Rust가 모든 타입에 자동으로 적용하는 트레이트 때문입니다.
 
-Then if we add some documentation comments you can see them when you type `cargo doc`.
+여기에 문서 주석을 추가하면 `cargo doc` 실행 시 표시됩니다.
 
 ```rust
-/// This is a struct that does nothing
+/// 아무 일도 하지 않는 구조체
 struct DoesNothing {}
-/// This struct only has one method.
+/// 메서드가 하나뿐인 구조체
 struct PrintThing {}
-/// It just prints the same message.
+/// 같은 메시지를 출력하기만 합니다.
 impl PrintThing {
     fn prints_something() {
         println!("I am printing something");
@@ -14322,19 +14339,19 @@ fn main() {}
 ```
 
 
-Now it will print:
+이제 다음과 같이 표시됩니다.
 
 ```text
 Crate rust_book
 Structs
-DoesNothing This is a struct that does nothing
-PrintThing  This struct only has one method.
+DoesNothing 아무 일도 하지 않는 구조체입니다
+PrintThing  메서드가 하나뿐인 구조체입니다
 Functions
 main
 ```
 
-`cargo doc` is very nice when you use a lot of other people's crates. Because these crates are all on different websites, it can take some time to search them all. But if you use `cargo doc`, you will have them all in the same place on your hard drive.
+`cargo doc`는 다른 사람이 만든 크레이트를 많이 사용할 때 특히 좋습니다. 크레이트가 각기 다른 사이트에 있다 보니 일일이 찾아보기 번거로운데, `cargo doc`를 사용하면 하드 드라이브 한 곳에서 모두 확인할 수 있습니다.
 
 ## The end?
 
-This is the end of Rust in Easy English. But I am still here, and you can let me know if you have any questions. Feel free to [contact me on Twitter](https://twitter.com/mithridates) or add a pull request, issue, etc. You can also tell me if some parts weren't easy to understand. Rust in Easy English needs to be very easy to understand, so please let me know where the English is too difficult. Of course, Rust itself can be difficult to understand, but we can at least make sure that the English is easy.
+여기까지가 Rust in Easy English입니다. 궁금한 점이 있으면 언제든지 알려 주세요. [트위터](https://twitter.com/mithridates)로 연락하거나 PR, 이슈 등을 올려도 좋습니다. 이해하기 어려웠던 부분이 있다면 알려 주세요. Rust in Easy English는 최대한 쉽게 읽혀야 합니다. 물론 Rust 자체가 어려울 수 있지만, 적어도 영어 때문에 어렵지는 않게 만들고 싶습니다.

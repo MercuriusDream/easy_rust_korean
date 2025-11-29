@@ -37,8 +37,11 @@ snippets-test: snippets ## Test snippets
 		rustc --out-dir "$(SNIPPETS)" $$snippet; \
 	done
 
-feedback: ## Give feedback
-	@open https://github.com/Dhghomon/easy_rust/issues
+feedback: ## feedback to original author
+	@open https://github.com/Dhghomon/easy_rust
+
+feedback_tl: ## Give feedback
+	@open https://github.com/Mercuriusdream/easy_rust_korean
 
 clean: ## Cleanup
 	@rm -rf "$(SNIPPETS)"

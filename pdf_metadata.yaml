@@ -1,16 +1,21 @@
 ---
-title: 'Easy Rust'
+title: 'Easy Rust (Korean)'
 author:
-- https://github.com/Dhghomon/easy_rust
-keywords: [rust, easy-rust]
+  - 'Dhghomon'
+  - 'Mercuriusdream'
+keywords: [rust, easy-rust, easy-rust-korean]
 # abstract: |
-#   Rust explained using easy English
+#   Rust explained using easy Korean
 
-geometry: margin=0.7in #left=1cm,right=1cm,top=2cm,bottom=2cm
+geometry: margin=0.7in
 
 colorlinks: true
-linkcolor: blue 
-urlcolor: blue 
+linkcolor: blue
+urlcolor: blue
 toccolor: gray
+
+source:
+  - 'https://github.com/Dhghomon/easy_rust'
+  - 'https://github.com/Mercuriusdream/easy_rust_korean'
 
 ...

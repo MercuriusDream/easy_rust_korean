@@ -1,6 +1,6 @@
 [book]
-authors = ["David MacLeod"]
-language = "en"
+authors = ["David MacLeod", "Wooseok Sung"]
+language = "ko"
 multilingual = false
 src = "src"
-title = "Easy Rust" 
+title = "Easy Rust (Korean)"
